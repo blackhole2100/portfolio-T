@@ -1,0 +1,127 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{iftex}
+
+% ATS text-extraction support (pdflatex only; XeTeX/LuaTeX embed Unicode natively)
+\ifPDFTeX
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+\urlstyle{same}
+\definecolor{linkblue}{HTML}{0645AD}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue,
+  citecolor=linkblue
+}
+\raggedright
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.10in}
+\addtolength{\topmargin}{-0.70in}
+\addtolength{\textheight}{1.40in}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1}}
+\newcommand{\resumeRole}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
+}
+\newcommand{\resumeProject}[4]{
+  \textbf{#1}: \textit{#2} \hfill \href{#3}{GitHub}\\
+  \footnotesize #4
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge \textbf{Nikunj Khitha}}\\
+  \vspace{2pt}
+  \small
+  \faIcon{phone}~\href{tel:+919540234616}{+91 9540234616} \quad
+  \faIcon{envelope}~\href{mailto:njkhitha2003@gmail.com}{njkhitha2003@gmail.com} \quad
+  \faIcon{globe}~\href{https://nikunj.codenex.dev/}{nikunj.codenex.dev} \quad
+  \faIcon{linkedin}~\href{https://www.linkedin.com/in/nikunj-khitha/}{Nikunj Khitha} \quad
+  \faIcon{github}~\href{https://github.com/Nikunj2003}{Nikunj2003}
+\end{center}
+
+\section{Professional Summary}
+\footnotesize Applied AI Engineer who takes agent systems from stakeholder discovery to production. Shipped Slack-accessible AI agents to \textbf{20+ business functions}, delivered \textbf{10+} production MCP servers into a shared enterprise tool registry, and built the OpenTelemetry/Langfuse evaluation platform gating every prompt, model, agent, and tool change on measured accuracy, latency, and cost. Python, TypeScript, Go, Java/Spring AI.
+
+\section{Technical Skills}
+\footnotesize
+\textbf{Applied AI, Agents \& Evaluation:} AI Agents, Agentic AI, Multi-Agent Systems, Model Context Protocol (MCP), Tool Calling, Structured Output, Agent Memory, RAG, GraphRAG, Knowledge Graph RAG, Vector Search, Prompt Engineering, Prompt Caching, Model Routing, LLM Evaluation, LLM-as-a-Judge, Golden Datasets, Langfuse, Ragas, DeepEval, promptfoo, OpenTelemetry, LangChain, LangGraph, LangChain4j, Spring AI, CrewAI, Graphiti, Human-in-the-Loop Workflows, AWS Bedrock, OpenAI, Claude, Gemini, LLaMA\\
+\textbf{Languages \& Backend:} Python, TypeScript, Go, Java, SQL, Bash, FastAPI, Spring Boot, Spring Security, Node.js, Gin, SQLAlchemy, Next.js, React, REST APIs, Microservices, SSE, RBAC, JWT, OAuth2, Stripe\\
+\textbf{Data \& Storage:} PostgreSQL, pgvector, Neo4j, MongoDB, Elasticsearch, Redis, MSSQL, Supabase, MinIO, S3, Apache Superset\\
+\textbf{Platform \& Observability:} Docker, Kubernetes, AWS, Azure, CI/CD, Jenkins, GitHub Actions, Fabric8, Kafka, LocalStack, LiteLLM, n8n, Grafana, Prometheus, pytest, scikit-learn, Nginx, Resilience4j
+
+\section{Professional Experience}
+\resumeRole{ArmorCode}{Dec 2025 -- Present}{Applied AI Engineer (SDE 1)}{Gurugram, India}
+\begin{itemize}[leftmargin=0.16in, itemsep=0pt, topsep=1pt]
+  \resumeItem{Won ArmorCode's \textbf{AI Ninja Award} as its first-ever and youngest recipient, presented on the company's global platform.}
+  \resumeItem{Shipped Slack-accessible AI agents to \textbf{20+ business functions} by co-building Agentic Office OS, translating ambiguous stakeholder requirements into agents, skills, MCP integrations, and human-in-the-loop approval workflows, then owning rollout, debugging, and enablement.}
+  \resumeItem{Gated every prompt, model, and MCP tool change on measured accuracy, latency, and cost with an OpenTelemetry/Langfuse platform scoring \textbf{9 AI surfaces} on golden datasets via deterministic checks, scikit-learn metrics, Ragas, and LLM-as-a-judge graders validated at \textbf{Cohen's kappa} $\geq$ \textbf{0.7}, enforced as Jenkins CI gates.}
+  \resumeItem{Secured multi-tenant agent tool use org-wide by delivering \textbf{10+ production MCP servers} into the shared enterprise registry, validating \textbf{20 of 20} authorization checks across \textbf{3 permission tiers} with OAuth2/RBAC and audit attribution.}
+  \resumeItem{Cut recurring LLM spend as sole maintainer of a LiteLLM gateway, tracing \textbf{57\%} of cost across \textbf{50,000+ requests} to \textbf{10+} automations, then migrating models and enabling Bedrock prompt caching while flagging a rewrite worth a further \textbf{$\sim$95\%}.}
+  \resumeItem{Grounded those agents with a tenant-isolated knowledge-graph RAG layer over \textbf{1M+ entities} in Neo4j and pgvector, scoring retrieval accuracy, ranking quality, and context precision across five query modes.}
+  \resumeItem{Built a codebase-search MCP service in Go over \textbf{8 product repositories} that cut CS escalations, then restored it after \textbf{100+ queries} returned zero content by isolating a Go schema defect and a client timeout mismatch, flagging \textbf{14} exposed connectors.}
+  \resumeItem{Kept AI-drafted documentation reviewable rather than blind-published by shipping Quill, an Electron/React GitHub PR review app pairing a WYSIWYG editor with an embedded agent terminal, per-branch Git worktrees, and permission-aware delivery.}
+  \resumeItem{Replaced AWS QuickSight with a self-hosted business-data layer, consolidating \textbf{4 production AWS accounts} and \textbf{10+ SaaS sources} into PostgreSQL and Apache Superset via cross-account S3 replication, then exposing it to agents over MCP.}
+\end{itemize}
+
+\resumeRole{ArmorCode}{Jan 2025 -- Nov 2025}{Software Development Intern (Applied AI)}{Gurugram, India}
+\begin{itemize}[leftmargin=0.16in, itemsep=0pt, topsep=1pt]
+  \resumeItem{Created the initial Java framework for ArmorCode's platform agent, owning its short- and long-term memory layers, later shipping platform memory on \textbf{Graphiti} temporal knowledge graphs, and porting \textbf{2 of 6} sub-agents from LangChain4j to Spring AI.}
+  \resumeItem{Owned backend integrations for \textbf{5+ security tools}, including Black Duck, Snyk, and Checkmarx, on an AppSec platform aggregating findings across \textbf{130+ connectors}.}
+  \resumeItem{Automated new-integration scaffolding with AI-assisted code generation, template engines, and AST parsing, cutting per-integration boilerplate setup time by \textbf{30\%}.}
+  \resumeItem{Designed an OpenAI-compatible LLM proxy in Go serving Gemini CLI, Codex, and Claude Code, with multi-account load balancing, health-aware provider fallbacks, streaming, and Redis-backed caching.}
+\end{itemize}
+
+\resumeRole{Xansr Media (AIKO)}{Jun 2024 -- Dec 2024}{Software Development Intern (GenAI Specialist)}{Remote}
+\begin{itemize}[leftmargin=0.16in, itemsep=0pt, topsep=1pt]
+  \resumeItem{Built Fantasy GPT, a multi-step SQL-RAG system on a fine-tuned in-house model with LangGraph and DeepEval quality gates, resolving \textbf{98\%} of complex sports queries against live match data.}
+  \resumeItem{Consolidated multi-source sports data into MS SQL via Python ETL pipelines powering Fantasy GPT's SQL-RAG retrieval.}
+  \resumeItem{Integrated Azure Speech SDK into AIKO for voice-driven sports media, live commentary in \textbf{20+ languages}, and on-the-fly highlight reels, for a product presented at \textbf{IBC 2024}.}
+  \resumeItem{Optimized Node.js and FastAPI microservices to improve API performance \textbf{40\%} and cut deployment time \textbf{42\%} with Docker and GitHub Actions.}
+\end{itemize}
+
+
+\section{Projects}
+\textbf{CodeNex: AI Builder}: \textit{Java, Spring Boot, Spring AI, React, TypeScript, SSE, Kubernetes, MinIO, Stripe} \hfill \href{https://www.codenex.dev/}{Live} | \href{https://github.com/Nikunj2003/Codenex-backend-v1}{GitHub}
+\begin{itemize}[leftmargin=0.16in, itemsep=0pt, topsep=1pt]
+  \resumeItem{Launched a live AI code-generation SaaS that turns natural-language prompts into full React apps, using Spring AI, SSE streaming, and MinIO/NFS-backed workspace persistence.}
+  \resumeItem{Provisioned per-user Kubernetes preview environments via Fabric8 and Ingress, with token quotas, RBAC, autoscaling, and Stripe subscription billing.}
+\end{itemize}
+
+\textbf{Serenify}: \textit{React, TypeScript, Supabase, pgvector, Gemini AI, Vercel} \hfill \href{https://serenify.codenex.dev/}{Live} | \href{https://github.com/Nikunj2003/Serenify}{GitHub}
+\begin{itemize}[leftmargin=0.16in, itemsep=0pt, topsep=1pt]
+  \resumeItem{Released an open-source AI wellness product pairing Gemini-powered chat with mood tracking, journaling, guided sessions, crisis-help routing, and pgvector-backed personalization.}
+  \resumeItem{Enforced per-user data isolation at the database with granular controls over what the assistant may read, so personalization improves across sessions without exposing sensitive history.}
+\end{itemize}
+
+\section{Education}
+\footnotesize
+B.Tech in Computer Science Engineering --- The NorthCap University, Gurugram, India \hfill Aug 2021 -- Jun 2025\\
+
+\end{document}
