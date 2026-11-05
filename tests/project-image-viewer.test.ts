@@ -9,7 +9,7 @@ import {
   getDistance,
   getMidpoint,
   roundZoom,
-} from "../src/lib/project-image-viewer.ts";
+} from "../src/lib/project-image-viewer";
 
 test("clamp keeps values within inclusive bounds", () => {
   assert.equal(clamp(-5, 0, 10), 0);

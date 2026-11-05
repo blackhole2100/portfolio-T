@@ -1,9 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { caseStudies } from "../src/data/case-studies.ts";
-import { PORTFOLIO_CONTEXT, PORTFOLIO_CONTEXT_BRIEF } from "../src/lib/ai-twin.ts";
-import { SYSTEM_PROMPT } from "../src/lib/ai-config.ts";
+import { caseStudies } from '../src/data/case-studies';
+import { PORTFOLIO_CONTEXT, PORTFOLIO_CONTEXT_BRIEF } from '../src/lib/ai-twin';
+import { SYSTEM_PROMPT } from '../src/lib/ai-config';
 
 /**
  * The system prompt is resent on every chat request, so its size is a recurring

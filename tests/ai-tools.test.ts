@@ -1,8 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { TOOL_DEFINITIONS, TOOL_NAMES, executeTool, formatToolCall } from "../src/lib/ai-tools.ts";
-import { caseStudies } from "../src/data/case-studies.ts";
+import { TOOL_DEFINITIONS, TOOL_NAMES, executeTool, formatToolCall } from "../src/lib/ai-tools";
+import { caseStudies } from "../src/data/case-studies";
 
 const call = (name: string, args: Record<string, unknown>) => executeTool({ id: "t1", name, args });
 

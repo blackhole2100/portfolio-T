@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
-import { revealAnimate, revealInitial } from "../src/lib/motion.ts";
+import { revealAnimate, revealInitial } from "../src/lib/motion";
 
 /**
  * Scroll reveals must not fade opacity.

@@ -6,7 +6,7 @@ import {
   CHAT_STORAGE_VERSION,
   createStoredChatEnvelope,
   parseStoredChatEnvelope,
-} from "../src/lib/chat-storage.ts";
+} from "../src/lib/chat-storage";
 
 test("createStoredChatEnvelope wraps messages with versioned metadata", () => {
   const envelope = createStoredChatEnvelope([{ id: "1" }], 1234);

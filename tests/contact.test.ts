@@ -6,7 +6,7 @@ import {
   CONTACT_MIN_FILL_MS,
   contactRequestSchema,
   getContactSubmissionIssue,
-} from "../src/lib/contact.ts";
+} from "../src/lib/contact";
 
 test("contactRequestSchema accepts the visible form fields plus anti-spam metadata", () => {
   const result = contactRequestSchema.safeParse({

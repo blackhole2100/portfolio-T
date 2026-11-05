@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createServer, type Server } from "node:http";
 import { readFileSync } from "node:fs";
 
-import { createChatEventParser, type ChatStreamEvent } from "../src/lib/chat-contract.ts";
+import { createChatEventParser, type ChatStreamEvent } from "../src/lib/chat-contract";
 
 /**
  * Route-level tests for the chat stream's LIFECYCLE.
@@ -123,7 +123,7 @@ async function drain(response: Response, timeoutMs = 8_000): Promise<ChatStreamE
 }
 
 async function post(message = "Tell me about the evaluation platform") {
-  const { POST } = await import("../src/app/api/chat/route.ts");
+  const { POST } = await import("../src/app/api/chat/route");
   return POST(
     new Request("https://example.test/live-assistant", {
       method: "POST",

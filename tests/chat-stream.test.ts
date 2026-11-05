@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { createChatEventParser, type ChatStreamEvent } from "../src/lib/chat-contract.ts";
+import { createChatEventParser, type ChatStreamEvent } from "../src/lib/chat-contract";
 
 const line = (event: ChatStreamEvent) => `${JSON.stringify(event)}\n`;
 

@@ -10,7 +10,7 @@ import {
   getCaseStudyPath,
   productCaseStudies,
   systemCaseStudies,
-} from "../src/data/case-studies.ts";
+} from "../src/data/case-studies";
 
 /** Diagram keys that `src/components/diagrams/index.tsx` actually resolves. */
 const REGISTERED_DIAGRAMS = new Set(["eval", "mcp", "kgrag", "docs", "gateway"]);
@@ -145,7 +145,7 @@ test("CASE_STUDY_SLUGS matches the real array exactly", async () => {
   // `as const` on all 13 entries). This is the runtime half of that guarantee
   // — if the two ever drift, a bullet could compile against a slug that no
   // longer resolves to any study.
-  const { CASE_STUDY_SLUGS } = await import("../src/data/case-studies.ts");
+  const { CASE_STUDY_SLUGS } = await import("../src/data/case-studies");
   const actual = caseStudies.map((study) => study.slug).sort();
   const declared = [...CASE_STUDY_SLUGS].sort();
 
@@ -153,7 +153,7 @@ test("CASE_STUDY_SLUGS matches the real array exactly", async () => {
 });
 
 test("every experience bullet's study link resolves to a real case study", async () => {
-  const { experiences, bulletStudySlug, bulletText } = await import("../src/data/portfolio.ts");
+  const { experiences, bulletStudySlug, bulletText } = await import("../src/data/portfolio");
 
   let mappedCount = 0;
   for (const experience of experiences) {

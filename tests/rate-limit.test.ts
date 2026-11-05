@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { checkRateLimit, getClientKey, getRateLimitHeaders } from "../src/lib/rate-limit.ts";
+import { checkRateLimit, getClientKey, getRateLimitHeaders } from "../src/lib/rate-limit";
 
 function createRequest(headers: Record<string, string>) {
   return new Request("https://example.com/api/chat", { headers });
