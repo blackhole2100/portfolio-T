@@ -1,6 +1,6 @@
 ---
 name: application-packet
-description: Create job-application collateral from Nikunj Khitha's tailored resume and a job description, including cover letter, recruiter email, LinkedIn note, referral ask, follow-up, and interview talking points. Use after a tailored resume exists or when asked for outreach material.
+description: Create job-application collateral from Tijani Shabazz's tailored resume and a job description, including cover letter, recruiter email, LinkedIn note, referral ask, follow-up, and interview talking points. Use after a tailored resume exists or when asked for outreach material.
 ---
 
 # Application Packet

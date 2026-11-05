@@ -1,4 +1,4 @@
-# Nikunj Khitha
+# Tijani Shabazz
 
 **Applied AI Engineer at ArmorCode | AI Agents, MCP, RAG & LLM Evaluation | Python, TypeScript, Go & Java | AI Platform Engineering**
 
@@ -6,7 +6,7 @@ Gurugram, Haryana, India
 
 ## Contact
 
-[njkhitha2003@gmail.com](mailto:njkhitha2003@gmail.com) · [LinkedIn](https://www.linkedin.com/in/nikunj-khitha/) · [GitHub](https://github.com/Nikunj2003) · [Portfolio](https://nikunj.codenex.dev/)
+[munimaguro68@gmail.com](mailto:munimaguro68@gmail.com) · [LinkedIn](https://www.linkedin.com/in/nikunj-khitha/) · [GitHub](https://github.com/Nikunj2003) · [Portfolio](https://tijani-porfolio.dev/)
 
 ## Top Skills
 
@@ -104,7 +104,7 @@ Paste each description block, including its URLs, into the LinkedIn project desc
 ```text
 Built an LLM evaluation framework using golden datasets, deterministic checks, retrieval scoring and human-validated LLM judges. Integrated CI quality gates to assess accuracy, latency and cost before prompt, model and agent changes ship. Owned the evaluation framework, with platform DevOps responsible for the underlying Langfuse deployment.
 
-Case study: https://nikunj.codenex.dev/work/llm-evaluation-platform
+Case study: https://tijani-porfolio.dev/work/llm-evaluation-platform
 ```
 
 #### Governed MCP Tool Registry
@@ -116,7 +116,7 @@ Case study: https://nikunj.codenex.dev/work/llm-evaluation-platform
 ```text
 Delivered production MCP services into a shared enterprise tool registry. Implemented tool-level permissions, authorization checks and audit attribution so agents could use business tools under governed access. Contributed the integrations and access controls within a platform built with teammates.
 
-Case study: https://nikunj.codenex.dev/work/governed-mcp-registry
+Case study: https://tijani-porfolio.dev/work/governed-mcp-registry
 ```
 
 #### Knowledge Graph RAG
@@ -128,7 +128,7 @@ Case study: https://nikunj.codenex.dev/work/governed-mcp-registry
 ```text
 Built graph and vector retrieval that grounds agent responses in relevant product knowledge. Developed ingestion pipelines and tenant-scoped retrieval, and evaluated ranking quality and context precision to improve the usefulness of retrieved information.
 
-Case study: https://nikunj.codenex.dev/work/knowledge-graph-rag
+Case study: https://tijani-porfolio.dev/work/knowledge-graph-rag
 ```
 
 #### AI Documentation Automation with Quill Review
@@ -140,8 +140,8 @@ Case study: https://nikunj.codenex.dev/work/knowledge-graph-rag
 ```text
 Built a documentation workflow in which a completed Jira ticket triggers an agent to create or update GitHub documentation and open a pull request. Built Quill, the TypeScript/React/Electron review app within this workflow, so reviewers can inspect and edit drafts before approval. Merged changes then sync to Zendesk.
 
-Case study: https://nikunj.codenex.dev/work/documentation-automation
-Quill review app: https://nikunj.codenex.dev/work/quill
+Case study: https://tijani-porfolio.dev/work/documentation-automation
+Quill review app: https://tijani-porfolio.dev/work/quill
 ```
 
 #### Agentic Office OS
@@ -153,7 +153,7 @@ Quill review app: https://nikunj.codenex.dev/work/quill
 ```text
 Co-built an internal agent platform with teammates, translating stakeholder needs into autonomous, human-triggered and human-in-the-loop workflows. Connected agents to shared tools and knowledge sources, and owned rollout, debugging and enablement. Built supporting execution services with request routing, task queues and observability.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 #### Code Intelligence Gateway
@@ -165,7 +165,7 @@ Portfolio experience: https://nikunj.codenex.dev/#experience
 ```text
 Built a Go code-search service that gives agents access to repository knowledge through a read-only interface. Implemented request queueing and per-query session isolation, designed the deployment specification, and resolved indexing and integration reliability issues. Platform DevOps handled infrastructure provisioning.
 
-Case study: https://nikunj.codenex.dev/work/code-intelligence-gateway
+Case study: https://tijani-porfolio.dev/work/code-intelligence-gateway
 ```
 
 #### Enterprise LLM Gateway and Cost Optimization
@@ -177,7 +177,7 @@ Case study: https://nikunj.codenex.dev/work/code-intelligence-gateway
 ```text
 Maintain governed model and MCP access through LiteLLM, including model configuration, scoped API keys and spend controls. Investigated usage patterns and implemented model migration and AWS Bedrock prompt caching to improve the cost efficiency of AI workflows.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 #### AI Test Generation Agent
@@ -189,7 +189,7 @@ Portfolio experience: https://nikunj.codenex.dev/#experience
 ```text
 Built an agent that generates test cases from tickets using code-graph context and existing test knowledge. Implemented parallel tool calls and test-management uploads, fixed integration defects, and validated the workflow jointly with a QA engineer.
 
-Case study: https://nikunj.codenex.dev/work/sentinel-test-agent
+Case study: https://tijani-porfolio.dev/work/sentinel-test-agent
 ```
 
 #### Organization BI Platform and Business Data Layer
@@ -201,7 +201,7 @@ Case study: https://nikunj.codenex.dev/work/sentinel-test-agent
 ```text
 Designed and operationalized a production BI platform with Apache Superset, PostgreSQL and scheduled data pipelines. Enabled interactive dashboards and self-service analytics, implemented governed data access, and exposed the same business-data layer to AI agents through MCP.
 
-Case study: https://nikunj.codenex.dev/work/bi-platform
+Case study: https://tijani-porfolio.dev/work/bi-platform
 ```
 
 #### Platform Agent Framework and Memory
@@ -213,7 +213,7 @@ Case study: https://nikunj.codenex.dev/work/bi-platform
 ```text
 Created the initial Java framework for ArmorCode's platform agent during my internship, designing and owning its short- and long-term memory layers. Established Langfuse evaluation and contributed to the migration from LangChain4j to Spring AI. Later platform memory work used Graphiti temporal knowledge graphs.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 #### AppSec Integrations and Backend Developer Tooling
@@ -225,7 +225,7 @@ Portfolio experience: https://nikunj.codenex.dev/#experience
 ```text
 Built backend security-tool integrations and AI-assisted scaffolding using template engines and AST parsing during my internship. Developed shared service orchestration and a reusable HTTP client with failure isolation, configurable backoff, timeouts and request protections.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 #### n8n Automation Platform
@@ -237,7 +237,7 @@ Portfolio experience: https://nikunj.codenex.dev/#experience
 ```text
 Owned and rearchitected the production n8n automation platform with multi-stage deployment pipelines, Lua-based role-based access control and bidirectional GitHub CI/CD synchronization. Supported the delivery and maintenance of enterprise automation workflows.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 ### Xansr Media
@@ -251,7 +251,7 @@ Portfolio experience: https://nikunj.codenex.dev/#experience
 ```text
 Built the retrieval and reasoning workflows for Fantasy GPT, a sports-intelligence product answering cricket questions using live match data. Developed Python/FastAPI APIs, LangGraph workflows and SQL-RAG retrieval. Built sports-data ETL pipelines and DeepEval answer-quality checks as a GenAI intern on the product team.
 
-Case study: https://nikunj.codenex.dev/work/fantasy-gpt
+Case study: https://tijani-porfolio.dev/work/fantasy-gpt
 ```
 
 #### AIKO: Voice Sports Companion
@@ -263,7 +263,7 @@ Case study: https://nikunj.codenex.dev/work/fantasy-gpt
 ```text
 Contributed to AIKO's voice workflows, user personalization and profile-driven highlight generation as a GenAI intern. Worked with Azure Speech SDK for speech recognition and synthesis, multilingual commentary and live sports experiences. AIKO was showcased in the AI Media Production Lab at the IBC 2024 Accelerator Zone.
 
-Case study: https://nikunj.codenex.dev/work/aiko
+Case study: https://tijani-porfolio.dev/work/aiko
 ```
 
 ### Personal Projects
@@ -351,7 +351,7 @@ GitHub: https://github.com/Nikunj2003/LLaMa-MCP-Streamlit
 **Title — copy and paste:**
 
 ```text
-Nikunj Khitha | Applied AI Engineer | Resume
+Tijani Shabazz | Applied AI Engineer | Resume
 ```
 
 **Description — copy and paste:**
@@ -362,10 +362,10 @@ My experience building production AI agents, MCP integrations, RAG systems, LLM 
 
 ### Project links
 
-1. **[LLM Evaluation Platform](https://nikunj.codenex.dev/work/llm-evaluation-platform)** — evaluation, observability and CI quality gates for production AI systems.
-2. **[Governed MCP Tool Registry](https://nikunj.codenex.dev/work/governed-mcp-registry)** — secure tool integration and access governance for agent workflows.
-3. **[Knowledge Graph RAG](https://nikunj.codenex.dev/work/knowledge-graph-rag)** — graph and vector retrieval for grounded agent responses.
-4. **[Documentation Automation](https://nikunj.codenex.dev/work/documentation-automation)** — Jira-triggered documentation workflow with GitHub, Quill review and Zendesk delivery.
+1. **[LLM Evaluation Platform](https://tijani-porfolio.dev/work/llm-evaluation-platform)** — evaluation, observability and CI quality gates for production AI systems.
+2. **[Governed MCP Tool Registry](https://tijani-porfolio.dev/work/governed-mcp-registry)** — secure tool integration and access governance for agent workflows.
+3. **[Knowledge Graph RAG](https://tijani-porfolio.dev/work/knowledge-graph-rag)** — graph and vector retrieval for grounded agent responses.
+4. **[Documentation Automation](https://tijani-porfolio.dev/work/documentation-automation)** — Jira-triggered documentation workflow with GitHub, Quill review and Zendesk delivery.
 5. **[CodeNex](https://www.codenex.dev/)** — public AI application builder using Spring AI, streaming generation and Kubernetes previews.
 6. **[AI API Proxy](https://github.com/Nikunj2003/codenex-ai-api-proxy)** — Go gateway with provider routing, fallbacks, streaming and Redis caching.
 

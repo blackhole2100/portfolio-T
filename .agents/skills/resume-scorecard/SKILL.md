@@ -1,6 +1,6 @@
 ---
 name: resume-scorecard
-description: Score Nikunj Khitha's resume against a job description, ATS parsing, keyword coverage, evidence strength, recruiter readability, and truthfulness. Use when asked to evaluate, score, compare, or audit the resume.
+description: Score Tijani Shabazz's resume against a job description, ATS parsing, keyword coverage, evidence strength, recruiter readability, and truthfulness. Use when asked to evaluate, score, compare, or audit the resume.
 ---
 
 # Resume Scorecard

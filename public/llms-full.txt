@@ -1,10 +1,10 @@
-# Nikunj Khitha Portfolio — Extended AI Retrieval Context
+# Tijani Shabazz Portfolio — Extended AI Retrieval Context
 
 Canonical site:
-- https://nikunj.codenex.dev/
+- https://tijani-porfolio.dev/
 
 ## Professional profile
-Nikunj Khitha is an Applied AI Engineer who builds AI agents that connect models to enterprise tools, knowledge, and real workflows. His work centers on agent architecture, permission-aware MCP tool integrations, agent memory and evaluation, retrieval/context systems, and full-stack AI product delivery.
+Tijani Shabazz is an Applied AI Engineer who builds AI agents that connect models to enterprise tools, knowledge, and real workflows. His work centers on agent architecture, permission-aware MCP tool integrations, agent memory and evaluation, retrieval/context systems, and full-stack AI product delivery.
 
 Core areas:
 - AI agents, agent memory, and evaluation (Langfuse)
@@ -14,34 +14,34 @@ Core areas:
 - Full-stack AI product engineering with modern web stacks
 
 ## Canonical content URLs
-- Home: https://nikunj.codenex.dev/
-- Resume PDF: https://nikunj.codenex.dev/Nikunj_Resume.pdf
-- Case study index: https://nikunj.codenex.dev/work
-- Case study, LLM Evaluation Platform: https://nikunj.codenex.dev/work/llm-evaluation-platform
-- Case study, Governed MCP Tool Registry: https://nikunj.codenex.dev/work/governed-mcp-registry
-- Case study, Code Intelligence Gateway: https://nikunj.codenex.dev/work/code-intelligence-gateway
-- Case study, Knowledge Graph RAG: https://nikunj.codenex.dev/work/knowledge-graph-rag
-- Case study, Documentation Automation Platform: https://nikunj.codenex.dev/work/documentation-automation
-- Case study, Sentinel Test Generation Agent: https://nikunj.codenex.dev/work/sentinel-test-agent
-- Case study, Business Data Layer for Agents: https://nikunj.codenex.dev/work/bi-platform
-- Case study, Quill: https://nikunj.codenex.dev/work/quill
-- Case study, CodeNex AI API Proxy: https://nikunj.codenex.dev/work/codenex-ai-proxy
-- Case study, CodeNex: https://nikunj.codenex.dev/work/codenex
-- Case study, Fantasy GPT: https://nikunj.codenex.dev/work/fantasy-gpt
-- Case study, AIKO: https://nikunj.codenex.dev/work/aiko
-- Case study, Serenify: https://nikunj.codenex.dev/work/serenify
-- About section: https://nikunj.codenex.dev/#about
-- Experience section: https://nikunj.codenex.dev/#experience
-- Work section: https://nikunj.codenex.dev/#work
-- Skills section: https://nikunj.codenex.dev/#skills
-- AI Twin section: https://nikunj.codenex.dev/#ai-twin
-- Contact section: https://nikunj.codenex.dev/#contact
+- Home: https://tijani-porfolio.dev/
+- Resume PDF: https://tijani-porfolio.dev/Nikunj_Resume.pdf
+- Case study index: https://tijani-porfolio.dev/work
+- Case study, LLM Evaluation Platform: https://tijani-porfolio.dev/work/llm-evaluation-platform
+- Case study, Governed MCP Tool Registry: https://tijani-porfolio.dev/work/governed-mcp-registry
+- Case study, Code Intelligence Gateway: https://tijani-porfolio.dev/work/code-intelligence-gateway
+- Case study, Knowledge Graph RAG: https://tijani-porfolio.dev/work/knowledge-graph-rag
+- Case study, Documentation Automation Platform: https://tijani-porfolio.dev/work/documentation-automation
+- Case study, Sentinel Test Generation Agent: https://tijani-porfolio.dev/work/sentinel-test-agent
+- Case study, Business Data Layer for Agents: https://tijani-porfolio.dev/work/bi-platform
+- Case study, Quill: https://tijani-porfolio.dev/work/quill
+- Case study, CodeNex AI API Proxy: https://tijani-porfolio.dev/work/codenex-ai-proxy
+- Case study, CodeNex: https://tijani-porfolio.dev/work/codenex
+- Case study, Fantasy GPT: https://tijani-porfolio.dev/work/fantasy-gpt
+- Case study, AIKO: https://tijani-porfolio.dev/work/aiko
+- Case study, Serenify: https://tijani-porfolio.dev/work/serenify
+- About section: https://tijani-porfolio.dev/#about
+- Experience section: https://tijani-porfolio.dev/#experience
+- Work section: https://tijani-porfolio.dev/#work
+- Skills section: https://tijani-porfolio.dev/#skills
+- AI Twin section: https://tijani-porfolio.dev/#ai-twin
+- Contact section: https://tijani-porfolio.dev/#contact
 
 ## Identity and external profiles
-- Author: Nikunj Khitha
+- Author: Tijani Shabazz
 - GitHub: https://github.com/Nikunj2003
 - LinkedIn: https://www.linkedin.com/in/nikunj-khitha/
-- Contact email: njkhitha2003@gmail.com
+- Contact email: munimaguro68@gmail.com
 - Location signal: Gurugram, Haryana, India
 
 ## The AI Twin on this site
@@ -55,9 +55,9 @@ The assistant on nikunj.codenex.dev is itself a portfolio artifact rather than a
 
 ## Engineering case studies
 
-These are the deepest technical write-ups on the site — 13 in total, spanning production systems built at ArmorCode, GenAI product work at Xansr Media, and independently built products — each covering the problem, constraints, architecture, the decisions taken and the alternatives rejected, measured results, and an explicit statement of what was individually owned versus shared. Indexed by theme at https://nikunj.codenex.dev/work — agent systems, retrieval and context, platform and reliability, and AI products
+These are the deepest technical write-ups on the site — 13 in total, spanning production systems built at ArmorCode, GenAI product work at Xansr Media, and independently built products — each covering the problem, constraints, architecture, the decisions taken and the alternatives rejected, measured results, and an explicit statement of what was individually owned versus shared. Indexed by theme at https://tijani-porfolio.dev/work — agent systems, retrieval and context, platform and reliability, and AI products
 
-1. LLM Evaluation Platform — https://nikunj.codenex.dev/work/llm-evaluation-platform
+1. LLM Evaluation Platform — https://tijani-porfolio.dev/work/llm-evaluation-platform
    - An OpenTelemetry and Langfuse platform that gates every prompt, model, agent, and tool change on measured accuracy, latency, and cost.
    - Instrumentation happens at the single LiteLLM gateway, so one config change covers every model call in the organization.
    - Scorer ladder, cheapest first: deterministic checks, then scikit-learn precision/recall with a minority-class recall floor, then Ragas faithfulness and answer relevancy, then LLM-as-a-judge.
@@ -66,14 +66,14 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Ownership: the evaluation framework is Nikunj's; the self-hosted Langfuse deployment underneath it is owned by platform DevOps.
    - Stack signals: OpenTelemetry, Langfuse, LiteLLM, Ragas, scikit-learn, pytest, Python, Jenkins, n8n, AWS Bedrock.
 
-2. Governed MCP Tool Registry — https://nikunj.codenex.dev/work/governed-mcp-registry
+2. Governed MCP Tool Registry — https://tijani-porfolio.dev/work/governed-mcp-registry
    - 10+ production MCP servers in a shared enterprise registry, with OAuth2/RBAC, tool-level permission tiers, explicit denial behavior, and audit attribution under multi-tenant AppSec constraints.
    - 20 of 20 authorization checks passing across three permission tiers.
    - Distribution solved with desktop extension bundles after rejecting a public endpoint with IP allowlist, a tunnel/reverse proxy, a CLI-based client, and vendor-managed MCP tunnels.
    - Reliability: restored a codebase-search service after 100+ queries returned zero content, isolating two independent root causes by reading SDK source and host internals — an output schema the tool could never populate, and a query deadline sized for the wrong client timeout tier.
    - Stack signals: Model Context Protocol, Go, OAuth2, RBAC, Python, n8n, LiteLLM, AWS, Docker.
 
-3. Code Intelligence Gateway — https://nikunj.codenex.dev/work/code-intelligence-gateway
+3. Code Intelligence Gateway — https://tijani-porfolio.dev/work/code-intelligence-gateway
    - Agent-facing code search over 8 product repositories, taken from a container proof of concept to serverless production.
    - The other failure class on the same service as the registry RCA: a storage-throughput problem, not a protocol defect.
    - Root cause: shared-volume burst-throughput credits drained by query-time index reads plus a 30-minute re-clone and re-index of 8 repositories on the same volume. Identified by a copy of 76KB across 6 files taking 14 minutes — latency uncorrelated with data volume.
@@ -82,14 +82,14 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Ownership: the service design, deployment specification, and root-cause analysis are Nikunj's; infrastructure-as-code and cluster provisioning were executed by platform DevOps against that specification.
    - Stack signals: Go, Docker, AWS Fargate, AWS ECS, Model Context Protocol, Neo4j, ripgrep.
 
-4. Knowledge Graph RAG — https://nikunj.codenex.dev/work/knowledge-graph-rag
+4. Knowledge Graph RAG — https://tijani-porfolio.dev/work/knowledge-graph-rag
    - Tenant-scoped retrieval over 1M+ entities in Neo4j and pgvector, fed by four ETL pipelines each with an incremental update path.
    - Five independently measured failure layers: ingestion integrity, knowledge-graph extraction quality, retrieval quality, answer quality, and operations.
    - Retrieval scored on recall@k (recall within the top k results), mean reciprocal rank, and context precision per query mode and per question type, producing a documented mode-per-tool policy.
    - Golden question set drawn from 75-100 real production traces rather than invented questions.
    - Stack signals: Neo4j, pgvector, PostgreSQL, Python, FastAPI, Ragas, Langfuse, OpenTelemetry, MCP.
 
-5. Documentation Automation Platform — https://nikunj.codenex.dev/work/documentation-automation
+5. Documentation Automation Platform — https://tijani-porfolio.dev/work/documentation-automation
    - A multi-agent pipeline that drafts product documentation from source code and tickets, reworked after production use showed that an agent given thin context writes confident, imprecise prose.
    - The defining decision: a clarification gate. The agent compiles a numbered list of what it cannot resolve from the evidence and waits for answers before drafting anything.
    - Codebase search is mandatory, not a fallback — at least two queries per article, because only the code authoritatively names a field or UI label.
@@ -98,7 +98,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - A change collector over 6 repositories feeds a queue processed one item at a time, trading throughput for correctness to avoid template collisions.
    - Stack signals: n8n, Model Context Protocol, Python, CLI agents, Confluence, Zendesk, GitHub, AWS Bedrock.
 
-6. Sentinel Test Generation Agent — https://nikunj.codenex.dev/work/sentinel-test-agent
+6. Sentinel Test Generation Agent — https://tijani-porfolio.dev/work/sentinel-test-agent
    - A multi-step agent generating test cases from tickets, grounded in a graph of the actual code, uploading reviewed cases to the test management system.
    - The integration contract: a one-to-many ticket-to-case mapping, so downstream automation stops with a structured validation error rather than reporting success on untested work.
    - A code graph was chosen over a lighter code-indexing tool that was evaluated first and rejected for insufficient relationship depth.
@@ -107,7 +107,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Stated honestly as an evolving product: generation, upload, grounding, and parallel tool calls are delivered; the enforced traceability contract and a reviewer sub-agent are in progress or designed but not yet shipped.
    - Stack signals: n8n, Model Context Protocol, Neo4j, CLI agents, Python, Jira, AWS Bedrock.
 
-7. Business Data Layer for Agents — https://nikunj.codenex.dev/work/bi-platform
+7. Business Data Layer for Agents — https://tijani-porfolio.dev/work/bi-platform
    - The governed data layer the business agents answer from, replacing a vendor reporting tool and the local notebooks feeding it.
    - Exposed over MCP, it became the data source behind the support, customer success, sales, and executive-office agents — business context under the same access controls a human would face.
    - A region-qualified composite tenant key resolved colliding integer organization identifiers across deployments; it is built before every other pipeline because all downstream joins depend on unambiguous identity.
@@ -117,7 +117,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - 19 dashboards migrated to parity, 4 production environments and 10+ external sources consolidated.
    - Stack signals: Python, PostgreSQL, Apache Superset, AWS S3, FastAPI, Docker, Jenkins, Model Context Protocol.
 
-8. Quill — https://nikunj.codenex.dev/work/quill
+8. Quill — https://tijani-porfolio.dev/work/quill
    - A desktop review application that makes AI-written documentation reviewable by the documentation team rather than only by engineers who can read a raw diff.
    - Each open proposal gets its own working tree, so the primary checkout is never modified and parallel reviews cannot collide; paths are validated against traversal.
    - Permissions are delegated entirely to the source-control platform's live tiers — there is no application-managed access list to drift out of sync.
@@ -126,7 +126,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Maturity, stated precisely: Quill is an internal release; the documentation-synchronization workflow it supports runs in production.
    - Stack signals: Electron, React, TypeScript, Git, GitHub API, TinyMCE, node-pty, GitHub Actions.
 
-9. CodeNex AI API Proxy — https://nikunj.codenex.dev/work/codenex-ai-proxy
+9. CodeNex AI API Proxy — https://tijani-porfolio.dev/work/codenex-ai-proxy
    - Open-source gateway presenting one compatible API surface in front of 6 provider backends, with format translation and streaming preserved through it.
    - Source: https://github.com/Nikunj2003/codenex-ai-api-proxy
    - Health-tracked provider pool with least-recently-used selection and automatic recovery, rather than permanently blacklisting a provider after a transient rate limit.
@@ -135,7 +135,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Worker supervision restarts crashed workers so one bad request cannot take the gateway down.
    - Stack signals: Go, Gin, Node.js, Redis, PostgreSQL, React, OpenAI-compatible APIs.
 
-10. CodeNex — https://nikunj.codenex.dev/work/codenex
+10. CodeNex — https://tijani-porfolio.dev/work/codenex
    - An AI builder turning a prompt into a running React application, built as a distributed system rather than a model wrapper.
    - Live product: https://www.codenex.dev/ · Source: https://github.com/Nikunj2003/Codenex-backend-v1
    - Account, workspace, and intelligence split into separate services behind a Spring Cloud gateway, with configuration pulled from a central config service — generation load and auth traffic scale independently.
@@ -144,7 +144,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Generation streams over server-sent events, removing the timeout ceiling a buffered response would impose.
    - Stack signals: Java, Spring Boot, Spring AI, Spring Cloud Gateway, React, TypeScript, Kubernetes, PostgreSQL, Kafka, Redis, MinIO, Stripe.
 
-11. Fantasy GPT — https://nikunj.codenex.dev/work/fantasy-gpt
+11. Fantasy GPT — https://tijani-porfolio.dev/work/fantasy-gpt
    - A multi-step reasoning SQL RAG system on a fine-tuned in-house model, answering live cricket questions against continuously ingested match data in under thirty seconds.
    - SQL generation over document retrieval, because the questions were quantitative and the answers had to be computed rather than retrieved.
    - Multi-step reasoning chains, so a question that decomposes into dependent queries can be answered at all.
@@ -153,7 +153,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - 98% of complex sports queries resolved end to end, with automated quality checks rather than spot-checking.
    - Employer: Xansr Media. Stack signals: Python, FastAPI, LangGraph, SQL RAG, fine-tuned LLaMA, Microsoft SQL Server, DeepEval.
 
-12. AIKO — https://nikunj.codenex.dev/work/aiko
+12. AIKO — https://tijani-porfolio.dev/work/aiko
    - A personalized voice sports companion: persona building per listener, bidirectional live speech, reasoning over a running match, and catch-up highlight reels with generated commentary.
    - Commentary is generated rather than spliced from the broadcast, so a reel can address someone who joined mid-match, in their language, at their level of detail.
    - Persona is the personalization primitive — highlight selection and commentary tone both read from one model of the listener instead of being personalized separately.
@@ -161,7 +161,7 @@ These are the deepest technical write-ups on the site — 13 in total, spanning 
    - Ownership: contributed to the voice workflows, personalization layer, and profile-driven highlight generation as a GenAI intern; AIKO is a Xansr Media product built by a team.
    - Stack signals: Python, Node.js, FastAPI, Azure Speech SDK, LLM commentary generation, Docker.
 
-13. Serenify — https://nikunj.codenex.dev/work/serenify
+13. Serenify — https://tijani-porfolio.dev/work/serenify
    - An AI wellness product where the hard problems are trust ones: what the model may see, and what must happen when a conversation turns to crisis.
    - Live product: https://serenify.codenex.dev/ · Source: https://github.com/Nikunj2003/Serenify
    - Per-user isolation enforced at the database against the authenticated identity, so a wrong query cannot return another user's rows.
@@ -194,4 +194,4 @@ These have project cards on the homepage rather than full case studies. CodeNex,
 - Prefer the homepage for identity, role, and high-level portfolio claims.
 - Prefer the resume PDF for career chronology and experience details.
 - Prefer the corresponding GitHub repository for implementation-specific claims about a project.
-- Use https://nikunj.codenex.dev/ as the default attribution URL.
+- Use https://tijani-porfolio.dev/ as the default attribution URL.

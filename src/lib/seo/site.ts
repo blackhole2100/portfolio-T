@@ -1,7 +1,7 @@
 import { caseStudies, getCaseStudyPath } from "@/data/case-studies";
 import { about, personalInfo } from "@/data/portfolio";
 
-const siteUrl = "https://nikunj.codenex.dev";
+const siteUrl = "https://tijani-porfolio.dev";
 export const ogLocale = "en_IN";
 
 export const siteConfig = {
@@ -9,7 +9,7 @@ export const siteConfig = {
   homeUrl: `${siteUrl}/`,
   resumeUrl: `${siteUrl}${personalInfo.resumeUrl}`,
   updatedAt: "2026-09-06T00:00:00.000Z",
-  siteName: "Nikunj Khitha Portfolio",
+  siteName: "Tijani Shabazz Portfolio",
   title: `${personalInfo.name} — Applied AI Engineer`,
   description: personalInfo.tagline,
   author: personalInfo.name,
@@ -31,7 +31,7 @@ export const siteConfig = {
     "Model Routing",
     "Forward Deployed Engineer",
     "Forward Deployed AI Engineer",
-    "Nikunj Khitha",
+    "Tijani Shabazz",
     "Full-Stack Engineer",
     "Backend Engineer",
     "AI Engineer",

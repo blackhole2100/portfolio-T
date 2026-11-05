@@ -5,7 +5,7 @@ import { z } from "zod";
  *
  * These back the `hosted-html-report` skill's `host-file.sh`, which POSTs a
  * base64-encoded HTML file here to publish it at
- * https://nikunj.codenex.dev/artifacts/<slug>/<filename>.
+ * https://tijani-porfolio.dev/artifacts/<slug>/<filename>.
  */
 
 // Slug/filename segments become Vercel Blob pathnames, so they are restricted

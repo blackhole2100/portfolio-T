@@ -1,6 +1,6 @@
 ---
 name: interview-story-bank
-description: Build or refresh Nikunj Khitha's interview STAR story bank from portfolio and resume facts for backend, GenAI, platform, ownership, debugging, leadership, conflict, and failure questions.
+description: Build or refresh Tijani Shabazz's interview STAR story bank from portfolio and resume facts for backend, GenAI, platform, ownership, debugging, leadership, conflict, and failure questions.
 ---
 
 # Interview Story Bank

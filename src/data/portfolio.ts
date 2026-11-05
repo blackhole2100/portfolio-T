@@ -1,11 +1,11 @@
 import type { CaseStudySlug } from "@/data/case-studies";
 
 export const personalInfo = {
-  name: "Nikunj Khitha",
+  name: "Tijani Shabazz",
   role: "Applied AI Engineer",
   tagline: "I work on the part of AI that starts after the demo: giving agents real tools, real memory, and a way to prove they still work tomorrow.",
   focus: "Open to Applied AI, Forward Deployed AI, Agentic AI, AI Product, and LLM/AI Engineer roles where I can own agent systems end to end \u2014 governed MCP tool use, retrieval, and the evaluation that keeps them reliable.",
-  email: "njkhitha2003@gmail.com",
+  email: "munimaguro68@gmail.com",
   linkedin: "https://www.linkedin.com/in/nikunj-khitha/",
   github: "https://github.com/Nikunj2003",
   resumeUrl: "/Nikunj_Resume.pdf",

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Upload an HTML report to Nikunj Khitha's portfolio artifact host.
+# Upload an HTML report to Tijani Shabazz's portfolio artifact host.
 #
 # Usage:  host-file.sh <filepath> <slug> [remote-filename]
 #
 #   filepath         local HTML file to upload
 #   slug              folder segment in the published URL:
-#                      https://nikunj.codenex.dev/artifacts/<slug>/<remote-filename>
+#                      https://tijani-porfolio.dev/artifacts/<slug>/<remote-filename>
 #   remote-filename   defaults to the local file's basename (must end .html)
 #
 # This POSTs straight to the portfolio's own /api/artifacts route (a plain
@@ -56,12 +56,12 @@ if [ -z "$UPLOAD_URL" ] || [ -z "$UPLOAD_TOKEN" ]; then
   fi
 fi
 
-UPLOAD_URL="${UPLOAD_URL:-https://nikunj.codenex.dev/api/artifacts}"
+UPLOAD_URL="${UPLOAD_URL:-https://tijani-porfolio.dev/api/artifacts}"
 
 [ -n "$UPLOAD_TOKEN" ] || {
   echo "error: no upload token found." >&2
   echo "  set ARTIFACT_UPLOAD_TOKEN, or create $CONFIG_FILE with:" >&2
-  echo '  { "uploadUrl": "https://nikunj.codenex.dev/api/artifacts", "token": "..." }' >&2
+  echo '  { "uploadUrl": "https://tijani-porfolio.dev/api/artifacts", "token": "..." }' >&2
   exit 1
 }
 

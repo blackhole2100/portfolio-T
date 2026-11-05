@@ -1,6 +1,6 @@
 # Job Hunt Resume Flows
 
-This package is designed for Nikunj Khitha's portfolio repository.
+This package is designed for Tijani Shabazz's portfolio repository.
 
 It follows the current Codex guidance:
 - Custom agents live in `.codex/agents/`.

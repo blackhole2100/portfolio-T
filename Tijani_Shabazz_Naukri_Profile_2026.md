@@ -1,4 +1,4 @@
-# Nikunj Khitha — Naukri profile
+# Tijani Shabazz — Naukri profile
 
 Prepared on 11 September 2026 from `src/`, `work/`, `Nikunj.md`, and `Nikunj_Khitha_ATS_Resume_2026.tex`, with internet research into Naukri's candidate guidance and recruiter search tools.
 
@@ -298,7 +298,7 @@ The screenshot's preselected Finished, Offsite and Full time options do not esta
 ```text
 Built an LLM evaluation framework on ArmorCode's Langfuse platform to measure prompt, model, agent, tool and retrieval quality. Created golden datasets, deterministic checks, classification metrics, Ragas retrieval scoring and LLM-as-a-judge evaluation validated against human labels. Integrated evaluation into Jenkins CI gates to assess accuracy, latency and cost before changes ship. Owned the evaluation framework; platform DevOps owned the underlying Langfuse deployment.
 
-Case study: https://nikunj.codenex.dev/work/llm-evaluation-platform
+Case study: https://tijani-porfolio.dev/work/llm-evaluation-platform
 ```
 
 **Role description — copy and paste (204/250 characters):**
@@ -331,7 +331,7 @@ Designed the evaluation framework, curated golden datasets, implemented determin
 ```text
 Delivered 10+ production Model Context Protocol servers into a shared enterprise registry for agent tool access. Implemented OAuth2/RBAC, tool-level permission tiers, explicit denials and audit attribution. Validated 20/20 authorization checks across three access tiers in a 23-tool integration. Enabled internal tool distribution to business users and resolved a codebase-search failure caused by an output-schema defect and a client-timeout mismatch.
 
-Case study: https://nikunj.codenex.dev/work/governed-mcp-registry
+Case study: https://tijani-porfolio.dev/work/governed-mcp-registry
 ```
 
 **Role description — copy and paste (181/250 characters):**
@@ -364,7 +364,7 @@ Built and integrated MCP servers, implemented OAuth2/RBAC and tool-level permiss
 ```text
 Built tenant-scoped knowledge-graph RAG over 1M+ entities using Neo4j and pgvector. Connected product documentation, root-cause analyses and test knowledge to business agents through graph and vector retrieval. Implemented ingestion paths and evaluated retrieval accuracy, ranking quality and context precision across five query modes to ground answers in relevant, tenant-scoped information.
 
-Case study: https://nikunj.codenex.dev/work/knowledge-graph-rag
+Case study: https://tijani-porfolio.dev/work/knowledge-graph-rag
 ```
 
 **Role description — copy and paste (170/250 characters):**
@@ -397,7 +397,7 @@ Use June–December 2024 only if you worked on Fantasy GPT throughout the intern
 ```text
 Built Fantasy GPT, a sports intelligence system answering cricket questions through multi-step reasoning over live match data. Developed Python and FastAPI backend APIs and LangGraph workflows to plan and chain SQL-RAG queries against Microsoft SQL Server. Built Python ETL pipelines to collect sports data from multiple sources and keep the analytical store updated. Integrated an in-house fine-tuned model for domain-specific reasoning and added DeepEval quality checks to assess generated answers. Owned the retrieval and reasoning system, backend APIs, data pipelines and answer evaluation as a GenAI intern on the product team.
 
-Case study: https://nikunj.codenex.dev/work/fantasy-gpt
+Case study: https://tijani-porfolio.dev/work/fantasy-gpt
 ```
 
 **Role description — copy and paste (169/250 characters):**
@@ -432,8 +432,8 @@ Use this entry to make your Xansr work visible even though Naukri does not provi
 ```text
 Built AI documentation automation that starts when a Jira ticket is completed. An agent gathers ticket and codebase context, creates or updates documentation in GitHub, and opens a pull request. Built Quill, the workflow's TypeScript/React/Electron review app, so the documentation team can inspect rendered changes, edit drafts and approve PRs using a WYSIWYG editor, an embedded agent terminal and isolated Git worktrees. Once the PR merges, the workflow syncs the documentation to Zendesk. Quill provides the human review step within the complete automation.
 
-Case study: https://nikunj.codenex.dev/work/documentation-automation
-Quill review app: https://nikunj.codenex.dev/work/quill
+Case study: https://tijani-porfolio.dev/work/documentation-automation
+Quill review app: https://tijani-porfolio.dev/work/quill
 ```
 
 **Role description — copy and paste (162/250 characters):**
@@ -466,7 +466,7 @@ Office OS is the umbrella platform. The evaluation, registry, retrieval, documen
 ```text
 Co-built ArmorCode's internal agent platform with teammates, translating stakeholder requirements into autonomous, human-triggered and human-in-the-loop workflows accessible through Slack. Connected agents to shared MCP tools, product knowledge and business data. Owned stakeholder discovery, rollout, debugging and enablement. Operationalized internal agent execution through a Go/Gin gateway with routing, load balancing, task queues and observability for scheduled and pull-request-triggered workflows.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (164/250 characters):**
@@ -497,7 +497,7 @@ Co-built the internal agent platform, translated stakeholder needs into workflow
 ```text
 Built a Go code-search gateway over eight product repositories with authentication, request queueing, per-query session isolation and a read-only agent backed by a local vector index. Designed the production deployment and diagnosed shared-filesystem throughput throttling behind recurring restarts. Moved query data off the shared-volume hot path, made startup non-blocking and coordinated Git synchronization. Also resolved MCP output-schema and client-timeout failures. Platform DevOps implemented infrastructure provisioning against my deployment specification.
 
-Case study: https://nikunj.codenex.dev/work/code-intelligence-gateway
+Case study: https://tijani-porfolio.dev/work/code-intelligence-gateway
 ```
 
 **Role description — copy and paste (198/250 characters):**
@@ -530,7 +530,7 @@ This is ArmorCode's enterprise LiteLLM work. The personal Go-based CodeNex AI AP
 ```text
 Maintain company-wide model and MCP access through LiteLLM, including the approved model catalog, scoped API keys, per-model access and spend budgets. Distribute permission-controlled internal MCP access to employee clients. Investigated a budget alert across more than 50,000 requests, traced the largest cost concentration to recurring automations and a historical backfill, and implemented model migration and AWS Bedrock prompt caching by separating system and user prompts.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (156/250 characters):**
@@ -563,7 +563,7 @@ The public case study explicitly distinguishes delivered generation and upload f
 ```text
 Built an agent that generates test cases from Jira tickets using code-graph context, historical root-cause analyses and the existing test corpus. Implemented parallel tool calls and uploads to the test-management system with folder handling and labels. Fixed parsing and priority-field integration defects and validated an end-to-end run jointly with a QA engineer. Designed a ticket-to-case traceability contract for downstream automation; enforcement of that contract remains planned.
 
-Case study: https://nikunj.codenex.dev/work/sentinel-test-agent
+Case study: https://tijani-porfolio.dev/work/sentinel-test-agent
 ```
 
 **Role description — copy and paste (156/250 characters):**
@@ -594,7 +594,7 @@ Built the test-generation agent, grounding tools and test-management integration
 ```text
 Built a governed business-data platform consolidating four production environments and more than ten external sources into a central S3 lake, PostgreSQL analytics database and Apache Superset. Designed a 12-table serving schema, region-qualified tenant identities, scheduled ETL and row-level access control. Migrated 19 dashboards to parity with the previous reporting tool and exposed the modeled data through MCP so business agents and dashboards query the same governed sources.
 
-Case study: https://nikunj.codenex.dev/work/bi-platform
+Case study: https://tijani-porfolio.dev/work/bi-platform
 ```
 
 **Role description — copy and paste (172/250 characters):**
@@ -627,7 +627,7 @@ This entry spans the internship framework and later memory work. Confirm the lat
 ```text
 Created the initial Java framework for Anya, ArmorCode's platform agent, during my internship. Designed and owned short- and long-term memory and established Langfuse evaluation for agent accuracy and memory behavior. Migrated two of six sub-agents from LangChain4j to Spring AI, reimplementing memory and evaluation integrations. Later platform memory work used Graphiti temporal knowledge graphs to combine session context with tenant- and person-level recall.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (163/250 characters):**
@@ -660,7 +660,7 @@ Grouped backend workstream from the internship. The platform's 130+ connectors a
 ```text
 Owned backend integrations for more than five security tools, including Black Duck, Snyk and Checkmarx, on ArmorCode's AppSec platform. Built AI-assisted integration scaffolding using template engines and AST parsing. Developed supporting backend service orchestration for MySQL, Elasticsearch, Redis, Kafka, MongoDB and LocalStack, and a reusable Resilience4j HTTP client with failure isolation, configurable backoff, timeouts and SSRF protection.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (157/250 characters):**
@@ -691,7 +691,7 @@ Implemented security-tool integrations, automated integration scaffolding, built
 ```text
 Contributed to AIKO, Xansr Media's personalized voice sports companion, as a GenAI intern. Worked on Azure Speech SDK speech-to-text and text-to-speech workflows, user personalization, live AI-generated commentary in more than 20 languages and profile-driven highlight generation. Helped connect live match context to conversational and catch-up experiences. Built backend microservices and containerized delivery workflows during the internship. The team product was presented at IBC 2024 in Amsterdam.
 
-Case study: https://nikunj.codenex.dev/work/aiko
+Case study: https://tijani-porfolio.dev/work/aiko
 ```
 
 **Role description — copy and paste (144/250 characters):**
@@ -722,7 +722,7 @@ Contributed to voice workflows, user personalization, profile-driven highlights 
 ```text
 Integrated National Power Portal data into a national renewable-energy dashboard covering more than 150 power stations during my internship at the Central Electricity Authority. Worked on data integration and reporting reliability for the public-sector dashboard.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (140/250 characters):**
@@ -753,7 +753,7 @@ Integrated National Power Portal data into the renewable-energy dashboard and im
 ```text
 Built a secure Java and PostgreSQL file-management system during my Central Electricity Authority internship. Implemented role-based access control and file organization and retrieval workflows for more than 5,000 files used in internal operations.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (153/250 characters):**
@@ -784,7 +784,7 @@ Built the Java/PostgreSQL file-management system, implemented role-based access 
 ```text
 Developed a MERN conference-room booking system during my Central Electricity Authority internship. Built the application to streamline internal room reservations and scheduling, reducing manual coordination and scheduling errors.
 
-Portfolio experience: https://nikunj.codenex.dev/#experience
+Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
 **Role description — copy and paste (124/250 characters):**
@@ -818,7 +818,7 @@ Your existing degree entry is substantially correct. Add Class XII and Class X o
 |---|---|---|
 | LinkedIn | https://www.linkedin.com/in/nikunj-khitha/ | Applied AI engineering experience, career history and professional updates. |
 | GitHub | https://github.com/Nikunj2003 | AI products and backend projects using TypeScript, Python, Go and Java, including CodeNex and an AI API gateway. |
-| Portfolio | https://nikunj.codenex.dev/ | Applied AI case studies covering agents, MCP, RAG, evaluation and TypeScript product development with React and Electron. |
+| Portfolio | https://tijani-porfolio.dev/ | Applied AI case studies covering agents, MCP, RAG, evaluation and TypeScript product development with React and Electron. |
 
 ### Work samples — personal projects
 
@@ -937,9 +937,9 @@ ArmorCode | Dec 2025 - Present
 Previously: Software Development Intern | Jan 2025 - Nov 2025
 ```
 
-This is a recommended portfolio edit; this task changes only the Naukri guide. [Public portfolio](https://nikunj.codenex.dev/)
+This is a recommended portfolio edit; this task changes only the Naukri guide. [Public portfolio](https://tijani-porfolio.dev/)
 
-Your public GitHub profile also links to `nikunj.tech` and expands MCP as “Model Control Protocol” in a featured-project description. Standardise the portfolio link to `https://nikunj.codenex.dev/` and use **Model Context Protocol** when next updating that profile. The Naukri copy already uses these forms. [GitHub profile](https://github.com/Nikunj2003)
+Your public GitHub profile also links to `nikunj.tech` and expands MCP as “Model Control Protocol” in a featured-project description. Standardise the portfolio link to `https://tijani-porfolio.dev/` and use **Model Context Protocol** when next updating that profile. The Naukri copy already uses these forms. [GitHub profile](https://github.com/Nikunj2003)
 
 ### Award
 
@@ -977,7 +977,7 @@ These are recommended choices, not verified current Naukri dropdown labels. Sele
 | Current annual CTC | **CONFIRM** actual value |
 | Expected annual CTC | **CONFIRM** your target; no salary estimate has been inferred |
 | Notice period | **CONFIRM** contractual duration and whether you are currently serving it |
-| Email | njkhitha2003@gmail.com — verify in Naukri |
+| Email | munimaguro68@gmail.com — verify in Naukri |
 | Phone | +91 9540234616 — from the LaTeX resume; verify that it remains your recruiter contact number |
 | Recruiter visibility and communication | Check that your profile is searchable and desired recruiter communications are enabled in your account settings |
 

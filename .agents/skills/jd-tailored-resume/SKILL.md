@@ -1,6 +1,6 @@
 ---
 name: jd-tailored-resume
-description: Rewrite Nikunj Khitha's ATS-friendly LaTeX resume for a specific job description using the latest portfolio facts, JD keywords, company research, and resume best practices. Use when the user provides or references a JD and asks for a tailored resume.
+description: Rewrite Tijani Shabazz's ATS-friendly LaTeX resume for a specific job description using the latest portfolio facts, JD keywords, company research, and resume best practices. Use when the user provides or references a JD and asks for a tailored resume.
 ---
 
 # JD-Tailored Resume
@@ -65,6 +65,7 @@ Add `with subagents` when the user wants the full optimized multi-agent flow. Co
 ## Output
 
 Return:
+
 - Resume path changed.
 - Targeting summary.
 - Score out of 100.

@@ -1,15 +1,15 @@
 {
-  "name": "my-next-js-portfolio-v2",
+  "name": "portfolio-v1",
   "version": "1.0.0",
-  "description": "A modern Next.js portfolio for Nikunj Khitha showcasing GenAI platform engineering work, projects, experience, and interactive AI-powered features.",
+  "description": "A modern Next.js portfolio for Tijani Shabazz showcasing GenAI platform engineering work, projects, experience, and interactive AI-powered features.",
   "type": "module",
-  "homepage": "https://nikunj.codenex.dev",
+  "homepage": "https://tijani-porfolio.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nikunj2003/My-Next-Js-Portfolio-v2.git"
+    "url": "git+https://github.com/blackhole2100/portfolio-T.git"
   },
   "bugs": {
-    "url": "https://github.com/Nikunj2003/My-Next-Js-Portfolio-v2/issues"
+    "url": "https://github.com/blackhole2100/portfolio-T.git"
   },
   "scripts": {
     "dev": "next dev",
@@ -31,9 +31,9 @@
     "full-stack"
   ],
   "author": {
-    "name": "Nikunj Khitha",
-    "email": "njkhitha2003@gmail.com",
-    "url": "https://nikunj.codenex.dev"
+    "name": "Tijani Shabazz",
+    "email": "munimaguro68@gmail.com",
+    "url": "https://tijani-porfolio.dev"
   },
   "license": "ISC",
   "dependencies": {

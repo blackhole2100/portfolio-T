@@ -173,7 +173,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: true,
-        url: `https://nikunj.codenex.dev/artifacts/${slug}/${filename}`,
+        url: `https://tijani-porfolio.dev/artifacts/${slug}/${filename}`,
         replaced: isUpdate,
       },
       { headers: rateLimitHeaders }

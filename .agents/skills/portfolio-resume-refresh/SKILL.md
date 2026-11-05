@@ -1,6 +1,6 @@
 ---
 name: portfolio-resume-refresh
-description: Refresh or create Nikunj Khitha's ATS-friendly LaTeX resume from the latest local portfolio data, existing resume files, and current resume best practices. Use when asked to update the resume from portfolio content or regenerate the base one-page resume.
+description: Refresh or create Tijani Shabazz's ATS-friendly LaTeX resume from the latest local portfolio data, existing resume files, and current resume best practices. Use when asked to update the resume from portfolio content or regenerate the base one-page resume.
 ---
 
 # Portfolio Resume Refresh
@@ -63,6 +63,7 @@ Add `with subagents` when the user wants the full optimized multi-agent flow. Co
 ## Output
 
 Return:
+
 - Changed file path.
 - Brief summary of edits.
 - Validation performed.

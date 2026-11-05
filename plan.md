@@ -2,7 +2,7 @@
 
 ## Purpose, Scope, and Research Standard
 
-This document is a **content and career-positioning plan**, not a portfolio UI or visual-design plan. It consolidates the August 15, 2026 research on comparable Applied AI roles at AI startups and large technology companies, public-profile patterns, and the required improvements to Nikunj Khitha’s resume, LinkedIn, portfolio copy, and public AI narrative.
+This document is a **content and career-positioning plan**, not a portfolio UI or visual-design plan. It consolidates the August 15, 2026 research on comparable Applied AI roles at AI startups and large technology companies, public-profile patterns, and the required improvements to Tijani Shabazz’s resume, LinkedIn, portfolio copy, and public AI narrative.
 
 It deliberately excludes recommendations about layout, component design, animations, color, navigation, or other portfolio UI changes. Future implementation work should update content only after the supporting evidence for every material claim has been reviewed.
 
@@ -369,7 +369,7 @@ The August 15, 2026 audit found that the repositioning is **substantially comple
 |---|---|---|
 | Missing maturity appears as “Not publicly labeled” | `src/components/ProjectsSection.tsx:409-423` | Use **“Maturity intentionally not publicly specified.”** This communicates deliberate evidence discipline rather than missing diligence. |
 | Copy repeatedly uses “public-safe,” “curated,” “evidence trace,” “sanitized,” and “disclosure-safe” | Examples in `src/components/HeroSection.tsx:169-171`, `src/components/ProjectsSection.tsx:76-82`, and `src/components/CaseStudyPage.tsx:126-145` | Keep one concise confidentiality note. Replace meta-process language elsewhere with direct problem, contribution, validation, and outcome wording. |
-| Hero eyebrow “Systems, not demos” is negative and marketing-like | `src/components/HeroSection.tsx:131-137` | Prefer a plain identity such as **“Nikunj Khitha · Applied AI Engineer”** or **“Applied AI systems for enterprise workflows.”** Do not create a false contrast with demos. |
+| Hero eyebrow “Systems, not demos” is negative and marketing-like | `src/components/HeroSection.tsx:131-137` | Prefer a plain identity such as **“Tijani Shabazz · Applied AI Engineer”** or **“Applied AI systems for enterprise workflows.”** Do not create a false contrast with demos. |
 | Resume language order differs from the role strategy | `Nikunj_Khitha_ATS_Resume_2026.tex:69-71` | Prefer **TypeScript, Python, Go, Java, SQL** when targeting AI product/platform roles; retain a Java-first order only for Spring AI-heavy applications. |
 | Machine-facing pronoun/style differs from the AI Twin’s neutral guidance | `public/llms-full.txt:7-9` versus `src/lib/ai-config.ts:34` | Use noun phrasing: **“Nikunj’s target roles include…”** Keep machine-facing language consistent and factual. |
 
@@ -661,7 +661,7 @@ These are content recommendations only. They do not require changes to layout, c
 
 Recommended eyebrow:
 
-> **Nikunj Khitha · Applied AI Engineer**
+> **Tijani Shabazz · Applied AI Engineer**
 
 Recommended headline:
 

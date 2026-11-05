@@ -1,12 +1,12 @@
 ---
 name: hosted-html-report
-description: Build a self-contained HTML report styled after Nikunj Khitha's portfolio (dark glassmorphism, teal accent, inline-SVG diagrams), verify it renders correctly, and host it at a shareable nikunj.codenex.dev link. Use when asked to produce a design doc, analysis, plan, dashboard or any shareable HTML artifact, or to host/re-host an HTML file and get a link. Examples: "write this up as an HTML report and host it", "make a shareable page for this analysis", "re-host the updated doc".
+description: Build a self-contained HTML report styled after Tijani Shabazz's portfolio (dark glassmorphism, teal accent, inline-SVG diagrams), verify it renders correctly, and host it at a shareable nikunj.codenex.dev link. Use when asked to produce a design doc, analysis, plan, dashboard or any shareable HTML artifact, or to host/re-host an HTML file and get a link. Examples: "write this up as an HTML report and host it", "make a shareable page for this analysis", "re-host the updated doc".
 ---
 
 # Hosted HTML report
 
 Produce a single self-contained HTML file, prove it renders correctly, and publish it
-to `https://nikunj.codenex.dev/artifacts/<slug>/<name>.html`.
+to `https://tijani-porfolio.dev/artifacts/<slug>/<name>.html`.
 
 Everything fiddly is in the bundled scripts. Read this file for the decisions; run the
 scripts for the mechanics.
@@ -47,7 +47,7 @@ handshake involved. It needs an upload token, resolved in this order:
 1. `ARTIFACT_UPLOAD_URL` / `ARTIFACT_UPLOAD_TOKEN` environment variables
 2. A JSON config file at `~/.config/hosted-html-report/config.json`:
    ```json
-   { "uploadUrl": "https://nikunj.codenex.dev/api/artifacts", "token": "..." }
+   { "uploadUrl": "https://tijani-porfolio.dev/api/artifacts", "token": "..." }
    ```
 
 The token is a shared secret configured server-side as `ARTIFACT_UPLOAD_TOKEN`
@@ -79,6 +79,7 @@ learn and no rendering-engine defects to work around; you're writing the exact
 SVG that ends up on the page.
 
 **Pattern** (see the template's example section for the full markup):
+
 - Wrap the diagram in `<div class="diagram">` for the glass-panel frame.
 - Boxes are `<rect rx="10">` with a `<text>` label centered on it:
   - Accent/highlighted node: `fill="rgba(41,214,185,.12)" stroke="rgba(41,214,185,.55)"`
@@ -152,14 +153,14 @@ Cross-link related reports from the header badges so a reader can move between t
 
 ## Troubleshooting
 
-| Symptom | Cause | Fix |
-|---|---|---|
-| `401` on upload | missing/wrong bearer token | check `ARTIFACT_UPLOAD_TOKEN` / config file |
-| `503` on upload | server env not configured | `ARTIFACT_UPLOAD_TOKEN` or `BLOB_READ_WRITE_TOKEN` unset on the server |
-| `429` "Daily limit reached" | 10 new-reports/day or 30 updates/day cap hit | wait until UTC midnight |
-| `404` on the live URL | slug/filename typo, or never uploaded | check `host-file.sh`'s output for the exact path used |
-| Diagram source shows as plain text on the page | wrote it inside a `<pre>` instead of a real `<svg>` | this skill uses inline SVG, not a text-block DSL — write actual `<svg>` markup |
-| `verify-report.sh` FAILs "svg without a viewBox" | missing `viewBox` attribute | add one sized to the diagram's content |
-| Header text dark on the gradient | generic rule beats inheritance | set colour on the element itself |
-| Live copy differs after upload | brief propagation lag, or rejected write | wait a few seconds and retry; check the response body for an `error` field |
-| `verify-report.sh` skips browser checks | Chrome not at the default path | set `CHROME_PATH` |
+| Symptom                                          | Cause                                               | Fix                                                                            |
+| ------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `401` on upload                                  | missing/wrong bearer token                          | check `ARTIFACT_UPLOAD_TOKEN` / config file                                    |
+| `503` on upload                                  | server env not configured                           | `ARTIFACT_UPLOAD_TOKEN` or `BLOB_READ_WRITE_TOKEN` unset on the server         |
+| `429` "Daily limit reached"                      | 10 new-reports/day or 30 updates/day cap hit        | wait until UTC midnight                                                        |
+| `404` on the live URL                            | slug/filename typo, or never uploaded               | check `host-file.sh`'s output for the exact path used                          |
+| Diagram source shows as plain text on the page   | wrote it inside a `<pre>` instead of a real `<svg>` | this skill uses inline SVG, not a text-block DSL — write actual `<svg>` markup |
+| `verify-report.sh` FAILs "svg without a viewBox" | missing `viewBox` attribute                         | add one sized to the diagram's content                                         |
+| Header text dark on the gradient                 | generic rule beats inheritance                      | set colour on the element itself                                               |
+| Live copy differs after upload                   | brief propagation lag, or rejected write            | wait a few seconds and retry; check the response body for an `error` field     |
+| `verify-report.sh` skips browser checks          | Chrome not at the default path                      | set `CHROME_PATH`                                                              |
