@@ -15,33 +15,28 @@ export interface CaseStudySection {
   points?: string[];
 }
 
-/**
- * Index grouping. Capability rather than employer, so a reader matching against a
- * role sees the shape of the work first. A study can plausibly fit two themes —
- * pick the one it would be strongest evidence for.
- */
 export type CaseStudyTheme = "agents" | "retrieval" | "platform" | "products";
 
 export const CASE_STUDY_THEMES: { id: CaseStudyTheme; label: string; blurb: string }[] = [
   {
     id: "agents",
-    label: "Agent systems",
-    blurb: "Agents with real tools, real context, and the evaluation that keeps them honest.",
+    label: "AI & intelligent systems",
+    blurb: "Agent integrations, enterprise AI, AI-assisted analysis, and data workflows that connect models to real business operations.",
   },
   {
     id: "retrieval",
-    label: "Retrieval & context",
-    blurb: "Grounding answers in knowledge that is scoped, current, and measurable.",
+    label: "Healthcare & data integration",
+    blurb: "Clinical information, accounting systems, high-volume data processing, and workflows that depend on reliable synchronization.",
   },
   {
     id: "platform",
-    label: "Platform & reliability",
-    blurb: "The infrastructure agents run on, and the failures that had to be root-caused.",
+    label: "Web, logistics & business platforms",
+    blurb: "Operational software for real estate, fulfillment, shipping, accounting, engineering, and industrial business users.",
   },
   {
     id: "products",
-    label: "AI products",
-    blurb: "End-to-end products where the AI is the experience, not a feature bolted on.",
+    label: "Mobile & customer products",
+    blurb: "Cross-platform mobile experiences and marketplace workflows built around real user tasks and connected services.",
   },
 ];
 
@@ -49,14 +44,10 @@ export interface CaseStudy {
   slug: string;
   kind: "system" | "product";
   theme: CaseStudyTheme;
-  /**
-   * Shown in the homepage tier-1 row, which is a fixed three-column grid.
-   * Keep exactly three studies featured; the rest are reached via `/work`.
-   */
   featured?: boolean;
   title: string;
   employer?: string;
-  period: string;
+  period?: string;
   oneLiner: string;
   summary: string;
   problem: string;
@@ -69,1239 +60,913 @@ export interface CaseStudy {
   stack: string[];
   ownership: string;
   tags: string[];
-  /** Extra phrases the AI Twin matches on, beyond title/slug/tags. */
   aliases: string[];
 }
 
-/**
- * Literal union of every case-study slug, for compile-time-checked references
- * from other data (e.g. an experience bullet naming which study proves it).
- *
- * `slug` on `CaseStudy` stays `string` — turning it into a matching literal
- * union would require `as const` on all 13 entries, which is more invasive
- * than this single line. `case-studies.test.ts` asserts this list matches
- * `caseStudies.map(s => s.slug)` exactly, so the two cannot silently drift:
- * a renamed slug fails a test rather than becoming a dead link discovered by
- * a visitor.
- */
 export type CaseStudySlug =
-  | "llm-evaluation-platform"
-  | "governed-mcp-registry"
-  | "code-intelligence-gateway"
-  | "knowledge-graph-rag"
-  | "documentation-automation"
-  | "sentinel-test-agent"
-  | "bi-platform"
-  | "quill"
-  | "codenex-ai-proxy"
-  | "codenex"
-  | "fantasy-gpt"
-  | "aiko"
-  | "serenify";
+  | "anchord-ai-entity-resolution"
+  | "correlate-health-clinical-trial-matching"
+  | "freight-quickbooks-integration"
+  | "azure-openai-data-processing"
+  | "crushbank-enterprise-ai"
+  | "ourblackguide-react-native"
+  | "parente-ai-mobile-health"
+  | "deed-driver-delivery"
+  | "arvrobot-real-estate-underwriting"
+  | "gemsharbor-marketplace"
+  | "shiphype-fulfillment"
+  | "dealercortex-ai"
+  | "arub-shipping-integrations"
+  | "suppliersift-ap-automation"
+  | "calcs-engineering-calculations"
+  | "charter-steel-web";
 
 export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
-  "llm-evaluation-platform",
-  "governed-mcp-registry",
-  "code-intelligence-gateway",
-  "knowledge-graph-rag",
-  "documentation-automation",
-  "sentinel-test-agent",
-  "bi-platform",
-  "quill",
-  "codenex-ai-proxy",
-  "codenex",
-  "fantasy-gpt",
-  "aiko",
-  "serenify",
+  "anchord-ai-entity-resolution",
+  "correlate-health-clinical-trial-matching",
+  "freight-quickbooks-integration",
+  "azure-openai-data-processing",
+  "crushbank-enterprise-ai",
+  "ourblackguide-react-native",
+  "parente-ai-mobile-health",
+  "deed-driver-delivery",
+  "arvrobot-real-estate-underwriting",
+  "gemsharbor-marketplace",
+  "shiphype-fulfillment",
+  "dealercortex-ai",
+  "arub-shipping-integrations",
+  "suppliersift-ap-automation",
+  "calcs-engineering-calculations",
+  "charter-steel-web",
 ];
 
+/**
+ * Each entry separates product context from Tijani's documented contribution.
+ * Quantified results are included only where the supplied resume or notes state them.
+ */
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "llm-evaluation-platform",
+    slug: "anchord-ai-entity-resolution",
     kind: "system",
     theme: "agents",
     featured: true,
-    title: "LLM Evaluation Platform",
-    employer: "ArmorCode",
-    period: "2026",
+    title: "Anchord AI — Entity Resolution & Agent Integration",
     oneLiner:
-      "An OpenTelemetry and Langfuse platform that gates every prompt, model, agent, and tool change on measured accuracy, latency, and cost.",
+      "Integrated AI-agent workflows with 11 MCP tools and implemented a reviewable entity-resolution path from candidate matching to safe downstream writes.",
     summary:
-      "Nine AI surfaces were shipping on assertion. I built the evaluation platform that made all of them measurable before release: golden datasets harvested from work reviewers were already doing, a scorer ladder that spends nothing until it has to, and judge models that must prove themselves against human labels before they are allowed to gate anything.",
+      "Anchord AI connects agents to business data and helps determine whether records from different sources describe the same company or contact. Tijani's documented work centered on the tool and integration layer and the resolution workflow: MCP tools, REST APIs, webhooks, multi-signal scoring, evidence-backed review, canonical IDs, and resolve-before-write behavior.",
     problem:
-      "A senior engineer asked whether we had an evaluation framework to justify swapping a production model. We did not. Prompts, models, agents, skills, MCP tools, and retrieval were all changing on reasoning rather than measurement — which meant nobody could say whether a change had improved anything, and a vendor retiring a model turned into a fire drill instead of a scored diff. Rather than defend the gap I filed it as the ticket, then built well past its original scope.",
+      "Business records are often duplicated, incomplete, or represented differently across systems. An agent needs more than a fuzzy name match: it needs a repeatable way to score candidate records, expose the evidence behind uncertain matches, and avoid writing against an entity before its identity is resolved.",
     constraints: [
-      "No new vendors. LiteLLM, Langfuse, LightRAG, and n8n were already self-hosted; the design had to wire together what existed plus one small container.",
-      "Two very different audiences: workflow authors who need a UI, and statistical rigour that only a code harness can provide.",
-      "Community-tier n8n, so custom span attributes were unavailable and trace tagging had to route through gateway request metadata instead.",
-      "Judges are models too. Any LLM-as-judge score had to be proven trustworthy before it could block a release.",
+      "The workflow uses multiple signals and rules rather than relying on a single matching field.",
+      "Ambiguous candidates require evidence-backed review instead of being silently treated as confirmed matches.",
+      "Downstream writes must follow entity resolution, not precede it.",
     ],
-    diagram: "eval",
-    diagramCaption:
-      "Producers emit OpenTelemetry gen_ai spans into one collector, which fans out to Langfuse for traces, datasets, and scores. Only the collector and the wire format are hard to change later; every other component stays swappable.",
-    decisions: [
-      {
-        choice: "Instrument at the LiteLLM gateway, not in each workflow",
-        why:
-          "Because no workflow or agent has direct model access, a single callback line on the proxy instruments every model call in the organization at once — n8n workflows, retrieval extraction and query calls, agent tool use. The chokepoint that existed for governance turned out to be the highest-leverage line of config in the whole design.",
-        rejected: [
-          "Per-workflow instrumentation — N places to change, N places to drift",
-          "Application-level SDK calls in each producer — couples every service to one backend",
-        ],
-      },
-      {
-        choice: "OpenTelemetry collector as the single ingest point",
-        why:
-          "PII redaction, sampling, and batching happen once, in one place, and backends can be swapped or added without touching a single producer. Pointing callbacks straight at the tracing backend works on day one, but bakes in a vendor at the wire.",
-        rejected: ["Direct-to-backend OTLP as the permanent design — fine as a shortcut, a lock-in as an architecture"],
-      },
-      {
-        choice: "Langfuse for traces, datasets, prompt registry, and scores",
-        why:
-          "It gave versioned prompts, datasets of record, annotation queues, and observation-level judges in one surface, on a stack already hosted internally. Evaluated against the alternatives on whether results from a separate code harness could be written back into the same place engineers already look.",
-        rejected: [
-          "promptfoo — strong for prompt sweeps, weaker as a system of record",
-          "DeepEval — good metric library, not a trace and dataset backend",
-          "n8n native Evaluations alone — kept, but as a second tier, not the whole answer",
-        ],
-      },
-      {
-        choice: "Two evaluation tiers instead of one",
-        why:
-          "Workflow authors get n8n's built-in Evaluations with Data Table datasets so they can iterate without writing Python. Everything statistical — repeated runs with variance, confusion matrices, sweeps, CI gating — lives in a pytest harness in git. One tier would have either blocked non-engineers or given up rigour.",
-      },
-      {
-        choice: "Error analysis before metric selection",
-        why:
-          "The rule above all others: no metric before reading 50 real traces. Doing this first repeatedly showed the top failure was something a free deterministic check catches — malformed CSV, empty tool response, wrong repository — and no judge was needed at all. Picking metrics from a list first is the most expensive way to start.",
-      },
-    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
     sections: [
       {
-        heading: "The scorer ladder, cheapest first",
+        heading: "Tijani's role",
         body:
-          "Every surface is scored by the least expensive method that can actually catch its failures, and only escalates when that is genuinely insufficient.",
+          "Tijani integrated AI-agent workflows with 11 MCP tools, REST APIs, and webhooks. He implemented the multi-signal, rules-based scoring path, the evidence-backed review of ambiguous matches, canonical entity identifiers, and resolve-before-write flows.",
         points: [
-          "Deterministic code checks — schema validity, label in the allowed set, file paths that exist, symbols that resolve, completeness as a set comparison. Free, and always right.",
-          "Statistical metrics — scikit-learn per-class precision, recall, F1, and a confusion matrix. Overall accuracy hides the class that matters, so the minority class is always reported separately with a pre-committed recall floor.",
-          "Ragas — faithfulness and answer relevancy for retrieval. Both are reference-free, so they double as online monitors on live traffic.",
-          "LLM-as-judge — last resort, for prose where no single right string exists.",
+          "Connected the agent workflow to business capabilities through MCP tools and service APIs.",
+          "Implemented scoring that combines more than one signal and applies explicit rules to candidate matches.",
+          "Made uncertain matches reviewable with supporting evidence and stable canonical IDs.",
+          "Kept entity resolution ahead of downstream writes so the workflow does not mutate a record on an unresolved assumption.",
         ],
       },
       {
-        heading: "Validating the judges",
+        heading: "Resolution and write sequence",
         body:
-          "A judge is a model making predictions, and it can be wrong. Until a judge agrees with a held-out, human-labeled set at Cohen's kappa of at least 0.7, its scores are not allowed to gate anything. Kappa is rechecked quarterly. This is the step that separates an evaluation system from a second unmeasured model.",
+          "The workflow separates candidate discovery from the decision to treat two records as the same entity. A candidate can be scored, reviewed with its supporting evidence, and mapped to a canonical identifier. Only after resolution does the connected workflow proceed to a write operation.",
+        points: [
+          "Multi-signal and rules-based candidate scoring.",
+          "Evidence-backed review for ambiguous matches.",
+          "Canonical entity IDs for consistent downstream references.",
+          "Resolve-before-write sequencing for connected agent actions.",
+        ],
       },
       {
-        heading: "Golden datasets that cost nothing to build",
+        heading: "Integration surface",
         body:
-          "Ground truth arrives free from work people were already doing. Every time a reviewer corrects a generated test-case CSV or a human overrides a suggested severity, that is one labeled example. The system's job was to capture those corrections rather than commission a labeling effort.",
-      },
-      {
-        heading: "Offline gates, online drift",
-        body:
-          "Offline evaluation runs before release on a fixed dataset as a pass-or-fail gate in Jenkins CI. Online evaluation scores 5–10% of live production traffic continuously, because offline sets never cover everything and quality drifts under a prompt that never changed. Both are needed: one gates changes, the other catches the world moving.",
-      },
-      {
-        heading: "The layer nobody else measures",
-        body:
-          "Tool descriptions and output formats shape the behavior of every agent that connects to them, so the MCP layer gets its own evaluation. A fixed set of real user intents measures whether an agent picks the right tool on the first call. Running the same intents with 3, 7, 10, and 14 servers enabled shows where selection accuracy bends — which is where registry policy should cap defaults. The same intents across JSON, Markdown, XML, and prose answer 'which output format suits our models' with a number instead of a preference.",
+          "The project work connected agent behavior to external business systems using MCP tools, REST APIs, and webhooks. The supplied materials do not identify a specific programming language or database for this engagement, so this case study keeps the technology description to the integration mechanisms that were documented.",
       },
     ],
     results: [
-      { metric: "9", label: "AI surfaces scored against golden datasets" },
-      { metric: "≥ 0.7", label: "Cohen's kappa required before a judge may gate a release" },
-      { metric: "4", label: "scorer tiers, escalating only when the cheaper one cannot catch the failure" },
-      { metric: "5–10%", label: "of live traffic scored continuously for drift" },
+      { metric: "11", label: "MCP tools integrated into agent workflows" },
+      { metric: "Multi-signal", label: "Rules-based candidate scoring" },
+      { metric: "Resolve first", label: "Canonical identity before downstream writes" },
     ],
-    stack: [
-      "OpenTelemetry",
-      "Langfuse",
-      "LiteLLM",
-      "Ragas",
-      "scikit-learn",
-      "pytest",
-      "Python",
-      "Jenkins",
-      "n8n",
-      "AWS Bedrock",
-      "Grafana",
-      "Prometheus",
-    ],
+    stack: ["AI Agents", "MCP", "REST APIs", "Webhooks", "Entity Resolution", "Rules-Based Scoring"],
     ownership:
-      "The evaluation framework, metric catalog, scorer harness, and CI gates are mine. The self-hosted Langfuse deployment underneath it is owned by platform DevOps — a deliberate split between infrastructure ownership and application ownership.",
-    tags: ["LLM Evaluation", "Observability", "CI Gates"],
-    aliases: ["evaluation", "eval", "evals", "measure", "measurement", "langfuse", "ragas", "judge", "kappa", "golden dataset", "ci gate", "opentelemetry", "observability", "drift"],
+      "The supplied notes document Tijani's contribution to the 11-tool integration and entity-resolution workflow. They do not claim sole ownership of the broader Anchord AI product.",
+    tags: ["AI Agents", "MCP", "Entity Resolution", "Integrations"],
+    aliases: ["anchord", "anchord ai", "entity resolution", "canonical entity", "mcp tools", "match scoring", "ambiguous match", "webhooks"],
   },
   {
-    slug: "governed-mcp-registry",
+    slug: "correlate-health-clinical-trial-matching",
+    kind: "system",
+    theme: "retrieval",
+    featured: true,
+    title: "Correlate Health / LooPT — Clinical Trial Matching",
+    oneLiner:
+      "Worked on clinical-trial eligibility workflows comparing structured EHR data and clinical notes with study criteria, with validation and human review.",
+    summary:
+      "Correlate Health's LooPT platform evaluates whether patient information aligns with clinical-trial eligibility criteria. Tijani's documented contribution includes healthcare workflow development, data validation, complex eligibility rules, API integration, auditability, and human review across structured EHR fields and clinical notes.",
+    problem:
+      "Trial matching needs to compare patient information with detailed study criteria. Relevant details may be represented in structured EHR fields or narrative clinical notes, and the workflow must preserve enough context for validation and follow-up rather than presenting an unexplained match result.",
+    constraints: [
+      "The matching workflow considers both structured EHR data and clinical notes.",
+      "Eligibility logic includes complex rules and requires data validation.",
+      "The process needs an auditable path and a human-review step.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani worked on the application workflows that bring clinical information into eligibility evaluation. His documented scope includes validation of incoming data, implementation of complex eligibility rules, API integration, auditability, and the human-review process.",
+        points: [
+          "Worked across structured EHR data and clinical-note workflows.",
+          "Implemented and supported rule-driven eligibility evaluation.",
+          "Connected application workflows through APIs and data validation.",
+          "Supported auditability and human review for matching decisions.",
+        ],
+      },
+      {
+        heading: "Clinical information and eligibility",
+        body:
+          "The product context combines structured patient data with narrative clinical information and compares that information with study-specific eligibility criteria. Keeping validation and review in the process is important because the output is used to coordinate follow-up, not merely to produce a search result.",
+      },
+      {
+        heading: "Workflow quality",
+        body:
+          "The supplied material identifies data validation, complex rules, API integration, auditability, and human review as the areas of work. It does not provide a numerical matching-accuracy result or a specific technology stack beyond the platform context, so neither is inferred here.",
+      },
+    ],
+    results: [
+      { metric: "EHR + notes", label: "Structured and narrative clinical information" },
+      { metric: "Rule-driven", label: "Eligibility evaluation" },
+      { metric: "Auditable", label: "Human-review workflow" },
+    ],
+    stack: ["Healthcare Workflows", "EHR Data", "Clinical Notes", "Eligibility Rules", "API Integration", "Auditability"],
+    ownership:
+      "The resume describes Tijani as having worked on these workflows. This page reflects the listed engineering areas and does not imply sole ownership of the LooPT platform or clinical decision-making.",
+    tags: ["HealthTech", "Clinical Trial Matching", "Data Validation", "APIs"],
+    aliases: ["correlate health", "loopt", "clinical trial", "trial matching", "eligibility criteria", "ehr", "clinical notes", "patient matching"],
+  },
+  {
+    slug: "freight-quickbooks-integration",
+    kind: "system",
+    theme: "retrieval",
+    featured: true,
+    title: "Freight SaaS — QuickBooks Online Integration",
+    oneLiner:
+      "Built OAuth, webhook, idempotent synchronization, and reconciliation workflows for freight operations supporting 65 brokerages and 90,000 documents per month.",
+    summary:
+      "This project connected freight operating workflows with QuickBooks Online. Tijani built the integration paths around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation, supporting an operation handling approximately 65 brokerages, 52,000 loads, and 90,000 documents each month.",
+    problem:
+      "Freight operations create a large volume of business records that must stay aligned with accounting data. The integration has to work across authorization lifecycles and asynchronous events while avoiding duplicate updates and providing a way to reconcile records when systems drift or an event is retried.",
+    constraints: [
+      "OAuth credentials and access tokens need to be refreshed and managed over time.",
+      "Webhook delivery can be repeated, so synchronization must be idempotent.",
+      "High operational volume makes reconciliation and recovery important parts of the integration.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani built the integration workflows connecting the freight SaaS operation to QuickBooks Online. His documented responsibilities include OAuth handling, token refresh, webhook processing, idempotent synchronization, and reconciliation.",
+        points: [
+          "Implemented OAuth authorization and token refresh workflows.",
+          "Connected webhook events to the synchronization process.",
+          "Used idempotent handling to protect against repeated event delivery.",
+          "Built reconciliation workflows to help keep connected operational and accounting records aligned.",
+        ],
+      },
+      {
+        heading: "Operational scale",
+        body:
+          "The connected operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month. Those figures describe the scale of the operation supported by the integration; they are not presented as a count of records personally processed by one developer.",
+        points: [
+          "Approximately 65 brokerages.",
+          "Approximately 52,000 loads per month.",
+          "Approximately 90,000 documents per month.",
+        ],
+      },
+      {
+        heading: "Reliability across systems",
+        body:
+          "The engineering work focused on the points where external integrations commonly become fragile: credentials expire, event notifications repeat, and records need to be reconciled after partial failures. Idempotency and explicit reconciliation were part of the documented workflow rather than optional cleanup tasks.",
+      },
+    ],
+    results: [
+      { metric: "65", label: "Brokerages supported" },
+      { metric: "52,000", label: "Loads per month" },
+      { metric: "90,000", label: "Documents per month" },
+    ],
+    stack: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
+    ownership:
+      "Tijani's documented role was building the QuickBooks integration workflows. The scale figures describe the operation supported; the supplied resume does not state that he owned the entire freight SaaS product.",
+    tags: ["QuickBooks", "Accounting Integration", "Freight", "Reliability"],
+    aliases: ["freight saas", "quickbooks", "qbo", "oauth", "token refresh", "webhooks", "65 brokerages", "52000 loads", "90000 documents", "reconciliation"],
+  },
+  {
+    slug: "azure-openai-data-processing",
     kind: "system",
     theme: "agents",
-    featured: true,
-    title: "Governed MCP Tool Registry",
-    employer: "ArmorCode",
-    period: "2025 – 2026",
+    title: ".NET 8 & Azure OpenAI Data Processing",
     oneLiner:
-      "Ten-plus production MCP servers behind a shared enterprise registry, with tool-level authorization under multi-tenant AppSec constraints.",
+      "Developed ASP.NET Core worker and data-processing workflows using EF Core, SQL Server, and Azure OpenAI across a 1.6-million-record historical dataset.",
     summary:
-      "Giving agents real tools inside a multi-tenant security platform means a single authorization slip leaks another customer's vulnerability data. I delivered ten-plus production servers into the shared registry, solved the distribution problem for non-technical teams, and root-caused the outage that took the codebase service down on two of three client surfaces.",
+      "This enterprise data-processing project combines ASP.NET Core worker services, Entity Framework Core, SQL Server, and Azure OpenAI. Tijani developed the processing workflows, which handled approximately 2,400 records per day against a historical dataset of about 1.6 million records.",
     problem:
-      "Agents are only as useful as the tools they can reach, and in an AppSec platform the tools reach customer vulnerability data. Every server needed authentication, scoped permissions, explicit denial behavior, and audit attribution before it could be exposed — and then it needed to actually reach the people who needed it, including teams with no terminal and no device management to push configuration for them.",
+      "The project needed a repeatable way to process records at a daily cadence while working against a large historical dataset and incorporating Azure OpenAI into the processing workflow. The supplied material identifies the worker-service, data-processing, persistence, and AI integration elements.",
     constraints: [
-      "Multi-tenant AppSec data. A single authorization slip exposes one customer's findings to another.",
-      "Claude Enterprise connectors relay through a vendor cloud on a fixed egress range, so they structurally cannot reach VPN-hosted internal endpoints.",
-      "The users who needed access most — Customer Success, Product, Documentation — had no terminal, no npx, and no MDM to push configuration on their behalf.",
-      "Tool descriptions are part of the interface. Every agent that connects inherits whatever the description implies.",
+      "The workflow operates against a historical dataset of approximately 1.6 million records.",
+      "The documented processing volume is approximately 2,400 records per day.",
+      "Background processing, relational persistence, and the Azure OpenAI service must work together as one application workflow.",
     ],
-    diagram: "mcp",
-    diagramCaption:
-      "Requests carry identity from the client through the gateway, where RBAC resolves a permission tier before any tool executes. Denials are explicit and attributed rather than silent.",
-    decisions: [
-      {
-        choice: "Desktop extension bundles for distribution",
-        why:
-          "Each bundle wraps a remote MCP client pointed at the internal HTTPS endpoint, with auth tokens marked sensitive in user configuration. The install path became download, double-click, drag to Applications — no terminal at any step. That was the only option that actually reached a non-technical user without weakening the network boundary.",
-        rejected: [
-          "Public endpoint with an IP allowlist — exposes internal surface to reach an internal user",
-          "Tunnel or reverse proxy — ongoing ops burden and a fragile dependency in the request path",
-          "CLI-based client — correct for engineers, unusable for the teams who needed it",
-          "Vendor-managed MCP tunnels — wrong product tier for the access pattern",
-        ],
-      },
-      {
-        choice: "Permission tiers at the tool level, not the server level",
-        why:
-          "A single server often exposes both read and write paths over the same data. Gating at the server would have meant either denying useful reads or permitting unreviewed writes, so authorization resolves per tool, with denial explicit and attributed rather than a silent empty result.",
-        rejected: ["Server-level allow or deny — too coarse for servers that mix read and write tools"],
-      },
-      {
-        choice: "Continuous integration for the bundle artifacts",
-        why:
-          "Extension bundles and organization-level agent skills had no structured home and no build pipeline — they were artifacts being produced by hand. Moving them into a repository with automated builds on push and tag closed a real gap in how the tool layer shipped.",
-      },
-      {
-        choice: "One registry as the source of truth",
-        why:
-          "Fourteen servers across multiple teams drift in naming and capability without a single owner reconciling them. Maintaining the canonical list — and correcting drift against it — is what makes registry policy enforceable rather than advisory.",
-      },
-    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
     sections: [
       {
-        heading: "When it broke",
+        heading: "Tijani's role",
         body:
-          "The codebase-search service began returning empty answers on two of three client surfaces while the third kept working — the signature of a bug that looks surface-specific and is not. More than a hundred logged calls, none of them successful with content: empty responses, timeouts at just over sixty seconds, and server-unavailable errors. Reading the SDK source and the host runtime turned up two independent root causes.",
+          "Tijani developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI. His work covered the application processing path and its connection to persistence and AI service capabilities.",
         points: [
-          "The tool advertised an output schema it could never populate. The handler's second return parameter was a named empty struct, and the SDK derives an output schema from that type, skipping it only when the type is exactly `any`. An empty struct is not `any` — so the tool advertised a schema satisfiable only by an empty object, and returned exactly that alongside the real answer. Clients that support output schemas prefer the structured field, so they read the empty object and discarded every answer. The third surface predated that preference, read the content field, and was unaffected.",
-          "The query deadline was measured against the wrong client budget. Two host tiers existed: a main process at 300 seconds and agent runtimes at roughly 60. The deadline was set to 240 seconds — correct for the first tier, unreachable in the second. The failing surfaces were cancelled before it fired, so the gateway's 'still running, call again' recovery path never reached them. The job kept running, the cache filled, and nothing ever collected the result.",
-          "Shipped with an isolated two-tool reproduction differing only in the return type, and a negative-control test that fails if the typed return is reinstated. Verified build, vet, and tests across nine packages. Fourteen connectors were flagged carrying the same timeout misconfiguration before anyone hit it.",
+          "Developed .NET 8 / ASP.NET Core worker-service workflows.",
+          "Used Entity Framework Core and SQL Server for data access and persistence.",
+          "Integrated Azure OpenAI into the record-processing flow.",
         ],
       },
       {
-        heading: "Ruling things out",
+        heading: "Processing volume",
         body:
-          "Two otherwise-obvious fixes were eliminated by reading the host and SDK rather than guessing: the host never passes the flag that resets a timeout on progress, so heartbeats could not extend the deadline; and the SDK discards late results silently on cancellation, so letting the job finish and return would never have delivered anything. Knowing what will not work is most of the value of an RCA.",
+          "The workflow processed about 2,400 records per day against a historical dataset of roughly 1.6 million records. These are the approximate volumes stated in the resume, not a claim about throughput beyond the documented project scope.",
       },
       {
-        heading: "An earlier failure class",
+        heading: "Backend and data workflow",
         body:
-          "A separate investigation traced four-minute silent hangs to a server-side idle timeout closing sessions while the client held a dead reference, burning its entire budget before failing — which is why retrying often appeared to work. Both incidents pointed at the same lesson: in a tool protocol, timeout tiers and schema contracts are the interface, and mismatches there present as unrelated symptoms.",
+          "The documented stack places the processing logic in .NET worker services, uses EF Core and SQL Server for the data layer, and integrates Azure OpenAI for AI-assisted processing. The supplied resume does not specify additional infrastructure or a measured accuracy result, so those details are intentionally not inferred.",
       },
     ],
     results: [
-      { metric: "10+", label: "production MCP servers delivered into the shared registry" },
-      { metric: "20 / 20", label: "authorization checks passing across three permission tiers" },
-      { metric: "100+ → 0", label: "failing queries traced to two independent root causes and fixed" },
-      { metric: "14", label: "connectors flagged for the same latent misconfiguration" },
+      { metric: "2,400", label: "Records processed per day" },
+      { metric: "1.6M", label: "Historical records in the dataset" },
+      { metric: ".NET 8", label: "Worker-service and processing stack" },
     ],
-    stack: [
-      "Model Context Protocol",
-      "Go",
-      "OAuth2",
-      "RBAC",
-      "Python",
-      "n8n",
-      "LiteLLM",
-      "AWS",
-      "Docker",
-      "GitHub Actions",
-    ],
+    stack: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
     ownership:
-      "Ten-plus of the registry's production servers are mine, along with the canonical registry, the distribution mechanism, and the reliability work. The remaining servers were built by teammates against the same registry policy. Which models are approved is a senior engineering decision; I own the configuration and enforcement.",
-    tags: ["MCP", "Tool Authorization", "Reliability"],
-    aliases: ["mcp", "model context protocol", "tool", "tools", "tool use", "authorization", "permission", "rbac", "oauth", "registry", "rca", "root cause", "debug", "outage", "timeout", "reliability", "governance"],
+      "The resume states that Tijani developed the worker-service and data-processing workflows. It does not claim sole ownership of the broader data platform.",
+    tags: [".NET", "Azure OpenAI", "Data Processing", "Enterprise"],
+    aliases: ["dotnet 8", ".net 8", "azure openai", "ef core", "entity framework", "sql server", "worker service", "2400 records", "1.6 million records"],
   },
   {
-    slug: "code-intelligence-gateway",
+    slug: "crushbank-enterprise-ai",
+    kind: "system",
+    theme: "agents",
+    title: "CrushBank Orchestrate IT — Enterprise AI",
+    oneLiner:
+      "Contributed to IBM watsonx integrations for connected enterprise knowledge, grounded answers, service-ticket classification, and operational automation.",
+    summary:
+      "CrushBank Orchestrate IT is an enterprise AI platform built around IBM watsonx. Tijani contributed to integrations connecting enterprise information sources, grounded search and answers, service-ticket classification, and operational workflow automation.",
+    problem:
+      "Enterprise IT workflows rely on information spread across business systems and service-management records. AI capabilities are more useful when they can retrieve relevant connected information, provide grounded answers, classify incoming tickets, and participate in operational processes.",
+    constraints: [
+      "Information sources need to be connected before the platform can ground answers in enterprise context.",
+      "AI output is used in service-management and operational workflows, not only in a standalone chat experience.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed to enterprise AI integrations involving IBM watsonx, connected information sources, grounded search and answer experiences, ticket classification, and operational automation.",
+        points: [
+          "Worked on connections to enterprise information sources.",
+          "Contributed to grounded search and answer workflows.",
+          "Supported service-ticket classification and operational automation paths.",
+        ],
+      },
+      {
+        heading: "From knowledge to workflow",
+        body:
+          "The product context links enterprise knowledge access with service-management actions. Retrieval makes relevant information available to the AI experience, while ticket classification and workflow automation connect that capability to the operational work IT teams already perform.",
+      },
+      {
+        heading: "Ownership boundary",
+        body:
+          "The supplied resume describes this as a contribution to enterprise AI integrations. It does not specify an individually owned subsystem, deployment model, or quantitative outcome, so the project is presented as collaborative product engineering.",
+      },
+    ],
+    results: [
+      { metric: "IBM watsonx", label: "Enterprise AI ecosystem" },
+      { metric: "Grounded", label: "Search and answer experiences" },
+      { metric: "Operational", label: "Ticket and workflow automation" },
+    ],
+    stack: ["IBM watsonx", "Enterprise AI", "Grounded Search", "Ticket Classification", "Workflow Automation"],
+    ownership:
+      "Tijani contributed to the named enterprise AI integration areas. The wider CrushBank Orchestrate IT product is not presented as his sole work.",
+    tags: ["Enterprise AI", "IBM watsonx", "Knowledge Search", "IT Automation"],
+    aliases: ["crushbank", "orchestrate it", "watsonx", "ticket classification", "enterprise search", "grounded answers", "it automation"],
+  },
+  {
+    slug: "ourblackguide-react-native",
+    kind: "product",
+    theme: "products",
+    title: "OurBlackGuide — React Native Marketplace",
+    oneLiner:
+      "Contributed to cross-platform React Native architecture, directory discovery, secure sessions, business profiles, media uploads, and production releases.",
+    summary:
+      "OurBlackGuide is a community discovery application connecting users with local businesses, professional services, entrepreneurs, events, career resources, and marketplace listings. Tijani contributed to the React Native architecture and reusable iOS/Android components, then integrated the account, discovery, profile, and listing workflows.",
+    problem:
+      "A community directory needs more than a list of business names. Users need ways to find relevant services and events, narrow results by category and location, review business profiles, and interact with listings from a mobile device.",
+    constraints: [
+      "The mobile application supports both iOS and Android through a shared React Native codebase.",
+      "Directory search and filtering must connect with live API data and account workflows.",
+      "Business profiles and listings include image-upload and deep-link experiences.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed to the React Native application architecture and reusable cross-platform components using TypeScript, React Navigation, and TanStack Query. He integrated authentication and APIs, built directory-search and filter experiences, and worked on business profiles, image uploads, deep links, and production releases.",
+        points: [
+          "Contributed to React Native architecture and reusable iOS/Android components.",
+          "Integrated authentication and backend APIs.",
+          "Implemented directory search, category filters, location filters, and pagination.",
+          "Connected business profiles, image uploads, and listing workflows.",
+          "Worked on performance, deep linking, and production releases.",
+        ],
+      },
+      {
+        heading: "Discovery experience",
+        body:
+          "The product brings local discovery and community resources into one mobile experience. The documented flows include searching the directory, narrowing results with category and location filters, paging through results, and opening detailed business profiles.",
+      },
+      {
+        heading: "Mobile application foundations",
+        body:
+          "The documented stack—React Native, TypeScript, React Navigation, and TanStack Query—supports reusable screen components, navigation, and API-backed state. Authentication, media uploads, and deep links extend the experience beyond a simple directory browser.",
+      },
+    ],
+    results: [
+      { metric: "iOS + Android", label: "Shared React Native application" },
+      { metric: "Search + filters", label: "Directory discovery workflows" },
+      { metric: "Production", label: "Release support and deep linking" },
+    ],
+    stack: ["React Native", "TypeScript", "React Navigation", "TanStack Query", "Authentication", "REST APIs"],
+    ownership:
+      "The source describes Tijani as a contributor to the app architecture and listed mobile workflows. It does not claim sole authorship of the full OurBlackGuide product.",
+    tags: ["React Native", "Mobile", "Marketplace", "Directory Search"],
+    aliases: ["ourblackguide", "our black guide", "react native", "local directory", "community marketplace", "business profiles", "deep links", "tanstack query"],
+  },
+  {
+    slug: "parente-ai-mobile-health",
+    kind: "product",
+    theme: "products",
+    title: "Parente AI — Cross-Platform Health Application",
+    oneLiner:
+      "Built Flutter onboarding, assessment, and patient-messaging workflows, integrated APIs, and resolved mobile state and authentication issues across iOS and Android.",
+    summary:
+      "Parente AI is a pediatric behavioral-health application combining parent-led therapy, child psychology, clinician communication, and AI-assisted coaching. Tijani built Flutter mobile workflows for family onboarding, assessments, and patient messaging, integrated APIs, and addressed reliability issues that affected real user flows.",
+    problem:
+      "A family-facing health application must preserve the correct profile and assessment state while moving between onboarding, assessments, and patient messaging. API inconsistencies and expired sessions can interrupt that journey and leave forms incomplete or state stale.",
+    constraints: [
+      "Authentication tokens can expire during an application session.",
+      "API responses may be inconsistent and need to be handled safely in the client.",
+      "Switching profiles can leave stale state if dependent screens are not refreshed correctly.",
+      "Assessment forms need to handle incomplete input and support release requirements on both mobile platforms.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani built Flutter workflows for family onboarding, assessments, and patient messaging. He integrated the application APIs and addressed token expiration, inconsistent responses, stale state after profile switching, incomplete forms, and iOS/Android release needs.",
+        points: [
+          "Built family onboarding flows in Flutter.",
+          "Implemented reusable assessment screens and patient-facing messaging.",
+          "Integrated backend APIs and handled inconsistent responses.",
+          "Resolved state issues after profile switching and gaps in incomplete forms.",
+          "Addressed authentication-token expiration and mobile release requirements.",
+        ],
+      },
+      {
+        heading: "Mobile workflow reliability",
+        body:
+          "The work focused on state transitions that affect family and patient experiences: authentication renewal, profile changes, partially completed forms, and responses from connected services. These concerns were addressed as part of the application workflows rather than treated as isolated visual defects.",
+      },
+      {
+        heading: "Cross-platform delivery",
+        body:
+          "The application was developed for iOS and Android using Flutter. The supplied materials document the mobile workflows and release needs but do not provide a numerical adoption or clinical-outcome metric.",
+      },
+    ],
+    results: [
+      { metric: "Flutter", label: "Cross-platform mobile implementation" },
+      { metric: "3", label: "Core workflows: onboarding, assessments, messaging" },
+      { metric: "iOS + Android", label: "Release requirements addressed" },
+    ],
+    stack: ["Flutter", "REST APIs", "Authentication", "Mobile State", "iOS", "Android"],
+    ownership:
+      "Tijani built the listed mobile workflows and handled integration and client-state issues. The supplied notes do not describe him as the sole developer of the complete Parente AI product.",
+    tags: ["Flutter", "HealthTech", "Mobile", "API Integration"],
+    aliases: ["parente", "parente ai", "pediatric behavioral health", "family onboarding", "assessments", "patient messaging", "flutter"],
+  },
+  {
+    slug: "deed-driver-delivery",
+    kind: "product",
+    theme: "products",
+    title: "Deed — Driver Delivery Application",
+    oneLiner:
+      "Developed a Flutter driver application for a UPS partner in Iceland, supporting package-scanning and delivery workflows.",
+    summary:
+      "Deed is a driver delivery application built for a UPS partner in Iceland. Tijani developed the Flutter application supporting package scanning and delivery tasks, using Firebase Authentication and a documented set of state-management, dependency-injection, reactive, and file-selection tools.",
+    problem:
+      "Delivery drivers need mobile workflows that let them carry out package-related tasks while working in the field. The application brings package scanning and delivery actions into a driver-facing mobile experience.",
+    constraints: [
+      "The application is a Flutter mobile product using Firebase Authentication.",
+      "The documented implementation uses several state and dependency-management libraries together.",
+      "The workflow includes package scanning and delivery operations.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani developed the Flutter application for the partner's driver package-scanning and delivery workflows. The documented stack includes Dart, Firebase Authentication, Provider, GetIt, RxDart, BLoC, and file_picker.",
+        points: [
+          "Developed the Flutter mobile application.",
+          "Supported driver package-scanning and delivery task flows.",
+          "Worked with Firebase Authentication for application access.",
+          "Used Provider, GetIt, RxDart, and BLoC within the application architecture.",
+          "Used file_picker as part of the app's file interaction capabilities.",
+        ],
+      },
+      {
+        heading: "Mobile implementation",
+        body:
+          "The project is documented as a Flutter/Dart application with Firebase Authentication and a combination of state-management and dependency-management tools. The supplied notes do not provide a public product URL or quantitative delivery metric.",
+      },
+    ],
+    results: [
+      { metric: "Flutter", label: "Driver-facing mobile application" },
+      { metric: "Package scan", label: "Core delivery workflow" },
+      { metric: "Firebase Auth", label: "Application authentication" },
+    ],
+    stack: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
+    ownership:
+      "The resume states that Tijani developed this Flutter application. The scope described here is the driver package-scanning and delivery workflow, not the wider carrier organization or logistics operation.",
+    tags: ["Flutter", "Logistics", "Mobile", "Driver App"],
+    aliases: ["deed", "driver delivery", "ups partner", "iceland", "package scanning", "firebase authentication", "flutter", "dart"],
+  },
+  {
+    slug: "arvrobot-real-estate-underwriting",
     kind: "system",
     theme: "platform",
-    title: "Code Intelligence Gateway",
-    employer: "ArmorCode",
-    period: "2026",
+    title: "ARVRobot — Real Estate Underwriting",
     oneLiner:
-      "A code-search service for agents, taken from container proof of concept to serverless production — then rescued from a storage-throughput failure that no amount of application debugging would have found.",
+      "Contributed property-data ingestion, comparable analysis, underwriting calculations, configurable assumptions, reporting, and AI-assisted property analysis.",
     summary:
-      "Agents answering questions about eight product repositories need a code-search service that stays up. I designed that service, took it from a local container to a serverless deployment, and then root-caused the failure that kept killing it: not a bug in the code, but a shared network filesystem whose throughput credits were being drained by the service's own indexing schedule.",
+      "ARVRobot helps real-estate investors evaluate properties and analyze potential returns. Tijani contributed to the data and analysis workflows that bring property facts, comparable properties, financial calculations, configurable assumptions, reporting, and AI-assisted analysis into an underwriting experience.",
     problem:
-      "The service would not stabilize. Health checks failed, the orchestrator killed the task, and it restarted into the same failure — a crash loop that looked like an application defect. It was not. Every code query read a vector index off a shared network filesystem, and a separate scheduled job re-cloned and re-indexed eight repositories onto that same volume every thirty minutes. The two patterns together exhausted the volume's burst-throughput credits, after which all I/O throttled to baseline, startup reads stalled, and the health endpoint never answered in time.",
+      "Property investment decisions depend on more than a listing price. Investors need to gather property information, compare relevant properties, test financial assumptions, and review the resulting analysis in a consistent workflow.",
     constraints: [
-      "Per-request session isolation was required, but spinning up a container per request was impractical — cold start and target registration cost more than the queries themselves.",
-      "The failure presented as an application crash loop, so the evidence pointing at storage had to be found rather than reported.",
-      "Only the question and the snippets the agent reads may leave the container; the code checkout itself cannot.",
-      "The orchestrator's health grace period was zero, so anything slow during startup read as a dead task.",
-    ],
-    diagram: "gateway",
-    diagramCaption:
-      "Before: queries and a scheduled re-index both hit the same shared network volume until its throughput credits drained. After: index and checkout are local, the gateway owns its own sync, and startup never blocks the health check.",
-    decisions: [
-      {
-        choice: "Move the index and checkout onto local ephemeral storage",
-        why:
-          "The index is derived data — it can be rebuilt from source on boot, so it never needed durable shared storage in the first place. Moving it, and the code checkout with it, took the hot read path off the throttled volume entirely. The volume had been doing work that no longer had a reason to be shared.",
-        rejected: [
-          "Paying for a higher provisioned-throughput storage tier — treats a design mistake as a billing line, and the read pattern would have kept growing into it",
-        ],
-      },
-      {
-        choice: "Give the gateway ownership of its own git sync",
-        why:
-          "The external job that cloned and indexed on a schedule was writing into storage the service depended on, from outside the service's control. Folding that work into the gateway — shallow pulls on an interval it owns — removed the write storm and put the lifecycle in one place. The external job was retired rather than tuned.",
-      },
-      {
-        choice: "Non-blocking startup with an explicit warmup gate",
-        why:
-          "Health had been gated on slow I/O, which is what turned a throughput problem into a crash loop. Bootstrap now runs in the background so health answers immediately, and queries return an explicit warming-up notice until both the first index and the control-plane copy finish. Correctness and availability are decoupled: the service is honest about not being ready instead of being killed for it, and it never answers from a half-populated checkout.",
-        rejected: [
-          "Reporting healthy as soon as the process starts — would have stopped the restarts while letting agents query an empty index, trading a loud failure for a silent one",
-        ],
-      },
-      {
-        choice: "Serialize git operations behind a mutex",
-        why:
-          "Three things could trigger a sync — boot, the interval, and a manual trigger — and two passes over the same checkout at once corrupts it. A mutex is the cheapest correct answer to a race that would otherwise appear as random index corruption under load.",
-      },
-    ],
-    sections: [
-      {
-        heading: "The measurement that identified the cause",
-        body:
-          "The decisive evidence was a copy that had no business being slow. Moving six files totalling seventy-six kilobytes took fourteen minutes. Latency at that scale cannot be explained by data volume, and nothing in the application touches those files on a hot path — which rules out application-level causes and leaves infrastructure-level throttling as the only explanation that fits.",
-        points: [
-          "Throughput uncorrelated with payload size is the signature of a credit-based storage tier running at baseline. Once that was the hypothesis, the burst-credit metrics confirmed it directly.",
-          "The crash loop was downstream of the throttling, not the cause of it. Reading the symptom as an application defect is what made this expensive to find, and it is the general lesson: a health-check failure names the victim, not the culprit.",
-        ],
-      },
-      {
-        heading: "What the service actually is",
-        body:
-          "A read-only code-search agent over eight product repositories, behind an authenticated gateway with request queueing and per-query session isolation, backed by a locally rebuilt vector index. Specialized agents and domain skills sit on top for documentation generation, feature-flag cataloguing, and configuration discovery. It removed most support escalations to engineering, because the questions that used to need an engineer with repository access can now be asked directly.",
-        points: [
-          "Session isolation happens at the session layer rather than by isolating infrastructure per request — the compromise that made the cost model workable.",
-          "Deployment targets a modern ARM architecture by default with fallback support retained, sized at two virtual CPUs and eight gigabytes, autoscaling on CPU and memory with one task always guaranteed.",
-        ],
-      },
-    ],
-    results: [
-      { metric: "8", label: "product repositories searchable by agents through one gateway" },
-      { metric: "76 KB / 14 min", label: "copy time that identified storage throttling as the root cause" },
-      { metric: "0", label: "shared-volume reads left on the query hot path after the fix" },
-      { metric: "1 of 2", label: "independent failure classes on this service; the protocol defect is the other" },
-    ],
-    stack: [
-      "Go",
-      "Docker",
-      "AWS Fargate",
-      "AWS ECS",
-      "Application Load Balancer",
-      "Model Context Protocol",
-      "Neo4j",
-      "ripgrep",
-    ],
-    ownership:
-      "The service design, the deployment specification, and the root-cause analysis are mine. The infrastructure-as-code and cluster provisioning were executed by platform DevOps against that specification.",
-    tags: ["Agent Infrastructure", "Reliability", "Root Cause Analysis"],
-    aliases: ["opencode", "codebase search", "code search", "code intelligence", "fargate", "ecs", "efs", "throughput", "burst credits", "storage", "crash loop", "health check", "infrastructure", "capacity", "index", "warmup", "goroutine", "gateway"],
-  },
-  {
-    slug: "knowledge-graph-rag",
-    kind: "system",
-    theme: "retrieval",
-    featured: true,
-    title: "Knowledge Graph RAG",
-    employer: "ArmorCode",
-    period: "2025 – 2026",
-    oneLiner:
-      "Tenant-scoped retrieval over a million-plus entity knowledge graph, with a five-layer failure taxonomy so a bad answer can be traced to its cause.",
-    summary:
-      "Agents that answer from product knowledge need retrieval that is both grounded and tenant-isolated. I took the knowledge graph from proof of concept to production over a million-plus entities, wired four content sources in with incremental update paths, and built the evaluation that says which of five possible failures caused any given bad answer.",
-    problem:
-      "Office OS agents were answering product questions without grounding, and plain vector retrieval could not follow relationships across root-cause analyses, test cases, release notes, and documentation. Multi-tenancy raised the stakes: retrieval had to be scoped so no query could surface another customer's data. And when a retrieval answer is wrong, the cause could be in any of five independent places — scoring only the final answer tells you something is broken but never what.",
-    constraints: [
-      "Tenant scoping is not optional. Retrieval crosses root-cause analyses and support content, so isolation is a correctness requirement, not a feature.",
-      "Four content sources with different shapes and different update cadences, each needing an incremental path rather than a full rebuild.",
-      "Graph extraction runs an LLM over source documents, so a cheap model swap there silently degrades the entire graph.",
-      "Five query modes existed and tools were choosing between them by convention rather than evidence.",
-    ],
-    diagram: "kgrag",
-    diagramCaption:
-      "Four ETL pipelines feed a graph and vector store queried through five retrieval modes. Each of the five layers fails independently, so each is measured independently.",
-    decisions: [
-      {
-        choice: "A graph layer over plain vector retrieval",
-        why:
-          "The questions that mattered were relational — which connectors changed in releases that also touched authentication — and vector similarity cannot follow that. Entities and relations extracted into a graph, alongside vector search over the same corpus, made multi-hop questions answerable.",
-        rejected: ["Vector-only retrieval — fine for lookups, blind to relationships between documents"],
-      },
-      {
-        choice: "Evaluate retrieval per mode, per question type",
-        why:
-          "Specific lookups, thematic questions, and multi-hop questions win under different modes, which is exactly why mode choice should not be folklore. Running all five modes over a golden set of real questions pulled from production traces — scoring recall within the top k results, mean reciprocal rank, and context precision — produced a documented mode-per-tool policy with numbers behind it.",
-        rejected: ["One default mode for all tools — simpler, and measurably worse on two of three question types"],
-      },
-      {
-        choice: "Ingestion integrity as scheduled assertions, not evaluations",
-        why:
-          "A dedup bug based on titles left dozens of stale documents in the knowledge base, found by a one-off manual scan. Source parity counts, duplicate and stale scans, an idempotency probe that re-ingests a known document, and a freshness lag check now run nightly with alerts. These are assertions with a right answer, not metrics with a threshold — treating them as evaluations would have been a category error.",
-      },
-      {
-        choice: "Gate the graph extraction step on human annotation",
-        why:
-          "Twenty-five source documents stratified across content types, with humans listing the entities and relations that should be extracted, scored for entity and relation precision and recall plus duplication and orphan rates. It is manual and rare, and it runs before any change to the extraction prompt, model, or chunking — because everything downstream is built on the graph being right.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Five layers, because it fails five ways",
-        body:
-          "The system is not one thing: it is an ingestion pipeline, an LLM extracting a graph, a retriever with five modes, a generator, and a service. When an answer is bad, exactly one of these happened — the document never made it in, the graph extracted the wrong entities, the retriever pulled the wrong context, the model ignored good context, or the call timed out. Separate evaluation per layer turns a vague quality complaint into a pointed diagnosis.",
-        points: [
-          "Ingestion integrity — source parity, duplicate and stale counts, idempotency, freshness lag. Nightly assertions with alerts.",
-          "Graph extraction quality — entity and relation precision and recall against human annotation, plus duplication and orphan-entity rates. The evaluation almost everyone skips.",
-          "Retrieval quality — recall@k (was the right document in the top k results), mean reciprocal rank (how high it ranked), and context precision, measured per query mode and per question type.",
-          "Answer quality — faithfulness and answer relevancy, reference-free so they also run on live traffic; correctness against golden facts offline.",
-          "Operations — p95 latency, timeout rate, empty-result rate, cost per query, and publish-to-queryable lag.",
-        ],
-      },
-      {
-        heading: "Four pipelines, each incremental",
-        body:
-          "Test cases, support documentation, root-cause analysis items, and release notes each got an initial load and a separate incremental update path, so the corpus stays current without rebuilding the graph. A dedicated release-notes retrieval tool followed, and the test-case generation flow was rewired to query the graph so generation starts grounded in the accumulated corpus rather than cold.",
-      },
-      {
-        heading: "Exposed as a tool, not an endpoint",
-        body:
-          "Retrieval reaches agents through the governed MCP registry, which means tenant scoping, authorization, and audit attribution come from the same layer that governs every other tool. Retrieval spans flow into the same OpenTelemetry pipeline as everything else, so its extraction and query calls are metered and scored alongside the rest of the estate.",
-      },
-    ],
-    results: [
-      { metric: "1M+", label: "entities in production across four content sources" },
-      { metric: "5", label: "retrieval modes benchmarked into a documented mode-per-tool policy" },
-      { metric: "5", label: "independently measured failure layers, from ingestion to operations" },
-      { metric: "75–100", label: "golden questions drawn from real production traces, not invented" },
-    ],
-    stack: [
-      "Neo4j",
-      "pgvector",
-      "PostgreSQL",
-      "Python",
-      "FastAPI",
-      "Ragas",
-      "Langfuse",
-      "OpenTelemetry",
-      "Model Context Protocol",
-      "AWS",
-    ],
-    ownership:
-      "The retrieval architecture, the four ETL pipelines, the evaluation design, and the mode policy are mine. Server provisioning and deployment for the retrieval service were handled with platform DevOps.",
-    tags: ["RAG", "Knowledge Graphs", "Retrieval Evaluation"],
-    aliases: ["rag", "retrieval", "knowledge graph", "graphrag", "neo4j", "pgvector", "vector", "embedding", "context", "grounding", "ingestion", "etl"],
-  },
-  {
-    slug: "documentation-automation",
-    kind: "system",
-    theme: "agents",
-    title: "Documentation Automation Platform",
-    employer: "ArmorCode",
-    period: "2025 – 2026",
-    oneLiner:
-      "Completed Jira tickets trigger AI documentation updates in GitHub, reviewed through Quill and synced to Zendesk after the pull request merges.",
-    summary:
-      "I built AI documentation automation that starts when a Jira ticket is completed. An agent gathers ticket and codebase context, creates or updates documentation in GitHub, and opens a pull request. The documentation team reviews and edits the proposed changes through Quill, the workflow's Electron/React/TypeScript review app. Once the PR merges, the documentation is synced to Zendesk. Context enrichment and a blocking clarification gate keep the agent from drafting through unresolved gaps.",
-    problem:
-      "The first version drafted from a ticket description alone — typically a one-line summary written for a project manager, not an engineer. It did not reliably read the linked engineering tickets, never searched the codebase to confirm what things were actually called, and never surfaced an ambiguity. The output was plausible and imprecise: approximate UI labels, missed edge cases, and multiple revision rounds per article. The agent was not short of capability; it was short of context, and it had no way to say so.",
-    constraints: [
-      "The ticket description cannot be trusted as the specification — it is written for a different audience than the documentation.",
-      "Published articles are customer-facing, so an approximate field name is a defect, not a rough edge.",
-      "Related engineering tickets are often not formally linked, so discovery cannot rely on link graphs alone.",
-      "Generated documentation must be reviewed through Quill before the GitHub PR merges; Zendesk receives the merged documentation.",
-    ],
-    diagram: "docs",
-    diagramCaption:
-      "Jira completion triggers the agent. After context enrichment and clarification, it creates or updates GitHub documentation and opens a PR. Quill supports human review and editing; the merged documentation then syncs to Zendesk.",
-    decisions: [
-      {
-        choice: "A clarification gate that blocks drafting",
-        why:
-          "The agent compiles a numbered list of what it cannot resolve from the available evidence and waits for answers before writing a word. This is the single most valuable behaviour in the pipeline: the failure mode of a documentation agent is not refusing to write, it is writing confidently from a gap. Making the gap explicit converts a silent assumption into a question someone can answer in seconds.",
-        rejected: [
-          "Letting the agent proceed on best-effort assumptions — faster per run, and the source of every revision round it was meant to eliminate",
-        ],
-      },
-      {
-        choice: "Mandate codebase search before drafting, not as a fallback",
-        why:
-          "At least two searches per article, one broad on the feature and one narrow on a specific component or configuration key. Documentation has to use the product's exact terminology, and the only authoritative source for what a field is called is the code that names it. Tickets describe intent; the codebase describes what shipped.",
-      },
-      {
-        choice: "Search for related tickets rather than trusting links",
-        why:
-          "A bounded keyword search over recently-tested tickets discovers work that is relevant but was never formally linked, deduplicated against what the link graph already returned. Bounding it by recency and status keeps the context pool relevant instead of merely large — an unbounded search would trade one context problem for another.",
-      },
-      {
-        choice: "Distil the writing rules from published work",
-        why:
-          "Rather than hand-authoring a style guide, the rules were derived from the last several published release notes — how entries open, the tone and sentence length, the recurring constructions. Critically, patterns that violated the existing rules were noted and deliberately not encoded, so the result matches the house voice without inheriting its bad habits. Style guidance written from scratch drifts from the real corpus; this cannot.",
-        rejected: ["Hand-written tone guidance — already existed, and was what the output was drifting from"],
-      },
-      {
-        choice: "Validate formatting in the workflow, not only in the prompt",
-        why:
-          "A malformed comment format persisted after the prompt was corrected, so a validation and correction layer went into the workflow node itself. When a model is the only thing enforcing a structural contract, that contract is advisory. Defense in depth is cheaper than a class of formatting bugs that reappear whenever the prompt changes.",
-      },
-    ],
-    sections: [
-      {
-        heading: "From completed ticket to published documentation",
-        body:
-          "A Jira ticket reaching Done automatically triggers the documentation agent. The agent gathers the relevant context, creates a new article or updates an existing one in the GitHub documentation repository, and opens a pull request. Reviewers use Quill to inspect the rendered changes, edit the draft, and approve the PR. After the PR merges, the synchronization workflow updates Zendesk with the merged documentation.",
-        points: [
-          "Jira completion starts the authoring workflow; it does not publish an article by itself.",
-          "Quill is the human review application within this automation, with GitHub retaining the proposed changes and approval history.",
-          "Zendesk synchronization follows the documentation PR merge, so customers receive the reviewed version.",
-        ],
-      },
-      {
-        heading: "Keeping the scheduled refresh bounded",
-        body:
-          "Alongside the Jira-triggered workflow, a collector scans merged code pull requests across six repositories, extracts which product areas changed, and maintains a queue with per-item state — first seen, last seen, last run, retry count. A scheduled runner then processes that queue rather than regenerating everything. These code changes feed documentation refresh; merging the resulting documentation PR is the separate step that leads to Zendesk synchronization.",
-        points: [
-          "The queue is processed one item at a time, sequentially, on purpose: parallel runs collided over shared template files. Throughput was the correct thing to trade for correctness here, because the deadline is weekly.",
-          "Item names are canonicalized and deduplicated, so repeated pull requests touching the same area update one queue row instead of creating several.",
-          "Retries and failure handling live in the queue rather than in the agent, so a transient failure does not lose the work.",
-        ],
-      },
-      {
-        heading: "Quill provides the human review step",
-        body:
-          "Quill makes the agent's GitHub PRs reviewable by the documentation team. Its WYSIWYG editor, rendered comparisons, embedded agent terminal and per-branch Git worktrees let reviewers inspect and correct a proposal before approving it. Quill is the review component of this documentation automation; the surrounding workflow triggers authoring and syncs merged changes to Zendesk.",
-      },
-    ],
-    results: [
-      { metric: "4", label: "sequential context steps required before any drafting begins" },
-      { metric: "2+", label: "codebase searches mandated per article to confirm exact product terminology" },
-      { metric: "6", label: "repositories scanned for changes feeding the refresh queue" },
-      { metric: "1", label: "queue item processed at a time, trading throughput for correctness" },
-    ],
-    stack: [
-      "n8n",
-      "Model Context Protocol",
-      "Python",
-      "CLI agents",
-      "Jira",
-      "Quill",
-      "TypeScript",
-      "React",
-      "Electron",
-      "Confluence",
-      "Zendesk",
-      "GitHub",
-      "AWS Bedrock",
-    ],
-    ownership:
-      "Built the documentation automation, including the Jira-triggered agent workflow, context enrichment, refresh queue, GitHub PR delivery, Quill review app and synchronization of merged documentation to Zendesk. The work grew from an epic opened by engineering leadership. The documentation team owns editorial decisions and approval before publication.",
-    tags: ["Multi-Agent Systems", "Agent Context", "Workflow Automation"],
-    aliases: ["documentation", "docs", "doc automation", "release notes", "clarification", "context enrichment", "confluence", "zendesk", "technical writing", "agent workflow", "n8n", "queue", "quill", "jira done", "documentation pr", "documentation sync"],
-  },
-  {
-    slug: "sentinel-test-agent",
-    kind: "system",
-    theme: "agents",
-    title: "Sentinel Test Generation Agent",
-    employer: "ArmorCode",
-    period: "2025 – 2026",
-    oneLiner:
-      "A multi-step agent that writes test cases from tickets, grounded in a code graph — and refuses to let untested work proceed downstream.",
-    summary:
-      "Test coverage lagged because writing cases by hand competed with shipping. Sentinel generates them from the ticket, grounds itself in a graph of the actual code, and hands reviewed cases to the test management system. The part I care about most is the contract: automation downstream fails loudly when the cases it should be tagging do not exist.",
-    problem:
-      "Test-case generation and test automation ran as two pipelines against the same ticket, with nothing enforcing that one had happened before the other. Cases were generated but not always linked; automation ran without the coverage tags it needed. Reconciling the two was manual, so it was skipped, and coverage gaps only surfaced later as missing traceability on priority work.",
-    constraints: [
-      "Context sources — historical root-cause analyses, the existing case corpus, the code itself — are only reachable through tool calls, not direct database access.",
-      "Generated cases land in a system of record that real QA processes depend on, so a malformed upload is worse than no upload.",
-      "Priority coverage requires traceable identifiers linking automated scenarios back to the cases they satisfy.",
-      "Write access to ticketing and test-management systems needs rate limiting, because an agent loop can generate load a human never would.",
+      "The workflow combines ingested property data with comparable-property information.",
+      "Financial outputs depend on assumptions that users can configure.",
+      "Reporting and AI-assisted analysis need to stay connected to the underlying property and financial context.",
     ],
     diagram: null,
     diagramCaption: "",
-    decisions: [
-      {
-        choice: "Fail the downstream pipeline instead of proceeding without coverage",
-        why:
-          "The ticket key became the integration contract: generation persists a one-to-many mapping from ticket to case identifiers, and automation reads that mapping before it starts. If no cases are linked, it stops with a structured validation error rather than running and reporting success on untested work. A pipeline that silently proceeds without coverage is worse than one that stops, because it produces false confidence.",
-        rejected: [
-          "Merging both pipelines into one system — larger blast radius and a rewrite, when a shared key and a hard check achieve the actual goal",
-        ],
-      },
-      {
-        choice: "A code graph rather than text search for grounding",
-        why:
-          "An evaluation of a lighter option came first and was rejected: it could not express the relationships that mattered. The adopted approach indexes files, classes, and functions as nodes with calls, imports, and inheritance as edges, so the agent can answer which code paths a change actually reaches. Test generation needs to know what a change touches, and that is a graph traversal, not a similarity match.",
-        rejected: ["A simpler code-indexing tool — evaluated first, rejected for insufficient relationship depth"],
-      },
-      {
-        choice: "Parallel tool calls within a single agent turn",
-        why:
-          "Gathering context from several sources sequentially made each turn slow enough that people noticed. Allowing concurrent calls in one turn cut that latency directly. Agent responsiveness is mostly a function of how tool calls are scheduled, not how fast the model is.",
-      },
-      {
-        choice: "Fix the parser rather than the symptom",
-        why:
-          "Steps were splitting incorrectly on a delimiter. The cause was HTML-entity-encoded angle brackets being broken up by a naive parser — so the fix was decoding plus a lookahead pattern, verified against known cases with before-and-after step counts. Separately, a priority field was being set from a hardcoded value that did not match the target system's project-specific identifiers. Both were data-contract bugs at a boundary, which is where this class of defect concentrates.",
-      },
-    ],
+    decisions: [],
     sections: [
       {
-        heading: "What is shipped and what is not",
+        heading: "Tijani's role",
         body:
-          "This is the longest-running agent in the portfolio and it is still moving, so the honest description separates delivered work from planned work. Delivered: generation from tickets, upload to the test management system with correct folder handling and labelling, code-graph grounding, parallel tool calls, and an end-to-end run validated with a QA engineer against real tickets rather than only internal testing.",
+          "Tijani contributed property-data ingestion, comparable-property analysis, financial calculations, configurable assumptions, reporting, and AI-assisted property analysis.",
         points: [
-          "In progress: extending generation to the core product security domain, with a reviewer sub-agent that critiques generated cases before a human sees them.",
-          "Designed and not yet built: the enforced traceability contract described above, and automated remediation of failed test analysis.",
-          "Presenting a roadmap as shipped would be the same failure this portfolio argues against everywhere else. The delivered core is real; the rest is stated as intent.",
+          "Worked on property-data ingestion and the supporting data workflows.",
+          "Contributed comparable-property analysis for underwriting context.",
+          "Implemented or extended financial calculations and configurable assumptions.",
+          "Contributed reporting and AI-assisted property-analysis workflows.",
         ],
       },
       {
-        heading: "Rate limits as a design input",
+        heading: "Underwriting workflow",
         body:
-          "Write paths carry per-hostname limits — ten requests an hour on ticket writes, a hundred on test-management writes. An agent that retries is an agent that can hammer a system of record, and the limit is what makes giving it write access defensible in the first place.",
+          "The platform organizes the property-evaluation process around property facts, comparable sales, financial assumptions, and reports. Configurable inputs let the analysis reflect different investment scenarios, while AI-assisted analysis adds another way to interpret the property information.",
+      },
+      {
+        heading: "Ownership boundary",
+        body:
+          "The supplied materials describe Tijani as a contributor to the listed product workflows. They do not specify a sole-owner role or a quantified underwriting result, so this case study stays within the documented contribution.",
       },
     ],
     results: [
-      { metric: "10 / 100", label: "hourly per-host write limits on ticketing and test management" },
-      { metric: "1 → many", label: "ticket-to-case mapping that makes coverage checkable rather than assumed" },
-      { metric: "3", label: "grounding sources: code graph, historical analyses, existing case corpus" },
+      { metric: "Property data", label: "Ingestion and comparable-property context" },
+      { metric: "Configurable", label: "Financial assumptions and calculations" },
+      { metric: "AI-assisted", label: "Property analysis and reporting" },
     ],
-    stack: [
-      "n8n",
-      "Model Context Protocol",
-      "Neo4j",
-      "CLI agents",
-      "Python",
-      "Jira",
-      "AWS Bedrock",
-    ],
+    stack: ["Property Data", "Comparable Analysis", "Financial Calculations", "Configurable Assumptions", "Reporting", "AI-Assisted Analysis"],
     ownership:
-      "The agent, its tools, the grounding design, and the integration contract are mine. Test cases are reviewed and owned by the QA engineers who use them, and the validation run was done jointly with a QA engineer.",
-    tags: ["AI Agents", "Tool Calling", "Test Automation"],
-    aliases: ["sentinel", "test case", "test generation", "qa", "qmetry", "test automation", "code graph", "codegraphcontext", "traceability", "coverage", "parallel tools", "agent"],
+      "Tijani contributed to the documented property-data, underwriting, reporting, and AI-assisted analysis workflows. This is not a claim of sole product ownership.",
+    tags: ["Real Estate", "Underwriting", "Financial Analysis", "AI"],
+    aliases: ["arvrobot", "real estate underwriting", "property analysis", "comparable properties", "comps", "financial calculations", "assumptions", "ai property analysis"],
   },
   {
-    slug: "bi-platform",
-    kind: "system",
-    theme: "retrieval",
-    title: "Business Data Layer for Agents",
-    employer: "ArmorCode",
-    period: "2026",
-    oneLiner:
-      "The governed data layer the business agents answer from — replacing a reporting stack that ran off one contractor's laptop.",
-    summary:
-      "Agents serving support, customer success, sales, and the executive office needed one trustworthy source for business questions. I replaced a vendor reporting tool and the local notebooks feeding it with a self-hosted platform: a consolidated lake, a modelled analytics database, row-level access control, and an interface exposed over the tool protocol so agents query the same governed data humans see in dashboards.",
-    problem:
-      "The reporting pipeline ran on a contractor's local machine — notebooks pulling from production databases, transforming locally, pushing to a hosted vendor tool. It was unautomated, a data availability risk, and expensive per seat. More importantly for the agent work, there was no queryable business data layer at all: agents could reason about product and code, but not about accounts, support load, or usage, because that data only existed inside dashboards.",
-    constraints: [
-      "Deployments in different regions used colliding integer organization identifiers, so no natural single tenant key existed across environments.",
-      "The standard internal database proxy supported neither the relational store nor the search cluster the extraction needed.",
-      "Access control had to reach row level — teams see their own accounts, not everyone's — because the same layer serves agents used across functions.",
-      "Parity with the tool being replaced was the acceptance bar, so a partial migration was not a viable end state.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [
-      {
-        choice: "A composite tenant key",
-        why:
-          "Region-qualified keys resolved the collision between deployments that independently issued the same integer identifiers. This table is built before every other pipeline, because every downstream join depends on identity being unambiguous. Getting identity wrong in a warehouse is not a bug you find in one query — it is wrong answers everywhere, quietly.",
-      },
-      {
-        choice: "A conventional relational store, with the condition for changing it written down",
-        why:
-          "Chosen over two column-oriented alternatives as the right fit for this data mix and volume, with an explicit threshold recorded: revisit if snapshot facts pass roughly fifty million rows. A technology choice that names the condition under which it becomes wrong is a decision; one that does not is a preference.",
-        rejected: [
-          "Two column-oriented analytical engines — better at scales this data has not reached, and more operational surface to own today",
-        ],
-      },
-      {
-        choice: "Prune the schema to what dashboards actually consume",
-        why:
-          "The design started over-scoped at more than thirty tables and was cut to twelve, with every remaining column required to trace to a surface that reads it. Unused warehouse columns are not free — they are ETL that can break, documentation that goes stale, and joins someone will eventually trust by mistake.",
-        rejected: ["The original larger schema — comprehensive, and most of it fed nothing"],
-      },
-      {
-        choice: "Bypass the standard internal proxy deliberately",
-        why:
-          "The conventional path did not support two of the required sources, so extraction uses direct clients with explicit pool management instead. Deviating from a convention is fine when the reason is documented and specific; the failure mode to avoid is deviating silently and leaving the next person to rediscover why.",
-      },
-      {
-        choice: "Gate loads on a manifest",
-        why:
-          "Processing only begins once a manifest is present, so a partially written batch cannot be read as complete. Partial loads are the worst class of data bug: they do not error, they just produce numbers that are slightly wrong and get reported.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Why this belongs to the agent work",
-        body:
-          "Exposed over the tool protocol, this became the data source behind the support, customer success, sales, and executive-office agents. It is the reason those agents can answer a question about an account rather than only about the product. Retrieval gave agents product knowledge; this gave them business context, under the same access controls a human would face.",
-        points: [
-          "Row-level security plus dashboard-level access control means an agent inherits the caller's scope rather than querying with unrestricted access.",
-          "The same modelled tables serve both dashboards and agents, so a human and an agent asking the same question get the same answer — which is what makes the agent's answer auditable.",
-        ],
-      },
-      {
-        heading: "Shape of the pipeline",
-        body:
-          "Per-environment extracts plus global sources land in a consolidated lake through cross-account replication, then a scheduled pipeline models them into an analytics database — identity first, then per-surface loads, then derived views — with dashboards and the tool interface reading only from the modelled layer. Development runs against a local storage emulator with a single configuration swap to production.",
-      },
-    ],
-    results: [
-      { metric: "19", label: "dashboards migrated to parity with the tool being replaced" },
-      { metric: "32 → 12", label: "serving tables after pruning to what is actually consumed" },
-      { metric: "4", label: "production environments consolidated into one governed lake" },
-      { metric: "10+", label: "external sources unified behind a single queryable layer" },
-    ],
-    stack: [
-      "Python",
-      "PostgreSQL",
-      "Apache Superset",
-      "AWS S3",
-      "FastAPI",
-      "Docker",
-      "Jenkins",
-      "Model Context Protocol",
-    ],
-    ownership:
-      "The architecture, schema design, ETL, access-control model, and the tool interface are mine, delivered end to end. The dashboards it replaced were originally built by an external contractor.",
-    tags: ["Agent Context", "Data Platform", "Access Control"],
-    aliases: ["bi", "business intelligence", "superset", "quicksight", "dashboards", "etl", "warehouse", "star schema", "tenant key", "row level security", "analytics", "data platform", "business data"],
-  },
-  {
-    slug: "quill",
+    slug: "gemsharbor-marketplace",
     kind: "product",
     theme: "products",
-    title: "Quill: Documentation Review",
-    employer: "ArmorCode",
-    period: "2026",
+    title: "GemsHarbor — Marketplace & Auctions",
     oneLiner:
-      "The Electron/React/TypeScript review app within ArmorCode's AI documentation automation, between agent-created GitHub PRs and publication to Zendesk.",
+      "Worked on product listings, dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order workflows.",
     summary:
-      "Quill is the human review component of ArmorCode's AI documentation automation. When a Jira ticket is completed, an agent creates or updates documentation in GitHub and opens a PR. Reviewers use Quill to inspect rendered changes, edit the documentation and approve the proposal. After the PR merges, the surrounding workflow syncs the merged documentation to Zendesk. I built Quill in Electron, React and TypeScript to make that review step practical for the documentation team.",
+      "GemsHarbor is a B2B/B2C gemstone and jewelry marketplace. Tijani worked on the commerce workflows spanning product listings, user dashboards, auctions, bidding, offers, payment integrations, notifications, and order progression.",
     problem:
-      "The Jira-triggered documentation agent already creates and updates articles through GitHub pull requests. Before Quill, the documentation team had to judge the proposed output through raw markup diffs and ask engineers to make small corrections. Since merged documentation is synchronized to Zendesk, review needed to let the people responsible for the articles inspect and fix the actual draft before publication.",
+      "A specialist marketplace needs to support both product discovery and transaction workflows. Listings, auction activity, offers, payment status, notifications, and orders need to connect so buyers and sellers can follow a transaction through its stages.",
     constraints: [
-      "Several proposals are open at once, so editing one cannot disturb the working copy of another.",
-      "Reviewers are not engineers; anything requiring command-line work would not be used.",
-      "Access control must not become a second system to keep in sync with the source of truth.",
-      "Reviewers need to see what customers will see, not an approximation of it.",
-      "Quill reviews the GitHub documentation PR; authoring is triggered by Jira completion and Zendesk synchronization happens after merge in the surrounding workflow.",
+      "The marketplace supports product listings and user dashboards.",
+      "Auctions and bidding add time-sensitive interaction to the commerce flow.",
+      "Offers, payments, notifications, and order workflows must remain connected.",
     ],
-    diagram: "docs",
-    diagramCaption:
-      "Quill sits at the human review step: Jira Done triggers the agent, the agent creates or updates GitHub docs and opens a PR, reviewers edit and approve through Quill, and merged documentation syncs to Zendesk.",
-    decisions: [
-      {
-        choice: "A separate working tree per proposal",
-        why:
-          "Each open branch gets its own checkout, so the primary copy is never modified and parallel reviews cannot collide. Editing in place on a shared checkout is the obvious implementation and the one that corrupts state the first time two reviews overlap. Paths are validated to prevent traversal outside the intended directory.",
-        rejected: [
-          "Editing directly in a single shared checkout — simpler until two people review at once, then wrong in ways that are hard to unwind",
-        ],
-      },
-      {
-        choice: "Delegate permissions entirely to the source-control platform",
-        why:
-          "The app resolves the user's live permission tier and adapts: read-only reviewers can view but not edit or merge, write access unlocks editing, and full access unlocks merging. There is no in-app access list, so adding a collaborator in one place grants the right level everywhere. A duplicated permission model is a permission model that drifts, and drift in access control is a security bug.",
-        rejected: ["An application-managed access list — one more thing to maintain, and it would diverge"],
-      },
-      {
-        choice: "Render in the real published theme",
-        why:
-          "The published styling is vendored so the side-by-side comparison shows what readers will actually get, with word-level highlighting. A reviewer approving documentation is approving how it reads in context, which a markup diff cannot show and which is exactly where errors of tone and structure hide.",
-      },
-      {
-        choice: "Embed a real terminal, not a simulated one",
-        why:
-          "A genuine terminal session opens in the active working tree so a reviewer can re-run the authoring agent on the spot rather than filing a request and waiting. The loop that matters is see a problem, fix the source of the problem, review again — and that loop only closes if the agent is reachable from where the review happens.",
-      },
-    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
     sections: [
       {
-        heading: "Quill's place in the documentation workflow",
+        heading: "Tijani's role",
         body:
-          "The workflow begins outside Quill, when a completed Jira ticket triggers the documentation agent. The agent creates or updates articles in GitHub and opens a PR. Quill brings those PRs to the documentation team for rendered review, editing and approval. Once a PR merges, the documentation synchronization workflow updates Zendesk. This case study focuses on the review app within that larger system.",
+          "Tijani worked on the marketplace and e-commerce workflows: listings, dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order flows.",
+        points: [
+          "Contributed product listing and marketplace experiences.",
+          "Worked on user dashboards and auction/bidding workflows.",
+          "Connected offer and payment steps to the order journey.",
+          "Supported notifications across marketplace activity.",
+        ],
       },
       {
-        heading: "What shipped in the review app",
+        heading: "Marketplace transaction flow",
         body:
-          "A working desktop application covering the full review path: a filtered list of open proposals, rendered side-by-side comparison with inline and multi-line comments that post back to the real pull request, approve and merge as genuine actions, a searchable article browser with version preview, an in-place editor with image management committed atomically alongside the text, a command palette for jumping to any article, a conversation timeline, and automated builds attaching signed installers to releases.",
-        points: [
-          "Inline suggestions are posted in the platform's native suggestion format, so a reviewer's fix becomes a one-click accept rather than a comment someone has to transcribe.",
-          "Quill is an internal release within the production documentation automation workflow. Jira completion triggers authoring, Quill supports review, and merged documentation is synced to Zendesk.",
-        ],
+          "The product combines B2B/B2C discovery with auction and e-commerce features. The documented scope spans the buyer/seller-facing surfaces and the connected transactions behind them, rather than a static catalog alone.",
+      },
+      {
+        heading: "Project scope",
+        body:
+          "The supplied resume identifies the major marketplace workflows but does not provide a technology stack, exact implementation ownership by feature, or quantified business outcomes. This write-up therefore focuses on the product and workflow areas that are explicitly documented.",
       },
     ],
     results: [
-      { metric: "3", label: "permission tiers enforced, all resolved from the source-control platform" },
-      { metric: "1 per branch", label: "isolated working trees, so concurrent reviews never collide" },
-      { metric: "0", label: "application-managed access lists to keep in sync" },
+      { metric: "B2B + B2C", label: "Marketplace audience" },
+      { metric: "Auctions", label: "Bidding and offer workflows" },
+      { metric: "Commerce", label: "Payments, notifications, and orders" },
     ],
-    stack: [
-      "Electron",
-      "React",
-      "TypeScript",
-      "Git",
-      "GitHub API",
-      "TinyMCE",
-      "node-pty",
-      "GitHub Actions",
-    ],
+    stack: ["Marketplace", "E-commerce", "Auctions", "Bidding", "Offers", "Payment Integrations", "Notifications"],
     ownership:
-      "Designed and built Quill, the review application within the documentation automation platform, from the first proposal through release automation. Its scope is inspecting, editing and approving GitHub documentation PRs; the surrounding pipeline handles the Jira trigger, agent authoring and Zendesk synchronization after merge. The documentation team owns the review decisions.",
-    tags: ["Documentation Automation", "Human in the Loop", "Developer Tooling"],
-    aliases: ["quill", "documentation review", "electron", "desktop app", "wysiwyg", "worktree", "git worktrees", "pull request review", "human in the loop", "review tool", "pty", "terminal", "documentation automation", "jira", "zendesk"],
+      "Tijani worked on the listed marketplace and transaction workflows. The supplied materials do not describe him as the sole author of GemsHarbor or provide a per-feature ownership breakdown.",
+    tags: ["Marketplace", "E-commerce", "Auctions", "Payments"],
+    aliases: ["gemsharbor", "gems harbor", "jewelry marketplace", "gemstone marketplace", "auctions", "bidding", "offers", "payments"],
   },
   {
-    slug: "codenex-ai-proxy",
+    slug: "shiphype-fulfillment",
+    kind: "system",
+    theme: "platform",
+    title: "ShipHype — Logistics & Fulfillment",
+    oneLiner:
+      "Contributed to fulfillment integrations and automation covering event processing, synchronization, retries, error handling, and operational workflows.",
+    summary:
+      "ShipHype is an operational platform for fulfillment and logistics workflows. Tijani contributed to the integration and automation layers, focusing on event processing, data synchronization, retry strategies, error handling, and the operational processes that connect fulfillment systems.",
+    problem:
+      "Fulfillment operations depend on multiple connected services and events. When updates arrive asynchronously or an external service is temporarily unavailable, the platform needs to preserve workflow state and provide safe retry and recovery behavior.",
+    constraints: [
+      "Operational workflows depend on events and synchronization between connected systems.",
+      "Temporary integration failures need explicit retry and error-handling behavior.",
+      "The work spans integration and automation layers rather than a single isolated screen.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed to the platform's integration and automation layers, including event processing, synchronization, retry strategies, error handling, and operational workflows. The supporting project notes also identify work around integration and AI layers.",
+        points: [
+          "Worked on integration and automation workflows for fulfillment operations.",
+          "Contributed event-processing and synchronization paths.",
+          "Implemented or extended retry and error-handling behavior.",
+          "Supported operational workflows across connected systems.",
+        ],
+      },
+      {
+        heading: "Operational reliability",
+        body:
+          "The documented focus is on making connected operational workflows resilient. Events need to be processed, state needs to synchronize, and failures need to be handled in a way that supports recovery instead of leaving the operation in an unclear state.",
+      },
+      {
+        heading: "Scope and attribution",
+        body:
+          "The resume states that Tijani contributed to these platform layers. It does not provide a complete technology inventory, a quantitative outcome, or sole ownership of the fulfillment platform.",
+      },
+    ],
+    results: [
+      { metric: "Event-driven", label: "Fulfillment workflow processing" },
+      { metric: "Retry-aware", label: "Integration recovery behavior" },
+      { metric: "Automated", label: "Connected operational workflows" },
+    ],
+    stack: ["Fulfillment", "Logistics", "Event Processing", "Synchronization", "Retries", "Error Handling", "Automation"],
+    ownership:
+      "Tijani contributed to the integration and automation layers described in the resume. The broader ShipHype product is not presented as an individually owned build.",
+    tags: ["Logistics", "Fulfillment", "Integrations", "Automation"],
+    aliases: ["shiphype", "fulfillment", "logistics", "event processing", "synchronization", "retry", "error handling"],
+  },
+  {
+    slug: "dealercortex-ai",
+    kind: "system",
+    theme: "agents",
+    title: "DealerCortex AI — Automotive Intelligence",
+    oneLiner:
+      "Connected marketing, inventory, CRM, customer-conversation, and call data to AI-driven dealership recommendations and business outcomes.",
+    summary:
+      "DealerCortex AI connects dealership marketing activity, customer interactions, inventory, and business performance. Tijani's documented contribution includes AI-powered automotive workflows, Google Ads and analytics integrations, CRM and inventory connections, conversation and call-data integration, and AI recommendations tied to appointments, sales, and other business outcomes.",
+    problem:
+      "Dealership performance data is spread across marketing platforms, inventory systems, CRM records, customer conversations, and call activity. A useful intelligence layer needs to connect those signals so marketing activity can be interpreted in the context of real dealership outcomes.",
+    constraints: [
+      "The platform connects multiple sources, including Google Ads, analytics, inventory, and CRM data.",
+      "Customer conversations and call data provide additional context beyond advertising metrics.",
+      "Recommendations need to relate marketing activity to business outcomes such as appointments and sales.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed to AI-powered automotive intelligence workflows and the integrations that feed them. The documented work includes Google Ads and analytics connections, inventory and CRM data, customer conversations and call data, and AI-driven dealership recommendations.",
+        points: [
+          "Integrated Google Ads and analytics data.",
+          "Connected dealership inventory and CRM information.",
+          "Worked with customer conversation and call data.",
+          "Contributed AI recommendations that connect marketing activity to appointments, sales, and business outcomes.",
+        ],
+      },
+      {
+        heading: "From marketing signals to dealership outcomes",
+        body:
+          "The product context moves beyond campaign reporting by bringing inventory, customer activity, and call/conversation context into the same intelligence workflow. The goal is to connect marketing activity to the operational outcomes dealerships care about.",
+      },
+      {
+        heading: "Integration scope",
+        body:
+          "The supplied notes identify the platforms and data domains involved but do not specify the exact programming languages, connector count, or performance metrics. This page describes the documented integration and AI workflow contribution without inventing those details.",
+      },
+    ],
+    results: [
+      { metric: "Google Ads", label: "Marketing data integration" },
+      { metric: "CRM + inventory", label: "Dealership data context" },
+      { metric: "AI-driven", label: "Recommendations tied to business outcomes" },
+    ],
+    stack: ["AI Workflows", "Google Ads", "Analytics", "CRM", "Inventory Data", "Call Data"],
+    ownership:
+      "Tijani's documented contribution covers the AI workflows and integrations listed here. The supplied notes do not claim sole ownership of DealerCortex AI.",
+    tags: ["Automotive", "AI", "Marketing Analytics", "CRM Integrations"],
+    aliases: ["dealercortex", "dealer cortex", "automotive intelligence", "dealership ai", "google ads", "crm", "call data", "inventory", "dealer recommendations"],
+  },
+  {
+    slug: "arub-shipping-integrations",
+    kind: "system",
+    theme: "platform",
+    title: "Arub Shipping — Carrier & Order Integrations",
+    oneLiner:
+      "Worked on carrier APIs, order synchronization, shipment processing, label generation, reconciliation, idempotency, retries, and recovery handling.",
+    summary:
+      "Arub Shipping connects order processing with carrier services. Tijani's documented integration experience includes carrier API connectivity, order synchronization, shipment processing, label generation, transaction reconciliation, idempotency, retries, and recovery handling.",
+    problem:
+      "Shipping workflows need to carry order data into carrier services and bring shipment status and labels back into the originating operation. This becomes fragile when API requests are retried, events are duplicated, or the carrier and order systems temporarily disagree.",
+    constraints: [
+      "Carrier services are external dependencies with their own request and response lifecycle.",
+      "Order and shipment state must remain synchronized across systems.",
+      "Retries and recovery need protection against duplicate processing and inconsistent records.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani worked on the shipping integration layer, covering carrier APIs, order synchronization, shipment processing, label generation, and transaction reconciliation. The documented reliability mechanisms include idempotency, retries, and recovery handling.",
+        points: [
+          "Connected shipping workflows to external carrier APIs.",
+          "Synchronized order information with shipment processing.",
+          "Supported label-generation workflows.",
+          "Worked on reconciliation and safe retry/recovery behavior.",
+        ],
+      },
+      {
+        heading: "Carrier lifecycle and recovery",
+        body:
+          "The engineering scope follows a shipping operation from order synchronization through carrier processing and label generation. Idempotency and recovery behavior are important because a repeated request should not create duplicate shipment actions or leave the order and carrier states out of sync.",
+      },
+    ],
+    results: [
+      { metric: "Carrier APIs", label: "External shipping connectivity" },
+      { metric: "Order → shipment", label: "Synchronized processing workflow" },
+      { metric: "Idempotent", label: "Retry and recovery handling" },
+    ],
+    stack: ["Carrier APIs", "Order Sync", "Shipment Processing", "Label Generation", "Reconciliation", "Idempotency", "Retries"],
+    ownership:
+      "The supporting notes describe integration experience in these areas. This page does not claim sole ownership of the Arub platform or any carrier relationship.",
+    tags: ["Shipping", "Carrier APIs", "Logistics", "Integrations"],
+    aliases: ["arub", "arub shipping", "carrier integration", "shipping api", "labels", "shipment processing", "order sync", "reconciliation"],
+  },
+  {
+    slug: "suppliersift-ap-automation",
+    kind: "system",
+    theme: "retrieval",
+    title: "SupplierSift — Accounts Payable Automation",
+    oneLiner:
+      "Contributed QuickBooks Desktop integration workflows for invoice posting, accounting-list synchronization, and duplicate prevention.",
+    summary:
+      "SupplierSift automates accounts-payable work from Microsoft 365 email intake through invoice extraction, accounting classification, approvals, and QuickBooks Desktop. Tijani's documented integration contribution includes QuickBooks Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention.",
+    problem:
+      "Accounts-payable workflows begin with documents and email, but the final accounting record must be accurate and consistent with QuickBooks Desktop. The system needs to move invoice information through extraction, classification, approval, and posting without creating duplicate transactions or stale reference data.",
+    constraints: [
+      "Invoice intake and extraction are connected to accounting classification and approval workflows.",
+      "QuickBooks Desktop is integrated through its Web Connector communication path.",
+      "Transaction posting and accounting-list synchronization need duplicate-prevention safeguards.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed integration and workflow work around QuickBooks Desktop, specifically Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention.",
+        points: [
+          "Worked with QuickBooks Web Connector communication.",
+          "Connected approved AP transactions to posting workflows.",
+          "Supported synchronization of accounting reference lists.",
+          "Implemented or extended duplicate-prevention behavior for transaction handling.",
+        ],
+      },
+      {
+        heading: "Document-to-accounting workflow",
+        body:
+          "The product context starts with Microsoft 365 email intake and invoice extraction, then moves through accounting classification and approvals before updating QuickBooks Desktop. Tijani's stated role is specifically the accounting-integration portion of that workflow.",
+      },
+      {
+        heading: "Ownership boundary",
+        body:
+          "The source describes Tijani's scope as relevant integration and workflow experience. This write-up does not claim ownership of the complete accounts-payable product or the invoice extraction model.",
+      },
+    ],
+    results: [
+      { metric: "Microsoft 365", label: "Email-based invoice intake context" },
+      { metric: "QuickBooks Desktop", label: "Accounting integration" },
+      { metric: "Duplicate-aware", label: "Transaction posting workflow" },
+    ],
+    stack: ["Microsoft 365", "QuickBooks Desktop", "Web Connector", "Invoice Extraction", "Accounting Classification", "Approvals"],
+    ownership:
+      "Tijani's documented contribution is the QuickBooks integration and related workflow safeguards. The full SupplierSift product is not presented as his sole work.",
+    tags: ["FinTech", "Accounts Payable", "QuickBooks", "Integrations"],
+    aliases: ["suppliersift", "supplier sift", "accounts payable", "ap automation", "quickbooks desktop", "web connector", "invoice processing", "duplicate prevention"],
+  },
+  {
+    slug: "calcs-engineering-calculations",
+    kind: "system",
+    theme: "platform",
+    title: "Calcs.com — Engineering Calculation Platform",
+    oneLiner:
+      "Contributed to production web workflows that turn spreadsheet-based engineering methods into transparent, testable calculations.",
+    summary:
+      "Calcs.com converts spreadsheet-based design methods into web calculations for structural steel, concrete, timber, foundations, and connections. Tijani contributed to production web workflows with dependency-aware updates and automated validation.",
+    problem:
+      "Engineering calculations often live in spreadsheets where dependencies and validation can be difficult to inspect or test consistently. A web workflow can make inputs, dependent calculations, and results more transparent while preserving the relationship between the values users change and the outputs they rely on.",
+    constraints: [
+      "The product covers different structural-engineering calculation domains, including steel, concrete, timber, foundations, and connections.",
+      "Derived values depend on other inputs and need to update when those inputs change.",
+      "Calculation workflows require automated validation to make behavior testable.",
+    ],
+    diagram: null,
+    diagramCaption: "",
+    decisions: [],
+    sections: [
+      {
+        heading: "Tijani's role",
+        body:
+          "Tijani contributed to the implementation of production web workflows, with a documented focus on dependency-aware updates and automated validation. The work supported the translation of spreadsheet-based engineering methods into a clearer, testable application experience.",
+        points: [
+          "Contributed to production web calculation workflows.",
+          "Worked with dependency-aware updates as calculation inputs change.",
+          "Supported automated validation of calculation behavior.",
+        ],
+      },
+      {
+        heading: "Calculation workflow context",
+        body:
+          "The platform covers calculation methods for structural steel, concrete, timber, foundations, and connections. The important product distinction is that the underlying calculation method is represented as a transparent web workflow rather than hidden inside a disconnected spreadsheet.",
+      },
+      {
+        heading: "Engineering quality",
+        body:
+          "Dependency-aware updates preserve the relationship between inputs and derived values, while automated validation makes the implemented calculations easier to verify. The supplied source does not specify particular formulas or code ownership, so this case study stays at the documented workflow level.",
+      },
+    ],
+    results: [
+      { metric: "5 domains", label: "Steel, concrete, timber, foundations, connections" },
+      { metric: "Dependency-aware", label: "Recalculation when inputs change" },
+      { metric: "Automated", label: "Validation of calculation behavior" },
+    ],
+    stack: ["Engineering Calculations", "Structural Steel", "Concrete", "Timber", "Foundations", "Automated Validation"],
+    ownership:
+      "The source describes Tijani as a participant in the platform's production web workflows. This page does not claim ownership of engineering methods or the complete Calcs.com platform.",
+    tags: ["Engineering Software", "Web Applications", "Validation", "Calculations"],
+    aliases: ["calcs", "calcs.com", "engineering calculations", "structural steel", "concrete", "timber", "foundations", "dependency updates", "automated validation"],
+  },
+  {
+    slug: "charter-steel-web",
     kind: "product",
     theme: "platform",
-    title: "CodeNex AI API Proxy",
-    period: "2025 – 2026",
+    title: "Charter Steel — Corporate Web Experience",
     oneLiner:
-      "An open-source gateway that makes six different model backends answer to one API shape, with failover that lets recovered providers back in.",
+      "Contributed to industrial website development, responsive layouts, corporate presentation, and business-facing content organization.",
     summary:
-      "Every provider has its own request format, its own auth, and its own failure modes, so client code ends up knowing about all of them. This gateway absorbs that: one compatible surface in front of six backends, with format translation, health-aware routing, and worker supervision. It is public and inspectable, which is the point — the reasoning is readable in the code, not just described here.",
+      "Charter Steel is an industrial steel manufacturer. Tijani's documented contribution includes website development, responsive page layouts, corporate presentation, and organization of business-facing information for professional audiences.",
     problem:
-      "Tools built against one provider's API cannot talk to another without rewriting their client, and juggling several providers means every consumer reimplements the same translation, retry, and fallback logic — inconsistently. Provider outages and rate limits then surface as failures in each client separately, with no shared notion of which backend is currently healthy.",
+      "An industrial corporate website needs to communicate a company's capabilities and business information clearly to customers and professional audiences. The experience should remain usable across screen sizes while keeping important content organized and easy to navigate.",
     constraints: [
-      "Clients must not change: existing tooling expects a specific request and response shape, including streaming.",
-      "Providers fail in different ways — rate limits, transient errors, expired credentials — and a single classification would be wrong for most of them.",
-      "Streaming has to survive translation, so responses cannot be fully buffered before forwarding.",
-      "Credentials for several accounts and providers live in one process, so isolation and configuration hygiene matter.",
+      "The site presents information for an industrial and business-to-business audience.",
+      "Layouts need to remain responsive across desktop and mobile screen sizes.",
+      "Corporate presentation and content organization need to work together rather than compete for attention.",
     ],
     diagram: null,
     diagramCaption: "",
-    decisions: [
-      {
-        choice: "Health-tracked provider pool with automatic recovery",
-        why:
-          "Providers are selected least-recently-used from a pool that tracks health, and an unhealthy provider is taken out of rotation and then retried rather than blacklisted permanently. Most provider failures are transient — a rate limit is not a death sentence — so permanent removal steadily degrades capacity in exchange for nothing.",
-        rejected: [
-          "Permanent blacklisting on failure — simpler bookkeeping, and it retires healthy capacity after a momentary rate limit",
-        ],
-      },
-      {
-        choice: "Route on model name rather than explicit configuration",
-        why:
-          "The requested model name is enough to infer the right backend, so clients get sensible routing without per-provider setup. Configuration that could have been inference is configuration that will be wrong somewhere.",
-      },
-      {
-        choice: "Two implementations, deliberately",
-        why:
-          "A process-supervised runtime with a metrics store and cache for feature-rich deployments, and a single compiled binary for low-footprint ones. Keeping both honest forced the protocol translation to be specified rather than incidental to one language's conventions.",
-      },
-      {
-        choice: "Supervise workers instead of exiting on crash",
-        why:
-          "A parent process monitors workers and restarts them, so one bad request cannot take the gateway down. A gateway is a single point of failure by construction; the only acceptable answer is that it recovers without operator attention.",
-      },
-    ],
+    decisions: [],
     sections: [
       {
-        heading: "Why it exists at work as well as at home",
+        heading: "Tijani's role",
         body:
-          "The same problem shape recurred internally: several command-line coding tools, each expecting a different provider format, all needing to route through one governed path with fallback between accounts. Building this in the open first meant the internal version started from a design that had already been tested against real client tools rather than being reasoned about from scratch.",
+          "Tijani contributed to website development, responsive layouts, corporate presentation, and business-facing content organization.",
         points: [
-          "Response caching and per-provider metrics make the cost and reliability picture visible per backend instead of aggregated into one number.",
-          "Streaming is preserved through translation, which is the constraint that rules out the simplest possible implementation.",
+          "Worked on the corporate website experience.",
+          "Implemented responsive page layouts.",
+          "Organized business-facing information for a professional audience.",
+          "Supported the presentation of an industrial manufacturing brand online.",
         ],
+      },
+      {
+        heading: "Responsive corporate presentation",
+        body:
+          "The project required a consistent presentation of company and business information across desktop and mobile layouts. The supplied material identifies the website and content responsibilities but does not specify a technology stack or quantified conversion result.",
       },
     ],
     results: [
-      { metric: "6", label: "provider backends reachable through one compatible API surface" },
-      { metric: "2", label: "independent implementations, one process-supervised and one single-binary" },
-      { metric: "Public", label: "source, so the routing and failover logic can be read directly" },
+      { metric: "Responsive", label: "Layouts across desktop and mobile" },
+      { metric: "Industrial B2B", label: "Corporate information architecture" },
+      { metric: "Business-facing", label: "Content presentation" },
     ],
-    stack: [
-      "Go",
-      "Gin",
-      "Node.js",
-      "Redis",
-      "PostgreSQL",
-      "React",
-      "OpenAI-compatible APIs",
-    ],
+    stack: ["Web Development", "Responsive Design", "Corporate Website", "Content Organization"],
     ownership:
-      "Designed and built solo as an open-source project, published under my own account.",
-    tags: ["AI Gateway", "Provider Abstraction", "Reliability"],
-    aliases: ["proxy", "api proxy", "gateway", "codenex proxy", "openai compatible", "provider abstraction", "failover", "fallback", "load balancing", "streaming", "model routing", "open source"],
-  },
-  {
-    slug: "codenex",
-    kind: "product",
-    theme: "products",
-    title: "CodeNex",
-    period: "2025 – 2026",
-    oneLiner:
-      "An AI builder that turns a prompt into a running React application, on a microservice backend that gives every project its own live preview environment.",
-    summary:
-      "Generating code is the easy half. The hard half is everything around it: where the files live, how a user sees the result running, how concurrent builds stay isolated, and how streaming keeps the interface alive while a model works. I built CodeNex as a distributed system rather than a wrapper — a Spring Cloud backend, streamed generation, and per-project preview environments served on their own subdomains.",
-    problem:
-      "A prompt-to-app product only feels real when the user can click into a running application, not read a code listing. That requires solving problems a single service cannot: long-running generation that must stream rather than block, generated files that need durable storage separate from the container that produced them, previews that must be isolated per project, and the caching and quota accounting that keeps any of it affordable under concurrency.",
-    constraints: [
-      "Generation takes far longer than a request-response cycle tolerates, so progress has to stream or the interface looks broken.",
-      "Every project's preview must be isolated — one user's generated app cannot reach another's files or environment.",
-      "Generated artifacts outlive the process that created them, so they cannot live on the generating container's disk.",
-      "Model calls cost money per token, so quotas and caching are product requirements, not optimizations.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [
-      {
-        choice: "Split the backend by responsibility, behind one gateway",
-        why:
-          "Account, workspace, and intelligence became separate services behind a Spring Cloud gateway, with routing by path prefix and configuration pulled from a central config service. Generation is bursty and expensive while account operations are cheap and constant — coupling them means scaling the wrong thing, and a model-provider failure taking down login.",
-        rejected: [
-          "A single monolithic backend — faster to build, and it forces generation load and auth traffic to scale together",
-        ],
-      },
-      {
-        choice: "A preview environment per project, on its own subdomain",
-        why:
-          "Generated apps are served from a dedicated previews namespace, matched by subdomain through the ingress and resolved to a dynamic preview by a proxy service. Subdomain isolation gives each project a real origin, which means browser security boundaries do the isolation work rather than application-level path checks that are easy to get subtly wrong.",
-        rejected: [
-          "Serving previews from a shared path on the main domain — one origin for every user's generated code, so cookies and storage are shared by default",
-        ],
-      },
-      {
-        choice: "Object storage for generated files, not container disk",
-        why:
-          "Files are pushed to object storage and watched into the preview environment, so the artifact survives the generating pod and a preview can be rebuilt without re-running the model. Treating generated code as durable state rather than process output is what makes workspaces resumable.",
-      },
-      {
-        choice: "Stream tokens over server-sent events",
-        why:
-          "Generation streams to the browser as it happens instead of resolving one long request. The user sees work in progress, which changes the product from a loading spinner into something that feels alive — and it removes the timeout ceiling a buffered response would impose.",
-      },
-      {
-        choice: "An event bus between generation and everything downstream",
-        why:
-          "Generation publishes events that other services consume, with a cache layer in front of read paths. Usage accounting, workspace updates, and preview refreshes are all reactions to generation rather than steps inside it, so a slow consumer cannot stall the generation itself.",
-      },
-    ],
-    sections: [
-      {
-        heading: "The shape of the system",
-        body:
-          "Traffic enters through an ingress that splits two ways: API calls to the gateway service and preview traffic to a proxy service that resolves project subdomains. Behind the gateway, account, workspace, and intelligence services each own their deployment and pull configuration centrally. The data layer carries a relational store for durable state, an event bus between services, a cache in front of hot reads, and object storage for generated files, which sync into the previews namespace.",
-        points: [
-          "Preview resolution is a subdomain match rather than a lookup in application code, so adding a project needs no routing change.",
-          "Configuration is fetched by services at runtime rather than baked into images, so an environment change does not require a rebuild.",
-        ],
-      },
-      {
-        heading: "What this was for",
-        body:
-          "CodeNex is the project where I owned every layer at once — backend architecture, the streaming path, Kubernetes deployment, storage, authentication, quotas, and subscription billing. The value of building it was learning where a distributed system's real cost sits, which is almost never in the interesting part: it is in isolation boundaries, durable state, and what happens on the second concurrent request.",
-      },
-    ],
-    results: [
-      { metric: "3", label: "backend services split by scaling profile behind one gateway" },
-      { metric: "1 per project", label: "isolated preview environment, addressed by its own subdomain" },
-      { metric: "Live", label: "public product with streaming generation and running previews" },
-    ],
-    stack: [
-      "Java",
-      "Spring Boot",
-      "Spring AI",
-      "Spring Cloud Gateway",
-      "React",
-      "TypeScript",
-      "Kubernetes",
-      "PostgreSQL",
-      "Kafka",
-      "Redis",
-      "MinIO",
-      "Stripe",
-    ],
-    ownership:
-      "Designed and built solo — backend services, streaming architecture, preview infrastructure, storage, authentication, quotas, and billing foundations.",
-    tags: ["AI Product", "Distributed Systems", "Platform Engineering"],
-    aliases: ["codenex", "code nex", "ai builder", "codegen", "code generation", "spring", "spring ai", "spring cloud", "kubernetes", "preview", "previews", "sse", "streaming", "minio", "kafka", "saas", "prompt to app"],
-  },
-  {
-    slug: "fantasy-gpt",
-    kind: "product",
-    theme: "retrieval",
-    title: "Fantasy GPT",
-    employer: "Xansr Media",
-    period: "2024",
-    oneLiner:
-      "A multi-step reasoning SQL RAG system on a fine-tuned in-house model, answering live cricket questions against continuously ingested match data in under thirty seconds.",
-    summary:
-      "Sports questions are not lookups — they are aggregations over live data, and they arrive while the match is still running. I built the system that answers them: a fine-tuned in-house model driving multi-step reasoning over SQL, fed by live ETL pipelines, with quality checks rather than vibes deciding whether an answer was good enough to ship.",
-    problem:
-      "A fan's question rarely maps to a single row. It maps to a query — sometimes several, chained — over data that is changing as they ask. Vector retrieval over documents cannot answer 'who has the better strike rate against spin in this innings', because the answer does not exist as text anywhere; it has to be computed. And a stale answer during a live match is worse than a slow one, so ingestion latency was part of the problem, not separate from it.",
-    constraints: [
-      "The data is live: an answer computed against a stale snapshot is wrong even if the reasoning was right.",
-      "Questions need multiple dependent steps, so a single generated query cannot satisfy them.",
-      "A generated query runs against a real database, so it has to be constrained rather than trusted.",
-      "Answers had to land fast enough to feel conversational during a match in progress.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [
-      {
-        choice: "SQL generation over document retrieval",
-        why:
-          "The questions were quantitative, and the ground truth lived in structured match data rather than prose. Generating queries against that data returns computed answers instead of retrieved passages — which is the difference between answering a statistics question and finding a page that discusses statistics.",
-        rejected: [
-          "Vector search over match reports and commentary — retrieves text that talks about the numbers without ever computing them",
-        ],
-      },
-      {
-        choice: "Multi-step reasoning rather than one query per question",
-        why:
-          "Real questions decompose: establish context, then narrow, then compare. Letting the system plan and chain steps — using intermediate results to shape the next query — answers questions that a single generated statement structurally cannot.",
-      },
-      {
-        choice: "A fine-tuned in-house model",
-        why:
-          "Cricket has dense domain vocabulary and a schema-specific query surface, and a general model handled neither reliably. Fine-tuning in house also kept inference within our own infrastructure, which matters when every question during a live match hits the same path.",
-      },
-      {
-        choice: "Live ETL as part of the answer path",
-        why:
-          "Pipelines continuously ingested match data from multiple sources into the analytical store the model queries. Freshness was treated as a system property rather than a data-team concern, because the product promise was answering about a match that is still happening.",
-      },
-      {
-        choice: "Automated quality checks on generated answers",
-        why:
-          "Answer quality was measured with an evaluation harness rather than judged by spot-checking. This was my first experience of the thing I now build deliberately: without measurement, every prompt change is a guess, and regressions are invisible until a user finds them.",
-      },
-    ],
-    sections: [
-      {
-        heading: "Why this one mattered to me",
-        body:
-          "This is where the pattern I now work on full time first appeared: a model is only as useful as the tools and context around it, and you cannot tell whether it is working without measuring it. Fantasy GPT needed retrieval that computed rather than recalled, orchestration across dependent steps, and evaluation to know if any of it held. Everything I have built since is a more rigorous version of those three ideas.",
-      },
-    ],
-    results: [
-      { metric: "98%", label: "of complex sports queries resolved end to end" },
-      { metric: "< 30s", label: "answers against live match data while a match is in progress" },
-      { metric: "Multi-step", label: "reasoning chains, so questions need not map to a single query" },
-    ],
-    stack: [
-      "Python",
-      "FastAPI",
-      "LangGraph",
-      "SQL RAG",
-      "Fine-tuned LLaMA",
-      "Microsoft SQL Server",
-      "DeepEval",
-      "Docker",
-    ],
-    ownership:
-      "Built the retrieval and reasoning system, the backend APIs, the ETL pipelines feeding it, and the quality checks over its answers, as a GenAI intern on the product team.",
-    tags: ["SQL RAG", "Multi-Step Reasoning", "Model Fine-Tuning"],
-    aliases: ["fantasy gpt", "fantasygpt", "sql rag", "text to sql", "cricket", "sports", "fine tuning", "finetuned", "llama", "langgraph", "deepeval", "etl", "live data", "xansr", "multi step reasoning"],
-  },
-  {
-    slug: "aiko",
-    kind: "product",
-    theme: "products",
-    title: "AIKO",
-    employer: "Xansr Media",
-    period: "2024",
-    oneLiner:
-      "A personalized voice sports companion that follows a live match, builds a persona per listener, and generates catch-up highlight reels with AI commentary in twenty-plus languages.",
-    summary:
-      "AIKO is what a sports broadcast sounds like when it is built for one person. It follows a match as it happens, holds a spoken conversation in the listener's language, and — for someone who joined at half time — stitches the part they missed into a highlight reel with commentary generated for them. I worked across the voice pipeline, the personalization layer, and the highlight generation.",
-    problem:
-      "Broadcast commentary is one narration for everyone, in one language, and it assumes you were watching from the start. A listener who tunes in mid-match has no way to catch up conversationally, and a listener who does not speak the broadcast language has no access at all. Solving that means real-time voice in both directions, a model of what this specific listener cares about, and generating narration over footage that has already gone past.",
-    constraints: [
-      "Voice is bidirectional and live, so latency budgets apply to speech recognition and synthesis, not only to the model.",
-      "The match is in progress, so the system reads and reasons about events as they arrive rather than after the fact.",
-      "Highlights are assembled from the part already played, so selection has to be driven by what this listener would care about.",
-      "Twenty-plus languages means neither the commentary nor the voice layer can be built around one locale.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [
-      {
-        choice: "Persona building as the personalization primitive",
-        why:
-          "Rather than tuning a single feed, the system builds a persona per listener — the teams, players, and kinds of moment they care about — and every downstream decision reads from it. Highlight selection and commentary tone then follow from one model of the listener instead of being personalized separately and inconsistently.",
-      },
-      {
-        choice: "Generate commentary rather than clip existing audio",
-        why:
-          "Reusing broadcast audio would carry the original language, pacing, and assumption that you watched from the start. Generating narration per listener means a catch-up reel can explain what happened to someone who just arrived, in their language, at their level of detail.",
-        rejected: [
-          "Splicing the original broadcast commentary — cheaper, and it cannot be localized, re-paced, or made to address a mid-match arrival",
-        ],
-      },
-      {
-        choice: "Read live match state as a first-class input",
-        why:
-          "The assistant tracks a running match and answers about what is happening now, which means match events feed the reasoning path continuously rather than being queried on demand. A sports companion that can only discuss finished matches is a search interface.",
-      },
-      {
-        choice: "Managed speech services for the voice layer",
-        why:
-          "Speech recognition and synthesis across twenty-plus languages is a problem with mature managed solutions and enormous depth. Using one kept the effort on the parts that were actually differentiated — persona modelling, highlight selection, and generated commentary.",
-      },
-    ],
-    sections: [
-      {
-        heading: "The catch-up case",
-        body:
-          "The feature that best explains the product: a listener starts watching at half time and wants to know what they missed. AIKO selects moments from the played portion based on that listener's persona, generates commentary over them, and speaks it in their language. Every part of the system — live state, persona, generation, voice — has to work at once for that single interaction to land.",
-      },
-      {
-        heading: "Where it went",
-        body:
-          "The product was presented at IBC 2024 in Amsterdam, one of the industry's main broadcast technology events. Building for a demo with that audience meant the voice path had to hold up live rather than in a recorded walkthrough.",
-      },
-    ],
-    results: [
-      { metric: "20+", label: "languages supported for live commentary and conversation" },
-      { metric: "IBC 2024", label: "presented at the broadcast industry event in Amsterdam" },
-      { metric: "Per listener", label: "persona driving highlight selection and commentary, not a shared feed" },
-    ],
-    stack: [
-      "Python",
-      "Node.js",
-      "FastAPI",
-      "Azure Speech SDK",
-      "LLM commentary generation",
-      "Docker",
-      "GitHub Actions",
-    ],
-    ownership:
-      "Contributed to the voice workflows, the personalization layer, and profile-driven highlight generation as a GenAI intern; AIKO is a Xansr Media product built by a team.",
-    tags: ["Voice AI", "Personalization", "Real-Time Systems"],
-    aliases: ["aiko", "voice assistant", "voice ai", "sports assistant", "commentary", "highlights", "highlight reel", "text to speech", "speech to text", "tts", "stt", "azure speech", "multilingual", "persona", "ibc", "xansr"],
-  },
-  {
-    slug: "serenify",
-    kind: "product",
-    theme: "products",
-    title: "Serenify",
-    period: "2025 – 2026",
-    oneLiner:
-      "An AI wellness product where the hard problems are trust ones: what the model is allowed to see, and what it must do when a conversation turns to crisis.",
-    summary:
-      "Wellness is a domain where a plausible AI response is not good enough. I built Serenify as a product that takes that seriously: per-user data isolation enforced at the database, granular controls over what the assistant can read, retrieval over documents the user chose to share, and explicit crisis-resource surfacing rather than leaving a distressed user to the model's judgment.",
-    problem:
-      "An empathetic chat interface is straightforward to build and the wrong place to stop. The real questions are structural: how do you guarantee one user's journal can never reach another's session, how does a user grant the assistant access to some of their history but not all of it, and what happens when someone describes self-harm to a chatbot. Those are architecture and safety decisions, not prompt decisions.",
-    constraints: [
-      "The data is health-adjacent and personal, so isolation has to be enforced by the datastore rather than by application code remembering to filter.",
-      "Users must be able to withhold context from the AI without losing the rest of the product.",
-      "Crisis signals can appear in any conversation, so detection cannot live in a single flow.",
-      "Repeated model calls over personal history are expensive, so caching had to respect per-user boundaries.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [
-      {
-        choice: "Row-level isolation tied to the authenticated user",
-        why:
-          "Every user-owned table enforces access against the authenticated identity at the database layer, so a query cannot return another user's rows even if application code is wrong. In a product holding journals and mood history, isolation belongs where it cannot be forgotten rather than in every query that touches it.",
-        rejected: [
-          "Filtering by user in application queries — correct until one query forgets, and that one query is a data breach",
-        ],
-      },
-      {
-        choice: "Explicit user control over what the assistant can see",
-        why:
-          "Granular toggles decide which categories of personal data the AI may read. Personalization and privacy genuinely trade off here, so the resolution is to let the user set the balance rather than to pick a default and hide it. A wellness product that quietly reads everything has broken something more important than a feature.",
-      },
-      {
-        choice: "Retrieval scoped to documents the user uploaded",
-        why:
-          "Embeddings over user-provided health documents let the assistant ground its responses in that person's actual context, stored in the same per-user isolated store. Retrieval is what makes the responses specific rather than generic, and scoping it per user is what makes it safe to do at all.",
-      },
-      {
-        choice: "Detect crisis language and surface real resources",
-        why:
-          "When a conversation indicates crisis, the product surfaces helpline and emergency resources directly instead of relying on the model to respond well. A model's answer to someone in danger is a probability distribution; a helpline number is not. This is the decision I would defend hardest in the whole product.",
-      },
-      {
-        choice: "Cache derived insights per user per day",
-        why:
-          "Generated insights are computed once and reused within the day rather than regenerated on every view, which cuts model calls substantially and keeps what the user sees stable rather than shifting each time they open the app.",
-      },
-    ],
-    sections: [
-      {
-        heading: "A known limitation, stated plainly",
-        body:
-          "In the current open-source build the model is called from the client, which means the API key is exposed to the browser — acceptable for a self-hosted personal deployment, not for a hosted multi-user product. The documented fix is to proxy model calls through a server-side function so the key never reaches the client. It is written down in the repository rather than left for someone to discover, because an unstated known weakness is worse than the weakness.",
-      },
-      {
-        heading: "What the product actually does",
-        body:
-          "Empathetic chat, mood tracking across several dimensions, journaling with AI-assisted reflection, guided sessions, and a dashboard of trends over time — with the privacy controls and crisis flows threaded through all of it rather than bolted on at the end.",
-      },
-    ],
-    results: [
-      { metric: "Per user", label: "database-enforced isolation on every user-owned table" },
-      { metric: "Granular", label: "user controls over which personal data the assistant may read" },
-      { metric: "1 per day", label: "cached insight generation per user, cutting redundant model calls" },
-    ],
-    stack: [
-      "React",
-      "TypeScript",
-      "Supabase",
-      "PostgreSQL",
-      "pgvector",
-      "Gemini",
-      "Vite",
-      "Vercel",
-    ],
-    ownership:
-      "Designed and built solo as an open-source product — data model, privacy and isolation design, AI workflows, retrieval, and the full interface.",
-    tags: ["AI Product", "Privacy by Design", "Safety"],
-    aliases: ["serenify", "wellness", "mental health", "journaling", "mood tracking", "supabase", "pgvector", "row level security", "rls", "privacy", "crisis", "safety", "gemini", "consumer product"],
+      "Tijani's documented contribution is website development and the listed presentation and layout work. The site and brand are not presented as his sole creation.",
+    tags: ["Corporate Website", "Responsive Design", "Industrial", "B2B"],
+    aliases: ["charter steel", "industrial website", "steel manufacturer", "corporate website", "responsive web design", "content organization"],
   },
 ];
 
+// Keep system work before customer-facing products in the index, regardless of
+// the order in which the source entries above are maintained.
+caseStudies.sort((a, b) => (a.kind === b.kind ? 0 : a.kind === "system" ? -1 : 1));
+
 export const caseStudyBySlug = new Map(caseStudies.map((study) => [study.slug, study]));
-
 export const systemCaseStudies = caseStudies.filter((study) => study.kind === "system");
-
 export const productCaseStudies = caseStudies.filter((study) => study.kind === "product");
 
-/** Studies grouped for the `/work` index, in the order themes are declared. */
 export const caseStudiesByTheme = CASE_STUDY_THEMES.map((theme) => ({
   ...theme,
   studies: caseStudies.filter((study) => study.theme === theme.id),
 })).filter((group) => group.studies.length > 0);
 
-/**
- * The homepage tier-1 row is a fixed three-column grid, so it renders a curated
- * subset rather than growing with the array. Everything else is reached via `/work`.
- */
 export const featuredCaseStudies = caseStudies.filter((study) => study.featured);
 
 export function getCaseStudyPath(slug: string) {

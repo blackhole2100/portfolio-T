@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
-  authors: [{ name: siteConfig.author, url: siteConfig.github }],
+  authors: [{ name: siteConfig.author, url: siteConfig.linkedin }],
   creator: siteConfig.creator,
   openGraph: {
     type: 'website',
@@ -56,8 +56,6 @@ export const metadata: Metadata = {
   other: {
     'geo.region': siteConfig.geo.region,
     'geo.placename': siteConfig.geo.placename,
-    'geo.position': siteConfig.geo.position,
-    ICBM: siteConfig.geo.icbm,
   }
 }
 

@@ -3,7 +3,7 @@ import { bulletText, experiences, personalInfo, projects, stats } from "@/data/p
 import { getProjectAnchor, normalizeText } from "@/lib/ai-twin";
 
 /**
- * Tools the AI Twin can call.
+ * Tools the portfolio assistant can call.
  *
  * Every tool is a pure function over data already in the repo — no network, no
  * database — so a call costs microseconds and the only failure mode is
@@ -47,17 +47,17 @@ export const TOOL_DEFINITIONS = [
     function: {
       name: "search_work",
       description:
-        "Search across Nikunj's production systems (case studies), personal projects, and experience bullets. Use this first for any question about what he has built, worked on, or is capable of.",
+        "Search across Tijani's documented project case studies, project contributions, skills, and experience. Use this first for any question about his work or capabilities.",
       parameters: {
         type: "object",
         properties: {
           query: {
             type: "string",
-            description: "What to look for, e.g. 'tenant isolation', 'evaluation', 'Go', 'cost'.",
+            description: "What to look for, e.g. 'entity resolution', 'QuickBooks', 'React Native', or 'Azure OpenAI'.",
           },
           kind: {
             type: "string",
-            enum: ["all", "systems", "projects", "experience"],
+            enum: ["all", "systems", "products", "projects", "experience"],
             description: "Optionally narrow the search. Defaults to all.",
           },
         },
@@ -70,7 +70,7 @@ export const TOOL_DEFINITIONS = [
     function: {
       name: "get_case_study",
       description:
-        "Retrieve the full detail of one production system: problem, constraints, architecture decisions with rejected alternatives, measured results, stack, and the ownership boundary. Use when the visitor asks how something works or wants depth.",
+        "Retrieve the documented detail for one project: product context, constraints, implementation sections, results, technology, and the ownership boundary. Use when the visitor asks how something works or wants depth.",
       parameters: {
         type: "object",
         properties: {
@@ -100,7 +100,7 @@ export const TOOL_DEFINITIONS = [
         properties: {
           name: {
             type: "string",
-            description: "The metric being asked about, e.g. 'MCP servers', 'kappa', 'entities', 'cost'.",
+            description: "The metric being asked about, e.g. 'load-time reduction', 'events per second', 'MCP tools', or 'documents per month'.",
           },
         },
         required: ["name"],
@@ -152,7 +152,7 @@ export const TOOL_DEFINITIONS = [
  * ------------------------------------------------------------------ */
 
 interface SearchHit {
-  kind: "system" | "project" | "experience";
+  kind: "system" | "product" | "project" | "experience";
   id: string;
   title: string;
   snippet: string;
@@ -183,8 +183,10 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
 
   const hits: SearchHit[] = [];
 
-  if (kind === "all" || kind === "systems") {
+  if (kind === "all" || kind === "systems" || kind === "products") {
     for (const study of caseStudies) {
+      if (kind === "systems" && study.kind !== "system") continue;
+      if (kind === "products" && study.kind !== "product") continue;
       const haystack = [
         study.title,
         study.oneLiner,
@@ -201,12 +203,12 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
       const score = scoreText(haystack, terms);
       if (score > 0) {
         hits.push({
-          kind: "system",
+          kind: study.kind,
           id: study.slug,
           title: study.title,
           snippet: study.oneLiner,
           link: getCaseStudyPath(study.slug),
-          score: score + 8, // production systems outrank side projects
+          score: score + (study.kind === "system" ? 8 : 4),
         });
       }
     }
@@ -222,7 +224,7 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
           id: project.slug,
           title: project.title,
           snippet: project.summary,
-          link: project.live ?? project.github,
+          link: project.live ?? getCaseStudyPath(project.caseStudy),
           score,
         });
       }
@@ -274,149 +276,64 @@ interface MetricEntry {
 
 const METRICS: MetricEntry[] = [
   {
-    keys: ["mcp server", "mcp servers", "servers", "registry size", "10+"],
-    value: "10+",
-    context:
-      "Production MCP servers Nikunj delivered into ArmorCode's shared enterprise registry. Others in the same registry were built by teammates against the same policy, so this is his contribution rather than the registry total.",
-    source: "Governed MCP Tool Registry",
+    keys: ["years of experience", "11 years", "11+ years", "experience"],
+    value: "11+ years",
+    context: "Senior full-stack and AI software engineering experience across web, mobile, enterprise, and AI-enabled products, as stated in the supplied resume.",
+    source: "Professional Summary",
   },
   {
-    keys: ["authorization", "authorization checks", "permission tier", "tiers", "20 of 20"],
-    value: "20 of 20",
-    context: "Authorization checks passing across three permission tiers on a 23-tool integration.",
-    source: "Governed MCP Tool Registry",
+    keys: ["load time", "load-time reduction", "application load", "93%", "performance improvement"],
+    value: "93%",
+    context: "Reduction in application load time, stated as a career result in the supplied resume. The resume does not assign this figure to a named project.",
+    source: "Professional Summary",
   },
   {
-    keys: ["ai surface", "ai surfaces", "surfaces", "evaluated", "scored"],
-    value: "9",
-    context:
-      "AI surfaces scored against golden datasets: prompts, models, agents, skills, MCP tool calls, and retrieval.",
-    source: "LLM Evaluation Platform",
+    keys: ["events per second", "1000 events", "1000+", "real-time events", "event throughput"],
+    value: "1,000+ events per second",
+    context: "Contributions to real-time platforms processing more than 1,000 events per second, as stated in the supplied resume. This is not attributed to a named project in the resume.",
+    source: "Professional Summary",
   },
   {
-    keys: ["kappa", "cohen", "judge", "agreement", "inter rater"],
-    value: "≥ 0.7",
-    context:
-      "Cohen's kappa a judge model must reach against held-out human labels before its scores are allowed to gate any release. Rechecked quarterly.",
-    source: "LLM Evaluation Platform",
+    keys: ["mcp tools", "11 mcp tools", "anchord tools", "anchord mcp"],
+    value: "11 MCP tools",
+    context: "AI-agent workflows integrated with 11 MCP tools for Anchord AI. The documented contribution also includes REST APIs, webhooks, multi-signal scoring, evidence-backed ambiguous-match review, canonical IDs, and resolve-before-write flows.",
+    source: "Anchord AI — Entity Resolution & Agent Integration",
   },
   {
-    keys: ["entities", "entity", "knowledge graph size", "1m", "corpus"],
-    value: "1M+",
-    context:
-      "Entities in the production knowledge graph across four content sources: test cases, support documentation, RCA items, and release notes.",
-    source: "Knowledge Graph RAG",
+    keys: ["brokerages", "65 brokerages", "freight brokerages"],
+    value: "Approximately 65",
+    context: "Brokerages supported by the freight SaaS operation connected to QuickBooks Online. This is the operational scale of the integration, not a personal customer count.",
+    source: "Freight SaaS — QuickBooks Online Integration",
   },
   {
-    keys: ["query mode", "modes", "retrieval mode", "five modes"],
-    value: "5",
-    context:
-      "Retrieval modes benchmarked (naive, local, global, hybrid, mix) into a documented mode-per-tool policy, scored on recall within the top k results, mean reciprocal rank, and context precision.",
-    source: "Knowledge Graph RAG",
+    keys: ["loads per month", "52000 loads", "52,000 loads"],
+    value: "Approximately 52,000 per month",
+    context: "Loads handled per month by the freight operation supported by the QuickBooks Online integration.",
+    source: "Freight SaaS — QuickBooks Online Integration",
   },
   {
-    keys: ["business function", "functions", "teams served", "20"],
-    value: "20+",
-    context:
-      "Business functions reachable by Slack-accessible agents through Agentic Office OS, which Nikunj co-built with teammates.",
-    source: "Agentic Office OS",
+    keys: ["documents per month", "90000 documents", "90,000 documents"],
+    value: "Approximately 90,000 per month",
+    context: "Documents handled per month by the freight operation supported by the QuickBooks Online integration.",
+    source: "Freight SaaS — QuickBooks Online Integration",
   },
   {
-    keys: ["cost", "spend", "gateway cost", "57"],
-    value: "57%",
-    context:
-      "Share of LiteLLM gateway cost traced to 10+ automations across 50,000+ requests, root-caused to a bulk historical backfill rather than the model. Fixed by model migration and prompt caching. A deterministic rewrite was documented as worth a further ~95% reduction. Percentages only — absolute internal spend is not published.",
-    source: "LiteLLM gateway",
+    keys: ["records per day", "2400 records", "2,400 records", "daily processing"],
+    value: "Approximately 2,400 per day",
+    context: "Records processed per day by the .NET 8 and Azure OpenAI worker-service/data-processing workflow.",
+    source: ".NET 8 & Azure OpenAI Data Processing",
   },
   {
-    keys: ["empty queries", "100", "outage", "zero content", "failing queries"],
-    value: "100+ → 0",
-    context:
-      "Codebase-search queries returning zero content before the fix; two independent root causes were isolated by reading SDK source and host internals.",
-    source: "Governed MCP Tool Registry",
-  },
-  {
-    keys: ["sub agent", "sub agents", "platform agent", "migration", "2 of 6"],
-    value: "2 of 6",
-    context:
-      "Platform agent sub-agents Nikunj helped migrate from LangChain4j to Spring AI during his internship, reimplementing memory and evaluation integrations.",
-    source: "ArmorCode internship",
-  },
-  {
-    keys: ["online", "drift", "live traffic", "sample"],
-    value: "5–10%",
-    context: "Share of live production traffic scored continuously to catch quality drift.",
-    source: "LLM Evaluation Platform",
-  },
-  {
-    keys: ["efs", "storage throughput", "throttling", "76 kb", "14 minutes", "copy time", "burst credit"],
-    value: "76 KB in 14 minutes",
-    context:
-      "The copy time that identified the cause of a service crash loop as storage-throughput throttling rather than an application defect: latency uncorrelated with data volume is the signature of a credit-based volume running at baseline.",
-    source: "Code Intelligence Gateway",
-  },
-  {
-    keys: ["repositories", "repos", "product repositories", "8 repositories", "codebase search scope"],
-    value: "8",
-    context:
-      "Product repositories searchable by agents through the code intelligence gateway, indexed locally and refreshed on an interval the gateway owns.",
-    source: "Code Intelligence Gateway",
-  },
-  {
-    keys: ["context enrichment", "enrichment steps", "clarification", "clarification gate", "4 steps"],
-    value: "4",
-    context:
-      "Sequential context-enrichment steps that must complete before the documentation agent drafts anything: deep ticket pull, codebase search, clarification questions, then the existing flow. The clarification gate blocks drafting until open questions are answered.",
-    source: "Documentation Automation Platform",
-  },
-  {
-    keys: ["dashboards", "19 dashboards", "parity", "superset", "bi parity"],
-    value: "19",
-    context:
-      "Dashboards migrated to full parity with the vendor reporting tool being replaced, served from a self-hosted platform with row-level access control.",
-    source: "Business Data Layer for Agents",
-  },
-  {
-    keys: ["serving tables", "schema size", "32 to 12", "tables pruned"],
-    value: "32 → 12",
-    context:
-      "Serving tables after pruning an over-scoped schema down to only those whose every column traces to a surface that reads it.",
-    source: "Business Data Layer for Agents",
-  },
-  {
-    keys: ["permission tiers quill", "quill rbac", "github tiers", "3 tiers"],
-    value: "3",
-    context:
-      "Permission tiers enforced in Quill, the review app within the AI documentation automation workflow — read-only, write, and full access — resolved live from GitHub. Quill supports review of agent-created documentation PRs before merged changes sync to Zendesk.",
-    source: "Quill",
-  },
-  {
-    keys: ["backends", "providers", "6 backends", "provider count"],
-    value: "6",
-    context:
-      "Model provider backends reachable through one compatible API surface in the open-source gateway, with health-tracked routing and automatic recovery of providers that were temporarily unhealthy.",
-    source: "CodeNex AI API Proxy",
-  },
-  {
-    keys: ["sports queries", "fantasy gpt", "98%", "query resolution"],
-    value: "98%",
-    context:
-      "Complex sports queries resolved end to end by Fantasy GPT, a multi-step SQL RAG system on a fine-tuned in-house model answering against live match data in under thirty seconds.",
-    source: "Fantasy GPT",
-  },
-  {
-    keys: ["languages", "20+ languages", "multilingual", "commentary languages", "aiko"],
-    value: "20+",
-    context:
-      "Languages supported by AIKO for live commentary and voice conversation, with persona-driven highlight generation. Presented at IBC 2024 in Amsterdam.",
-    source: "AIKO",
+    keys: ["historical records", "1.6 million", "1.6m", "1.6m records", "dataset size"],
+    value: "Approximately 1.6 million",
+    context: "Historical records in the dataset used by the .NET 8 and Azure OpenAI data-processing workflow.",
+    source: ".NET 8 & Azure OpenAI Data Processing",
   },
   {
     keys: ["case studies", "case study count", "how many case studies", "write ups"],
-    value: "13",
-    context:
-      "Deep-dive case studies published on the site, grouped by theme at /work: agent systems, retrieval and context, platform and reliability, and AI products.",
-    source: "Portfolio",
+    value: "16",
+    context: "Sixteen project case studies are published in the Work section. Each describes product context, Tijani's documented role, implementation scope, available results, and ownership boundaries.",
+    source: "Portfolio Work Index",
   },
 ];
 
@@ -477,6 +394,7 @@ const SECTION_TARGETS: Record<string, string> = {
   skills: "#skills",
   contact: "#contact",
   "ai twin": "#ai-twin",
+  "ai assistant": "#ai-twin",
   hero: "#hero",
 };
 
@@ -488,9 +406,8 @@ function navigateTo(target: string) {
     return { ok: true as const, href: section, label: `${query} section` };
   }
 
-  // Case studies are matched before projects on purpose. Several slugs exist as
-  // both (CodeNex, Serenify, the API proxy), and the case study is the better
-  // destination: same subject, far more depth than the project card.
+  // Case studies are matched before projects so a request for a documented
+  // deep dive opens the detailed project page rather than the homepage anchor.
   const study = caseStudies.find(
     (candidate) => normalizeText(candidate.slug) === query || normalizeText(candidate.title) === query
   );
@@ -602,12 +519,17 @@ export function executeTool(request: ToolCallRequest): ToolCallResult {
       }
 
       const section = String(args.section ?? "all");
-      const base = { title: study.title, employer: study.employer, period: study.period, link: getCaseStudyPath(study.slug) };
+      const base = {
+        title: study.title,
+        ...(study.employer ? { employer: study.employer } : {}),
+        ...(study.period ? { period: study.period } : {}),
+        link: getCaseStudyPath(study.slug),
+      };
 
       const pick: Record<string, unknown> = {
         problem: { ...base, problem: study.problem },
         constraints: { ...base, constraints: study.constraints },
-        decisions: { ...base, decisions: study.decisions },
+        decisions: { ...base, decisions: study.decisions.length ? study.decisions : [], note: study.decisions.length ? undefined : "No specific architecture decision or rejected alternative was supplied for this project." },
         results: { ...base, results: study.results },
         ownership: { ...base, ownership: study.ownership },
         detail: { ...base, sections: study.sections },

@@ -2,114 +2,75 @@ import type { CaseStudySlug } from "@/data/case-studies";
 
 export const personalInfo = {
   name: "Tijani Shabazz",
-  role: "Applied AI Engineer",
-  tagline: "I work on the part of AI that starts after the demo: giving agents real tools, real memory, and a way to prove they still work tomorrow.",
-  focus: "Open to Applied AI, Forward Deployed AI, Agentic AI, AI Product, and LLM/AI Engineer roles where I can own agent systems end to end \u2014 governed MCP tool use, retrieval, and the evaluation that keeps them reliable.",
-  email: "munimaguro68@gmail.com",
-  linkedin: "https://www.linkedin.com/in/nikunj-khitha/",
-  github: "https://github.com/Nikunj2003",
-  resumeUrl: "/Nikunj_Resume.pdf",
+  role: "Senior Full-Stack & AI Software Engineer",
+  location: "Fort Lauderdale, Florida",
+  tagline:
+    "I build production software across web, mobile, enterprise, and AI—combining end-to-end product engineering with backend architecture, integrations, data workflows, and reliable cloud delivery.",
+  focus:
+    "Full-stack web and SaaS engineering · React Native and Flutter apps · AI-enabled products · APIs and distributed integrations · cloud delivery and production reliability",
+  linkedin: "https://www.linkedin.com/in/tijani-shabazz-7493a6439",
+  resumeUrl: "/Tijani_Shabazz_Senior_Engineer_Resume.docx",
 };
 
-/** `href` points each number at the surface that actually proves it. */
+/** Each figure is published in the supplied resume or project inventory. */
 export const stats = [
-  { value: 20, suffix: "+", label: "Business Functions Served", href: "#experience" },
-  { value: 10, suffix: "+", label: "Production MCP Servers", href: "/work/governed-mcp-registry" },
-  { value: 1, suffix: "M+", label: "KG Entities", href: "/work/knowledge-graph-rag" },
-  { value: 9, suffix: "", label: "AI Surfaces Evaluated", href: "/work/llm-evaluation-platform" },
+  { value: 11, suffix: "+", label: "Years of Experience", href: "#experience" },
+  { value: 93, suffix: "%", label: "Application Load-Time Reduction", href: "#about" },
+  { value: 1000, suffix: "+", label: "Events Processed per Second", href: "#about" },
+  { value: 90, suffix: "K", label: "Documents per Month", href: "/work/freight-quickbooks-integration" },
 ];
 
 export interface Highlight {
-  /** The measured claim, shown large. */
   metric: string;
-  /** What the metric counts. */
   label: string;
-  /** One sentence of supporting detail. */
   detail: string;
 }
 
 export const about = {
-  summary: "I focus on the engineering work that makes AI useful after the first successful prompt: connecting models to the right tools and context, controlling what those tools can do, preserving useful memory, measuring behavior, and debugging failures across model, protocol, application, and infrastructure boundaries.",
-  /**
-   * Structured so a card can lead with the figure and stay compact. The AI Twin
-   * still receives the full prose via the derived strings below.
-   */
+  summary:
+    "I’m a senior full-stack and AI software engineer with 11+ years of experience building and evolving production applications. I work across the full lifecycle—from understanding business requirements and shaping application architecture to implementing web and mobile experiences, integrating external systems, handling data-intensive workflows, and supporting cloud delivery. My project experience spans healthcare, logistics, financial integrations, marketplaces, real estate, and enterprise IT.",
   highlights: [
     {
-      metric: "9",
-      label: "AI surfaces evaluated",
+      metric: "93%",
+      label: "Application load-time reduction",
       detail:
-        "An OpenTelemetry platform on Langfuse scoring prompts, models, agents, skills, MCP tools, and retrieval against golden datasets — deterministic checks, scikit-learn metrics, Ragas, and LLM-as-a-judge graders validated at Cohen's kappa >= 0.7, enforced as Jenkins CI gates.",
+        "A career result cited in the supplied resume. The resume does not attribute this figure to a named project, so it is presented as an overall engineering result rather than assigned to a specific client engagement.",
     },
     {
-      metric: "10+",
-      label: "Production MCP servers",
+      metric: "1,000+",
+      label: "Events processed per second",
       detail:
-        "Delivered in ArmorCode's shared enterprise tool registry with OAuth2/RBAC, tool-level permission tiers, explicit denial behavior, and audit attribution under multi-tenant AppSec constraints.",
+        "Contributions to real-time platforms processing more than 1,000 events per second, as stated in the supplied resume.",
     },
     {
-      metric: "20+",
-      label: "Business functions served",
+      metric: "65",
+      label: "Brokerages supported",
       detail:
-        "Co-built Agentic Office OS, translating ambiguous stakeholder requirements into Slack-accessible agents, skills, MCP integrations, and human-in-the-loop approval workflows — then owning rollout, debugging, and enablement.",
+        "A freight SaaS integration supported an operation spanning approximately 65 brokerages, with QuickBooks Online synchronization and reconciliation workflows.",
     },
     {
-      metric: "1M+",
-      label: "Knowledge graph entities",
+      metric: "1.6M",
+      label: "Historical records in data workflows",
       detail:
-        "ArmorCode's tenant-scoped Knowledge Graph RAG layer in Neo4j and pgvector, with retrieval scored on accuracy, ranking quality, and context precision across five query modes.",
-    },
-    {
-      metric: "57%",
-      label: "Of gateway cost traced",
-      detail:
-        "Sole maintainer of company-wide model and MCP access on a LiteLLM gateway. Traced 57% of spend across 50,000+ requests to 10+ automations, then migrated models and enabled prompt caching.",
-    },
-    {
-      metric: "Graphiti",
-      label: "Agent memory layer",
-      detail:
-        "Shipped the platform agent memory layer on temporal knowledge graphs, combining session-scoped context with tenant- and person-level long-term recall for multi-step reasoning.",
+        "A .NET 8 and Azure OpenAI data-processing workflow handled about 2,400 records per day against a historical dataset of approximately 1.6 million records.",
     },
   ] satisfies Highlight[],
 };
 
-export const recognition = {
-  title: "AI Ninja Award at ArmorCode",
-  /**
-   * "Presented on a global platform" is the accurate framing: ArmorCode is a
-   * global company and the award was given at a company-wide global forum. It
-   * deliberately does not claim the award category itself is titled "global".
-   */
-  detail:
-    "First-ever recipient of ArmorCode's AI Ninja Award, presented on the company's global platform, and the youngest person to receive an award at the company.",
-};
-
-/** Prose form of the highlights, for the AI Twin context and SEO surfaces. */
 export const highlightSentences = about.highlights.map(
-  (highlight) => `${highlight.metric} ${highlight.label.toLowerCase()} — ${highlight.detail}`
+  (highlight) => `${highlight.metric} ${highlight.label}: ${highlight.detail}`
 );
 
 /**
- * A bullet is a plain string, OR a string paired with the case-study slug that
- * proves it.
- *
- * A separate slug-by-bullet-text lookup map was the other option and was
- * rejected: it would silently desync the moment a bullet is reworded, which is
- * exactly the class of regression this codebase keeps re-discovering.
- * Co-locating the link with the text it describes makes that impossible.
- *
- * `study` is typed against the case-study slug union so a renamed or removed
- * slug is a compile error here, not a dead link discovered by a visitor.
+ * A bullet is plain text, or text paired with the case study that documents it.
+ * Keeping the link next to the claim prevents the two from drifting apart.
  */
 export type ExperienceBullet = string | { text: string; study: CaseStudySlug };
 
-/** Reads the display text regardless of which bullet shape it is. */
 export function bulletText(bullet: ExperienceBullet): string {
   return typeof bullet === "string" ? bullet : bullet.text;
 }
 
-/** The case-study slug a bullet links to, if it has one. */
 export function bulletStudySlug(bullet: ExperienceBullet): CaseStudySlug | undefined {
   return typeof bullet === "string" ? undefined : bullet.study;
 }
@@ -123,67 +84,83 @@ export interface Experience {
   bullets: ExperienceBullet[];
 }
 
+/** Ordered chronologically so the timeline reads from education into employment. */
 export const experiences: Experience[] = [
   {
-    company: "Central Electricity Authority, Government of India",
-    role: "Software Development Intern",
-    period: "May 2023 - July 2023",
+    company: "Florida International University",
+    role: "Bachelor of Science, Computer Science",
+    period: "2009 – 2013",
+    type: "education",
+    summary: "Undergraduate study in computer science.",
+    bullets: [],
+  },
+  {
+    company: "Florida Atlantic University",
+    role: "Master of Science, Computer Science",
+    period: "2013 – 2015",
+    type: "education",
+    summary: "Graduate study in computer science.",
+    bullets: [],
+  },
+  {
+    company: "ModMed Innovation Lab",
+    role: "Research Assistant",
+    period: "Jun 2015 – May 2017",
     type: "work",
-    summary: "Built public-sector software that improved data reliability, internal operations, and workflow speed across government systems.",
+    summary:
+      "Research-oriented technical work establishing a foundation in software engineering, data systems, and applied computing.",
     bullets: [
-      "Integrated National Power Portal data into a national renewable energy dashboard serving 150+ power stations and improved reporting accuracy by 30%.",
-      "Built a secure Java/PostgreSQL file management system with role-based access control that improved retrieval efficiency by 25% across 5,000+ files.",
-      "Developed a MERN conference room booking system that cut booking time by 60% and reduced scheduling errors by 40%.",
+      "Supported technical research activities involving applied computing, software-related problem solving, and data-oriented work.",
+      "Used programming, structured analysis, and technical investigation to support research tasks and evaluate solutions.",
     ],
   },
   {
-    company: "Xansr Media (Aiko)",
-    role: "Software Development Intern (GenAI Specialist)",
-    period: "Jun 2024 – Dec 2024",
+    company: "Kairos Technologies",
+    role: "C/C++/C#/.NET Developer",
+    period: "Jun 2017 – Dec 2019",
     type: "work",
-    summary: "Shipped full-stack, backend, GenAI, and data systems for AIKO and Fantasy GPT, powering personalized sports experiences, voice AI, and retrieval-backed cricket intelligence.",
+    summary:
+      "Core software development focused on C-family languages, .NET application components, and dependable software implementation.",
     bullets: [
-      "Built Node.js and FastAPI microservices, improving API performance by 40% and reducing deployment time by 42% with Docker and GitHub Actions.",
-      { text: "Engineered Fantasy GPT with RAG, LangGraph, backend APIs, agents, and DeepEval quality checks to resolve 98% of complex sports queries.", study: "fantasy-gpt" },
-      { text: "Built Python-based ETL pipelines to collect sports data from multiple sources and ingest it into MS SQL for Fantasy GPT SQL RAG workflows.", study: "fantasy-gpt" },
-      { text: "Worked across AIKO, a voice-based sports companion using Azure Speech SDK for text-to-speech and speech-to-text, user-level personalization, and live AI-generated commentary in 20+ languages.", study: "aiko" },
-      { text: "Built AIKO personalization features for on-the-fly highlight reels, where AI agents stitched sports moments based on each user's profile and interests for a product presented at IBC 2024 in Amsterdam.", study: "aiko" },
+      "Developed application functionality using C, C++, C#, and .NET, applying object-oriented design, programming fundamentals, and structured problem-solving.",
+      "Implemented and maintained software components, investigating defects and improving code behavior through debugging and targeted changes.",
+      "Worked across application logic and supporting components, building a foundation in backend development, integration, and maintainable code.",
     ],
   },
   {
-    company: "ArmorCode",
-    role: "Software Development Intern (Applied AI)",
-    period: "Jan 2025 - Nov 2025",
+    company: "PeakActivity",
+    role: "Software Developer",
+    period: "Jan 2020 – Sep 2022",
     type: "work",
-    summary: "Created ArmorCode's platform agent framework and memory layers, and built backend integrations and AI-assisted scaffolding across its AppSec platform.",
+    summary:
+      "Product and application engineering across user-facing functionality, service integrations, and data-backed business workflows.",
     bullets: [
-      "Created the initial Java framework for ArmorCode's platform agent; designed, implemented, and owned its short- and long-term memory layers; and set up Langfuse-backed evaluation for agent accuracy and memory behavior.",
-      "Ported 2 of 6 platform agent sub-agents from LangChain4j to Spring AI, reimplementing memory and evaluation integrations for the new architecture.",
-      "Owned backend integrations for 5+ security tools, including Black Duck, Snyk, and Checkmarx, on an AppSec platform aggregating findings across 130+ connectors.",
-      "Created AI-assisted code generation utilities with template engines and AST parsing to automate new integration scaffolding, reducing per-integration boilerplate setup time by 30%.",
+      "Delivered web application features from interface behavior through backend and data integration, translating product requirements into maintainable software.",
+      "Implemented application services and connected workflows using APIs, data models, and external system integrations.",
+      "Improved existing functionality through debugging, performance refinement, and iterative enhancements to application behavior and user experience.",
+      "Contributed across implementation, testing, release preparation, and ongoing maintenance within the software development lifecycle.",
     ],
   },
   {
-    company: "ArmorCode",
-    role: "Applied AI Engineer (SDE 1)",
-    period: "Dec 2025 – Present",
+    company: "Chetu, Inc.",
+    role: "Full Stack Developer | Python, C#/.NET, TypeScript | AI, DevOps",
+    period: "Nov 2022 – Jul 2026",
     type: "work",
-    summary: "Co-build Agentic Office OS, the internal agent platform serving 20+ business functions, and own the tool, context, governance, and evaluation layers underneath it.",
+    summary:
+      "Full-stack delivery for client and enterprise software, spanning web applications, backend services, integrations, AI-enabled capabilities, and deployment.",
     bullets: [
-      "Co-built Agentic Office OS, the internal platform of autonomous, human-triggered, and human-in-the-loop agents reachable org-wide through Slack, translating ambiguous requirements from an external business consultant, executives, and internal teams into agents, skills, MCP integrations, and approval workflows for 20+ business functions, then owning rollout, debugging, and enablement.",
-      { text: "Built an OpenTelemetry-based LLM evaluation platform on Langfuse so every prompt, model, agent, skill, and MCP tool change ships on measured accuracy, latency, and cost. It scores 9 AI surfaces against golden datasets using deterministic checks, scikit-learn classification metrics, Ragas RAG scores, and LLM-as-a-judge graders validated at Cohen's kappa >= 0.7, enforced as Jenkins CI gates.", study: "llm-evaluation-platform" },
-      { text: "Delivered 10+ production MCP servers in ArmorCode's shared enterprise tool registry under multi-tenant AppSec constraints, implementing OAuth2/RBAC controls, tool-level permission tiers, explicit denial behavior, and audit attribution, with 20 of 20 authorization checks validated across three access tiers.", study: "governed-mcp-registry" },
-      { text: "Govern company-wide model and MCP access as sole maintainer of a LiteLLM gateway, issuing scoped API keys with per-model spend budgets and distributing RBAC-gated MCP servers to employees' Claude Desktop via an .mcpb proxy. Cut recurring LLM spend by tracing 57% of gateway cost across 50,000+ requests to 10+ automations, then migrating models and splitting system/user prompts to enable Bedrock prompt caching, while flagging a deterministic rewrite worth a further ~95% reduction.", study: "code-intelligence-gateway" },
-      { text: "Built ArmorCode's tenant-scoped knowledge-graph RAG layer over 1M+ entities of root-cause analyses, test cases, and product documentation in Neo4j and pgvector, giving Office OS agents grounded product knowledge without cross-tenant leakage, with retrieval scored on accuracy, ranking quality, and context precision across five query modes.", study: "knowledge-graph-rag" },
-      { text: "Cut CS and support escalations to engineering with a codebase-search MCP service in Go over 8 product repositories, fronting a read-only agent against a daily-reindexed vector index. Restored it after 100+ queries returned zero content by isolating two independent causes in SDK and host internals: a Go output-schema defect that made schema-aware clients discard every answer, and a query deadline sized for a longer client timeout tier. Shipped the fix with a negative-control test and flagged 14 exposed connectors.", study: "governed-mcp-registry" },
-      { text: "Built AI documentation automation that triggers when a Jira ticket is completed: an agent creates or updates documentation in GitHub and opens a pull request, reviewers use Quill (Electron/React/TypeScript) to review and edit the changes, and merged documentation syncs to Zendesk. Built Quill as the workflow's review app with a WYSIWYG editor, an embedded agent terminal, per-branch Git worktrees, and permission-aware GitHub actions.", study: "documentation-automation" }
+      { text: "Designed and implemented end-to-end application features across browser-based interfaces, server-side services, APIs, and relational or document data stores.", study: "charter-steel-web" },
+      { text: "Developed backend functionality and integration layers with Python and C#/.NET, connecting business workflows to internal services and external platforms through REST APIs and webhooks.", study: "freight-quickbooks-integration" },
+      { text: "Built and extended TypeScript-based application experiences, aligning frontend behavior with API contracts, authentication flows, data requirements, and operational workflows.", study: "ourblackguide-react-native" },
+      { text: "Applied AI capabilities to product workflows, including LLM-powered features, agent/tool integrations, retrieval-oriented experiences, and business-process automation.", study: "anchord-ai-entity-resolution" },
+      { text: "Addressed production concerns across performance, reliability, security, and maintainability; supported cloud delivery and CI/CD practices across the software lifecycle.", study: "azure-openai-data-processing" },
     ],
   },
 ];
 
 export interface Project {
   slug: string;
-  /** Featured projects get a full card; the rest render in the compact list. */
+  caseStudy: CaseStudySlug;
   featured?: boolean;
   title: string;
   category: string;
@@ -195,167 +172,355 @@ export interface Project {
   complexity: string;
   tech: string[];
   images: string[];
-  github: string;
+  github?: string;
   live?: string;
 }
 
+/** Projects with a documented role in the supplied resume and project notes. */
 export const projects: Project[] = [
   {
-    slug: "codenex",
+    slug: "ourblackguide-react-native",
+    caseStudy: "ourblackguide-react-native",
     featured: true,
-    title: "CodeNex: AI Builder",
-    category: "Full-Stack AI SaaS",
-    summary: "An AI-driven code generation SaaS platform for building full React applications from natural-language prompts.",
-    description: "Built an AI codegen SaaS that turns natural-language prompts into full React applications using Spring Boot and Spring AI, with SSE streaming, MinIO/NFS persistence, and Kubernetes preview pods.",
-    impact: "Designed for SaaS-scale concurrency with Kubernetes preview pods, token quotas, RBAC, autoscaling, and Stripe subscriptions.",
-    role: "SaaS architecture, backend systems, streaming infrastructure, and platform design",
-    timeline: "Flagship platform build",
-    complexity: "Distributed codegen, streaming, Kubernetes previews, persistence, auth, billing, and quotas",
-    images: [
-      "/images/projects/codenex/landing-page-light.png",
-      "/images/projects/codenex/landing-page-dark.png",
-      "/images/projects/codenex/system-architecture-dark.png",
-      "/images/projects/codenex/dashboard-overview-light.png",
-      "/images/projects/codenex/dashboard-overview-dark.png",
-      "/images/projects/codenex/dashboard-usage-dark.png",
-      "/images/projects/codenex/project-builder-dark.png",
-      "/images/projects/codenex/login-page-dark.png",
-    ],
-    tech: ["Java", "Spring Boot", "Spring AI", "React", "TypeScript", "SSE", "Kubernetes", "MinIO", "Stripe"],
-    github: "https://github.com/Nikunj2003/Codenex-backend-v1",
-    live: "https://www.codenex.dev/",
+    title: "OurBlackGuide",
+    category: "React Native Marketplace",
+    summary:
+      "A community discovery app connecting people with local businesses, professional services, entrepreneurs, events, career resources, and marketplace listings.",
+    description:
+      "Contributed to the React Native application architecture and reusable iOS and Android components. The mobile experience brings directory discovery, business profiles, category and location filtering, and listing workflows into one community-focused product.",
+    impact:
+      "Delivered reusable cross-platform foundations and connected the main discovery journey—from authenticated access and search through profiles, media uploads, and deep links.",
+    role:
+      "React Native engineering: reusable mobile components, authentication, API integration, discovery, profiles, and production releases.",
+    complexity:
+      "Cross-platform navigation and state, authenticated API workflows, searchable directories, location-aware filters, media handling, and deep-link behavior.",
+    tech: ["React Native", "TypeScript", "React Navigation", "TanStack Query", "iOS", "Android", "REST APIs"],
+    images: ["/images/portfolio/projects/ourblackguide-react-native.svg"],
+    live: "https://apps.apple.com/us/app/ourblackguide/id6816153059",
   },
   {
-    slug: "codenex-ai-api-proxy",
+    slug: "parente-ai-mobile-health",
+    caseStudy: "parente-ai-mobile-health",
     featured: true,
-    title: "CodeNex AI API Proxy",
-    category: "AI Gateway & Infra",
-    summary: "A unified AI gateway for routing model traffic through one consistent API layer.",
-    description: "Built an OpenAI-compatible AI gateway in Go and Gin with provider abstraction, multi-account load balancing, health-aware fallbacks, Redis-backed response caching, streaming support, and operational controls behind a single API surface.",
-    impact: "Demonstrates strong infra instincts around reliability, cost control, abstraction, observability, and multi-model platform design.",
-    role: "Gateway architecture, backend implementation, and operational tooling",
-    timeline: "Infra-focused product build",
-    complexity: "Provider abstraction, account pooling, fallback routing, Redis caching, streaming, and control plane UX",
-    images: [
-      "/images/projects/codenex-proxy/dashbord.png",
-      "/images/projects/codenex-proxy/providers.png",
-      "/images/projects/codenex-proxy/api-docs.png",
-      "/images/projects/codenex-proxy/login.png",
-    ],
-    tech: ["Go", "Gin", "Redis", "PostgreSQL", "React", "OpenAI-compatible APIs"],
-    github: "https://github.com/Nikunj2003/codenex-ai-api-proxy",
+    title: "Parente AI",
+    category: "Cross-Platform Health App",
+    summary:
+      "A pediatric behavioral-health application combining parent-led therapy, child psychology, clinician communication, and AI-assisted coaching.",
+    description:
+      "Built Flutter mobile workflows for family onboarding, assessments, and patient messaging, then connected those experiences to application APIs. The work included stabilizing real user flows affected by token expiration, inconsistent responses, profile switching, and incomplete assessment forms.",
+    impact:
+      "Improved the reliability of family and patient-facing workflows and supported the requirements of both iOS and Android releases.",
+    role:
+      "Flutter mobile development: onboarding, assessments, patient messaging, API integration, state handling, and release support.",
+    complexity:
+      "Multi-profile state, expiring authentication, inconsistent API responses, validation of multi-step forms, and cross-platform release behavior.",
+    tech: ["Flutter", "REST APIs", "Authentication", "iOS", "Android", "Mobile State Management"],
+    images: ["/images/portfolio/projects/parente-ai-mobile-health.svg"],
+    live: "https://www.parentehealth.com/",
   },
   {
-    slug: "serenify",
+    slug: "anchord-ai-entity-resolution",
+    caseStudy: "anchord-ai-entity-resolution",
     featured: true,
-    title: "Serenify",
-    category: "Full-Stack AI Product",
-    summary: "A consumer-style AI wellness product with thoughtful UX, not just chat wrapped around a model.",
-    description: "Built an open-source AI wellness product that combines empathetic Gemini-powered chat, mood tracking, journaling, guided sessions, crisis-help flows, privacy-aware analytics, and pgvector-backed personalization.",
-    impact: "Shows product empathy, privacy-minded AI interaction design, end-user UX judgment, and the ability to shape AI into a coherent consumer experience users can return to consistently.",
-    role: "Product design, frontend experience, and AI workflow implementation",
-    timeline: "Full product build",
-    complexity: "State-rich UX, AI interactions, crisis-help flows, Supabase-backed product workflows, pgvector personalization, and privacy-minded product design",
-    images: [
-      "/images/projects/serenify/landing-page-light.png",
-      "/images/projects/serenify/dashboard-light.png",
-      "/images/projects/serenify/chat-light.png",
-      "/images/projects/serenify/activities-light.png",
-      "/images/projects/serenify/profile-light.png",
-      "/images/projects/serenify/crisis-help-light.png",
-      "/images/projects/serenify/login-page-light.png",
-      "/images/projects/serenify/dashboard-streak-dark.png",
-    ],
-    tech: ["React", "TypeScript", "Supabase", "pgvector", "Gemini AI", "Vercel"],
-    github: "https://github.com/Nikunj2003/Serenify",
-    live: "https://serenify.codenex.dev/",
+    title: "Anchord AI",
+    category: "Entity Resolution & Agent Integration",
+    summary:
+      "An entity-resolution platform connecting AI agents to business data and helping determine when separate records represent the same real-world entity.",
+    description:
+      "Integrated agent workflows with 11 MCP tools, REST APIs, and webhooks. Implemented multi-signal, rules-based scoring, evidence-backed review for ambiguous matches, canonical entity identifiers, and resolve-before-write flows.",
+    impact:
+      "Connected agent actions to a more controlled entity-resolution workflow, with ambiguous cases surfaced for evidence review before downstream writes.",
+    role:
+      "AI integration and entity-resolution engineering: MCP tool integration, API/webhook connectivity, scoring, evidence review, and safe write sequencing.",
+    complexity:
+      "Coordinating multiple data signals, distinguishing confident matches from ambiguous records, and ensuring an entity is resolved before mutation.",
+    tech: ["AI Agents", "MCP", "REST APIs", "Webhooks", "Entity Resolution", "Rules-Based Scoring"],
+    images: ["/images/portfolio/projects/anchord-ai-entity-resolution.svg"],
+    live: "https://www.anchord.ai/product",
   },
   {
-    slug: "resume-fit-codenex",
-    title: "Resume Fit — CodeNex",
-    category: "AI Product",
-    summary: "An AI resume improvement workflow built like a practical product instead of a one-off analyzer.",
-    description: "Built an AI resume analysis and optimization tool with ATS-style scoring, keyword extraction, guided refinements, and visual feedback for iterative resume improvement.",
-    impact: "Highlights applied AI product thinking, user guidance, and polished workflow design around a high-frequency use case.",
-    role: "Product UX, AI workflow design, and frontend implementation",
-    timeline: "Focused product build",
-    complexity: "AI scoring UX, iterative feedback loops, and productized guidance",
-    images: [
-      "/images/projects/resumefit/landing-page-light.png",
-      "/images/projects/resumefit/landing-page-dark.png",
-      "/images/projects/resumefit/job-description-dark.png",
-      "/images/projects/resumefit/api-key-entry-light.png",
-      "/images/projects/resumefit/api-key-entry-dark.png",
-      "/images/projects/resumefit/upload-resume-empty-dark.png",
-      "/images/projects/resumefit/upload-resume-filled-dark.png",
-    ],
-    tech: ["React", "TypeScript", "Gemini AI", "Vercel AI SDK", "Recharts"],
-    github: "https://github.com/Nikunj2003/Resume-Fit-Codenex",
+    slug: "arvrobot-real-estate-underwriting",
+    caseStudy: "arvrobot-real-estate-underwriting",
+    featured: true,
+    title: "ARVRobot",
+    category: "Real Estate Underwriting",
+    summary:
+      "A real-estate underwriting platform that helps investors evaluate properties and analyze potential returns.",
+    description:
+      "Contributed to property-data ingestion, comparable-property analysis, financial calculations, configurable underwriting assumptions, reporting, and AI-assisted property analysis. The platform brings property facts and investment scenarios into a structured evaluation workflow.",
+    impact:
+      "Connected property research and financial assumptions to a clearer, more repeatable property-evaluation and reporting process.",
+    role:
+      "Full-stack product contribution across property data, comparable analysis, underwriting calculations, configurable inputs, reporting, and AI-assisted analysis.",
+    complexity:
+      "Combining property facts, comparable-property context, editable financial assumptions, and generated analysis in a coherent investor workflow.",
+    tech: ["Property Data Ingestion", "Comparable Analysis", "Financial Modeling", "AI-Assisted Analysis", "Reporting"],
+    images: ["/images/portfolio/projects/arvrobot-real-estate-underwriting.svg"],
+    live: "https://arvrobot.com/",
   },
   {
-    slug: "codenex-images",
-    title: "CodeNex Images",
-    category: "Full-Stack AI Product",
-    summary: "An AI image workspace designed around focused creation and editing flows.",
-    description: "Built an AI image generation and editing product around Gemini models, Auth0, and a polished workspace that emphasizes creation flow instead of exposing raw model controls.",
-    impact: "Shows ability to wrap multimodal AI into a more usable and polished creative product experience.",
-    role: "Product workflow design and full-stack implementation",
-    timeline: "Creative AI product build",
-    complexity: "Auth, image workflows, and UI-first multimodal product design",
-    images: [
-      "/images/projects/codenex-images/login-page-dark.png",
-      "/images/projects/codenex-images/generation-workspace-dark.png",
-    ],
-    tech: ["React", "TypeScript", "Vite", "Auth0", "Gemini AI", "Node.js", "MongoDB"],
-    github: "https://github.com/Nikunj2003/codenex-images",
+    slug: "crushbank-enterprise-ai",
+    caseStudy: "crushbank-enterprise-ai",
+    title: "CrushBank Orchestrate IT",
+    category: "Enterprise AI & IT Workflows",
+    summary:
+      "An enterprise AI platform using IBM watsonx to connect information sources, ground answers, classify service tickets, and automate operational workflows.",
+    description:
+      "Contributed to enterprise AI integrations spanning connected information sources, grounded search and answer experiences, service-ticket classification, and operational workflow automation. The project focused on making AI capabilities useful within established IT service processes.",
+    impact:
+      "Connected enterprise knowledge and AI-assisted classification to practical service-management and operational workflows.",
+    role:
+      "Enterprise AI integration contributor: information-source connectivity, grounded retrieval experiences, ticket classification, and workflow automation.",
+    complexity:
+      "Connecting enterprise knowledge sources to grounded responses and routing AI output into workflows where operational context matters.",
+    tech: ["IBM watsonx", "Enterprise AI", "Grounded Search", "Ticket Classification", "Workflow Automation"],
+    images: ["/images/portfolio/projects/crushbank-enterprise-ai.svg"],
+    live: "https://www.crushbank.com/orchestrate-it/",
   },
   {
-    slug: "llama-mcp-streamlit",
-    title: "LLaMa MCP Streamlit",
-    category: "LLM Tooling / MCP",
-    summary: "A tool-aware AI interface that pairs LLaMA with MCP for real-time external actions.",
-    description: "Built an interactive assistant that combines NVIDIA NIM-hosted LLaMA 3.3 70B with MCP to show how LLM interfaces can move beyond chat into real-time tool execution.",
-    impact: "Useful proof of experimentation depth around MCP, tool use, and practical LLM interaction design.",
-    role: "LLM tooling experimentation and applied interface design",
-    timeline: "Focused tooling exploration",
-    complexity: "Tool invocation, orchestration, and interactive AI UX",
-    images: [
-      "/images/projects/llama-mcp-streamlit/configuration-dark.png",
-      "/images/projects/llama-mcp-streamlit/tools-list-dark.png",
-    ],
-    tech: ["Python", "Streamlit", "MCP", "LLaMA", "NVIDIA NIM"],
-    github: "https://github.com/Nikunj2003/LLaMa-MCP-Streamlit",
+    slug: "correlate-health-clinical-trial-matching",
+    caseStudy: "correlate-health-clinical-trial-matching",
+    title: "Correlate Health / LooPT",
+    category: "Clinical Trial Matching",
+    summary:
+      "A healthcare platform that evaluates structured EHR data and clinical notes against clinical-trial eligibility criteria and coordinates follow-up workflows.",
+    description:
+      "Worked on healthcare workflows that compare structured electronic health record data and free-text clinical notes with study eligibility criteria. The contribution covered data validation, complex eligibility rules, API integration, auditability, and human review.",
+    impact:
+      "Supported a traceable matching process that combines structured and narrative clinical information while retaining validation and human review.",
+    role:
+      "Healthcare application engineering contributor: eligibility logic, clinical-data validation, API integration, auditability, and review workflows.",
+    complexity:
+      "Evaluating mixed structured and unstructured clinical information against multi-part eligibility criteria without losing reviewability.",
+    tech: ["Healthcare Workflows", "EHR Data", "Clinical Notes", "Eligibility Rules", "API Integration", "Auditability"],
+    images: ["/images/portfolio/projects/correlate-health-clinical-trial-matching.svg"],
+    live: "https://correlatehealth.com/",
+  },
+  {
+    slug: "freight-quickbooks-integration",
+    caseStudy: "freight-quickbooks-integration",
+    title: "Freight SaaS — QuickBooks Online Integration",
+    category: "Financial & Logistics Integration",
+    summary:
+      "An accounting integration that connects freight operations with QuickBooks Online through secure authorization, event-driven synchronization, and reconciliation.",
+    description:
+      "Built integration workflows around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation. The connected freight operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month.",
+    impact:
+      "Supported high-volume brokerage operations with repeatable accounting synchronization and recovery-aware reconciliation workflows.",
+    role:
+      "Integration engineering: OAuth lifecycle, webhook processing, idempotent sync, token refresh, and financial reconciliation.",
+    complexity:
+      "Maintaining reliable synchronization across external accounting APIs, expiring credentials, repeated events, and high-volume operational records.",
+    tech: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
+    images: ["/images/portfolio/projects/freight-quickbooks-integration.svg"],
+  },
+  {
+    slug: "azure-openai-data-processing",
+    caseStudy: "azure-openai-data-processing",
+    title: ".NET 8 & Azure OpenAI Data Processing",
+    category: "Enterprise Data Processing",
+    summary:
+      "A worker-service and data-processing workflow combining ASP.NET Core, Entity Framework Core, SQL Server, and Azure OpenAI.",
+    description:
+      "Developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI. The pipeline processed approximately 2,400 records per day against a historical dataset of around 1.6 million records.",
+    impact:
+      "Applied AI-assisted processing to a substantial historical dataset while maintaining a recurring daily processing workflow.",
+    role:
+      ".NET backend and data-processing development: worker services, persistence with EF Core and SQL Server, and Azure OpenAI integration.",
+    complexity:
+      "Combining recurring background processing, relational persistence, and AI service integration across a large historical dataset.",
+    tech: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
+    images: ["/images/portfolio/projects/azure-openai-data-processing.svg"],
+  },
+  {
+    slug: "deed-driver-delivery",
+    caseStudy: "deed-driver-delivery",
+    title: "Deed — Driver Delivery Application",
+    category: "Flutter Logistics App",
+    summary:
+      "A driver-focused mobile application for a UPS partner in Iceland, supporting package scanning and delivery workflows.",
+    description:
+      "Developed a Flutter application that supports driver package scanning and delivery tasks. The implementation used Firebase Authentication and a set of Flutter state-management and dependency-management tools to organize the application workflow.",
+    impact:
+      "Brought package-scanning and delivery tasks into a mobile workflow for drivers in the partner operation.",
+    role:
+      "Flutter application development: driver-facing screens and package-scanning/delivery workflow implementation.",
+    complexity:
+      "Building a dependable mobile task flow around authentication, scanning/file interaction, and coordinated application state.",
+    tech: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
+    images: ["/images/portfolio/projects/deed-driver-delivery.svg"],
+  },
+  {
+    slug: "gemsharbor-marketplace",
+    caseStudy: "gemsharbor-marketplace",
+    title: "GemsHarbor",
+    category: "Jewelry Marketplace & Auctions",
+    summary:
+      "A B2B/B2C gemstone marketplace combining product discovery, auctions, real-time bidding, offers, payments, and order workflows.",
+    description:
+      "Worked on e-commerce and marketplace workflows covering product listings, user dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order flows. The project brings discovery and transaction steps together for a specialist jewelry marketplace.",
+    impact:
+      "Contributed to the key marketplace and transaction journeys, from listings and bidding through payment and order communication.",
+    role:
+      "Marketplace application development: product listings, dashboards, auction/bid flows, offers, payment integrations, and notifications.",
+    complexity:
+      "Coordinating listing state, time-sensitive bids, offers, payment events, notifications, and order progression across marketplace users.",
+    tech: ["Marketplace Workflows", "E-commerce", "Auctions", "Bidding", "Payment Integrations", "Notifications"],
+    images: ["/images/portfolio/projects/gemsharbor-marketplace.svg"],
+    live: "https://gemsharbor.com/",
+  },
+  {
+    slug: "shiphype-fulfillment",
+    caseStudy: "shiphype-fulfillment",
+    title: "ShipHype",
+    category: "Logistics & Fulfillment SaaS",
+    summary:
+      "An operational platform for fulfillment and logistics, supporting connected shipping and warehouse workflows.",
+    description:
+      "Contributed to the integration and automation layers for fulfillment operations, including event processing, system synchronization, retry strategies, error handling, and operational workflows. The supporting project notes also identify work around the platform’s automation and AI layers.",
+    impact:
+      "Helped make fulfillment integrations more resilient to asynchronous events, synchronization issues, and recoverable failures.",
+    role:
+      "Full-stack and automation contribution: integration workflows, event handling, synchronization, retries, and error recovery.",
+    complexity:
+      "Maintaining consistency across operational systems when events arrive asynchronously or downstream services fail temporarily.",
+    tech: ["Logistics", "Fulfillment", "Event Processing", "System Synchronization", "Retry Strategies", "Automation"],
+    images: ["/images/portfolio/projects/shiphype-fulfillment.svg"],
+    live: "https://shiphype.com/",
+  },
+  {
+    slug: "dealercortex-ai",
+    caseStudy: "dealercortex-ai",
+    title: "DealerCortex AI",
+    category: "Automotive Intelligence",
+    summary:
+      "An automotive intelligence platform connecting dealership marketing, customer activity, inventory, and business performance.",
+    description:
+      "Contributed AI-powered dealership workflows and integrations across Google Ads, analytics, inventory, CRM data, customer conversations, and call data. The product connects marketing activity with downstream dealership outcomes such as appointments and sales, then uses AI-driven recommendations to inform decisions.",
+    impact:
+      "Connected fragmented marketing and dealership data to a more complete view of customer activity and business outcomes.",
+    role:
+      "AI integration and analytics development: marketing/ad data, CRM and inventory connections, conversation data, and AI recommendations.",
+    complexity:
+      "Bringing marketing, inventory, customer, and call signals together so recommendations can be tied to operational outcomes.",
+    tech: ["AI Workflows", "Google Ads", "Analytics", "CRM Integrations", "Inventory Data", "Call Data"],
+    images: ["/images/portfolio/projects/dealercortex-ai.svg"],
+    live: "https://dealercortexai.com/",
+  },
+  {
+    slug: "arub-shipping-integrations",
+    caseStudy: "arub-shipping-integrations",
+    title: "Arub Shipping",
+    category: "Shipping & Carrier Integrations",
+    summary:
+      "A shipping and logistics platform connecting order processing with carrier services.",
+    description:
+      "Worked on integration flows for carrier APIs, order synchronization, shipment processing, label generation, and transaction reconciliation. Reliability work included idempotency, retry behavior, and recovery handling across connected shipping operations.",
+    impact:
+      "Connected order and shipment workflows to carrier services with safeguards for duplicate events, retries, and reconciliation.",
+    role:
+      "Shipping integration development: carrier connectivity, order sync, shipment/label workflows, idempotency, retries, and reconciliation.",
+    complexity:
+      "Keeping order and shipment state aligned across external carrier services while recovering safely from transient failures and repeated requests.",
+    tech: ["Carrier APIs", "Order Synchronization", "Shipment Processing", "Label Generation", "Idempotency", "Reconciliation"],
+    images: ["/images/portfolio/projects/arub-shipping-integrations.svg"],
+    live: "https://arub.com/shipping",
+  },
+  {
+    slug: "suppliersift-ap-automation",
+    caseStudy: "suppliersift-ap-automation",
+    title: "SupplierSift",
+    category: "Accounts Payable Automation",
+    summary:
+      "An accounts-payable automation platform connecting Microsoft 365 invoice intake, extraction, accounting classification, approvals, and QuickBooks Desktop.",
+    description:
+      "Contributed to the accounting integration and workflow layer, including QuickBooks Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention. These integrations support the flow from incoming invoice documents through classification and approval to accounting-system updates.",
+    impact:
+      "Helped connect document-driven AP workflows to QuickBooks Desktop while guarding against duplicate transaction posting.",
+    role:
+      "Accounting integration contributor: Web Connector communication, posting workflows, list synchronization, and duplicate prevention.",
+    complexity:
+      "Keeping invoice-derived transactions and accounting reference data consistent across Microsoft 365 intake, approval stages, and QuickBooks Desktop.",
+    tech: ["Microsoft 365", "QuickBooks Desktop", "Web Connector", "Invoice Extraction", "Accounting Classification", "Approvals"],
+    images: ["/images/portfolio/projects/suppliersift-ap-automation.svg"],
+    live: "https://suppliersift.com/",
+  },
+  {
+    slug: "calcs-engineering-calculations",
+    caseStudy: "calcs-engineering-calculations",
+    title: "Calcs.com",
+    category: "Engineering Calculation Software",
+    summary:
+      "A web calculation platform that turns spreadsheet-based engineering methods into transparent, testable design workflows.",
+    description:
+      "Contributed to production web workflows translating calculation methods for structural steel, concrete, timber, foundations, and connections. The documented focus includes dependency-aware updates and automated validation so the calculation experience remains coherent as inputs change.",
+    impact:
+      "Helped make engineering calculation workflows more transparent and testable than disconnected spreadsheet-based processes.",
+    role:
+      "Web application contribution: calculation workflows, dependency-aware input updates, and automated validation.",
+    complexity:
+      "Maintaining correct dependencies between engineering inputs and derived calculations while making results transparent and testable.",
+    tech: ["Engineering Calculations", "Structural Steel", "Concrete", "Timber", "Foundations", "Automated Validation"],
+    images: ["/images/portfolio/projects/calcs-engineering-calculations.svg"],
+    live: "https://calcs.com/",
+  },
+  {
+    slug: "charter-steel-web",
+    caseStudy: "charter-steel-web",
+    title: "Charter Steel",
+    category: "Industrial Corporate Website",
+    summary:
+      "A corporate website for an industrial steel manufacturer, presenting the company and its business information to professional audiences.",
+    description:
+      "Contributed to website development, responsive page layouts, corporate presentation, and the organization of business-facing content. The work focused on making industrial information clear and accessible across desktop and mobile screen sizes.",
+    impact:
+      "Supported a responsive corporate web experience with clearer information organization for business audiences.",
+    role:
+      "Web development: responsive layouts, corporate presentation, and business-facing content organization.",
+    complexity:
+      "Presenting detailed industrial and corporate information through a clear, consistent responsive interface.",
+    tech: ["Web Development", "Responsive Design", "Corporate Website", "Content Organization"],
+    images: ["/images/portfolio/projects/charter-steel-web.svg"],
+    live: "https://www.chartersteel.com/",
   },
 ];
 
 export const skillCategories = [
   {
-    title: "Applied AI, Agents & Evaluation",
-    description: "The agent, retrieval, and evaluation stack I use to build governed AI systems and prove they still work after a change.",
-    skills: ["AI Agents", "Agentic AI", "Multi-Agent Systems", "Model Context Protocol (MCP)", "Tool Calling", "Agent Memory", "LLM Evaluation", "LLM-as-a-Judge", "Golden Datasets", "Langfuse", "Ragas", "OpenTelemetry", "RAG", "GraphRAG", "Knowledge Graph RAG", "Prompt Engineering", "Prompt Caching", "Model Routing", "LangGraph", "Spring AI", "Graphiti", "AWS Bedrock"],
+    title: "Web & SaaS Engineering",
+    description:
+      "End-to-end browser applications and SaaS products, from typed interfaces and API contracts through backend services, relational data, and business workflows.",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "C#/.NET", "ASP.NET Core", "Python", "FastAPI", "REST APIs", "Microservices", "SQL"],
   },
   {
-    title: "Languages & Backend",
-    description: "The languages and frameworks I use to build AI products, APIs, and internal platforms end to end.",
-    skills: ["Python", "TypeScript", "Go", "Java", "SQL", "FastAPI", "Spring Boot", "Node.js", "Gin", "Next.js", "React", "REST APIs", "Microservices", "OAuth2", "RBAC"],
+    title: "Mobile Application Engineering",
+    description:
+      "Cross-platform iOS and Android applications with reusable components, reliable navigation and state, authenticated API access, media workflows, and release support.",
+    skills: ["React Native", "Flutter", "Dart", "iOS", "Android", "React Navigation", "TanStack Query", "Authentication", "Deep Linking", "Media Uploads"],
   },
   {
-    title: "Data, Retrieval & Storage",
-    description: "The storage, graph, and vector technologies behind the retrieval and context systems I build.",
-    skills: ["Neo4j", "pgvector", "PostgreSQL", "Elasticsearch", "Redis", "MongoDB", "Apache Superset", "S3"],
+    title: "AI & Intelligent Applications",
+    description:
+      "Practical AI integration across product workflows: model connectivity, retrieval, agent/tool orchestration, entity resolution, and grounded automation.",
+    skills: ["LLM Integration", "OpenAI API", "RAG", "AI Agents", "MCP", "LangChain", "Vector Search", "Entity Resolution", "Grounded Retrieval", "Workflow Automation"],
   },
   {
-    title: "Platform, Observability & Delivery",
-    description: "The infrastructure and measurement tooling I use to deploy, route, observe, and gate AI systems in production.",
-    skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Jenkins", "GitHub Actions", "LiteLLM", "pytest", "scikit-learn", "Kafka", "Grafana", "Prometheus", "n8n"],
+    title: "Integration, Data & Distributed Systems",
+    description:
+      "Reliable connections between business applications and external platforms, including data movement, authorization, event handling, synchronization, and recovery.",
+    skills: ["OAuth 2.0", "Webhooks", "API Integration", "ETL", "SQL Server", "PostgreSQL", "MongoDB", "Data Validation", "Idempotency", "Retries", "Reconciliation", "Token Lifecycle"],
+  },
+  {
+    title: "Architecture, Cloud & Delivery",
+    description:
+      "Production-minded system design, modernization, performance and security work, cloud delivery, containerization, and repeatable CI/CD practices.",
+    skills: ["System Design", "AWS", "Azure", "Docker", "CI/CD", "GitHub Actions", "Performance Optimization", "Production Troubleshooting", "Security Remediation", "Application Modernization"],
   },
 ];
 
-/** Phrased to exercise the AI Twin's tools rather than invite a canned answer. */
 export const chatSuggestions = [
-  "Which system handles tenant isolation?",
-  "How does the evaluation platform work?",
-  "Compare the MCP registry and the RAG layer",
-  "What broke in production, and how was it fixed?",
-  "Show me the strongest proof of ownership",
+  "How do you approach mobile app architecture?",
+  "Walk me through the Anchord AI project.",
+  "How did you make the QuickBooks integration reliable?",
+  "What was your role in clinical trial matching?",
 ];

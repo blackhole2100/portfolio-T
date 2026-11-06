@@ -1,4 +1,4 @@
-import { Brain, Layers, Database, Server, Wrench } from "lucide-react";
+import { Brain, Layers, Database, Server, Smartphone, Wrench } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import FlipWords from "@/components/ui/flip-words";
 import Reveal from "@/components/ui/reveal";
@@ -8,10 +8,11 @@ import AskAboutThis from "@/components/AskAboutThis";
 /** Keyed by exact category title — a miss falls back to Wrench silently, so
  *  these must be updated in the same edit as any title change in portfolio.ts. */
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
-  "Applied AI, Agents & Evaluation": Brain,
-  "Languages & Backend": Layers,
-  "Data, Retrieval & Storage": Database,
-  "Platform, Observability & Delivery": Server,
+  "AI & Intelligent Applications": Brain,
+  "Web & SaaS Engineering": Layers,
+  "Integration, Data & Distributed Systems": Database,
+  "Architecture, Cloud & Delivery": Server,
+  "Mobile Application Engineering": Smartphone,
 };
 
 const SkillsSection = () => {
@@ -35,13 +36,13 @@ const SkillsSection = () => {
                   <span className="text-gradient">Stack</span>
                 </h2>
                 <p className="max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  The technologies I reach for most often when building agent systems, governed MCP tools, evaluation pipelines, and full-stack AI products.
+                  A broad engineering toolkit spanning web and SaaS products, cross-platform mobile applications, production AI, integrations, data systems, and cloud delivery.
                 </p>
 
                 <p className="mt-10 text-left text-base font-semibold text-foreground sm:text-xl md:text-2xl">
                   <FlipWords
                     variant="line"
-                    words={["Learning fast.", "Building deep.", "Shipping reliably."]}
+                    words={["Web products.", "Mobile apps.", "AI systems."]}
                     className="text-primary"
                   />
                 </p>
@@ -77,7 +78,7 @@ const SkillsSection = () => {
                       </div>
 
                       <div className="mt-4">
-                        <AskAboutThis question={`What is Nikunj's depth in ${cat.title}?`} className="ml-0" />
+                        <AskAboutThis question={`What is Tijani's depth in ${cat.title}?`} className="ml-0" />
                       </div>
 
                       <p className="mb-6 mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">

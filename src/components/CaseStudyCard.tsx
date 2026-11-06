@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, AudioLines, Blocks, Boxes, Database, BookOpen, FlaskConical, Gauge, HeartPulse, Layers, Network, PenLine, ServerCog, ShieldCheck, Trophy } from "lucide-react";
+import { Activity, ArrowRight, Boxes, Brain, Building2, Code2, Database, HeartPulse, Layers, Network, ServerCog, type LucideIcon } from "lucide-react";
 import { getCaseStudyPath, type CaseStudy } from "@/data/case-studies";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import AskAboutThis from "@/components/AskAboutThis";
@@ -8,20 +9,23 @@ import AskAboutThis from "@/components/AskAboutThis";
  * Per-study glyph. A slug with no entry falls back to a generic mark rather
  * than breaking, but every shipped study should be listed here.
  */
-export const SYSTEM_GLYPHS: Record<string, React.ElementType> = {
-  "llm-evaluation-platform": Gauge,
-  "governed-mcp-registry": ShieldCheck,
-  "code-intelligence-gateway": ServerCog,
-  "knowledge-graph-rag": Network,
-  "documentation-automation": BookOpen,
-  "sentinel-test-agent": FlaskConical,
-  "bi-platform": Database,
-  quill: PenLine,
-  "codenex-ai-proxy": Boxes,
-  codenex: Blocks,
-  "fantasy-gpt": Trophy,
-  aiko: AudioLines,
-  serenify: HeartPulse,
+export const SYSTEM_GLYPHS: Record<string, LucideIcon> = {
+  "anchord-ai-entity-resolution": Network,
+  "correlate-health-clinical-trial-matching": HeartPulse,
+  "freight-quickbooks-integration": Activity,
+  "azure-openai-data-processing": Database,
+  "crushbank-enterprise-ai": Brain,
+  "ourblackguide-react-native": Layers,
+  "parente-ai-mobile-health": HeartPulse,
+  "deed-driver-delivery": Activity,
+  "arvrobot-real-estate-underwriting": Building2,
+  "gemsharbor-marketplace": Boxes,
+  "shiphype-fulfillment": Boxes,
+  "dealercortex-ai": Activity,
+  "arub-shipping-integrations": ServerCog,
+  "suppliersift-ap-automation": Database,
+  "calcs-engineering-calculations": Code2,
+  "charter-steel-web": Building2,
 };
 
 /**
@@ -58,6 +62,15 @@ const CaseStudyCard = ({
     */
     <SpotlightCard className="group/system relative h-full transition-colors duration-300 hover:border-primary/30">
       <div className="flex h-full flex-col p-6">
+        <div className="relative mb-5 aspect-[16/9] overflow-hidden rounded-xl border border-white/10 bg-black/30">
+          <Image
+            src={`/images/portfolio/projects/${study.slug}.svg`}
+            alt={`Illustrative project visual for ${study.title}`}
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
+          />
+        </div>
         {/* Glyph inline with the title rather than on its own row —
             it was costing ~70px of height for one small icon. */}
         <div className="flex items-start gap-3">

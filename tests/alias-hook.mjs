@@ -19,7 +19,18 @@ export async function resolve(specifier, context, nextResolve) {
     const base = resolvePath(srcDir, specifier.slice(2));
 
     // Source files import without an extension; Node's ESM resolver requires one.
-    for (const candidate of [base, `${base}.ts`, `${base}.tsx`, `${base}/index.ts`]) {
+    for (const candidate of [base, `${base}.ts`, `${base}.tsx`, `${base}.js`, `${base}/index.ts`]) {
+      if (existsSync(candidate)) {
+        return nextResolve(pathToFileURL(candidate).href, context);
+      }
+    }
+  }
+
+  // The unit-test runner imports pure TypeScript modules with relative paths.
+  // Resolve the same extensionless .ts/.tsx imports that Next's bundler accepts.
+  if (specifier.startsWith(".") && context.parentURL?.startsWith("file:")) {
+    const base = resolvePath(dirname(fileURLToPath(context.parentURL)), specifier);
+    for (const candidate of [base, `${base}.ts`, `${base}.tsx`, `${base}.js`, `${base}/index.ts`]) {
       if (existsSync(candidate)) {
         return nextResolve(pathToFileURL(candidate).href, context);
       }

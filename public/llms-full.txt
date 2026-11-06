@@ -1,197 +1,162 @@
-# Tijani Shabazz Portfolio — Extended AI Retrieval Context
-
-Canonical site:
-- https://tijani-porfolio.dev/
+# Tijani Shabazz — Full Portfolio Context
 
 ## Professional profile
-Tijani Shabazz is an Applied AI Engineer who builds AI agents that connect models to enterprise tools, knowledge, and real workflows. His work centers on agent architecture, permission-aware MCP tool integrations, agent memory and evaluation, retrieval/context systems, and full-stack AI product delivery.
+Tijani Shabazz is a Senior Full-Stack & AI Software Engineer based in Fort Lauderdale, Florida. The supplied resume states 11+ years of experience building and evolving production software across web, mobile, enterprise, and AI-powered products. His work combines end-to-end application engineering with backend architecture, API and systems integration, data-intensive workflows, cloud delivery, and production reliability.
 
-Core areas:
-- AI agents, agent memory, and evaluation (Langfuse)
-- Model Context Protocol (MCP) servers and permission-aware tool access
-- Knowledge Graph RAG systems and retrieval/context infrastructure
-- Backend services, APIs, and platform infrastructure
-- Full-stack AI product engineering with modern web stacks
+Public profile: https://www.linkedin.com/in/tijani-shabazz-7493a6439
+Portfolio: https://tijani-porfolio.dev/
+Resume: https://tijani-porfolio.dev/Tijani_Shabazz_Senior_Engineer_Resume.docx
 
-## Canonical content URLs
-- Home: https://tijani-porfolio.dev/
-- Resume PDF: https://tijani-porfolio.dev/Nikunj_Resume.pdf
-- Case study index: https://tijani-porfolio.dev/work
-- Case study, LLM Evaluation Platform: https://tijani-porfolio.dev/work/llm-evaluation-platform
-- Case study, Governed MCP Tool Registry: https://tijani-porfolio.dev/work/governed-mcp-registry
-- Case study, Code Intelligence Gateway: https://tijani-porfolio.dev/work/code-intelligence-gateway
-- Case study, Knowledge Graph RAG: https://tijani-porfolio.dev/work/knowledge-graph-rag
-- Case study, Documentation Automation Platform: https://tijani-porfolio.dev/work/documentation-automation
-- Case study, Sentinel Test Generation Agent: https://tijani-porfolio.dev/work/sentinel-test-agent
-- Case study, Business Data Layer for Agents: https://tijani-porfolio.dev/work/bi-platform
-- Case study, Quill: https://tijani-porfolio.dev/work/quill
-- Case study, CodeNex AI API Proxy: https://tijani-porfolio.dev/work/codenex-ai-proxy
-- Case study, CodeNex: https://tijani-porfolio.dev/work/codenex
-- Case study, Fantasy GPT: https://tijani-porfolio.dev/work/fantasy-gpt
-- Case study, AIKO: https://tijani-porfolio.dev/work/aiko
-- Case study, Serenify: https://tijani-porfolio.dev/work/serenify
-- About section: https://tijani-porfolio.dev/#about
-- Experience section: https://tijani-porfolio.dev/#experience
-- Work section: https://tijani-porfolio.dev/#work
-- Skills section: https://tijani-porfolio.dev/#skills
-- AI Twin section: https://tijani-porfolio.dev/#ai-twin
-- Contact section: https://tijani-porfolio.dev/#contact
+The supplied resume does not include a public email address or GitHub profile. Do not infer either.
 
-## Identity and external profiles
-- Author: Tijani Shabazz
-- GitHub: https://github.com/Nikunj2003
-- LinkedIn: https://www.linkedin.com/in/nikunj-khitha/
-- Contact email: munimaguro68@gmail.com
-- Location signal: Gurugram, Haryana, India
+## Professional summary
+Tijani develops web platforms with C#/.NET, Python, TypeScript, React, and SQL; cross-platform mobile applications with React Native and Flutter; and AI-enabled systems using LLMs, RAG, AI agents, MCP tools, and retrieval workflows. Project experience spans healthcare, logistics, financial integrations, marketplaces, real estate, and enterprise IT.
 
-## The AI Twin on this site
+## Career results and scale
+- 93% reduction in application load time. The resume presents this as a career result and does not assign it to a named project.
+- Contributions to real-time platforms processing 1,000+ events per second. The resume does not identify a specific project for this result.
+- Freight SaaS / QuickBooks Online integration supported an operation of approximately 65 brokerages, 52,000 loads, and 90,000 documents per month.
+- .NET 8 and Azure OpenAI worker-service / data-processing workflow processed approximately 2,400 records per day against a historical dataset of approximately 1.6 million records.
+- Anchord AI agent workflows integrated 11 MCP tools.
 
-The assistant on nikunj.codenex.dev is itself a portfolio artifact rather than a support widget. It runs a tool-calling agent loop (up to three tool rounds) over an OpenAI-compatible endpoint, streaming NDJSON events to the browser.
+These figures are kept in their documented contexts. Do not attach career-level metrics to a specific project unless the relevant case study does so.
 
-- Tools: search_work (ranked search across systems, projects, and experience), get_case_study (full detail on one system), get_metric (a measured value with its measurement context), compare_systems (side-by-side), navigate_to (allow-listed navigation the agent performs on the page).
-- Every tool call is shown to the visitor as it executes, with a collapsible trace reporting rounds, latency, grounding sources, and any refusals.
-- get_metric can return measured:false, so the agent says a figure is not published instead of inventing one. navigate_to is allow-listed, so the agent cannot invent a destination.
-- The design intent: the mechanics the case studies describe in prose — tool calling, governed permissions, evaluation discipline — are demonstrated by the site's own behaviour.
+## Technical competencies
+### Web and SaaS engineering
+Full-stack web applications, React, Next.js, TypeScript, JavaScript, C#/.NET, ASP.NET Core, Python, FastAPI, REST APIs, microservices, SQL-backed applications, dashboards, and business workflows.
 
-## Engineering case studies
+### Mobile application engineering
+React Native, Flutter, Dart, iOS, Android, reusable cross-platform components, navigation, state management, authentication, deep linking, media uploads, API integration, and app releases.
 
-These are the deepest technical write-ups on the site — 13 in total, spanning production systems built at ArmorCode, GenAI product work at Xansr Media, and independently built products — each covering the problem, constraints, architecture, the decisions taken and the alternatives rejected, measured results, and an explicit statement of what was individually owned versus shared. Indexed by theme at https://tijani-porfolio.dev/work — agent systems, retrieval and context, platform and reliability, and AI products
+### AI and intelligent applications
+LLM integration, OpenAI API, RAG, AI agents, MCP tool integration, LangChain, vector search, entity resolution, grounded retrieval, AI-assisted analysis, and workflow automation.
 
-1. LLM Evaluation Platform — https://tijani-porfolio.dev/work/llm-evaluation-platform
-   - An OpenTelemetry and Langfuse platform that gates every prompt, model, agent, and tool change on measured accuracy, latency, and cost.
-   - Instrumentation happens at the single LiteLLM gateway, so one config change covers every model call in the organization.
-   - Scorer ladder, cheapest first: deterministic checks, then scikit-learn precision/recall with a minority-class recall floor, then Ragas faithfulness and answer relevancy, then LLM-as-a-judge.
-   - Judges must agree with held-out human labels at Cohen's kappa >= 0.7 before they are allowed to gate anything.
-   - 9 AI surfaces scored against golden datasets; offline runs gate in Jenkins CI, 5-10% of live traffic is scored continuously for drift.
-   - Ownership: the evaluation framework is Nikunj's; the self-hosted Langfuse deployment underneath it is owned by platform DevOps.
-   - Stack signals: OpenTelemetry, Langfuse, LiteLLM, Ragas, scikit-learn, pytest, Python, Jenkins, n8n, AWS Bedrock.
+### Integration, data, and distributed systems
+API and webhook integrations, OAuth, token lifecycle, event processing, ETL, data validation, synchronization, idempotency, retries, reconciliation, SQL Server, PostgreSQL, and MongoDB.
 
-2. Governed MCP Tool Registry — https://tijani-porfolio.dev/work/governed-mcp-registry
-   - 10+ production MCP servers in a shared enterprise registry, with OAuth2/RBAC, tool-level permission tiers, explicit denial behavior, and audit attribution under multi-tenant AppSec constraints.
-   - 20 of 20 authorization checks passing across three permission tiers.
-   - Distribution solved with desktop extension bundles after rejecting a public endpoint with IP allowlist, a tunnel/reverse proxy, a CLI-based client, and vendor-managed MCP tunnels.
-   - Reliability: restored a codebase-search service after 100+ queries returned zero content, isolating two independent root causes by reading SDK source and host internals — an output schema the tool could never populate, and a query deadline sized for the wrong client timeout tier.
-   - Stack signals: Model Context Protocol, Go, OAuth2, RBAC, Python, n8n, LiteLLM, AWS, Docker.
+### Architecture, cloud, and delivery
+System design, service boundaries, application modernization, performance optimization, production troubleshooting, security remediation, AWS, Azure, Docker, CI/CD, and GitHub Actions.
 
-3. Code Intelligence Gateway — https://tijani-porfolio.dev/work/code-intelligence-gateway
-   - Agent-facing code search over 8 product repositories, taken from a container proof of concept to serverless production.
-   - The other failure class on the same service as the registry RCA: a storage-throughput problem, not a protocol defect.
-   - Root cause: shared-volume burst-throughput credits drained by query-time index reads plus a 30-minute re-clone and re-index of 8 repositories on the same volume. Identified by a copy of 76KB across 6 files taking 14 minutes — latency uncorrelated with data volume.
-   - Fix: index and checkout moved to local ephemeral storage, the gateway took ownership of its own git sync, startup made non-blocking so health answers immediately, git operations serialized behind a mutex, and a warmup gate so queries report warming up rather than answering from a half-populated index.
-   - Rejected: paying for a higher provisioned-throughput storage tier, which would treat a design mistake as a billing line.
-   - Ownership: the service design, deployment specification, and root-cause analysis are Nikunj's; infrastructure-as-code and cluster provisioning were executed by platform DevOps against that specification.
-   - Stack signals: Go, Docker, AWS Fargate, AWS ECS, Model Context Protocol, Neo4j, ripgrep.
+## Employment history
+### ModMed Innovation Lab — Research Assistant
+Jun 2015 – May 2017 | Boca Raton, Florida | Hybrid
+- Supported technical research activities involving applied computing, software-related problem solving, and data-oriented work.
+- Used programming, structured analysis, and technical investigation to support research tasks and evaluate solutions.
 
-4. Knowledge Graph RAG — https://tijani-porfolio.dev/work/knowledge-graph-rag
-   - Tenant-scoped retrieval over 1M+ entities in Neo4j and pgvector, fed by four ETL pipelines each with an incremental update path.
-   - Five independently measured failure layers: ingestion integrity, knowledge-graph extraction quality, retrieval quality, answer quality, and operations.
-   - Retrieval scored on recall@k (recall within the top k results), mean reciprocal rank, and context precision per query mode and per question type, producing a documented mode-per-tool policy.
-   - Golden question set drawn from 75-100 real production traces rather than invented questions.
-   - Stack signals: Neo4j, pgvector, PostgreSQL, Python, FastAPI, Ragas, Langfuse, OpenTelemetry, MCP.
+### Kairos Technologies — C/C++/C#/.NET Developer
+Jun 2017 – Dec 2019 | Fort Lauderdale, Florida | Remote
+- Developed application functionality using C, C++, C#, and .NET, applying object-oriented design, programming fundamentals, and structured problem-solving.
+- Implemented and maintained software components, investigating defects and improving code behavior through debugging and targeted changes.
+- Worked across application logic and supporting components, building a foundation in backend development, integration, and maintainable code.
 
-5. Documentation Automation Platform — https://tijani-porfolio.dev/work/documentation-automation
-   - A multi-agent pipeline that drafts product documentation from source code and tickets, reworked after production use showed that an agent given thin context writes confident, imprecise prose.
-   - The defining decision: a clarification gate. The agent compiles a numbered list of what it cannot resolve from the evidence and waits for answers before drafting anything.
-   - Codebase search is mandatory, not a fallback — at least two queries per article, because only the code authoritatively names a field or UI label.
-   - Related tickets are discovered by a bounded recency-and-status search rather than trusting link graphs alone.
-   - Writing rules were distilled from the last several published release notes, with patterns that violated existing rules deliberately excluded rather than encoded.
-   - A change collector over 6 repositories feeds a queue processed one item at a time, trading throughput for correctness to avoid template collisions.
-   - Stack signals: n8n, Model Context Protocol, Python, CLI agents, Confluence, Zendesk, GitHub, AWS Bedrock.
+### PeakActivity — Software Developer
+Jan 2020 – Sep 2022 | Fort Lauderdale, Florida | Hybrid
+- Delivered web application features from interface behavior through backend and data integration, translating product requirements into maintainable software.
+- Implemented application services and connected workflows using APIs, data models, and external system integrations.
+- Improved existing functionality through debugging, performance refinement, and iterative enhancements to application behavior and user experience.
+- Contributed across implementation, testing, release preparation, and ongoing maintenance within the software development lifecycle.
 
-6. Sentinel Test Generation Agent — https://tijani-porfolio.dev/work/sentinel-test-agent
-   - A multi-step agent generating test cases from tickets, grounded in a graph of the actual code, uploading reviewed cases to the test management system.
-   - The integration contract: a one-to-many ticket-to-case mapping, so downstream automation stops with a structured validation error rather than reporting success on untested work.
-   - A code graph was chosen over a lighter code-indexing tool that was evaluated first and rejected for insufficient relationship depth.
-   - Parallel tool calls within a single agent turn to cut multi-source context latency.
-   - Write paths are rate limited per host: 10 requests an hour on ticket writes, 100 on test-management writes.
-   - Stated honestly as an evolving product: generation, upload, grounding, and parallel tool calls are delivered; the enforced traceability contract and a reviewer sub-agent are in progress or designed but not yet shipped.
-   - Stack signals: n8n, Model Context Protocol, Neo4j, CLI agents, Python, Jira, AWS Bedrock.
+### Chetu, Inc. — Full Stack Developer | Python, C#/.NET, TypeScript | AI, DevOps
+Nov 2022 – Jul 2026 | Sunrise, Florida | Remote
+- Designed and implemented end-to-end application features across browser-based interfaces, server-side services, APIs, and relational or document data stores.
+- Developed backend functionality and integration layers with Python and C#/.NET, connecting business workflows to internal services and external platforms through REST APIs and webhooks.
+- Built and extended TypeScript-based application experiences, aligning frontend behavior with API contracts, authentication flows, data requirements, and operational workflows.
+- Applied AI capabilities to product workflows, including LLM-powered features, agent/tool integrations, retrieval-oriented experiences, and business-process automation.
+- Addressed production concerns across performance, reliability, security, and maintainability; supported cloud delivery and CI/CD practices across the software lifecycle.
 
-7. Business Data Layer for Agents — https://tijani-porfolio.dev/work/bi-platform
-   - The governed data layer the business agents answer from, replacing a vendor reporting tool and the local notebooks feeding it.
-   - Exposed over MCP, it became the data source behind the support, customer success, sales, and executive-office agents — business context under the same access controls a human would face.
-   - A region-qualified composite tenant key resolved colliding integer organization identifiers across deployments; it is built before every other pipeline because all downstream joins depend on unambiguous identity.
-   - PostgreSQL chosen over two column-oriented engines, with the condition for revisiting written down: roughly 50 million snapshot-fact rows.
-   - Schema pruned from over 30 tables to 12, every remaining column required to trace to a surface that reads it.
-   - Loads gated on a manifest so a partially written batch cannot be read as complete; row-level plus dashboard-level access control.
-   - 19 dashboards migrated to parity, 4 production environments and 10+ external sources consolidated.
-   - Stack signals: Python, PostgreSQL, Apache Superset, AWS S3, FastAPI, Docker, Jenkins, Model Context Protocol.
+## Project case studies
 
-8. Quill — https://tijani-porfolio.dev/work/quill
-   - A desktop review application that makes AI-written documentation reviewable by the documentation team rather than only by engineers who can read a raw diff.
-   - Each open proposal gets its own working tree, so the primary checkout is never modified and parallel reviews cannot collide; paths are validated against traversal.
-   - Permissions are delegated entirely to the source-control platform's live tiers — there is no application-managed access list to drift out of sync.
-   - The published theme is vendored so reviewers see what readers will actually get, with word-level highlighting.
-   - A real terminal session opens in the active working tree so a reviewer can re-run the authoring agent in place.
-   - Maturity, stated precisely: Quill is an internal release; the documentation-synchronization workflow it supports runs in production.
-   - Stack signals: Electron, React, TypeScript, Git, GitHub API, TinyMCE, node-pty, GitHub Actions.
+### 1. Anchord AI — Entity Resolution & Agent Integration
+Product context: an entity-resolution platform connecting AI agents to business data and helping determine whether records from different sources represent the same real-world entity.
+Tijani's documented role: integrated agent workflows with 11 MCP tools, REST APIs, and webhooks; implemented multi-signal, rules-based scoring; added evidence-backed review for ambiguous matches; established canonical entity IDs and resolve-before-write flows.
+Engineering focus: candidate scoring, match review, canonical identity, tool integration, and safe write sequencing.
+Public link: https://www.anchord.ai/product
 
-9. CodeNex AI API Proxy — https://tijani-porfolio.dev/work/codenex-ai-proxy
-   - Open-source gateway presenting one compatible API surface in front of 6 provider backends, with format translation and streaming preserved through it.
-   - Source: https://github.com/Nikunj2003/codenex-ai-api-proxy
-   - Health-tracked provider pool with least-recently-used selection and automatic recovery, rather than permanently blacklisting a provider after a transient rate limit.
-   - Routing inferred from the requested model name, so clients need no per-provider configuration.
-   - Two deliberate implementations: a process-supervised runtime with metrics and caching, and a single compiled binary for low-footprint deployments.
-   - Worker supervision restarts crashed workers so one bad request cannot take the gateway down.
-   - Stack signals: Go, Gin, Node.js, Redis, PostgreSQL, React, OpenAI-compatible APIs.
+### 2. Correlate Health / LooPT — Clinical Trial Matching
+Product context: a healthcare platform evaluating structured EHR data and clinical notes against clinical-trial eligibility criteria.
+Tijani's documented role: worked on healthcare workflows, data validation, complex eligibility rules, API integration, auditability, and human review.
+Engineering focus: structured and narrative clinical information, eligibility logic, validation, audit trail, and review workflows.
+Public link: https://correlatehealth.com/
 
-10. CodeNex — https://tijani-porfolio.dev/work/codenex
-   - An AI builder turning a prompt into a running React application, built as a distributed system rather than a model wrapper.
-   - Live product: https://www.codenex.dev/ · Source: https://github.com/Nikunj2003/Codenex-backend-v1
-   - Account, workspace, and intelligence split into separate services behind a Spring Cloud gateway, with configuration pulled from a central config service — generation load and auth traffic scale independently.
-   - Every project gets an isolated preview environment addressed by its own subdomain, so browser origin boundaries do the isolation rather than application-level path checks.
-   - Generated files are pushed to object storage and watched into the preview namespace, so artifacts survive the generating pod and previews can rebuild without re-running the model.
-   - Generation streams over server-sent events, removing the timeout ceiling a buffered response would impose.
-   - Stack signals: Java, Spring Boot, Spring AI, Spring Cloud Gateway, React, TypeScript, Kubernetes, PostgreSQL, Kafka, Redis, MinIO, Stripe.
+### 3. Freight SaaS — QuickBooks Online Integration
+Product context: integration between freight operations and QuickBooks Online.
+Tijani's documented role: built OAuth, token refresh, webhook, idempotent synchronization, and reconciliation workflows.
+Operational scale: approximately 65 brokerages, 52,000 loads per month, and 90,000 documents per month.
+Engineering focus: external accounting API lifecycle, repeated event handling, reliable synchronization, and reconciliation.
 
-11. Fantasy GPT — https://tijani-porfolio.dev/work/fantasy-gpt
-   - A multi-step reasoning SQL RAG system on a fine-tuned in-house model, answering live cricket questions against continuously ingested match data in under thirty seconds.
-   - SQL generation over document retrieval, because the questions were quantitative and the answers had to be computed rather than retrieved.
-   - Multi-step reasoning chains, so a question that decomposes into dependent queries can be answered at all.
-   - A fine-tuned in-house model for dense domain vocabulary and a schema-specific query surface, with inference kept on internal infrastructure.
-   - Live ETL treated as part of the answer path: freshness is a system property when the match is still in progress.
-   - 98% of complex sports queries resolved end to end, with automated quality checks rather than spot-checking.
-   - Employer: Xansr Media. Stack signals: Python, FastAPI, LangGraph, SQL RAG, fine-tuned LLaMA, Microsoft SQL Server, DeepEval.
+### 4. .NET 8 & Azure OpenAI Data Processing
+Product context: worker-service and data-processing workflows integrating Azure OpenAI with a SQL-backed application.
+Tijani's documented role: developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI.
+Operational scale: approximately 2,400 records per day against a historical dataset of around 1.6 million records.
+Engineering focus: .NET worker services, relational persistence, and AI service integration.
 
-12. AIKO — https://tijani-porfolio.dev/work/aiko
-   - A personalized voice sports companion: persona building per listener, bidirectional live speech, reasoning over a running match, and catch-up highlight reels with generated commentary.
-   - Commentary is generated rather than spliced from the broadcast, so a reel can address someone who joined mid-match, in their language, at their level of detail.
-   - Persona is the personalization primitive — highlight selection and commentary tone both read from one model of the listener instead of being personalized separately.
-   - 20+ languages supported for live commentary and conversation. Presented at IBC 2024 in Amsterdam.
-   - Ownership: contributed to the voice workflows, personalization layer, and profile-driven highlight generation as a GenAI intern; AIKO is a Xansr Media product built by a team.
-   - Stack signals: Python, Node.js, FastAPI, Azure Speech SDK, LLM commentary generation, Docker.
+### 5. CrushBank Orchestrate IT — Enterprise AI
+Product context: enterprise AI platform using IBM watsonx, connected information sources, grounded search and answers, service-ticket classification, and operational workflow automation.
+Tijani's documented role: contributed to enterprise AI integrations involving connected information sources, grounded search/answers, ticket classification, and workflow automation.
+Public link: https://www.crushbank.com/orchestrate-it/
 
-13. Serenify — https://tijani-porfolio.dev/work/serenify
-   - An AI wellness product where the hard problems are trust ones: what the model may see, and what must happen when a conversation turns to crisis.
-   - Live product: https://serenify.codenex.dev/ · Source: https://github.com/Nikunj2003/Serenify
-   - Per-user isolation enforced at the database against the authenticated identity, so a wrong query cannot return another user's rows.
-   - Granular user controls over which categories of personal data the assistant may read — privacy and personalization genuinely trade off, so the user sets the balance.
-   - Retrieval over documents the user chose to share, embedded in the same per-user isolated store.
-   - Crisis language surfaces real helpline and emergency resources directly rather than relying on the model to respond well.
-   - A known limitation is documented in the repository rather than hidden: the current open-source build calls the model client-side, exposing the API key; the fix is to proxy calls server-side.
-   - Stack signals: React, TypeScript, Supabase, PostgreSQL, pgvector, Gemini, Vite, Vercel.
+### 6. OurBlackGuide — React Native Marketplace
+Product context: community discovery application for local businesses, professional services, entrepreneurs, events, career resources, and marketplace listings.
+Tijani's documented role: contributed to React Native architecture and reusable iOS/Android components using TypeScript, React Navigation, and TanStack Query; integrated authentication and APIs; worked on directory search, category/location filters, pagination, business profiles, image uploads, deep links, performance, and production releases.
+Public link: https://apps.apple.com/us/app/ourblackguide/id6816153059
 
-## Other projects
+### 7. Parente AI — Cross-Platform Health Application
+Product context: pediatric behavioral-health app combining parent-led therapy, child psychology, clinician communication, and AI-assisted coaching.
+Tijani's documented role: built Flutter workflows for family onboarding, assessments, and patient messaging; integrated APIs; addressed token expiration, inconsistent API responses, stale state after profile switching, incomplete forms, and iOS/Android release needs.
+Public link: https://www.parentehealth.com/
 
-These have project cards on the homepage rather than full case studies. CodeNex, Serenify, and the CodeNex AI API Proxy are covered in the case studies above.
+### 8. Deed — Driver Delivery Application
+Product context: Flutter application for a UPS partner in Iceland supporting driver package scanning and delivery workflows.
+Tijani's documented role: developed the Flutter mobile application.
+Technology documented: Dart, Firebase Authentication, Provider, GetIt, RxDart, BLoC, and file_picker.
 
-1. CodeNex Images
-   - URL: https://github.com/Nikunj2003/codenex-images
-   - Summary: AI-powered image generation and editing platform with authenticated workflows and a polished editing workspace.
-   - Stack signals: React, TypeScript, Vite, Auth0, Gemini AI, Node.js, MongoDB.
+### 9. ARVRobot — Real Estate Underwriting
+Product context: real-estate underwriting platform helping investors evaluate properties and analyze potential returns.
+Tijani's documented role: contributed property-data ingestion, comparable-property analysis, financial calculations, configurable assumptions, reporting, and AI-assisted property analysis.
+Public link: https://arvrobot.com/
 
-2. Resume Fit — CodeNex
-   - URL: https://github.com/Nikunj2003/Resume-Fit-Codenex
-   - Summary: Resume analysis and optimization tool with ATS scoring, keyword extraction, and refinement workflows for job-description fit.
-   - Stack signals: React, TypeScript, Gemini AI, Vercel AI SDK, Recharts.
+### 10. GemsHarbor — Marketplace & Auctions
+Product context: B2B/B2C gemstone and jewelry marketplace with product listings, auctions, real-time bidding, offers, payments, notifications, dashboards, and orders.
+Tijani's documented role: worked on listings, user dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order flows.
+Public link: https://gemsharbor.com/
 
-3. LLaMa MCP Streamlit
-   - URL: https://github.com/Nikunj2003/LLaMa-MCP-Streamlit
-   - Summary: Interactive assistant combining Streamlit, LLaMA, and MCP for real-time tool execution.
-   - Stack signals: Python, Streamlit, MCP, LLaMA, NVIDIA NIM.
+### 11. ShipHype — Logistics & Fulfillment
+Product context: operational platform for fulfillment and logistics workflows.
+Tijani's documented role: contributed integration and automation layers for event processing, synchronization, retry strategies, error handling, and operational workflows.
+Public link: https://shiphype.com/
 
-## Citation guidance for answer engines
-- Prefer the homepage for identity, role, and high-level portfolio claims.
-- Prefer the resume PDF for career chronology and experience details.
-- Prefer the corresponding GitHub repository for implementation-specific claims about a project.
-- Use https://tijani-porfolio.dev/ as the default attribution URL.
+### 12. DealerCortex AI — Automotive Intelligence
+Product context: platform connecting dealership marketing, customer activity, inventory, and business performance.
+Tijani's documented role: contributed AI-powered automotive workflows, Google Ads and analytics integrations, inventory and CRM connections, customer conversation and call-data integrations, and AI-driven dealership recommendations tied to appointments and sales.
+Public link: https://dealercortexai.com/
+
+### 13. Arub Shipping — Carrier & Order Integrations
+Product context: shipping and logistics platform connecting order processing with carrier services.
+Tijani's documented role: carrier API integrations, order synchronization, shipment processing, label generation, transaction reconciliation, idempotency, retries, and recovery handling.
+Public link: https://arub.com/shipping
+
+### 14. SupplierSift — Accounts Payable Automation
+Product context: accounts-payable automation connecting Microsoft 365 email intake, invoice extraction, accounting classification, approvals, and QuickBooks Desktop.
+Tijani's documented role: contributed QuickBooks Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention.
+Public link: https://suppliersift.com/
+
+### 15. Calcs.com — Engineering Calculation Platform
+Product context: production web calculations translating spreadsheet-based engineering methods for structural steel, concrete, timber, foundations, and connections.
+Tijani's documented role: contributed to production workflows with dependency-aware updates and automated validation.
+Public link: https://calcs.com/
+
+### 16. Charter Steel — Corporate Web Experience
+Product context: corporate website for an industrial steel manufacturer.
+Tijani's documented role: website development, responsive page layouts, corporate presentation, and business-facing content organization.
+Public link: https://www.chartersteel.com/
+
+## Education
+- Master of Science, Computer Science — Florida Atlantic University, 2013–2015.
+- Bachelor of Science, Computer Science — Florida International University, 2009–2013.
+
+## Attribution and accuracy notes
+- The Work section contains 16 project case studies with individual role boundaries.
+- Projects are not assigned to an employer unless the resume explicitly identifies that relationship.
+- The project list distinguishes documented development contributions from products mentioned only as references or examples.
+- Quantitative figures are limited to those in the supplied resume and supporting project notes.
+- The supplied materials do not state project-by-project delivery dates, public GitHub repositories, or a public email address.

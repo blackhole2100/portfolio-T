@@ -8,7 +8,6 @@ import Link from "next/link";
 import { personalInfo, stats } from "@/data/portfolio";
 import { REVEAL_DURATION_REDUCED, REVEAL_EASE, REVEAL_OFFSET } from "@/lib/motion";
 import Card3D from "./Card3D";
-import cardImage from "@/assets/card.png";
 
 const AnimatedCounter = ({ value, suffix, start }: { value: number; suffix: string; start: boolean }) => {
   const [count, setCount] = useState(0);
@@ -65,11 +64,7 @@ const HeroSection = () => {
     },
   };
 
-  /*
-    Slide only, no opacity fade — the availability badge is a glass surface, and
-    fading it in from transparent made it read as flat until the animation
-    finished. Consistent with `revealInitial` in lib/motion.
-  */
+  /* Slide-only reveal, consistent with `revealInitial` in lib/motion. */
   const item = {
     hidden: shouldReduceMotion ? {} : { y: REVEAL_OFFSET },
     show: {
@@ -107,7 +102,7 @@ const HeroSection = () => {
             <motion.div variants={item}>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono font-bold glass-subtle border border-primary/20 text-primary tracking-wide glow-accent-xs">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse motion-reduce:animate-none" />
-                Available for New Opportunities
+                Fort Lauderdale, Florida · Web · Mobile · AI
               </span>
             </motion.div>
 
@@ -158,7 +153,7 @@ const HeroSection = () => {
                 href="#work"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold tracking-wide text-primary-foreground transition-all duration-300 glow-accent-sm hover:glow-accent-md active:scale-95 sm:w-auto"
               >
-                Read the case studies
+                Explore project work
                 <ArrowDown className="ml-1 h-4 w-4" />
               </a>
               <a
@@ -174,7 +169,7 @@ const HeroSection = () => {
                 className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3.5 rounded-full hover:bg-white/5 transition-all duration-300 font-semibold text-sm text-muted-foreground hover:text-foreground active:scale-95"
               >
                 <MessageCircle className="w-4 h-4 text-primary" />
-                Talk to AI Twin
+                Ask the portfolio assistant
               </a>
             </motion.div>
 
@@ -191,7 +186,9 @@ const HeroSection = () => {
              <div className="relative z-10 w-full max-w-[500px] xl:max-w-[600px] lg:scale-110 xl:scale-125 lg:origin-right lg:translate-x-4 xl:translate-x-12">
               <Card3D className="w-full">
                   <Image
-                     src={cardImage}
+                     src="/images/portfolio/engineering-stack.svg"
+                     width={900}
+                     height={720}
                      alt=""
                      aria-hidden="true"
                      className="w-full h-auto rounded-3xl border border-white/10 shadow-accent-strong pointer-events-none select-none"

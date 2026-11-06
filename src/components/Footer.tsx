@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { personalInfo } from "@/data/portfolio";
-import logo from "@/assets/logo.png";
-import { Mail, Linkedin, Github } from "lucide-react";
+import logo from "@/assets/tijani-mark.svg";
+import { Linkedin } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { scrollToHash, scrollToTop } from "@/lib/scroll";
 
@@ -13,14 +13,12 @@ const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
-  { label: "AI Twin", href: "#ai-twin" },
+  { label: "AI Assistant", href: "#ai-twin" },
   { label: "Contact", href: "#contact" },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: Mail, label: "Email", href: `mailto:${personalInfo.email}` },
   { icon: Linkedin, label: "LinkedIn", href: personalInfo.linkedin },
-  { icon: Github, label: "GitHub", href: personalInfo.github },
 ];
 
 const Footer = () => {
@@ -81,7 +79,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-8 text-center sm:text-left">
             <p className="text-sm font-medium text-foreground/85">
-              Open to Applied AI, AI Product, Agentic AI, LLM/AI, and Software Engineer (Applied AI) roles.
+              Full-stack, mobile, and AI engineering across the product lifecycle.
             </p>
             <a
               href={personalInfo.resumeUrl}

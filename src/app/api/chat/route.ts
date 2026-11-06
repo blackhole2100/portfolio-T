@@ -214,24 +214,24 @@ function buildFallbackSuggestions(
 
   const fallbackByCategory: Record<string, string[]> = {
     experience: [
-      "What impact are you driving at ArmorCode?",
-      "How did Xansr shape your backend style?",
+      "What did you build across your career?",
+      "How did your backend experience evolve?",
     ],
     skills: [
-      "Which tools do you use most day to day?",
-      "Which skill do you lean on most?",
+      "How do your web and mobile skills fit together?",
+      "How do you apply AI in production software?",
     ],
     projects: [
-      "Which project should I open first?",
-      "Which build best shows your style?",
+      "Which project should I explore first?",
+      "What did you contribute to Anchord AI?",
     ],
     achievements: [
-      "Which result are you proudest of?",
-      "What achievement stands out most?",
+      "What does the 93% load-time result mean?",
+      "Which project shows your integration work?",
     ],
     contact: [
-      "Could you share your LinkedIn?",
-      "What's the best way to reach you?",
+      "Where can I find your LinkedIn profile?",
+      "How can I send a project inquiry?",
     ],
     career_goals: [
       "What are you building next?",
@@ -516,7 +516,7 @@ function classifyUpstreamFailure(status: number): { code: ChatErrorCode; error: 
     return { code: "upstream_rate_limited", error: "The AI service is busy. Please try again shortly.", retryable: true };
   }
   if (status === 401 || status === 403) {
-    return { code: "upstream_auth_error", error: "The AI service rejected the request. Please contact Nikunj directly.", retryable: false };
+    return { code: "upstream_auth_error", error: "The AI service rejected the request. Please use the portfolio contact form or LinkedIn.", retryable: false };
   }
   // A 4xx other than 429 means the request itself was wrong, so replaying it
   // verbatim fails identically. Only 5xx and unknown statuses are worth a retry.
@@ -575,7 +575,7 @@ export async function POST(request: Request) {
     return createChatErrorResponse(
       503,
       "service_unavailable",
-      "The AI service is not configured right now. Please contact Nikunj directly if you need help.",
+      "The AI service is not configured right now. Please use the portfolio contact form or LinkedIn if you need help.",
       rateLimitHeaders,
       false
     );
@@ -818,7 +818,7 @@ export async function POST(request: Request) {
         }
 
         if (!answer) {
-          answer = "I could not put together an answer for that. Try rephrasing, or reach out to Nikunj directly.";
+          answer = "I could not put together an answer for that. Try rephrasing, or use the portfolio contact form or LinkedIn.";
         }
 
         // appendContextualLinks still runs, but tools already resolved most

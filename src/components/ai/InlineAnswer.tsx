@@ -144,7 +144,7 @@ export function InlineAnswer({
             onClick={handleContinueInTwin}
             className="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] font-medium uppercase tracking-wider text-primary transition-colors hover:text-primary/80"
           >
-            Continue in AI Twin →
+            Continue in portfolio assistant →
           </button>
         )}
       </span>

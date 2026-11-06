@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, ExternalLink, Github, Maximize2 } from "lucide-react";
-import { projects, type Project } from "@/data/portfolio";
-import { caseStudies, featuredCaseStudies } from "@/data/case-studies";
+import { ArrowRight, ExternalLink, Linkedin, Maximize2 } from "lucide-react";
+import { personalInfo, projects, type Project } from "@/data/portfolio";
+import { caseStudies, featuredCaseStudies, getCaseStudyPath } from "@/data/case-studies";
 import CaseStudyCard from "@/components/CaseStudyCard";
-import AskAboutThis from "@/components/AskAboutThis";
+import AskAboutThis, { ReadCaseStudyLink } from "@/components/AskAboutThis";
 import { PROJECT_ANCHOR_PREFIX } from "@/lib/ai-twin";
 import {
   Carousel,
@@ -104,13 +104,13 @@ function ProjectGallery({
                   onFocus={() => prefetchProjectImages(idx)}
                   onTouchStart={() => prefetchProjectImages(idx)}
                   className="group/viewer relative block w-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                  aria-label={`Open ${project.title} screenshot ${idx + 1} of ${project.images.length} full screen`}
+                  aria-label={`Open illustrative ${project.title} project visual ${idx + 1} of ${project.images.length} full screen`}
                 >
                   <div className="aspect-[16/10] w-full overflow-hidden rounded-xl">
                     <div className="relative h-full w-full">
                       <Image
                         src={img}
-                        alt={`${project.title} screenshot ${idx + 1}`}
+                        alt={`Illustrative interface visual for ${project.title}`}
                         fill
                         priority={priority && idx === 0}
                         sizes={PROJECT_IMAGE_SIZES}
@@ -257,15 +257,7 @@ function ProjectCard({
                   Live demo
                 </a>
               )}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 glass-subtle px-4 py-2 text-xs font-bold text-foreground transition-colors hover:border-primary/30 hover:text-primary"
-              >
-                <Github className="h-3.5 w-3.5" />
-                Source
-              </a>
+              <ReadCaseStudyLink href={getCaseStudyPath(project.caseStudy)} />
             </div>
           </div>
 
@@ -305,14 +297,13 @@ const ProjectsSection = () => {
             Selected <span className="text-gradient">Work</span>
           </h2>
           <p className="mb-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Agent systems, retrieval, and platform work I own at ArmorCode, GenAI products shipped at Xansr Media,
-            and the products I have built on my own.
+Selected work across AI-enabled systems, healthcare and financial integrations, cross-platform mobile apps, and business-facing SaaS products. Each case study separates the product context from Tijani's documented engineering role.
           </p>
         </Reveal>
 
         {/* Tier 1 — the featured case studies, the only cards carrying metrics on
             their face. Labelled by what they are rather than by employer, since the
-            row sits above a link to all 13 studies across three contexts. */}
+            row sits above a link to all documented project write-ups. */}
         <Reveal className="mb-6">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Featured case studies</h3>
@@ -341,11 +332,11 @@ const ProjectsSection = () => {
           </Link>
         </Reveal>
 
-        {/* Tier 2 — shipped personal products */}
+        {/* Selected projects with full visual previews */}
         <Reveal className="mb-8">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">
-              Built and shipped
+              Selected project work
             </h3>
             <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
@@ -359,12 +350,11 @@ const ProjectsSection = () => {
         </div>
 
 
-        {/* Also built — kept in the data and in the AI Twin context, just not
-            consuming a full card each. */}
+        {/* Remaining project case studies stay discoverable without repeating full-size cards. */}
         <Reveal>
           <div>
             <div className="mb-6 flex items-center gap-4">
-              <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Also built</h3>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-primary">More project work</h3>
               <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
             </div>
 
@@ -385,15 +375,7 @@ const ProjectsSection = () => {
                     </div>
                     <p className="flex-1 text-xs leading-relaxed text-muted-foreground">{project.summary}</p>
                     <div className="mt-1 flex items-center gap-4 text-xs font-semibold">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-primary"
-                      >
-                        <Github className="h-3.5 w-3.5" />
-                        Source
-                      </a>
+                      <ReadCaseStudyLink href={getCaseStudyPath(project.caseStudy)} />
                       {project.live && (
                         <a
                           href={project.live}
@@ -413,16 +395,15 @@ const ProjectsSection = () => {
           </div>
         </Reveal>
 
-        {/* View more on GitHub */}
         <Reveal delay={0.1} className="mt-12 flex justify-center">
           <a
-            href="https://github.com/Nikunj2003"
+            href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full border border-white/10 border-b-white/5 px-8 py-4 text-sm font-bold text-foreground shadow-accent-soft transition-all duration-300 glass hover:bg-white/10 hover:text-primary active:scale-95"
           >
-            <Github className="h-5 w-5" />
-            Explore more repositories
+            <Linkedin className="h-5 w-5" />
+            Connect on LinkedIn
           </a>
         </Reveal>
 

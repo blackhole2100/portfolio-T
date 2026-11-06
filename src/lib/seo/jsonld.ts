@@ -57,7 +57,6 @@ export function getPersonSchema(): JsonLd {
     name: personalInfo.name,
     url: siteConfig.homeUrl,
     description: personalInfo.tagline,
-    email: siteConfig.email,
     jobTitle: personalInfo.role,
     sameAs: siteConfig.sameAs,
     homeLocation: {
@@ -78,13 +77,13 @@ export function getProjectsItemListSchema(): JsonLd {
       "@type": "ListItem",
       position: index + 1,
       item: {
-        "@type": "SoftwareSourceCode",
+        "@type": "CreativeWork",
         name: project.title,
         description: `${project.summary} ${project.impact}`,
-        url: project.live ?? project.github,
+        url: project.live ?? `${siteConfig.siteUrl}/work/${project.caseStudy}`,
         codeRepository: project.github,
         image: project.images[0] ? `${siteConfig.siteUrl}${project.images[0]}` : undefined,
-        creator: {
+        contributor: {
           "@id": personId,
         },
         keywords: project.tech.join(", "),
@@ -127,7 +126,7 @@ export function getWorkIndexGraph(): JsonLd {
         "@id": `${url}#webpage`,
         url,
         name: `Engineering Case Studies — ${personalInfo.name}`,
-        description: `Deep-dive write-ups of ${caseStudies.length} systems and products, each covering constraints, decisions with rejected alternatives, measured results, and explicit ownership.`,
+        description: `Project write-ups explaining product context, Tijani's documented engineering role, implementation scope, available results, technology, and attribution boundaries.`,
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
         inLanguage: siteConfig.locale,
@@ -144,7 +143,7 @@ export function getWorkIndexGraph(): JsonLd {
         "@id": `${url}#breadcrumbs`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.homeUrl },
-          { "@type": "ListItem", position: 2, name: "Case studies", item: url },
+          { "@type": "ListItem", position: 2, name: "Project work", item: url },
         ],
       },
     ],
@@ -185,7 +184,7 @@ export function getCaseStudyGraph(study: CaseStudy): JsonLd {
         "@id": `${url}#breadcrumbs`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.homeUrl },
-          { "@type": "ListItem", position: 2, name: "Case studies", item: `${siteConfig.siteUrl}/work` },
+          { "@type": "ListItem", position: 2, name: "Project work", item: `${siteConfig.siteUrl}/work` },
           { "@type": "ListItem", position: 3, name: study.title, item: url },
         ],
       },

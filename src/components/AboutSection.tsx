@@ -1,17 +1,16 @@
 import Image from "next/image";
-import { Award, Download, MapPin } from "lucide-react";
-import { about, experiences, personalInfo, recognition } from "@/data/portfolio";
-import { siteConfig } from "@/lib/seo/site";
-import logo from "@/assets/logo.png";
+import { Download, MapPin } from "lucide-react";
+import { about, experiences, personalInfo } from "@/data/portfolio";
+import logo from "@/assets/tijani-mark.svg";
 
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import AskAboutThis from "@/components/AskAboutThis";
 import Reveal from "@/components/ui/reveal";
 
-/** Latest entry is the current role; the earliest ArmorCode entry sets tenure. */
-const currentRole = experiences[experiences.length - 1];
-const armorCodeStart = experiences.find((experience) => experience.company === "ArmorCode");
-const tenureLabel = armorCodeStart ? `${armorCodeStart.period.split(/\s*[-–]\s*/)[0]} — present` : currentRole.period;
+/** The timeline is chronological; the last work entry is the most recent role. */
+const workHistory = experiences.filter((experience) => experience.type === "work");
+const currentRole = workHistory[workHistory.length - 1];
+const tenureLabel = currentRole.period;
 
 /**
  * About section.
@@ -46,7 +45,7 @@ const AboutSection = () => {
 
                   <h2 className="heading-xl mb-6">
                     About <br className="hidden lg:block" />
-                    <span className="text-gradient">Nikunj</span>
+                    <span className="text-gradient">Tijani</span>
                   </h2>
 
                   <p className="max-w-md leading-relaxed text-muted-foreground">
@@ -74,15 +73,15 @@ const AboutSection = () => {
                       </dt>
                       <dd className="inline-flex min-w-0 flex-1 items-center gap-1.5 text-muted-foreground">
                         <MapPin className="h-3.5 w-3.5 shrink-0 text-primary/70" aria-hidden="true" />
-                        {siteConfig.geo.placename}
+                        {personalInfo.location}
                       </dd>
                     </div>
                   </dl>
 
                   <div className="mt-6 flex items-center justify-between gap-4 border-t border-white/10 pt-6">
                     <p className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground">
-                      <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-primary motion-reduce:animate-none" />
-                      Open to new roles
+                      <span className="h-2 w-2 shrink-0 rounded-full bg-primary" />
+                      Professional profile
                     </p>
                     <a
                       href={personalInfo.resumeUrl}
@@ -118,26 +117,6 @@ const AboutSection = () => {
               </div>
             </Reveal>
 
-            {/* Award first: it is the strongest single third-party signal in the
-                section, so it sits directly under the summary rather than at the
-                bottom where it read as a footnote. */}
-            <Reveal delay={0.05}>
-              <SpotlightCard className="overflow-hidden">
-                <div className="flex items-start gap-5 p-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary glow-accent-sm">
-                    <Award className="h-5 w-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary/80">Recognition</p>
-                    <h3 className="heading-md mt-1 text-foreground">{recognition.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground" style={{ textWrap: "pretty" }}>
-                      {recognition.detail}
-                    </p>
-                  </div>
-                </div>
-              </SpotlightCard>
-            </Reveal>
-
             {/* Metric-led proof. Two across inside a 2/3 column keeps each card
                 at a readable measure — three across gave ~23 chars per line. */}
             <div className="grid gap-4 sm:grid-cols-2">
@@ -160,7 +139,7 @@ const AboutSection = () => {
                         it overlapped the label and pushed the body text down,
                         so tiles in the same row no longer lined up. */}
                     <AskAboutThis
-                      question={`How did Nikunj achieve ${highlight.metric} ${highlight.label.toLowerCase()}?`}
+                      question={`How did Tijani achieve ${highlight.metric} ${highlight.label.toLowerCase()}?`}
                       className="ml-0 mt-auto self-start"
                     />
                   </div>

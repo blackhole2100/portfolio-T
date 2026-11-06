@@ -12,7 +12,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const title = `Engineering Case Studies — ${personalInfo.name}`;
-const description = `${caseStudies.length} deep-dive write-ups: the problem, the constraints, the decisions with their rejected alternatives, measured results, and an explicit statement of what was individually owned.`;
+const description = `${caseStudies.length} project write-ups explaining the product context, Tijani’s documented engineering role, implementation scope, available results, technology, and ownership boundaries.`;
 const url = `${siteConfig.siteUrl}/work`;
 
 export const metadata: Metadata = {
@@ -74,13 +74,14 @@ const WorkIndexPage = () => (
           </Reveal>
 
           <Reveal delay={0.05}>
-            <div className="mb-4 font-mono text-xs uppercase tracking-widest text-primary">Case studies</div>
+            <div className="mb-4 font-mono text-xs uppercase tracking-widest text-primary">Project experience</div>
             <h1 className="heading-xl mb-6">
-              Engineering <span className="text-gradient">Case Studies</span>
+              Selected <span className="text-gradient">Project Work</span>
             </h1>
             <p className="mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground" style={{ textWrap: "pretty" }}>
-              Each write-up covers the problem, the constraints it ran under, the decisions taken with the
-              alternatives rejected, measured results, and an explicit statement of what was mine versus shared.
+              Each write-up explains what the product does, the specific engineering work Tijani contributed,
+              the implementation scope, the technologies documented in the source material, and what can—and
+              cannot—be attributed to his role.
             </p>
           </Reveal>
 
@@ -105,7 +106,7 @@ const WorkIndexPage = () => (
 
           <Reveal className="mt-20 border-t border-white/10 pt-10">
             <p className="mb-6 text-base leading-relaxed text-muted-foreground">
-              Looking for the shorter version, or the side projects? Both are on the homepage.
+              Want the concise profile overview? The homepage brings the experience, skills, and selected projects together.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link

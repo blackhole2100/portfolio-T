@@ -23,12 +23,12 @@ const AITwinSection = () => {
 
   const primaryButtonLabel =
     status === "available"
-      ? "Open AI Chat"
+      ? "Open portfolio assistant"
       : status === "checking"
-        ? "Checking AI Chat..."
+        ? "Checking assistant..."
         : status === "unknown"
-          ? "Try AI Chat"
-        : "View Chat Status";
+          ? "Try assistant"
+        : "View assistant status";
 
   return (
     <section id="ai-twin" className="section-padding relative z-10">
@@ -56,8 +56,8 @@ const AITwinSection = () => {
                   {statusLabel}
                 </div>
                 <h2 className="heading-xl mb-6">
-                  Talk to my <br className="hidden lg:block"/>
-                  <span className="text-gradient">AI Twin</span>
+                  Explore the work with <br className="hidden lg:block"/>
+                  <span className="text-gradient">the AI assistant</span>
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-4 max-w-xl text-pretty lg:mx-0 mx-auto">
                   {isAvailable

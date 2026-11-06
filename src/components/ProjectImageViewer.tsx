@@ -797,7 +797,7 @@ export default function ProjectImageViewer({
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={activeImage}
-                      alt={`${projectTitle} screenshot ${activeIndex + 1}`}
+                      alt={`${projectTitle} project visual ${activeIndex + 1}`}
                       draggable={false}
                       loading="eager"
                       decoding="async"
@@ -928,7 +928,7 @@ export default function ProjectImageViewer({
                           ? "border-primary/70 shadow-[0_0_0_1px_hsl(var(--accent)/0.3),0_10px_24px_hsl(var(--accent)/0.14)]"
                           : "border-white/10 hover:border-white/20 hover:bg-white/5",
                       )}
-                      aria-label={`Open screenshot ${index + 1}`}
+                      aria-label={`Open project visual ${index + 1}`}
                       aria-pressed={isActive}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
@@ -68,19 +69,18 @@ const CaseStudyPage = async ({ params }: PageProps) => {
       .replace(/^-|-$/g, "");
 
   const tocItems: TocItem[] = [
-    { id: "problem", label: "The problem" },
-    { id: "constraints", label: "Constraints" },
+    { id: "problem", label: "Product context" },
+    ...(study.constraints.length ? [{ id: "constraints", label: "Engineering constraints" }] : []),
     ...(study.diagram ? [{ id: "architecture", label: "Architecture" }] : []),
-    { id: "decisions", label: "Decisions" },
+    ...(study.decisions.length ? [{ id: "decisions", label: "Decisions" }] : []),
     ...study.sections.map((section) => ({ id: sectionId(section.heading), label: section.heading })),
-    { id: "stack", label: "Stack" },
-    { id: "ownership", label: "What was mine" },
+    ...(study.stack.length ? [{ id: "stack", label: "Technology" }] : []),
+    { id: "ownership", label: "Role & ownership" },
   ];
 
   return (
     <>
-      {/* Inlined rather than via next/script so the graph is present in the
-          static HTML that crawlers read, matching the pattern in layout.tsx. */}
+      {/* Project structured data is rendered in the initial HTML for crawlers. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(getCaseStudyGraph(study)) }} />
 
       <Navbar />
@@ -107,7 +107,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                     {study.employer}
                   </span>
                 )}
-                <span className="text-muted-foreground">{study.period}</span>
+                {study.period && <span className="text-muted-foreground">{study.period}</span>}
                 {study.tags.map((tag) => (
                   <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-muted-foreground">
                     {tag}
@@ -124,7 +124,17 @@ const CaseStudyPage = async ({ params }: PageProps) => {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <dl className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 glass-subtle glow-accent-panel sm:grid-cols-4">
+              <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+                <Image
+                  src={`/images/portfolio/projects/${study.slug}.svg`}
+                  alt={`Illustrative project visual for ${study.title}`}
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 65vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 glass-subtle glow-accent-panel sm:grid-cols-3">
                 {study.results.map((result) => (
                   <div key={result.label} className="bg-background/20 p-5">
                     <dt className="sr-only">{result.label}</dt>
@@ -168,8 +178,8 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                   </div>
                 </Reveal>
 
-                <Reveal>
-                  <h2 id="constraints" className="heading-md mt-14 scroll-mt-28">Constraints</h2>
+                {study.constraints.length > 0 && <Reveal>
+                  <h2 id="constraints" className="heading-md mt-14 scroll-mt-28">Engineering constraints</h2>
                   <div className="mt-2 flex min-h-6 items-center">
                     <AskAboutThis
                       question={`What made the constraints on the ${study.title} hard to work within?`}
@@ -184,7 +194,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                       </li>
                     ))}
                   </ul>
-                </Reveal>
+                </Reveal>}
 
                 {study.diagram && (
                   <Reveal>
@@ -199,7 +209,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                   </Reveal>
                 )}
 
-                <Reveal>
+                {study.decisions.length > 0 && <Reveal>
                   <h2 id="decisions" className="heading-md mt-14 scroll-mt-28">Decisions</h2>
                   <div className="mt-2 flex min-h-6 items-center">
                     <AskAboutThis
@@ -246,7 +256,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                   </SpotlightCard>
                 ))}
               </div>
-            </Reveal>
+            </Reveal>}
 
                 {study.sections.map((section) => (
                   <Reveal key={section.heading}>
@@ -282,7 +292,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
             ))}
 
                 <Reveal>
-                  <h2 id="stack" className="heading-md mt-14 scroll-mt-28">Stack</h2>
+                  <h2 id="stack" className="heading-md mt-14 scroll-mt-28">Technology</h2>
               <ul className="mt-5 flex flex-wrap gap-2.5">
                 {study.stack.map((item) => (
                   <li
@@ -298,7 +308,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
             {/* Stated plainly and on purpose: shared work described as sole
                 ownership is the fastest way to lose a technical interview. */}
                 <Reveal>
-                  <h2 id="ownership" className="heading-md mt-14 scroll-mt-28">What was mine</h2>
+                  <h2 id="ownership" className="heading-md mt-14 scroll-mt-28">Role & ownership</h2>
                   <div className="mt-2 flex min-h-6 items-center">
                     <AskAboutThis question={`Who owned what on the ${study.title}?`} className="ml-0" />
                   </div>

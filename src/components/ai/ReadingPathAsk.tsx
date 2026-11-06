@@ -5,9 +5,9 @@ import { Compass } from "lucide-react";
 import { InlineAnswer } from "@/components/ai/InlineAnswer";
 
 const EXAMPLES = [
-  "Which study proves he can debug production infrastructure?",
-  "Which two studies show agent memory and tool governance?",
-  "What should I read if I only have five minutes?",
+  "Which project shows React Native architecture?",
+  "What did Tijani contribute to Anchord AI?",
+  "Which project best shows backend integrations?",
 ];
 
 /**
@@ -34,7 +34,7 @@ export function ReadingPathAsk() {
         Not sure where to start?
       </div>
       <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-        Tell the AI Twin what you&apos;re evaluating for, and it will point at the studies that actually prove it.
+        Tell the portfolio assistant what you want to understand, and it will point you to the most relevant project write-ups.
       </p>
 
       <form
@@ -48,7 +48,7 @@ export function ReadingPathAsk() {
           type="text"
           value={input}
           onChange={(event) => setInput(event.target.value)}
-          placeholder="e.g. Which study best shows agent evaluation?"
+          placeholder="e.g. Which project best shows AI integrations?"
           className="flex-1 rounded-xl border border-white/10 bg-black/5 px-4 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary/50 dark:bg-white/5"
         />
         <button type="submit" className="btn-cta-secondary shrink-0 justify-center">

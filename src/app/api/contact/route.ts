@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { personalInfo } from "@/data/portfolio";
 import {
   CONTACT_REQUEST_TIMEOUT_MS,
   contactRequestSchema,
@@ -48,7 +47,7 @@ function getRecipients(recipientList?: string) {
     .map((value) => value.trim())
     .filter(Boolean);
 
-  return recipients && recipients.length > 0 ? [...new Set(recipients)] : [personalInfo.email];
+  return recipients && recipients.length > 0 ? [...new Set(recipients)] : [];
 }
 
 export async function POST(request: Request) {
@@ -101,9 +100,9 @@ export async function POST(request: Request) {
     const sender = process.env.CONTACT_EMAIL_FROM?.trim();
     const recipients = getRecipients(process.env.CONTACT_EMAIL_TO);
 
-    if (!apiKey || !sender) {
+    if (!apiKey || !sender || recipients.length === 0) {
       return NextResponse.json(
-        { error: "Contact email is not configured on the server yet." },
+        { error: "The contact form is not configured yet. Please connect through LinkedIn." },
         { status: 503, headers: rateLimitHeaders }
       );
     }

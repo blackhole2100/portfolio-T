@@ -1,0 +1,101 @@
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import { personalInfo, about, experiences, bulletText, stats, projects, skillCategories } from "../src/data/portfolio.ts";
+import { caseStudyBySlug } from "../src/data/case-studies.ts";
+
+const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const outPath = resolve(projectRoot, "public/portfolio-preview.html");
+
+const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+}[char]));
+const inlineSvg = (relativePath) => {
+  const svg = readFileSync(resolve(projectRoot, "public", relativePath.replace(/^\//, "")), "utf8");
+  return `data:image/svg+xml;base64,${Buffer.from(svg).toString("base64")}`;
+};
+
+const statCards = stats.map((stat) => `
+  <article class="stat"><strong>${esc(stat.value)}${esc(stat.suffix)}</strong><span>${esc(stat.label)}</span></article>`).join("");
+
+const timeline = experiences.map((experience) => `
+  <article class="timeline-item ${experience.type === "education" ? "education" : "work"}">
+    <div class="timeline-head"><div><span class="eyebrow">${experience.type === "education" ? "EDUCATION" : "EXPERIENCE"}</span><h3>${esc(experience.role)}</h3><p class="company">${esc(experience.company)}</p></div><time>${esc(experience.period)}</time></div>
+    <p>${esc(experience.summary)}</p>
+    ${experience.bullets.length ? `<ul>${experience.bullets.map((bullet) => `<li>${esc(bulletText(bullet))}</li>`).join("")}</ul>` : ""}
+  </article>`).join("");
+
+const skillCards = skillCategories.map((category) => `
+  <article class="skill-card"><h3>${esc(category.title)}</h3><p>${esc(category.description)}</p><div class="tags">${category.skills.map((skill) => `<span>${esc(skill)}</span>`).join("")}</div></article>`).join("");
+
+const projectCards = projects.map((project) => {
+  const study = caseStudyBySlug.get(project.caseStudy);
+  const image = inlineSvg(project.images[0]);
+  const detail = study ? {
+    title: study.title,
+    summary: study.summary,
+    problem: study.problem,
+    ownership: study.ownership,
+    sections: study.sections,
+    results: study.results,
+    stack: study.stack,
+    constraints: study.constraints,
+  } : null;
+  const serialized = esc(JSON.stringify(detail));
+  return `
+  <article class="project-card" data-filter="${esc(`${project.title} ${project.category} ${project.role} ${project.tech.join(" ")}`.toLowerCase())}">
+    <div class="project-image"><img src="${image}" alt="Illustrative project visual for ${esc(project.title)}" loading="lazy"><span class="image-note">ILLUSTRATIVE VISUAL</span></div>
+    <div class="project-body"><div class="project-meta"><span class="eyebrow">${esc(project.category)}</span><span class="dot"></span><span>PROJECT</span></div>
+      <h3>${esc(project.title)}</h3><p>${esc(project.summary)}</p>
+      <div class="role"><span>DOCUMENTED ROLE</span><p>${esc(project.role)}</p></div>
+      <div class="tags">${project.tech.slice(0, 6).map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>
+      <div class="project-actions"><button class="button primary" type="button" data-study='${serialized}'>Read project details <span aria-hidden="true">↗</span></button>${project.live ? `<a class="text-link" href="${esc(project.live)}" target="_blank" rel="noopener noreferrer">Product link ↗</a>` : ""}</div>
+    </div>
+  </article>`;
+}).join("");
+
+const highlightCards = about.highlights.map((highlight) => `
+  <article class="highlight"><strong>${esc(highlight.metric)}</strong><h3>${esc(highlight.label)}</h3><p>${esc(highlight.detail)}</p></article>`).join("");
+
+const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07131f"><meta name="description" content="${esc(personalInfo.tagline)}">
+<title>${esc(personalInfo.name)} — Portfolio Preview</title>
+<style>
+:root{color-scheme:dark;--bg:#07131f;--panel:#0d1d2b;--panel2:#102536;--line:#244154;--text:#e8f2f8;--muted:#9bb0c0;--accent:#62dfd0;--accent2:#2999aa;--shadow:0 22px 70px #0006}
+:root[data-theme="light"]{color-scheme:light;--bg:#f4f8fa;--panel:#fff;--panel2:#edf5f7;--line:#d4e1e7;--text:#132b3b;--muted:#536c7c;--accent:#078e89;--accent2:#0c6b86;--shadow:0 18px 55px #193b4c18}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:radial-gradient(circle at 78% 6%,#1b66621c,transparent 32rem),var(--bg);color:var(--text);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}.header{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:750}.mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid #3a7684;border-radius:12px;color:var(--accent);font-weight:800;background:linear-gradient(145deg,#133344,#0b1a28)}.navlinks{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:13px}.navlinks a:hover,.text-link:hover{color:var(--accent)}.nav-actions{display:flex;gap:10px;align-items:center}.icon-button{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:99px;padding:8px 12px;cursor:pointer}.hero{padding:90px 0 62px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:54px}.eyebrow{display:inline-block;color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.location{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);border-radius:99px;padding:7px 13px;background:var(--panel);font-size:11px;color:var(--muted)}.pulse{width:7px;height:7px;border-radius:50%;background:var(--accent)}h1{font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:22px 0 20px;font-weight:800}.gradient{background:linear-gradient(110deg,var(--accent),#80bddc);color:transparent;background-clip:text}.hero-copy{font-size:17px;line-height:1.75;color:var(--muted);max-width:690px}.focus{margin-top:20px;color:var(--muted);font-size:12px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.button{display:inline-flex;align-items:center;gap:10px;justify-content:center;border:1px solid var(--line);padding:12px 18px;border-radius:99px;background:var(--panel);color:var(--text);font-size:13px;font-weight:700;cursor:pointer}.button.primary{background:linear-gradient(105deg,var(--accent),#72b9d0);color:#05202a;border-color:transparent}.button:hover{transform:translateY(-1px);filter:brightness(1.06)}.hero-art{position:relative}.hero-art img{display:block;width:100%;height:auto;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 70px}.stat{border:1px solid var(--line);background:var(--panel);padding:20px;border-radius:17px}.stat strong{display:block;color:var(--accent);font-size:31px;line-height:1.2}.stat span{display:block;margin-top:8px;color:var(--muted);font-size:12px}.section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}.section h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.045em;line-height:1.1;margin:10px 0 0}.section-intro{max-width:650px;color:var(--muted);margin:14px 0 0}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.highlight,.skill-card,.timeline-item{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:22px}.highlight strong{font-size:30px;color:var(--accent)}.highlight h3{font-size:15px;margin:5px 0 8px}.highlight p,.skill-card p,.timeline-item p{margin:0;color:var(--muted);font-size:13px}.timeline{display:grid;gap:13px}.timeline-item{padding:21px 24px}.timeline-head{display:flex;justify-content:space-between;gap:20px;align-items:start}.timeline-head h3{margin:6px 0 2px;font-size:17px}.timeline-head time{font-size:12px;color:var(--muted);white-space:nowrap}.company{color:var(--accent)!important;margin:0 0 12px!important}.timeline-item ul{padding-left:19px;color:var(--muted);font-size:13px;margin:14px 0 0}.timeline-item li+li{margin-top:6px}.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.skill-card h3{margin:0 0 10px;font-size:17px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.tags span{background:var(--panel2);border:1px solid var(--line);padding:5px 9px;border-radius:99px;color:var(--muted);font-size:10px;line-height:1.4}.projects-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:22px}.search{min-width:240px;flex:1;background:var(--panel);border:1px solid var(--line);border-radius:99px;color:var(--text);padding:11px 16px;outline:none}.search:focus{border-color:var(--accent)}.count{font-size:12px;color:var(--muted)}.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.project-card{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:var(--panel);box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}.project-image{position:relative;aspect-ratio:16/9;background:#07131f;overflow:hidden}.project-image img{width:100%;height:100%;object-fit:cover;display:block}.image-note{position:absolute;left:12px;bottom:12px;padding:5px 9px;border:1px solid #89aebc44;border-radius:99px;background:#07131fbf;color:#b9d0dc;font-size:9px;letter-spacing:.13em}.project-body{padding:22px;display:flex;flex-direction:column;flex:1}.project-meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:10px;letter-spacing:.11em;text-transform:uppercase}.project-meta .dot{width:4px;height:4px;background:var(--accent);border-radius:50%}.project-body h3{font-size:22px;line-height:1.2;letter-spacing:-.03em;margin:12px 0}.project-body>p{color:var(--muted);font-size:13px;margin:0}.role{border-left:2px solid var(--accent);background:var(--panel2);padding:12px 14px;margin-top:17px;border-radius:0 10px 10px 0}.role span{font-size:9px;color:var(--accent);letter-spacing:.15em;font-weight:800}.role p{margin:5px 0 0;font-size:12px;color:var(--text)}.project-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:20px}.project-actions .button{padding:9px 13px;font-size:11px}.text-link{color:var(--accent);font-size:12px;font-weight:700}.footer{padding:42px 0 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}.footer strong{color:var(--text)}dialog{width:min(850px,calc(100% - 28px));max-height:88vh;padding:0;border:1px solid var(--line);border-radius:20px;background:var(--panel);color:var(--text);box-shadow:0 30px 120px #000b}dialog::backdrop{background:#020a12c9;backdrop-filter:blur(7px)}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--panel)}.dialog-head h2{font-size:21px;margin:0}.dialog-content{padding:24px;overflow:auto}.dialog-content p{color:var(--muted);font-size:13px}.dialog-content h3{margin:24px 0 8px;font-size:16px}.dialog-content ul{color:var(--muted);font-size:13px;padding-left:18px}.dialog-content li+li{margin-top:7px}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0}.result{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}.result strong{display:block;color:var(--accent);font-size:17px}.result span{display:block;color:var(--muted);font-size:10px;margin-top:4px}.close{border:1px solid var(--line);border-radius:99px;background:var(--panel2);color:var(--text);padding:7px 12px;cursor:pointer}.empty{border:1px dashed var(--line);padding:30px;text-align:center;color:var(--muted);border-radius:14px;display:none}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:28px;padding-top:64px}.hero-art{max-width:650px}.stats{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}.projects{grid-template-columns:1fr}}
+@media(max-width:580px){.wrap{width:min(100% - 28px,1160px)}.nav{height:62px}.navlinks{display:none}.hero{padding:52px 0 40px}.hero-copy{font-size:15px}.section{padding:58px 0}.section-head{display:block}.grid-2,.skills{grid-template-columns:1fr}.timeline-head{display:block}.timeline-head time{display:block;margin-top:8px}.result-grid{grid-template-columns:1fr}.footer{display:block}.footer p{margin:5px 0}.project-body{padding:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap nav"><a class="brand" href="#top"><span class="mark">TS</span><span>${esc(personalInfo.name)}</span></a><nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav><div class="nav-actions"><button id="theme" class="icon-button" type="button" aria-label="Toggle color theme">Light / dark</button><a class="button primary" href="${esc(personalInfo.resumeUrl)}" download>Resume ↗</a></div></div></header>
+<main id="top">
+<section class="wrap hero"><div><span class="location"><i class="pulse"></i>${esc(personalInfo.location)} · Web · Mobile · AI</span><h1>${esc(personalInfo.role.replace(" Engineer", ""))}<br><span class="gradient">Engineer.</span></h1><p class="hero-copy">${esc(personalInfo.tagline)}</p><p class="focus">${esc(personalInfo.focus)}</p><div class="actions"><a class="button primary" href="#work">Explore project work <span>↘</span></a><a class="button" href="${esc(personalInfo.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="button" href="${esc(personalInfo.resumeUrl)}" download>Download resume ↓</a></div></div><div class="hero-art"><img src="${inlineSvg("/images/portfolio/engineering-stack.svg")}" alt="Illustration of Tijani's full-stack, mobile, and AI engineering capabilities"></div></section>
+<section class="wrap stats" aria-label="Career highlights">${statCards}</section>
+<section id="about" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">ABOUT</span><h2>Engineering with <span class="gradient">end-to-end ownership.</span></h2></div><p class="section-intro">${esc(about.summary)}</p></div><div class="grid-2">${highlightCards}</div></div></section>
+<section id="experience" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">CAREER & EDUCATION</span><h2>Experience grounded in <span class="gradient">delivery.</span></h2></div><p class="section-intro">Research and core software development through full-stack product engineering, mobile delivery, enterprise integrations, and production AI workflows.</p></div><div class="timeline">${timeline}</div></div></section>
+<section id="skills" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">TECHNICAL COMPETENCIES</span><h2>Across the <span class="gradient">whole stack.</span></h2></div><p class="section-intro">A broad engineering toolkit spanning web and SaaS products, cross-platform mobile apps, AI integrations, distributed systems, cloud delivery, and production reliability.</p></div><div class="skills">${skillCards}</div></div></section>
+<section id="work" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">SELECTED PROJECT WORK · 16 CASE STUDIES</span><h2>Product work, <span class="gradient">with role clarity.</span></h2></div><p class="section-intro">Each project separates the product context from Tijani's documented engineering contribution. Illustrations are representative concept visuals, not screenshots of the live products.</p></div><div class="projects-toolbar"><input class="search" id="project-search" type="search" placeholder="Filter projects by name, role, or technology…" aria-label="Filter projects"><span class="count" id="project-count">${projects.length} projects</span></div><div class="projects" id="projects">${projectCards}</div><div class="empty" id="empty">No projects match that search.</div></div></section>
+<section id="contact" class="section"><div class="wrap"><div class="section-head"><div><span class="eyebrow">CONTACT</span><h2>Connect with <span class="gradient">Tijani.</span></h2></div><p class="section-intro">For engineering and project inquiries, use the published LinkedIn profile. The supplied resume does not include a public email or GitHub profile.</p></div><div class="actions"><a class="button primary" href="${esc(personalInfo.linkedin)}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a><a class="button" href="${esc(personalInfo.resumeUrl)}" download>Download resume ↓</a></div></div></section>
+</main>
+<footer class="wrap footer"><div><strong>${esc(personalInfo.name)}</strong><p>Senior Full-Stack & AI Software Engineer</p></div><p>Representative portfolio preview · Generated from the project content model</p></footer>
+<dialog id="study-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title">Project details</h2><button class="close" type="button" id="dialog-close">Close ✕</button></div><div class="dialog-content" id="dialog-content"></div></dialog>
+<script>
+const themeButton=document.getElementById('theme');
+themeButton.addEventListener('click',()=>{const root=document.documentElement;const light=root.dataset.theme==='light';root.dataset.theme=light?'dark':'light';themeButton.textContent=light?'Light / dark':'Dark / light';});
+const search=document.getElementById('project-search');const cards=[...document.querySelectorAll('.project-card')];const count=document.getElementById('project-count');const empty=document.getElementById('empty');
+search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let visible=0;for(const card of cards){const show=card.dataset.filter.includes(q);card.hidden=!show;if(show)visible++;}count.textContent=visible+' of '+cards.length+' projects';empty.style.display=visible?'none':'block';});
+const dialog=document.getElementById('study-dialog');const content=document.getElementById('dialog-content');const close=()=>dialog.close();document.getElementById('dialog-close').addEventListener('click',close);
+document.querySelectorAll('[data-study]').forEach(button=>button.addEventListener('click',()=>{const data=JSON.parse(button.dataset.study);if(!data)return;document.getElementById('dialog-title').textContent=data.title;const results=data.results.map(r=>`<div class="result"><strong>${r.metric}</strong><span>${r.label}</span></div>`).join('');const sections=data.sections.map(s=>`<section><h3>${s.heading}</h3><p>${s.body}</p>${s.points?.length?`<ul>${s.points.map(p=>`<li>${p}</li>`).join('')}</ul>`:''}</section>`).join('');const constraints=data.constraints?.length?`<h3>Documented engineering constraints</h3><ul>${data.constraints.map(c=>`<li>${c}</li>`).join('')}</ul>`:'';content.innerHTML=`<p>${data.summary}</p><div class="result-grid">${results}</div><h3>Product context</h3><p>${data.problem}</p>${constraints}${sections}<h3>Technology and workflow areas</h3><div class="tags">${data.stack.map(s=>`<span>${s}</span>`).join('')}</div><h3>Attribution</h3><p>${data.ownership}</p>`;dialog.showModal();}));
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+</script>
+</body></html>`;
+
+mkdirSync(dirname(outPath), { recursive: true });
+writeFileSync(outPath, html, "utf8");
+console.log(`Wrote ${outPath} (${html.length.toLocaleString()} chars, ${projects.length} projects).`);

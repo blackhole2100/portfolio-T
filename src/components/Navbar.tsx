@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Menu, X, Download, Search } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/tijani-mark.svg";
 import { personalInfo } from "@/data/portfolio";
 import { ThemeToggle } from "./ThemeToggle";
 import { useLenisLock } from "@/hooks/useLenisLock";
@@ -16,7 +16,7 @@ const navLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#skills", label: "Skills" },
-  { href: "#ai-twin", label: "AI Twin" },
+  { href: "#ai-twin", label: "AI Assistant" },
   { href: "#contact", label: "Contact" },
 ];
 

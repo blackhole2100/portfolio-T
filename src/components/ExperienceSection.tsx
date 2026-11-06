@@ -136,16 +136,15 @@ function ExperienceItem({
                 {/* Own row, not trailing the prose: inline, the pill landed
                     wherever the last line happened to wrap, so it sometimes
                     hugged the text and sometimes sat alone under it. */}
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                  {/* `inline` here and nowhere else: an experience card is
-                      full-width prose, so an answer can grow downward without
-                      disturbing anything beside it. */}
-                  <AskAboutThis
-                    question={`Tell me more about ${exp.role} at ${exp.company}: "${exp.summary}"`}
-                    className="ml-0"
-                    inline
-                  />
-                </div>
+                {exp.type === "work" && (
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <AskAboutThis
+                      question={`Tell me more about ${exp.role} at ${exp.company}: "${exp.summary}"`}
+                      className="ml-0"
+                      inline
+                    />
+                  </div>
+                )}
               </div>
             </li>
             {exp.bullets.map((bullet) => {
@@ -270,14 +269,13 @@ const ExperienceSection = () => {
                     <span className="text-gradient">Experience</span>
                   </h2>
                   <p className="max-w-md leading-relaxed text-muted-foreground">
-                    I’ve grown from building public-sector software into delivering Applied AI systems, working through stakeholder discovery, agent architecture, governed tool integration, rollout, debugging, and iteration.
+                    More than 11 years across software research, core application development, full-stack product delivery, mobile engineering, enterprise integrations, and production AI workflows.
                   </p>
 
                   <div className="hidden lg:block">
                     <p className="mt-6 inline-flex flex-nowrap items-baseline whitespace-nowrap text-base font-semibold text-foreground sm:text-xl lg:mt-8">
-                    And a new{" "}
-                    <FlipWords words={["adventure", "chapter", "journey"]} slotWidth={9} className="px-2 text-primary" />{" "}
-                    ahead
+                    Building{" "}
+                    <FlipWords words={["web products", "mobile apps", "AI systems"]} slotWidth={9} className="px-2 text-primary" />
                   </p>
                   </div>
                 </div>
@@ -307,9 +305,8 @@ const ExperienceSection = () => {
 
             <div className="mt-8 pl-[50px] lg:hidden sm:pl-[90px]">
               <p className="mt-6 inline-flex flex-nowrap items-baseline whitespace-nowrap text-base font-semibold text-foreground sm:text-xl lg:mt-8">
-                    And a new{" "}
-                    <FlipWords words={["adventure", "chapter", "journey"]} slotWidth={9} className="px-2 text-primary" />{" "}
-                    ahead
+                    Building{" "}
+                    <FlipWords words={["web products", "mobile apps", "AI systems"]} slotWidth={9} className="px-2 text-primary" />
                   </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { Mail, Linkedin, Github, Send, Download, ArrowUpRight, Briefcase, Users, GitPullRequest, MessageSquare } from "lucide-react";
+import { Linkedin, Send, Download, ArrowUpRight, Briefcase, Users, GitPullRequest, MessageSquare } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 import { toast } from "@/components/ui/sonner";
 import {
@@ -15,7 +15,7 @@ import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import Reveal from "@/components/ui/reveal";
 import Card3D from "./Card3D";
-import cardImage from "@/assets/card.png";
+
 
 /**
  * One icon per contact reason.
@@ -32,22 +32,10 @@ const REASON_ICONS: Record<(typeof CONTACT_REASONS)[number], React.ElementType> 
 
 const SOCIAL_LINKS = [
   {
-    icon: Mail,
-    label: "Email",
-    value: personalInfo.email,
-    href: `mailto:${personalInfo.email}`,
-  },
-  {
     icon: Linkedin,
     label: "LinkedIn",
     value: personalInfo.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""),
     href: personalInfo.linkedin,
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: personalInfo.github.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""),
-    href: personalInfo.github,
   },
 ];
 
@@ -158,7 +146,9 @@ const ContactSection = () => {
         <Reveal delay={0.05} className="mx-auto mb-10 block w-full max-w-xs sm:max-w-sm lg:hidden">
           <Card3D>
             <Image
-              src={cardImage}
+              src="/images/portfolio/engineering-stack.svg"
+              width={900}
+              height={720}
               alt=""
               aria-hidden="true"
               className="w-full h-auto rounded-3xl border border-white/10 shadow-accent-strong pointer-events-none select-none"
@@ -218,7 +208,7 @@ const ContactSection = () => {
                 </a>
                 <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground border-t border-black/10 dark:border-white/5 pt-4">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse motion-reduce:animate-none shrink-0" />
-                  Available for new opportunities
+                  Open to engineering and project inquiries
                 </div>
               </div>
             </div>
@@ -397,7 +387,7 @@ const ContactSection = () => {
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
                 <p className="text-[11px] font-medium text-muted-foreground/60 text-center border-t border-black/10 dark:border-white/5 pt-4">
-                  Messages are sent securely to {personalInfo.email} with your email set as the reply-to.
+                  Messages are sent through the portfolio contact service. Your email address is used as the reply-to.
                 </p>
               </div>
             </form>

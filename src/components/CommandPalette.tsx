@@ -10,10 +10,8 @@ import {
   Download,
   ExternalLink,
   FileText,
-  Github,
-  Layers,
   Linkedin,
-  Mail,
+  Layers,
   MessageCircle,
   Search,
   Sparkles,
@@ -28,7 +26,7 @@ import { cn } from "@/lib/utils";
 /** `terms` widens matching so "cv", "stack" or "hire" land somewhere sensible. */
 const SECTIONS = [
   { label: "About", href: "#about", terms: "profile bio who" },
-  { label: "Experience", href: "#experience", terms: "career history roles timeline armorcode" },
+  { label: "Experience", href: "#experience", terms: "career history roles timeline software engineering" },
   { label: "Work", href: "#work", terms: "projects case studies portfolio systems" },
   { label: "Skills", href: "#skills", terms: "stack technologies tools expertise" },
   { label: "Contact", href: "#contact", terms: "email hire reach out message" },
@@ -134,7 +132,7 @@ const CommandPalette = () => {
               because the input's placeholder already labels the surface. */}
           <DialogPrimitive.Title className="sr-only">Command palette</DialogPrimitive.Title>
           <DialogPrimitive.Description className="sr-only">
-            Search sections and case studies, or ask the AI Twin a question.
+            Search portfolio sections and project case studies, or ask the AI assistant a question.
           </DialogPrimitive.Description>
 
           <Command loop className="flex min-h-0 flex-1 flex-col">
@@ -163,7 +161,7 @@ const CommandPalette = () => {
                     className="inline-flex items-center gap-2 rounded-xl px-3 py-2 font-medium text-primary transition-colors hover:bg-primary/10"
                   >
                     <Sparkles className="h-4 w-4" />
-                    Ask the AI Twin instead
+                    Ask the portfolio assistant instead
                   </button>
                 ) : (
                   "No results."
@@ -227,7 +225,7 @@ const CommandPalette = () => {
                 ))}
                 <Command.Item value="ai twin chat assistant agent ask question" onSelect={() => askTwin("")} className={itemClass}>
                   <MessageCircle className="h-4 w-4 shrink-0 text-primary" />
-                  Open the AI Twin
+                  Open the AI assistant
                 </Command.Item>
               </Command.Group>
 
@@ -243,22 +241,7 @@ const CommandPalette = () => {
                   <Download className="h-4 w-4 shrink-0 opacity-50" />
                   Download resume
                 </Command.Item>
-                <Command.Item
-                  value="email contact mail reach out hire"
-                  onSelect={() => run(() => { window.location.href = `mailto:${personalInfo.email}`; })}
-                  className={itemClass}
-                >
-                  <Mail className="h-4 w-4 shrink-0 opacity-50" />
-                  Email Nikunj
-                </Command.Item>
-                <Command.Item
-                  value="github repositories code source open source"
-                  onSelect={() => run(() => window.open(personalInfo.github, "_blank", "noopener,noreferrer"))}
-                  className={itemClass}
-                >
-                  <Github className="h-4 w-4 shrink-0 opacity-50" />
-                  GitHub
-                </Command.Item>
+
                 <Command.Item
                   value="linkedin profile social"
                   onSelect={() => run(() => window.open(personalInfo.linkedin, "_blank", "noopener,noreferrer"))}
@@ -270,13 +253,13 @@ const CommandPalette = () => {
               </Command.Group>
               {trimmedQuery.length > 2 && (
                 <Command.Group
-                  heading="Ask the AI Twin"
+                  heading="Ask the portfolio assistant"
                   className={groupClass}
                 >
                   <Command.Item value={`ask ${trimmedQuery}`} onSelect={() => askTwin(trimmedQuery)} className={itemClass}>
                     <Sparkles className="h-4 w-4 shrink-0 text-primary" />
                     <span className="truncate">
-                      Ask the AI Twin: <span className="text-foreground">&ldquo;{trimmedQuery}&rdquo;</span>
+                      Ask the portfolio assistant: <span className="text-foreground">&ldquo;{trimmedQuery}&rdquo;</span>
                     </span>
                     <CornerDownLeft className="ml-auto h-3 w-3 shrink-0 opacity-40" />
                   </Command.Item>
