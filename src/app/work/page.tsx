@@ -85,9 +85,9 @@ const WorkIndexPage = () => (
             </p>
           </Reveal>
 
-          <Reveal delay={0.08}>
+          {/* <Reveal delay={0.08}>
             <ReadingPathAsk />
-          </Reveal>
+          </Reveal> */}
 
           {/* Grouped by capability rather than employer, so the shape of the work
               reads before the logo does. */}

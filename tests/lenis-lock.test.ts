@@ -39,8 +39,8 @@ test("the lock uses isLocked, not stop()", () => {
 });
 
 test("the lock is reference counted", () => {
-  // The palette can open over the AI Twin; the first to close must not release
-  // the lock while the other is still open.
+  // Multiple modal surfaces can overlap; the first to close must not release
+  // the lock while another overlay is still open.
   assert.match(SOURCE, /lockCount \+= 1/, "must count acquisitions");
   assert.match(SOURCE, /lockCount === 1/, "must only lock on the first overlay");
   assert.match(SOURCE, /lockCount === 0/, "must only release when the last one closes");
@@ -75,10 +75,10 @@ test("nested overlays lock once and release once", () => {
   };
 
   acquire(); // AI Twin
-  acquire(); // palette over it
+  acquire(); // second modal over it
   assert.deepEqual({ locked, released }, { locked: 1, released: 0 });
 
-  release(); // palette closes — page must stay locked
+  release(); // first modal closes — page must stay locked
   assert.deepEqual({ locked, released }, { locked: 1, released: 0 });
 
   release(); // twin closes — now released
@@ -127,12 +127,7 @@ test("the AI Twin only locks scroll on mobile", () => {
   );
 });
 
-test("genuinely modal overlays still lock", () => {
-  // Both have a full-screen scrim, so the page behind them must not move.
-  const palette = readFileSync("src/components/CommandPalette.tsx", "utf8");
-  assert.match(palette, /useLenisLock\(open\)/, "the command palette is modal and must lock");
-  assert.match(palette, /fixed inset-0[^"]*bg-black\//, "…because it renders a full-screen scrim");
-
+test("the mobile navigation still locks scroll while open", () => {
   const navbar = readFileSync("src/components/Navbar.tsx", "utf8");
   assert.match(navbar, /useLenisLock\(isOpen\)/, "the mobile menu is modal and must lock");
 });

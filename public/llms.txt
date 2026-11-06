@@ -7,7 +7,9 @@
 - Role: Senior Full-Stack & AI Software Engineer
 - Location: Fort Lauderdale, Florida, United States
 - LinkedIn: https://www.linkedin.com/in/tijani-shabazz-7493a6439
-- Resume: https://tijani-porfolio.dev/Tijani_Shabazz_Senior_Engineer_Resume.docx
+- Resume: https://tijani-porfolio.dev/resume.pdf
+- Email: munimaguro68@gmail.com
+- GitHub: https://github.com/lightsunshine001
 - Portfolio: https://tijani-porfolio.dev/
 
 ## Core capabilities

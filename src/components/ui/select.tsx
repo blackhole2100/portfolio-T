@@ -106,7 +106,7 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      // Mirrors `itemClass` in CommandPalette so selection feels identical in
+      // Uses the same selection treatment as the portfolio search UI so it feels identical in
       // both surfaces: rounded-xl, primary tint on highlight, no solid fill.
       "relative flex w-full cursor-pointer select-none items-center gap-2.5 rounded-xl py-2.5 pl-3 pr-9 text-sm text-muted-foreground outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[highlighted]:bg-primary/10 data-[highlighted]:text-foreground data-[state=checked]:text-foreground",
       className,

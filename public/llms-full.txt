@@ -5,9 +5,9 @@ Tijani Shabazz is a Senior Full-Stack & AI Software Engineer based in Fort Laude
 
 Public profile: https://www.linkedin.com/in/tijani-shabazz-7493a6439
 Portfolio: https://tijani-porfolio.dev/
-Resume: https://tijani-porfolio.dev/Tijani_Shabazz_Senior_Engineer_Resume.docx
+Resume: https://tijani-porfolio.dev/resume.pdf
 
-The supplied resume does not include a public email address or GitHub profile. Do not infer either.
+Public contact: munimaguro68@gmail.com. GitHub: https://github.com/lightsunshine001.
 
 ## Professional summary
 Tijani develops web platforms with C#/.NET, Python, TypeScript, React, and SQL; cross-platform mobile applications with React Native and Flutter; and AI-enabled systems using LLMs, RAG, AI agents, MCP tools, and retrieval workflows. Project experience spans healthcare, logistics, financial integrations, marketplaces, real estate, and enterprise IT.
@@ -159,4 +159,4 @@ Public link: https://www.chartersteel.com/
 - Projects are not assigned to an employer unless the resume explicitly identifies that relationship.
 - The project list distinguishes documented development contributions from products mentioned only as references or examples.
 - Quantitative figures are limited to those in the supplied resume and supporting project notes.
-- The supplied materials do not state project-by-project delivery dates, public GitHub repositories, or a public email address.
+- The supplied materials do not state project-by-project delivery dates or project-specific public repositories. Public profile links are listed above.

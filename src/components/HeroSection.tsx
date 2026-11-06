@@ -164,13 +164,7 @@ const HeroSection = () => {
                 <Download className="w-4 h-4 mr-1 text-primary" />
                 Resume
               </a>
-              <a
-                href="#ai-twin"
-                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3.5 rounded-full hover:bg-white/5 transition-all duration-300 font-semibold text-sm text-muted-foreground hover:text-foreground active:scale-95"
-              >
-                <MessageCircle className="w-4 h-4 text-primary" />
-                Ask the portfolio assistant
-              </a>
+
             </motion.div>
 
           </motion.div>
@@ -183,7 +177,7 @@ const HeroSection = () => {
             className="hidden lg:flex justify-end lg:col-span-5 relative"
           >
              <div className="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15)_0%,transparent_70%)] rounded-full scale-150" />
-             <div className="relative z-10 w-full max-w-[500px] xl:max-w-[600px] lg:scale-110 xl:scale-125 lg:origin-right lg:translate-x-4 xl:translate-x-12">
+             <div className="relative z-10 w-full max-w-[440px] xl:max-w-[520px] lg:scale-100 xl:scale-105 lg:origin-right">
               <Card3D className="w-full">
                   <Image
                      src="/images/portfolio/engineering-stack.svg"

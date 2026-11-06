@@ -4,7 +4,6 @@ import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
-import AITwinSection from "@/components/AITwinSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { getPortfolioGraph, toJsonLd } from "@/lib/seo/jsonld";
@@ -30,7 +29,6 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
-        <AITwinSection />
         <ContactSection />
       </main>
       <Footer />

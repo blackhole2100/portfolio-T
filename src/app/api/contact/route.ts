@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { personalInfo } from "@/data/portfolio";
 import { Resend } from "resend";
 import {
   CONTACT_REQUEST_TIMEOUT_MS,
@@ -41,14 +42,6 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
-function getRecipients(recipientList?: string) {
-  const recipients = recipientList
-    ?.split(/[;,]/)
-    .map((value) => value.trim())
-    .filter(Boolean);
-
-  return recipients && recipients.length > 0 ? [...new Set(recipients)] : [];
-}
 
 export async function POST(request: Request) {
   const rateLimitResult = checkRateLimit(requestStore, getClientKey(request), {
@@ -98,11 +91,11 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY?.trim();
     const sender = process.env.CONTACT_EMAIL_FROM?.trim();
-    const recipients = getRecipients(process.env.CONTACT_EMAIL_TO);
+    const recipients = [personalInfo.email];
 
-    if (!apiKey || !sender || recipients.length === 0) {
+    if (!apiKey || !sender) {
       return NextResponse.json(
-        { error: "The contact form is not configured yet. Please connect through LinkedIn." },
+        { error: `The email service is not configured yet. You can reach me directly at ${personalInfo.email}.` },
         { status: 503, headers: rateLimitHeaders }
       );
     }

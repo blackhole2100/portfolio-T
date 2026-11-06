@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Menu, X, Download, Search } from "lucide-react";
+import { Menu, X, Download, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import logo from "@/assets/tijani-mark.svg";
 import { personalInfo } from "@/data/portfolio";
@@ -16,7 +16,6 @@ const navLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#skills", label: "Skills" },
-  { href: "#ai-twin", label: "AI Assistant" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -233,17 +232,7 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <div className="w-px h-4 bg-white/10 mx-2" />
-            {/* Discoverability for the shortcut — most visitors never guess it exists. */}
-            <button
-              type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
-              aria-label="Open command palette"
-              className="hidden items-center gap-1.5 rounded-full border border-white/10 px-3 py-1.5 font-mono text-[11px] text-muted-foreground transition-colors hover:border-primary/30 hover:text-primary lg:flex"
-            >
-              <Search className="h-3 w-3" />
-              <kbd className="font-sans">⌘K</kbd>
-            </button>
+            
             <ThemeToggle />
             <a
               href={personalInfo.resumeUrl}
@@ -310,8 +299,28 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center justify-between mt-2 pt-4 border-t border-white/5">
-                <ThemeToggle />
+              <div className="mt-2 flex items-center justify-between border-t border-white/5 pt-4">
+                <div className="flex items-center gap-2">
+                  <ThemeToggle />
+                  <a
+                    href={personalInfo.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub profile"
+                    onClick={() => closeMenu(false)}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full glass-subtle border border-white/10 text-muted-foreground hover:text-primary"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    aria-label="Email Tijani"
+                    onClick={() => closeMenu(false)}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full glass-subtle border border-white/10 text-muted-foreground hover:text-primary"
+                  >
+                    <Mail className="h-4 w-4" />
+                  </a>
+                </div>
                 <a
                   href={personalInfo.resumeUrl}
                   download

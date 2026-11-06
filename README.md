@@ -8,7 +8,7 @@ A production portfolio site built with Next.js App Router, React, TypeScript, an
 - `src/data/case-studies.ts` — the 16 detailed project write-ups, implementation scope, available results, technology, and attribution boundaries.
 - `src/lib/ai-twin.ts` and `src/lib/ai-tools.ts` — the portfolio assistant's compact context, search index, metrics, and case-study retrieval tools.
 - `public/images/portfolio/projects/` — representative SVG interface illustrations. These are concept visuals, not screenshots of live products.
-- `public/Tijani_Shabazz_Senior_Engineer_Resume.docx` — the supplied resume available from the site.
+- `public/resume.pdf` — the supplied resume available from the site.
 
 When revising project content, keep `portfolio.ts` and `case-studies.ts` aligned. Each new case study should include a matching illustrative asset named after its slug.
 

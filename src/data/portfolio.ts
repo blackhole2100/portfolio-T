@@ -9,7 +9,9 @@ export const personalInfo = {
   focus:
     "Full-stack web and SaaS engineering · React Native and Flutter apps · AI-enabled products · APIs and distributed integrations · cloud delivery and production reliability",
   linkedin: "https://www.linkedin.com/in/tijani-shabazz-7493a6439",
-  resumeUrl: "/Tijani_Shabazz_Senior_Engineer_Resume.docx",
+  github: "https://github.com/lightsunshine001",
+  email: "munimaguro68@gmail.com",
+  resumeUrl: "/resume.pdf",
 };
 
 /** Each figure is published in the supplied resume or project inventory. */

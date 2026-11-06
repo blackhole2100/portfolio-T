@@ -8,8 +8,8 @@ This file summarizes the current source-of-truth profile for the portfolio. Use 
 - Location: Fort Lauderdale, Florida, United States
 - LinkedIn: https://www.linkedin.com/in/tijani-shabazz-7493a6439
 - Experience: 11+ years
-- Public email: not provided in the supplied resume
-- Public GitHub: not provided in the supplied resume
+- Email: munimaguro68@gmail.com
+- GitHub: https://github.com/lightsunshine001
 
 ## Professional summary
 Senior Full-Stack & AI Software Engineer with 11+ years of experience building and evolving production software across web, mobile, enterprise, and AI-powered products. Focus areas include end-to-end application engineering, backend architecture, API and systems integration, data-intensive workflows, cloud delivery, and production reliability. Web platforms include C#/.NET, Python, TypeScript, React, and SQL; mobile applications include React Native and Flutter; AI-enabled products include LLM integration, RAG, AI agents, MCP tools, and retrieval workflows.

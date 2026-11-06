@@ -393,8 +393,6 @@ const SECTION_TARGETS: Record<string, string> = {
   "all work": "/work",
   skills: "#skills",
   contact: "#contact",
-  "ai twin": "#ai-twin",
-  "ai assistant": "#ai-twin",
   hero: "#hero",
 };
 

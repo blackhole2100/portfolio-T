@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { Linkedin, Send, Download, ArrowUpRight, Briefcase, Users, GitPullRequest, MessageSquare } from "lucide-react";
+import { Linkedin, Github, Mail, Send, Download, ArrowUpRight, Briefcase, Users, GitPullRequest, MessageSquare } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 import { toast } from "@/components/ui/sonner";
 import {
@@ -36,6 +36,18 @@ const SOCIAL_LINKS = [
     label: "LinkedIn",
     value: personalInfo.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""),
     href: personalInfo.linkedin,
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: personalInfo.github.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""),
+    href: personalInfo.github,
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: personalInfo.email,
+    href: `mailto:${personalInfo.email}`,
   },
 ];
 
@@ -387,7 +399,7 @@ const ContactSection = () => {
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
                 <p className="text-[11px] font-medium text-muted-foreground/60 text-center border-t border-black/10 dark:border-white/5 pt-4">
-                  Messages are sent through the portfolio contact service. Your email address is used as the reply-to.
+                  {`Messages are sent to ${personalInfo.email}. Your email address is used as the reply-to.`}
                 </p>
               </div>
             </form>

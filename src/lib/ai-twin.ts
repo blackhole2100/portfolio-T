@@ -4,7 +4,7 @@ import { about, bulletText, experiences, personalInfo, projects, skillCategories
 export const CHAT_MEMORY_WINDOW = 10;
 export const CHAT_STORAGE_KEY = "tijani-ai-twin-chat";
 export const PROJECT_ANCHOR_PREFIX = "project-";
-export const WELCOME_MESSAGE = "Hi — I’m Tijani’s AI portfolio assistant. I can summarize his full-stack, mobile, and AI experience, walk through a project, or explain his role in a specific delivery. You can [browse the projects](#work), [review his experience](#experience), or [download the resume](/Tijani_Shabazz_Senior_Engineer_Resume.docx).";
+export const WELCOME_MESSAGE = "Hi — I’m Tijani’s AI portfolio assistant. I can summarize his full-stack, mobile, and AI experience, walk through a project, or explain his role in a specific delivery. You can [browse the projects](#work), [review his experience](#experience), or [download the resume](/resume.pdf).";
 
 type ConversationWindowMessage = {
   content: string;
@@ -155,6 +155,8 @@ Personal info:
 - Role: ${personalInfo.role}
 - Location: ${personalInfo.location}
 - LinkedIn: ${personalInfo.linkedin}
+- GitHub: ${personalInfo.github}
+- Email: ${personalInfo.email}
 - Resume: ${personalInfo.resumeUrl}
 
 Professional summary:
@@ -201,6 +203,8 @@ export const PORTFOLIO_LINK_GUIDE = `
 When links would help the visitor, use these markdown links directly:
 - [Jump to Contact](#contact)
 - [View LinkedIn](${personalInfo.linkedin})
+- [View GitHub](${personalInfo.github})
+- [Email Tijani](mailto:${personalInfo.email})
 - [Browse Work](#work)
 - [Review Experience](#experience)
 - [View Skills](#skills)

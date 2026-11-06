@@ -124,14 +124,14 @@ const CaseStudyPage = async ({ params }: PageProps) => {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+              <div className="relative mt-10 aspect-[8/5] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
                 <Image
                   src={`/images/portfolio/projects/${study.slug}.svg`}
                   alt={`Illustrative project visual for ${study.title}`}
                   fill
                   priority
                   sizes="(min-width: 1024px) 65vw, 100vw"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 glass-subtle glow-accent-panel sm:grid-cols-3">

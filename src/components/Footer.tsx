@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { personalInfo } from "@/data/portfolio";
 import logo from "@/assets/tijani-mark.svg";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { scrollToHash, scrollToTop } from "@/lib/scroll";
 
@@ -13,12 +13,13 @@ const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
-  { label: "AI Assistant", href: "#ai-twin" },
   { label: "Contact", href: "#contact" },
 ];
 
 const SOCIAL_LINKS = [
   { icon: Linkedin, label: "LinkedIn", href: personalInfo.linkedin },
+  { icon: Github, label: "GitHub", href: personalInfo.github },
+  { icon: Mail, label: "Email", href: `mailto:${personalInfo.email}` },
 ];
 
 const Footer = () => {

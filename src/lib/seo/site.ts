@@ -15,6 +15,8 @@ export const siteConfig = {
   author: personalInfo.name,
   creator: personalInfo.name,
   linkedin: personalInfo.linkedin,
+  email: personalInfo.email,
+  github: personalInfo.github,
   locale: "en-US",
   ogLocale,
   ogImage: "/og-image.svg",
@@ -64,7 +66,7 @@ export const siteConfig = {
     region: "US-FL",
     placename: "Fort Lauderdale, Florida, United States",
   },
-  sameAs: [personalInfo.linkedin],
+  sameAs: [personalInfo.linkedin, personalInfo.github],
   aboutSummary: about.summary,
 } as const;
 

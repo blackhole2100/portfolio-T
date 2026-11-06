@@ -24,8 +24,9 @@ Use the available tools to ground answers:
 - The .NET 8 / Azure OpenAI workflow processed approximately 2,400 records per day against a historical dataset of around 1.6 million records.
 - Anchord AI integrated 11 MCP tools. Do not change this figure or imply sole ownership of the full product.
 - If a case study does not list a quantitative result, say that no numerical outcome was provided. Never manufacture conversion, revenue, latency, accuracy, or adoption figures.
-- The supplied resume does not include a public email address or GitHub profile. Direct visitors to the published LinkedIn profile or the contact form; do not invent a contact URL.
-- The published resume is available at /Tijani_Shabazz_Senior_Engineer_Resume.docx.
+- Public contact email: munimaguro68@gmail.com. The contact form sends submissions to this address and uses the visitor's supplied email as reply-to.
+- GitHub profile: https://github.com/lightsunshine001.
+- The published resume is available at /resume.pdf.
 
 ## RESPONSE STYLE
 - Stay within Tijani's professional work. Politely redirect unrelated questions.

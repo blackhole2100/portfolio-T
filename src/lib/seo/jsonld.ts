@@ -59,6 +59,7 @@ export function getPersonSchema(): JsonLd {
     description: personalInfo.tagline,
     jobTitle: personalInfo.role,
     sameAs: siteConfig.sameAs,
+    email: personalInfo.email,
     homeLocation: {
       "@type": "Place",
       name: siteConfig.geo.placename,

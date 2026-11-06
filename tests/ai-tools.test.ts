@@ -110,7 +110,7 @@ test("navigate_to resolves sections, case studies, and the resume", () => {
   assert.equal((call("navigate_to", { target: "#contact" }).output as { href: string }).href, "#contact");
   assert.equal((call("navigate_to", { target: "anchord-ai-entity-resolution" }).output as { href: string }).href, "/work/anchord-ai-entity-resolution");
   assert.equal((call("navigate_to", { target: "OurBlackGuide" }).output as { href: string }).href, "#project-ourblackguide-react-native");
-  assert.match((call("navigate_to", { target: "resume" }).output as { href: string }).href, /\.docx$/);
+  assert.equal((call("navigate_to", { target: "resume" }).output as { href: string }).href, "/resume.pdf");
 });
 
 test("navigate_to rejects targets outside the allow-list", () => {
