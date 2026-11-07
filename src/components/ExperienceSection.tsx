@@ -275,7 +275,7 @@ const ExperienceSection = () => {
                   <div className="hidden lg:block">
                     <p className="mt-6 inline-flex flex-nowrap items-baseline whitespace-nowrap text-base font-semibold text-foreground sm:text-xl lg:mt-8">
                     Building{" "}
-                    <FlipWords words={["web products", "mobile apps", "AI systems"]} slotWidth={9} className="px-2 text-primary" />
+                    <FlipWords words={["web products", "mobile apps", "AI systems"]} slotWidth={13} className="px-2 text-primary" />
                   </p>
                   </div>
                 </div>
