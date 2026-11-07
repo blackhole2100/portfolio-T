@@ -18,8 +18,13 @@ test("homepage sections contain 52 unique projects in total", () => {
   assert.equal(selectedProjectWork.length, 49, "selected project work must contain the remaining 49 projects");
   assert.equal(homepageFeaturedCaseStudies.length + selectedProjectWork.length, 52);
 
-  const caseStudySlugs = new Set(homepageFeaturedCaseStudies.map((study) => study.slug));
-  const selectedSlugs = new Set(selectedProjectWork.map((project) => project.caseStudy));
+ const caseStudySlugs = new Set<string>(
+  homepageFeaturedCaseStudies.map((study) => study.slug)
+);
+
+const selectedSlugs = new Set<string>(
+  selectedProjectWork.map((project) => project.caseStudy)
+);
 
   assert.equal(caseStudySlugs.size, homepageFeaturedCaseStudies.length, "featured case studies must be unique");
   assert.equal(selectedSlugs.size, selectedProjectWork.length, "selected project work must be unique");
