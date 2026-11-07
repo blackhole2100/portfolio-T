@@ -68,3 +68,14 @@ test("the standalone preview includes the current contact channels and all case 
   assert.match(preview, /github\.com\/lightsunshine001/);
   assert.match(preview, /16 case studies/i);
 });
+
+test("hero boundary has no oversized overlay or forced desktop viewport height", () => {
+  const hero = read("src/components/HeroSection.tsx");
+  assert.match(hero, /lg:min-h-0/);
+  assert.doesNotMatch(hero, /lg:min-h-screen/);
+  assert.doesNotMatch(hero, /h-32 sm:h-64/);
+  assert.doesNotMatch(hero, /bg-gradient-to-t from-background via-background\/80/);
+  // Preserve the original animated ambient orb; its radial gradient fades naturally.
+  assert.match(hero, /animate-\[pulse_10s_ease-in-out_infinite_reverse\]/);
+  assert.match(hero, /radial-gradient\(circle,hsl\(var\(--accent\)\/0\.2\)_0%,transparent_70%\)/);
+});

@@ -91,8 +91,8 @@ const HeroSection = () => {
       <div className="absolute top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full animate-[pulse_8s_ease-in-out_infinite] motion-reduce:animate-none opacity-50 pointer-events-none bg-[radial-gradient(circle,hsl(var(--primary)/0.2)_0%,transparent_70%)]" />
       <div className="absolute bottom-0 -left-1/4 w-[600px] h-[600px] rounded-full animate-[pulse_10s_ease-in-out_infinite_reverse] motion-reduce:animate-none opacity-40 pointer-events-none bg-[radial-gradient(circle,hsl(var(--accent)/0.2)_0%,transparent_70%)]" />
       
-      {/* Smooth fade into the next section */}
-      <div className="absolute bottom-0 inset-x-0 h-32 sm:h-64 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-0" />
+      {/* The ambient orbs already fade to transparent at their edges.
+          Avoid a full-width overlay here: it creates a visible band in light mode. */}
 
       <div className="container-narrow relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -164,7 +164,14 @@ const HeroSection = () => {
                 <Download className="w-4 h-4 mr-1 text-primary" />
                 Resume
               </a>
-
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent("open-ai-twin", { detail: { question: "" } }))}
+                className="inline-flex w-full sm:w-auto justify-center items-center gap-2 px-6 py-3.5 rounded-full hover:bg-white/5 transition-all duration-300 font-semibold text-sm text-muted-foreground hover:text-foreground active:scale-95"
+              >
+                <MessageCircle className="w-4 h-4 text-primary" />
+                Ask the portfolio assistant
+              </button>
             </motion.div>
 
           </motion.div>
@@ -177,7 +184,7 @@ const HeroSection = () => {
             className="hidden lg:flex justify-end lg:col-span-5 relative"
           >
              <div className="absolute inset-0 bg-[radial-gradient(circle,hsl(var(--primary)/0.15)_0%,transparent_70%)] rounded-full scale-150" />
-             <div className="relative z-10 w-full max-w-[440px] xl:max-w-[520px] lg:scale-100 xl:scale-105 lg:origin-right">
+             <div className="relative z-10 w-full max-w-[500px] xl:max-w-[600px] lg:scale-110 xl:scale-125 lg:origin-right lg:translate-x-4 xl:translate-x-12">
               <Card3D className="w-full">
                   <Image
                      src="/images/portfolio/engineering-stack.svg"
