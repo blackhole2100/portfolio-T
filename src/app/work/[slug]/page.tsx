@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Download } from "lucide-react";
 import { caseStudies, caseStudyBySlug, getAdjacentCaseStudies, getCaseStudyPath } from "@/data/case-studies";
-import { personalInfo } from "@/data/portfolio";
+import { personalInfo, projects } from "@/data/portfolio";
 import { getCaseStudyGraph, toJsonLd } from "@/lib/seo/jsonld";
 import { siteConfig } from "@/lib/seo/site";
 import CaseStudyDiagram from "@/components/diagrams";
@@ -14,6 +13,7 @@ import Reveal from "@/components/ui/reveal";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProjectScreenshot from "@/components/ProjectScreenshot";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -61,6 +61,14 @@ const CaseStudyPage = async ({ params }: PageProps) => {
   if (!study) notFound();
 
   const { previous, next } = getAdjacentCaseStudies(study.slug);
+  const relatedProject = projects.find((project) => project.caseStudy === study.slug);
+  const screenshotSrc = relatedProject?.images[0] ?? null;
+  const isPublicProject = Boolean(relatedProject?.live);
+  const projectLinks = relatedProject?.links?.length
+    ? relatedProject.links
+    : relatedProject?.live
+      ? [{ label: "Official project site", url: relatedProject.live }]
+      : [];
 
   const sectionId = (heading: string) =>
     heading
@@ -74,7 +82,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
     ...(study.diagram ? [{ id: "architecture", label: "Architecture" }] : []),
     ...(study.decisions.length ? [{ id: "decisions", label: "Decisions" }] : []),
     ...study.sections.map((section) => ({ id: sectionId(section.heading), label: section.heading })),
-    ...(study.stack.length ? [{ id: "stack", label: "Technology" }] : []),
+    ...(study.stack.length ? [{ id: "stack", label: "Technologies & implementation areas" }] : []),
     { id: "ownership", label: "Role & ownership" },
   ];
 
@@ -121,32 +129,45 @@ const CaseStudyPage = async ({ params }: PageProps) => {
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/85" style={{ textWrap: "pretty" }}>
                 {study.oneLiner}
               </p>
+              {projectLinks.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {projectLinks.map((link) => (
+                    <a
+                      key={`${link.label}-${link.url}`}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+                    >
+                      {link.label}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  ))}
+                </div>
+              )}
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="relative mt-10 aspect-[8/5] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-                <Image
-                  src={`/images/portfolio/projects/${study.slug}.svg`}
-                  alt={`Illustrative project visual for ${study.title}`}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 65vw, 100vw"
-                  className="object-contain"
-                />
-              </div>
-              <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 glass-subtle glow-accent-panel sm:grid-cols-3">
-                {study.results.map((result) => (
-                  <div key={result.label} className="bg-background/20 p-5">
-                    <dt className="sr-only">{result.label}</dt>
-                    <dd>
-                      <span className="block text-2xl font-bold tracking-tighter text-foreground sm:text-3xl">
-                        {result.metric}
-                      </span>
-                      <span className="mt-1.5 block text-xs leading-snug text-muted-foreground">{result.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <ProjectScreenshot
+                src={screenshotSrc}
+                title={study.title}
+                isPublic={isPublicProject}
+              />
+              {study.results.length > 0 && (
+                <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 glass-subtle glow-accent-panel sm:grid-cols-3">
+                  {study.results.map((result) => (
+                    <div key={result.label} className="bg-background/20 p-5">
+                      <dt className="sr-only">{result.label}</dt>
+                      <dd>
+                        <span className="block text-2xl font-bold tracking-tighter text-foreground sm:text-3xl">
+                          {result.metric}
+                        </span>
+                        <span className="mt-1.5 block text-xs leading-snug text-muted-foreground">{result.label}</span>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
             </Reveal>
 
             <Reveal delay={0.15}>
@@ -292,7 +313,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
             ))}
 
                 <Reveal>
-                  <h2 id="stack" className="heading-md mt-14 scroll-mt-28">Technology</h2>
+                  <h2 id="stack" className="heading-md mt-14 scroll-mt-28">Technologies & implementation areas</h2>
               <ul className="mt-5 flex flex-wrap gap-2.5">
                 {study.stack.map((item) => (
                   <li

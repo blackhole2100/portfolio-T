@@ -1,5 +1,5 @@
 import { caseStudies, caseStudyBySlug, getCaseStudyPath } from "@/data/case-studies";
-import { bulletText, experiences, personalInfo, projects, stats } from "@/data/portfolio";
+import { bulletText, experiences, personalInfo, projects, skillCategories, stats } from "@/data/portfolio";
 import { getProjectAnchor, normalizeText } from "@/lib/ai-twin";
 
 /**
@@ -161,8 +161,11 @@ interface SearchHit {
 }
 
 function scoreText(haystack: string, terms: string[]) {
-  const corpus = normalizeText(haystack);
-  return terms.reduce((total, term) => (corpus.includes(term) ? total + term.length : total), 0);
+  const words = new Set(normalizeText(haystack).split(" ").filter(Boolean));
+  const matchedTerms = terms.filter((term) => words.has(term));
+  const minimumMatches = terms.length <= 2 ? terms.length : Math.ceil(terms.length * 0.67);
+  if (matchedTerms.length < minimumMatches) return 0;
+  return matchedTerms.reduce((total, term) => total + term.length, 0);
 }
 
 function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit, "score">[]; sources: string[] } {
@@ -224,7 +227,7 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
           id: project.slug,
           title: project.title,
           snippet: project.summary,
-          link: project.live ?? getCaseStudyPath(project.caseStudy),
+          link: getCaseStudyPath(project.caseStudy),
           score,
         });
       }
@@ -245,6 +248,21 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
             score,
           });
         }
+      }
+    }
+
+    for (const category of skillCategories) {
+      const text = `${category.title} ${category.description} ${category.skills.join(" ")}`;
+      const score = scoreText(text, terms);
+      if (score > 0) {
+        hits.push({
+          kind: "experience",
+          id: `skill-category-${category.title}`,
+          title: category.title,
+          snippet: `${category.description} Skills: ${category.skills.join(", ")}.`,
+          link: "#skills",
+          score,
+        });
       }
     }
   }

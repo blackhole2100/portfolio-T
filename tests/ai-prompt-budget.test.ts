@@ -31,11 +31,12 @@ test("case-study depth is fetched rather than copied into the prompt", () => {
   assert.ok(!PORTFOLIO_CONTEXT.includes(longestBody));
 });
 
-test("the prompt preserves every ownership boundary and slug", () => {
+test("the compact prompt indexes every project and fetches ownership detail on demand", () => {
   for (const study of caseStudies) {
-    assert.ok(PORTFOLIO_CONTEXT.includes(study.ownership), `missing ownership boundary: ${study.slug}`);
     assert.ok(PORTFOLIO_CONTEXT.includes(study.slug), `missing case-study slug: ${study.slug}`);
+    assert.ok(PORTFOLIO_CONTEXT.includes(study.title), `missing case-study title: ${study.slug}`);
   }
+  assert.match(PORTFOLIO_CONTEXT, /participation in developing and deploying every project/i);
   assert.match(SYSTEM_PROMPT, /get_case_study/);
   assert.match(SYSTEM_PROMPT, /11 MCP tools/i);
   assert.doesNotMatch(SYSTEM_PROMPT, /9 of (the )?14/i);

@@ -57,16 +57,21 @@ test("the command-palette UI and keyboard shortcut are removed while the theme t
 
 test("case-study hero images preserve their 8:5 artwork without cropping", () => {
   const page = read("src/app/work/[slug]/page.tsx");
-  assert.match(page, /aspect-\[8\/5\]/);
-  assert.match(page, /className="object-contain"/);
-  assert.doesNotMatch(page, /className="object-cover"/);
+  const screenshot = read("src/components/ProjectScreenshot.tsx");
+  assert.match(page, /<ProjectScreenshot/);
+  assert.match(screenshot, /aspect-\[8\/5\]/);
+  assert.match(screenshot, /className="object-contain"/);
+  assert.doesNotMatch(screenshot, /className="object-cover"/);
+  assert.match(screenshot, /onError=\{\(\) => setImageFailed\(true\)\}/);
 });
 
 test("the standalone preview includes the current contact channels and all case studies", () => {
   const preview = read("public/portfolio-preview.html");
   assert.match(preview, /munimaguro68@gmail\.com/);
   assert.match(preview, /github\.com\/lightsunshine001/);
-  assert.match(preview, /16 case studies/i);
+  assert.match(preview, /FEATURED CASE STUDIES · 3/i);
+  assert.match(preview, /SELECTED PROJECT WORK · 49/i);
+  assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 52);
 });
 
 test("hero boundary has no oversized overlay or forced desktop viewport height", () => {

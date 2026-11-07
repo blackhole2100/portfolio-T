@@ -127,7 +127,7 @@ export function getWorkIndexGraph(): JsonLd {
         "@id": `${url}#webpage`,
         url,
         name: `Engineering Case Studies — ${personalInfo.name}`,
-        description: `Project write-ups explaining product context, Tijani's documented engineering role, implementation scope, available results, technology, and attribution boundaries.`,
+        description: `Project write-ups explaining products Tijani participated in developing and deploying, his engineering contribution, implementation scope, and available links.`,
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
         inLanguage: siteConfig.locale,

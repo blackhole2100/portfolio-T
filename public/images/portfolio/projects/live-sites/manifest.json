@@ -1,0 +1,364 @@
+{
+  "status": "pending-local-browser-capture",
+  "generatedAt": "2026-11-07T19:55:52.832Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "publicProjectCount": 45,
+  "capturedCount": 0,
+  "captures": [
+    {
+      "slug": "anchord-ai-entity-resolution",
+      "title": "Anchord AI — Entity Resolution & Agent Integration",
+      "url": "https://www.anchord.ai/product",
+      "file": "/images/portfolio/projects/live-sites/anchord-ai-entity-resolution.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "correlate-health-platform-integration",
+      "title": "Correlate Health — Healthcare Platform Integration",
+      "url": "https://correlatehealth.com/",
+      "file": "/images/portfolio/projects/live-sites/correlate-health-platform-integration.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "crushbank-enterprise-ai",
+      "title": "CrushBank Orchestrate IT — Enterprise AI",
+      "url": "https://www.crushbank.com/orchestrate-it/",
+      "file": "/images/portfolio/projects/live-sites/crushbank-enterprise-ai.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "arvrobot-real-estate-underwriting",
+      "title": "ARVRobot — Real Estate Underwriting",
+      "url": "https://arvrobot.com/",
+      "file": "/images/portfolio/projects/live-sites/arvrobot-real-estate-underwriting.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "shiphype-fulfillment",
+      "title": "ShipHype — Logistics & Fulfillment",
+      "url": "https://shiphype.com/",
+      "file": "/images/portfolio/projects/live-sites/shiphype-fulfillment.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "dealercortex-ai",
+      "title": "DealerCortex AI — Automotive Intelligence",
+      "url": "https://dealercortexai.com/",
+      "file": "/images/portfolio/projects/live-sites/dealercortex-ai.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "arub-shipping-integrations",
+      "title": "Arub Shipping — Carrier & Order Integrations",
+      "url": "https://arub.com/shipping",
+      "file": "/images/portfolio/projects/live-sites/arub-shipping-integrations.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "suppliersift-ap-automation",
+      "title": "SupplierSift — Accounts Payable Automation",
+      "url": "https://suppliersift.com/",
+      "file": "/images/portfolio/projects/live-sites/suppliersift-ap-automation.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "calcs-engineering-calculations",
+      "title": "Calcs.com — Engineering Calculation Platform",
+      "url": "https://calcs.com/",
+      "file": "/images/portfolio/projects/live-sites/calcs-engineering-calculations.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "loopt-clinical-trial-matching",
+      "title": "LooPT CTM — Clinical Trial Matching",
+      "url": "https://correlatehealth.com/solutions",
+      "file": "/images/portfolio/projects/live-sites/loopt-clinical-trial-matching.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "compasshss-healthcare-staffing",
+      "title": "CompassHSS — Healthcare Staffing Platform",
+      "url": "https://compasshss.com/",
+      "file": "/images/portfolio/projects/live-sites/compasshss-healthcare-staffing.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "jobably-ai-job-discovery",
+      "title": "Jobably — AI Job Discovery",
+      "url": "https://jobably.com/",
+      "file": "/images/portfolio/projects/live-sites/jobably-ai-job-discovery.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "sunethix-irb-review",
+      "title": "Sunethix — IRB Submission Review",
+      "url": "https://www.sunethix.com/",
+      "file": "/images/portfolio/projects/live-sites/sunethix-irb-review.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "lead-prosper-routing",
+      "title": "Lead Prosper — Lead Distribution Platform",
+      "url": "https://www.leadprosper.io/",
+      "file": "/images/portfolio/projects/live-sites/lead-prosper-routing.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "echoaeon-ai-lead-automation",
+      "title": "Echoaeon — AI Lead Qualification",
+      "url": "https://echoaeon.com/",
+      "file": "/images/portfolio/projects/live-sites/echoaeon-ai-lead-automation.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "sharkindicators-blackbird",
+      "title": "SharkIndicators BlackBird — Trade Management",
+      "url": "https://www.sharkindicators.com/products/blackbird/",
+      "file": "/images/portfolio/projects/live-sites/sharkindicators-blackbird.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "dynamite-docs-document-ai",
+      "title": "Dynamite Docs — AI Document Extraction",
+      "url": "https://www.dynamitedocs.com/",
+      "file": "/images/portfolio/projects/live-sites/dynamite-docs-document-ai.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "headspin-digital-testing",
+      "title": "HeadSpin — Digital Experience Testing",
+      "url": "https://www.headspin.io/",
+      "file": "/images/portfolio/projects/live-sites/headspin-digital-testing.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "libertum-tokenization-platform",
+      "title": "Libertum — Real-World Asset Tokenization",
+      "url": "https://libertum.io/en/",
+      "file": "/images/portfolio/projects/live-sites/libertum-tokenization-platform.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "filerun-file-management",
+      "title": "FileRun — Self-Hosted File Management",
+      "url": "https://filerun.com/",
+      "file": "/images/portfolio/projects/live-sites/filerun-file-management.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "taxslayer-pro-workflows",
+      "title": "TaxSlayer Pro — Tax Preparation Workflows",
+      "url": "https://www.taxslayerpro.com/",
+      "file": "/images/portfolio/projects/live-sites/taxslayer-pro-workflows.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "northflank-deployment-platform",
+      "title": "Northflank — Deployment & Infrastructure",
+      "url": "https://northflank.com/",
+      "file": "/images/portfolio/projects/live-sites/northflank-deployment-platform.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "myorbithealth-telehealth",
+      "title": "MyOrbitHealth — Telehealth Platform",
+      "url": "https://myorbithealth.com/",
+      "file": "/images/portfolio/projects/live-sites/myorbithealth-telehealth.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "andy-labs-ai-assistant",
+      "title": "Andy Labs — AI Executive Assistant",
+      "url": "https://andylabs.io/",
+      "file": "/images/portfolio/projects/live-sites/andy-labs-ai-assistant.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "synthreo-enterprise-ai",
+      "title": "Synthreo — Enterprise AI Infrastructure",
+      "url": "https://synthreo.ai/",
+      "file": "/images/portfolio/projects/live-sites/synthreo-enterprise-ai.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "interra-health-platform",
+      "title": "Interra Health — Healthcare Technology",
+      "url": "https://interrahealth.com/",
+      "file": "/images/portfolio/projects/live-sites/interra-health-platform.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "definity-workforce-platform",
+      "title": "Definity — Healthcare Workforce Platform",
+      "url": "https://definitywfs.com/",
+      "file": "/images/portfolio/projects/live-sites/definity-workforce-platform.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "service-fusion-field-service",
+      "title": "Service Fusion — Field Service Management",
+      "url": "https://www.servicefusion.com/",
+      "file": "/images/portfolio/projects/live-sites/service-fusion-field-service.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "ourblackguide-react-native",
+      "title": "OurBlackGuide — React Native Marketplace",
+      "url": "https://apps.apple.com/us/app/ourblackguide/id6816153059",
+      "file": "/images/portfolio/projects/live-sites/ourblackguide-react-native.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "parente-ai-mobile-health",
+      "title": "Parente AI — Cross-Platform Health Application",
+      "url": "https://www.parentehealth.com/",
+      "file": "/images/portfolio/projects/live-sites/parente-ai-mobile-health.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "gemsharbor-marketplace",
+      "title": "GemsHarbor — Marketplace & Auctions",
+      "url": "https://gemsharbor.com/",
+      "file": "/images/portfolio/projects/live-sites/gemsharbor-marketplace.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "charter-steel-web",
+      "title": "Charter Steel — Corporate Web Experience",
+      "url": "https://www.chartersteel.com/",
+      "file": "/images/portfolio/projects/live-sites/charter-steel-web.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "nomo-family-organizer",
+      "title": "Nomo — Family Organizer",
+      "url": "https://apps.apple.com/us/app/family-organizer-nomo/id6758967723",
+      "file": "/images/portfolio/projects/live-sites/nomo-family-organizer.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "ad-spin-studio",
+      "title": "AD Spin Studio — Guided Vehicle Walkarounds",
+      "url": "https://apps.apple.com/ca/app/ad-spin-studio/id6754834221",
+      "file": "/images/portfolio/projects/live-sites/ad-spin-studio.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "peptide-paradigm",
+      "title": "Peptide Paradigm — Peptide Reference App",
+      "url": "https://www.peptideparadigm.app/",
+      "file": "/images/portfolio/projects/live-sites/peptide-paradigm.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "sisu-real-estate-operations",
+      "title": "Sisu — Real Estate Transaction Intelligence",
+      "url": "https://sisu.co/",
+      "file": "/images/portfolio/projects/live-sites/sisu-real-estate-operations.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "pressbeyond-hotel-discovery",
+      "title": "PressBeyond — Hotel Discovery & Booking",
+      "url": "https://www.pressbeyond.com/",
+      "file": "/images/portfolio/projects/live-sites/pressbeyond-hotel-discovery.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "pet-free-hotels",
+      "title": "Pet-Free Hotels — No-Pet Policy Discovery",
+      "url": "https://petfreehotels.com/",
+      "file": "/images/portfolio/projects/live-sites/pet-free-hotels.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "omni-ride-hailing",
+      "title": "Omni — Ride-Hailing & Trip Management",
+      "url": "https://www.rideomni.com/",
+      "file": "/images/portfolio/projects/live-sites/omni-ride-hailing.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "swiftpoint-z2",
+      "title": "Swiftpoint Z2 — Programmable Gaming Mouse",
+      "url": "https://www.swiftpoint.com/products/gaming-mice-swiftpoint-z2",
+      "file": "/images/portfolio/projects/live-sites/swiftpoint-z2.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "wispr-flow-dictation",
+      "title": "Wispr Flow — AI Voice Dictation",
+      "url": "https://wisprflow.ai/",
+      "file": "/images/portfolio/projects/live-sites/wispr-flow-dictation.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "privatefly-aviation-booking",
+      "title": "PrivateFly — Private Aviation Booking",
+      "url": "https://www.privatefly.com/",
+      "file": "/images/portfolio/projects/live-sites/privatefly-aviation-booking.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "handhistory-poker-analytics",
+      "title": "HandHistory.com — Poker Analytics",
+      "url": "https://handhistory.com/",
+      "file": "/images/portfolio/projects/live-sites/handhistory-poker-analytics.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "ontrajectory-financial-planning",
+      "title": "OnTrajectory — Financial Planning",
+      "url": "https://www.ontrajectory.com/",
+      "file": "/images/portfolio/projects/live-sites/ontrajectory-financial-planning.png",
+      "status": "capture-required"
+    },
+    {
+      "slug": "appleseed-planner",
+      "title": "Appleseed Planner — Retirement Simulation",
+      "url": "https://appleseedplanner.com/",
+      "file": "/images/portfolio/projects/live-sites/appleseed-planner.png",
+      "status": "capture-required"
+    }
+  ],
+  "internalProjects": [
+    {
+      "slug": "freight-quickbooks-integration",
+      "title": "Freight SaaS — QuickBooks Online Integration",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "azure-openai-data-processing",
+      "title": ".NET 8 & Azure OpenAI Data Processing",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "deed-driver-delivery",
+      "title": "Deed — Driver Delivery Application",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "music-space-booking-app",
+      "title": "Music Space Booking App",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "location-based-mobile-app",
+      "title": "Location-Based Mobile App",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "macos-roulette-tactics",
+      "title": "macOS Roulette Tactics",
+      "status": "private-no-public-url"
+    },
+    {
+      "slug": "baccarat-stat-master",
+      "title": "Baccarat Stat Master",
+      "status": "private-no-public-url"
+    }
+  ]
+}

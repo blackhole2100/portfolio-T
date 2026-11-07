@@ -133,16 +133,9 @@ const experienceContext = experiences
   })
   .join("\n");
 
-/** A compact index. Full implementation detail is fetched on demand with get_case_study. */
+/** Compact 52-project index. Full implementation and contribution detail is fetched on demand. */
 const caseStudyContext = caseStudies
-  .map((study) =>
-    [
-      `- ${study.title} | ${study.kind} | slug: ${study.slug} | page: ${getCaseStudyPath(study.slug)}`,
-      `  - ${study.oneLiner}`,
-      `  - Focus: ${study.tags.join(", ")}`,
-      `  - Attribution: ${study.ownership}`,
-    ].join("\n")
-  )
+  .map((study) => `- ${study.title} | ${study.kind} | slug: ${study.slug} | focus: ${study.tags.slice(0, 3).join(", ")}`)
   .join("\n");
 
 const skillContext = skillCategories
@@ -169,7 +162,8 @@ ${profileStats}
 Experience:
 ${experienceContext}
 
-Documented project index:
+Project index:
+Tijani confirms participation in developing and deploying every project in this index. Individual pages contain the full product context, contribution scope, implementation details, and ownership boundaries; retrieve them with get_case_study when a question asks for specifics.
 ${caseStudyContext}
 
 Skills:
@@ -193,7 +187,7 @@ Experience:
 ${experiences.map((experience) => `- ${experience.company}: ${experience.role} (${experience.period})`).join("\n")}
 
 Project topics:
-${caseStudies.map((study) => `- ${study.title}: ${study.oneLiner}`).join("\n")}
+${caseStudies.map((study) => `- ${study.title} (${study.tags.slice(0, 2).join(", ")})`).join("\n")}
 
 Skills:
 ${skillContext}
@@ -205,12 +199,11 @@ When links would help the visitor, use these markdown links directly:
 - [View LinkedIn](${personalInfo.linkedin})
 - [View GitHub](${personalInfo.github})
 - [Email Tijani](mailto:${personalInfo.email})
-- [Browse Work](#work)
+- [Browse all 52 projects](/work)
 - [Review Experience](#experience)
 - [View Skills](#skills)
 - [Download Resume](${personalInfo.resumeUrl})
-${caseStudies.map((study) => `- [Read ${study.title}](${getCaseStudyPath(study.slug)})`).join("\n")}
-${projects.map((project) => `- [View ${project.title}](${getProjectAnchor(project.slug)})`).join("\n")}
+For an individual project, use the case-study URL returned by search_work. Its page contains the official public project links when available. Do not recreate or guess project URLs.
 `;
 
 export function findMatchingProjects(text: string) {

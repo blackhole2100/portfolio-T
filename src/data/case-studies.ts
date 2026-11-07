@@ -1,3 +1,5 @@
+import { additionalProjects } from "@/data/additional-projects";
+
 export interface CaseStudyDecision {
   choice: string;
   why: string;
@@ -65,7 +67,7 @@ export interface CaseStudy {
 
 export type CaseStudySlug =
   | "anchord-ai-entity-resolution"
-  | "correlate-health-clinical-trial-matching"
+  | "correlate-health-platform-integration"
   | "freight-quickbooks-integration"
   | "azure-openai-data-processing"
   | "crushbank-enterprise-ai"
@@ -79,11 +81,47 @@ export type CaseStudySlug =
   | "arub-shipping-integrations"
   | "suppliersift-ap-automation"
   | "calcs-engineering-calculations"
-  | "charter-steel-web";
+  | "charter-steel-web"
+  | "loopt-clinical-trial-matching"
+  | "nomo-family-organizer"
+  | "ad-spin-studio"
+  | "peptide-paradigm"
+  | "music-space-booking-app"
+  | "location-based-mobile-app"
+  | "macos-roulette-tactics"
+  | "baccarat-stat-master"
+  | "compasshss-healthcare-staffing"
+  | "jobably-ai-job-discovery"
+  | "sunethix-irb-review"
+  | "lead-prosper-routing"
+  | "echoaeon-ai-lead-automation"
+  | "sisu-real-estate-operations"
+  | "sharkindicators-blackbird"
+  | "pressbeyond-hotel-discovery"
+  | "pet-free-hotels"
+  | "omni-ride-hailing"
+  | "swiftpoint-z2"
+  | "dynamite-docs-document-ai"
+  | "wispr-flow-dictation"
+  | "headspin-digital-testing"
+  | "privatefly-aviation-booking"
+  | "libertum-tokenization-platform"
+  | "handhistory-poker-analytics"
+  | "filerun-file-management"
+  | "ontrajectory-financial-planning"
+  | "appleseed-planner"
+  | "taxslayer-pro-workflows"
+  | "northflank-deployment-platform"
+  | "myorbithealth-telehealth"
+  | "andy-labs-ai-assistant"
+  | "synthreo-enterprise-ai"
+  | "interra-health-platform"
+  | "definity-workforce-platform"
+  | "service-fusion-field-service";
 
 export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "anchord-ai-entity-resolution",
-  "correlate-health-clinical-trial-matching",
+  "correlate-health-platform-integration",
   "freight-quickbooks-integration",
   "azure-openai-data-processing",
   "crushbank-enterprise-ai",
@@ -98,13 +136,49 @@ export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "suppliersift-ap-automation",
   "calcs-engineering-calculations",
   "charter-steel-web",
+  "loopt-clinical-trial-matching",
+  "nomo-family-organizer",
+  "ad-spin-studio",
+  "peptide-paradigm",
+  "music-space-booking-app",
+  "location-based-mobile-app",
+  "macos-roulette-tactics",
+  "baccarat-stat-master",
+  "compasshss-healthcare-staffing",
+  "jobably-ai-job-discovery",
+  "sunethix-irb-review",
+  "lead-prosper-routing",
+  "echoaeon-ai-lead-automation",
+  "sisu-real-estate-operations",
+  "sharkindicators-blackbird",
+  "pressbeyond-hotel-discovery",
+  "pet-free-hotels",
+  "omni-ride-hailing",
+  "swiftpoint-z2",
+  "dynamite-docs-document-ai",
+  "wispr-flow-dictation",
+  "headspin-digital-testing",
+  "privatefly-aviation-booking",
+  "libertum-tokenization-platform",
+  "handhistory-poker-analytics",
+  "filerun-file-management",
+  "ontrajectory-financial-planning",
+  "appleseed-planner",
+  "taxslayer-pro-workflows",
+  "northflank-deployment-platform",
+  "myorbithealth-telehealth",
+  "andy-labs-ai-assistant",
+  "synthreo-enterprise-ai",
+  "interra-health-platform",
+  "definity-workforce-platform",
+  "service-fusion-field-service",
 ];
 
 /**
  * Each entry separates product context from Tijani's documented contribution.
  * Quantified results are included only where the supplied resume or notes state them.
  */
-export const caseStudies: CaseStudy[] = [
+const baseCaseStudies: CaseStudy[] = [
   {
     slug: "anchord-ai-entity-resolution",
     kind: "system",
@@ -161,26 +235,26 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["AI Agents", "MCP", "REST APIs", "Webhooks", "Entity Resolution", "Rules-Based Scoring"],
     ownership:
-      "The supplied notes document Tijani's contribution to the 11-tool integration and entity-resolution workflow. They do not claim sole ownership of the broader Anchord AI product.",
+      "Tijani participated in developing and deploying Anchord AI's agent integration and entity-resolution workflows, including the 11-tool MCP integration, scoring, evidence review, canonical IDs, and resolve-before-write sequence. This describes his contribution within the wider product team.",
     tags: ["AI Agents", "MCP", "Entity Resolution", "Integrations"],
     aliases: ["anchord", "anchord ai", "entity resolution", "canonical entity", "mcp tools", "match scoring", "ambiguous match", "webhooks"],
   },
   {
-    slug: "correlate-health-clinical-trial-matching",
+    slug: "correlate-health-platform-integration",
     kind: "system",
     theme: "retrieval",
     featured: true,
-    title: "Correlate Health / LooPT — Clinical Trial Matching",
+    title: "Correlate Health — Healthcare Platform Integration",
     oneLiner:
-      "Worked on clinical-trial eligibility workflows comparing structured EHR data and clinical notes with study criteria, with validation and human review.",
+      "Contributed to the development and deployment of healthcare application workflows connecting clinical data, APIs, validation, and reviewable operational processes.",
     summary:
-      "Correlate Health's LooPT platform evaluates whether patient information aligns with clinical-trial eligibility criteria. Tijani's documented contribution includes healthcare workflow development, data validation, complex eligibility rules, API integration, auditability, and human review across structured EHR fields and clinical notes.",
+      "Correlate Health develops healthcare technology and clinical-data workflows. Tijani participated in the development and deployment of application functionality connected to its healthcare platform, including structured health-data processing, validation, complex workflow logic, API integration, auditability, and human-review paths. The dedicated LooPT CTM case study describes the clinical-trial matching product separately.",
     problem:
-      "Trial matching needs to compare patient information with detailed study criteria. Relevant details may be represented in structured EHR fields or narrative clinical notes, and the workflow must preserve enough context for validation and follow-up rather than presenting an unexplained match result.",
+      "Healthcare applications need to connect data from different sources while preserving validation, traceability, and the context needed by clinical and operational teams. The engineering work involved making connected application workflows reliable and reviewable rather than treating incoming clinical information as unstructured, one-off data.",
     constraints: [
-      "The matching workflow considers both structured EHR data and clinical notes.",
-      "Eligibility logic includes complex rules and requires data validation.",
-      "The process needs an auditable path and a human-review step.",
+      "Healthcare data arriving from connected sources needs validation before it is used in application workflows.",
+      "Application logic must preserve the relationships between source data, API responses, and downstream processes.",
+      "Reviewability and traceability matter in clinical and operational workflows.",
     ],
     diagram: null,
     diagramCaption: "",
@@ -189,35 +263,35 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Tijani's role",
         body:
-          "Tijani worked on the application workflows that bring clinical information into eligibility evaluation. His documented scope includes validation of incoming data, implementation of complex eligibility rules, API integration, auditability, and the human-review process.",
+          "Tijani participated in developing and deploying healthcare platform workflows. His work included application integration, structured-data handling, validation, complex business logic, API connectivity, auditability, and reviewable processes that support clinical and operational users.",
         points: [
-          "Worked across structured EHR data and clinical-note workflows.",
-          "Implemented and supported rule-driven eligibility evaluation.",
-          "Connected application workflows through APIs and data validation.",
-          "Supported auditability and human review for matching decisions.",
+          "Developed and integrated application workflows for healthcare data and operational processes.",
+          "Applied validation and structured business rules to incoming information.",
+          "Connected application components and external services through APIs.",
+          "Supported traceability and reviewability across connected workflows.",
         ],
       },
       {
-        heading: "Clinical information and eligibility",
+        heading: "Healthcare data and application workflows",
         body:
-          "The product context combines structured patient data with narrative clinical information and compares that information with study-specific eligibility criteria. Keeping validation and review in the process is important because the output is used to coordinate follow-up, not merely to produce a search result.",
+          "The platform context brings healthcare data and connected application services into workflows used by clinical and operational teams. The work emphasizes validation, integrated processes, and reviewable outcomes so that information can move between systems in a controlled way.",
       },
       {
-        heading: "Workflow quality",
+        heading: "Development and deployment contribution",
         body:
-          "The supplied material identifies data validation, complex rules, API integration, auditability, and human review as the areas of work. It does not provide a numerical matching-accuracy result or a specific technology stack beyond the platform context, so neither is inferred here.",
+          "Tijani participated in the product's development and deployment. The supplied inventory identifies healthcare workflows, structured-data processing, validation, API integration, complex business rules, auditability, and human review as relevant engineering areas; no numerical performance claim is added where none was supplied.",
       },
     ],
     results: [
-      { metric: "EHR + notes", label: "Structured and narrative clinical information" },
-      { metric: "Rule-driven", label: "Eligibility evaluation" },
-      { metric: "Auditable", label: "Human-review workflow" },
+      { metric: "Integrated", label: "Healthcare application workflows" },
+      { metric: "Validated", label: "Structured clinical data" },
+      { metric: "Reviewable", label: "Connected clinical processes" },
     ],
-    stack: ["Healthcare Workflows", "EHR Data", "Clinical Notes", "Eligibility Rules", "API Integration", "Auditability"],
+    stack: ["Healthcare Workflows", "Clinical Data", "Data Validation", "API Integration", "Business Rules", "Auditability"],
     ownership:
-      "The resume describes Tijani as having worked on these workflows. This page reflects the listed engineering areas and does not imply sole ownership of the LooPT platform or clinical decision-making.",
-    tags: ["HealthTech", "Clinical Trial Matching", "Data Validation", "APIs"],
-    aliases: ["correlate health", "loopt", "clinical trial", "trial matching", "eligibility criteria", "ehr", "clinical notes", "patient matching"],
+      "Tijani participated in the development and deployment of Correlate Health application workflows. This describes his engineering contribution within the product effort and does not claim sole authorship of the wider healthcare platform.",
+    tags: ["HealthTech", "Healthcare Platform", "Data Validation", "APIs"],
+    aliases: ["correlate health", "healthcare platform", "healthcare integration", "clinical data workflows", "health data validation", "ehr integration", "clinical operations"],
   },
   {
     slug: "freight-quickbooks-integration",
@@ -274,7 +348,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
     ownership:
-      "Tijani's documented role was building the QuickBooks integration workflows. The scale figures describe the operation supported; the supplied resume does not state that he owned the entire freight SaaS product.",
+      "Tijani participated in developing and deploying the freight-to-QuickBooks integration, including OAuth, token refresh, webhook processing, idempotent synchronization, and reconciliation. The scale figures describe the operation supported, not a claim of sole ownership of the freight SaaS product.",
     tags: ["QuickBooks", "Accounting Integration", "Freight", "Reliability"],
     aliases: ["freight saas", "quickbooks", "qbo", "oauth", "token refresh", "webhooks", "65 brokerages", "52000 loads", "90000 documents", "reconciliation"],
   },
@@ -326,7 +400,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
     ownership:
-      "The resume states that Tijani developed the worker-service and data-processing workflows. It does not claim sole ownership of the broader data platform.",
+      "Tijani participated in developing and deploying the .NET 8 and Azure OpenAI worker-service and data-processing workflows, including ASP.NET Core, EF Core, SQL Server, and Azure OpenAI integration. The wider data platform is a collaborative product effort.",
     tags: [".NET", "Azure OpenAI", "Data Processing", "Enterprise"],
     aliases: ["dotnet 8", ".net 8", "azure openai", "ef core", "entity framework", "sql server", "worker service", "2400 records", "1.6 million records"],
   },
@@ -377,7 +451,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["IBM watsonx", "Enterprise AI", "Grounded Search", "Ticket Classification", "Workflow Automation"],
     ownership:
-      "Tijani contributed to the named enterprise AI integration areas. The wider CrushBank Orchestrate IT product is not presented as his sole work.",
+      "Tijani participated in developing and deploying the enterprise AI integrations described here, including connected information sources, grounded search and answers, ticket classification, and workflow automation. The broader CrushBank Orchestrate IT platform was a collaborative product effort.",
     tags: ["Enterprise AI", "IBM watsonx", "Knowledge Search", "IT Automation"],
     aliases: ["crushbank", "orchestrate it", "watsonx", "ticket classification", "enterprise search", "grounded answers", "it automation"],
   },
@@ -431,7 +505,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["React Native", "TypeScript", "React Navigation", "TanStack Query", "Authentication", "REST APIs"],
     ownership:
-      "The source describes Tijani as a contributor to the app architecture and listed mobile workflows. It does not claim sole authorship of the full OurBlackGuide product.",
+      "Tijani participated in developing and deploying OurBlackGuide's React Native application architecture and mobile workflows, including reusable iOS/Android components, authentication, directory discovery, profiles, uploads, and releases. This describes his contribution within the broader product team.",
     tags: ["React Native", "Mobile", "Marketplace", "Directory Search"],
     aliases: ["ourblackguide", "our black guide", "react native", "local directory", "community marketplace", "business profiles", "deep links", "tanstack query"],
   },
@@ -486,7 +560,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Flutter", "REST APIs", "Authentication", "Mobile State", "iOS", "Android"],
     ownership:
-      "Tijani built the listed mobile workflows and handled integration and client-state issues. The supplied notes do not describe him as the sole developer of the complete Parente AI product.",
+      "Tijani participated in developing and deploying Parente AI's Flutter mobile workflows, including onboarding, assessments, messaging, API integration, token handling, profile-state corrections, form completion, and release support. The complete product was a collaborative effort.",
     tags: ["Flutter", "HealthTech", "Mobile", "API Integration"],
     aliases: ["parente", "parente ai", "pediatric behavioral health", "family onboarding", "assessments", "patient messaging", "flutter"],
   },
@@ -535,7 +609,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
     ownership:
-      "The resume states that Tijani developed this Flutter application. The scope described here is the driver package-scanning and delivery workflow, not the wider carrier organization or logistics operation.",
+      "Tijani participated in developing and deploying the Deed Flutter application for driver package-scanning and delivery workflows. The listed scope describes the mobile product work, not ownership of the wider carrier organization or logistics operation.",
     tags: ["Flutter", "Logistics", "Mobile", "Driver App"],
     aliases: ["deed", "driver delivery", "ups partner", "iceland", "package scanning", "firebase authentication", "flutter", "dart"],
   },
@@ -588,7 +662,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Property Data", "Comparable Analysis", "Financial Calculations", "Configurable Assumptions", "Reporting", "AI-Assisted Analysis"],
     ownership:
-      "Tijani contributed to the documented property-data, underwriting, reporting, and AI-assisted analysis workflows. This is not a claim of sole product ownership.",
+      "Tijani participated in developing and deploying ARVRobot's property-data ingestion, comparable-property analysis, underwriting calculations, configurable assumptions, reporting, and AI-assisted analysis workflows as part of the wider product team.",
     tags: ["Real Estate", "Underwriting", "Financial Analysis", "AI"],
     aliases: ["arvrobot", "real estate underwriting", "property analysis", "comparable properties", "comps", "financial calculations", "assumptions", "ai property analysis"],
   },
@@ -641,7 +715,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Marketplace", "E-commerce", "Auctions", "Bidding", "Offers", "Payment Integrations", "Notifications"],
     ownership:
-      "Tijani worked on the listed marketplace and transaction workflows. The supplied materials do not describe him as the sole author of GemsHarbor or provide a per-feature ownership breakdown.",
+      "Tijani participated in developing and deploying GemsHarbor's marketplace and transaction workflows, including listings, dashboards, auctions, bidding, offers, payment integrations, notifications, and order flows. This reflects his contribution within the broader product effort.",
     tags: ["Marketplace", "E-commerce", "Auctions", "Payments"],
     aliases: ["gemsharbor", "gems harbor", "jewelry marketplace", "gemstone marketplace", "auctions", "bidding", "offers", "payments"],
   },
@@ -694,7 +768,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Fulfillment", "Logistics", "Event Processing", "Synchronization", "Retries", "Error Handling", "Automation"],
     ownership:
-      "Tijani contributed to the integration and automation layers described in the resume. The broader ShipHype product is not presented as an individually owned build.",
+      "Tijani participated in developing and deploying ShipHype's integration and automation layers, including event processing, synchronization, retry strategies, error handling, and operational workflows. The platform was developed as a collaborative product.",
     tags: ["Logistics", "Fulfillment", "Integrations", "Automation"],
     aliases: ["shiphype", "fulfillment", "logistics", "event processing", "synchronization", "retry", "error handling"],
   },
@@ -747,7 +821,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["AI Workflows", "Google Ads", "Analytics", "CRM", "Inventory Data", "Call Data"],
     ownership:
-      "Tijani's documented contribution covers the AI workflows and integrations listed here. The supplied notes do not claim sole ownership of DealerCortex AI.",
+      "Tijani participated in developing and deploying DealerCortex AI workflows and integrations, including automotive intelligence, Google Ads and analytics, inventory and CRM connections, customer conversation data, and dealership recommendations. This describes his role within the wider product team.",
     tags: ["Automotive", "AI", "Marketing Analytics", "CRM Integrations"],
     aliases: ["dealercortex", "dealer cortex", "automotive intelligence", "dealership ai", "google ads", "crm", "call data", "inventory", "dealer recommendations"],
   },
@@ -795,7 +869,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Carrier APIs", "Order Sync", "Shipment Processing", "Label Generation", "Reconciliation", "Idempotency", "Retries"],
     ownership:
-      "The supporting notes describe integration experience in these areas. This page does not claim sole ownership of the Arub platform or any carrier relationship.",
+      "Tijani participated in developing and deploying Arub Shipping integration workflows, including carrier APIs, order synchronization, shipment processing, label generation, idempotency, retries, and reconciliation. This does not imply ownership of the wider Arub platform or carrier relationships.",
     tags: ["Shipping", "Carrier APIs", "Logistics", "Integrations"],
     aliases: ["arub", "arub shipping", "carrier integration", "shipping api", "labels", "shipment processing", "order sync", "reconciliation"],
   },
@@ -848,7 +922,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Microsoft 365", "QuickBooks Desktop", "Web Connector", "Invoice Extraction", "Accounting Classification", "Approvals"],
     ownership:
-      "Tijani's documented contribution is the QuickBooks integration and related workflow safeguards. The full SupplierSift product is not presented as his sole work.",
+      "Tijani participated in developing and deploying SupplierSift's accounting integration and workflow safeguards, including QuickBooks Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention. The wider product was a collaborative effort.",
     tags: ["FinTech", "Accounts Payable", "QuickBooks", "Integrations"],
     aliases: ["suppliersift", "supplier sift", "accounts payable", "ap automation", "quickbooks desktop", "web connector", "invoice processing", "duplicate prevention"],
   },
@@ -900,7 +974,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Engineering Calculations", "Structural Steel", "Concrete", "Timber", "Foundations", "Automated Validation"],
     ownership:
-      "The source describes Tijani as a participant in the platform's production web workflows. This page does not claim ownership of engineering methods or the complete Calcs.com platform.",
+      "Tijani participated in developing and deploying Calcs.com production web workflows, including transparent engineering calculations, dependency-aware input updates, and automated validation. This describes his software contribution, not ownership of the underlying engineering methods or the complete platform.",
     tags: ["Engineering Software", "Web Applications", "Validation", "Calculations"],
     aliases: ["calcs", "calcs.com", "engineering calculations", "structural steel", "concrete", "timber", "foundations", "dependency updates", "automated validation"],
   },
@@ -948,11 +1022,48 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["Web Development", "Responsive Design", "Corporate Website", "Content Organization"],
     ownership:
-      "Tijani's documented contribution is website development and the listed presentation and layout work. The site and brand are not presented as his sole creation.",
+      "Tijani participated in developing and deploying the Charter Steel website experience, including responsive layouts, corporate presentation, and business-facing content organization. The statement describes his contribution to the web project, not ownership of the manufacturer or brand.",
     tags: ["Corporate Website", "Responsive Design", "Industrial", "B2B"],
     aliases: ["charter steel", "industrial website", "steel manufacturer", "corporate website", "responsive web design", "content organization"],
   },
 ];
+
+const supplementalCaseStudies: CaseStudy[] = additionalProjects.map((project) => ({
+  slug: project.slug,
+  kind: project.kind,
+  theme: project.theme,
+  title: project.title,
+  oneLiner: `${project.summary} Tijani participated in the product's development and deployment.`,
+  summary: `${project.description} Tijani participated in developing and deploying the product, with engineering contributions in ${project.areas.slice(0, 5).join(", ")}.`,
+  problem: project.problem,
+  constraints: [],
+  diagram: null,
+  diagramCaption: "",
+  decisions: [],
+  sections: [
+    {
+      heading: "Tijani's development and deployment role",
+      body: project.contribution,
+      points: project.workflow,
+    },
+    {
+      heading: "Product workflow and implementation",
+      body: `${project.description} The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.`,
+      points: project.areas,
+    },
+    {
+      heading: "Engineering scope",
+      body: `Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies ${project.areas.join(", ")} as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.`,
+    },
+  ],
+  results: [],
+  stack: project.areas,
+  ownership: `${project.contribution} This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.`,
+  tags: project.tags,
+  aliases: project.aliases,
+}));
+
+export const caseStudies: CaseStudy[] = [...baseCaseStudies, ...supplementalCaseStudies];
 
 // Keep system work before customer-facing products in the index, regardless of
 // the order in which the source entries above are maintained.

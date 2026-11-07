@@ -1,6 +1,6 @@
 import test from "node:test";
+import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
 
 import {
   CASE_STUDY_SLUGS,
@@ -14,10 +14,10 @@ import {
   getAdjacentCaseStudies,
   getCaseStudyPath,
 } from "../src/data/case-studies";
-import { experiences, bulletStudySlug, bulletText } from "../src/data/portfolio";
+import { experiences, bulletStudySlug, bulletText, projects } from "../src/data/portfolio";
 
-test("the published portfolio has sixteen source-backed project case studies", () => {
-  assert.equal(caseStudies.length, 16);
+test("the published portfolio has fifty-two project case studies", () => {
+  assert.equal(caseStudies.length, 52);
   assert.equal(CASE_STUDY_SLUGS.length, caseStudies.length);
   assert.deepEqual([...CASE_STUDY_SLUGS].sort(), caseStudies.map((study) => study.slug).sort());
 });
@@ -68,11 +68,55 @@ test("slugs are unique and resolve through the lookup map", () => {
   }
 });
 
-test("every project case study has a representative visual asset", () => {
+test("public projects map to real website screenshot files and internal projects have no fabricated image", () => {
+  assert.equal(projects.length, caseStudies.length, "each case study must have one matching portfolio project");
+
+  let publicProjectCount = 0;
+  let internalProjectCount = 0;
+
   for (const study of caseStudies) {
-    const path = `public/images/portfolio/projects/${study.slug}.svg`;
-    assert.ok(existsSync(path), `missing illustrative project asset for ${study.slug}`);
+    const project = projects.find((item) => item.caseStudy === study.slug);
+    assert.ok(project, `missing portfolio project for ${study.slug}`);
+
+    if (project.live) {
+      publicProjectCount += 1;
+      assert.equal(project.images.length, 1, `${study.slug} should map to one real website screenshot`);
+      assert.equal(
+        project.images[0],
+        `/images/portfolio/projects/live-sites/${project.slug}.png`,
+        `${study.slug} must use its local public-folder website screenshot`
+      );
+    } else {
+      internalProjectCount += 1;
+      assert.deepEqual(project.images, [], `${study.slug} has no public URL and must not use a substitute image`);
+    }
   }
+
+  assert.equal(publicProjectCount, 45, "expected forty-five projects with public website URLs");
+  assert.equal(internalProjectCount, 7, "expected seven internal projects without public URLs");
+});
+
+test("client case-study cards do not import Node filesystem screenshot helpers", () => {
+  const card = readFileSync(new URL("../src/components/CaseStudyCard.tsx", import.meta.url), "utf8");
+  assert.match(card, /^\"use client\";/);
+  assert.doesNotMatch(card, /project-screenshots|node:fs|node:path/);
+  assert.match(card, /onError=\{\(\) => setScreenshotFailed\(true\)\}/);
+
+  const detailPage = readFileSync(new URL("../src/app/work/[slug]/page.tsx", import.meta.url), "utf8");
+  assert.match(detailPage, /ProjectScreenshot/);
+  assert.doesNotMatch(detailPage, /project-screenshots|node:fs|node:path/);
+
+  const screenshot = readFileSync(new URL("../src/components/ProjectScreenshot.tsx", import.meta.url), "utf8");
+  assert.match(screenshot, /^"use client";/);
+  assert.match(screenshot, /onError=\{\(\) => setImageFailed\(true\)\}/);
+  assert.doesNotMatch(screenshot, /node:fs|node:path|project-screenshots/);
+});
+
+test("real website screenshot capture script is part of the project", () => {
+  const script = readFileSync(new URL("../scripts/capture-project-screenshots.mjs", import.meta.url), "utf8");
+  assert.match(script, /--screenshot=/);
+  assert.match(script, /public.*live-sites/s);
+  assert.match(script, /LIVE|captured/i);
 });
 
 test("systems precede products in the work index", () => {

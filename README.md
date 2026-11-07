@@ -1,37 +1,46 @@
 # Tijani Shabazz — Portfolio
 
-A production portfolio site built with Next.js App Router, React, TypeScript, and Tailwind CSS. The site presents Tijani Shabazz's senior full-stack, mobile, and AI engineering experience, with project case studies that distinguish product context from his documented engineering contribution.
+A production portfolio site built with Next.js App Router, React, TypeScript, and Tailwind CSS. The site presents Tijani Shabazz's senior full-stack, mobile, and AI engineering experience, with project case studies that describe products Tijani participated in developing and deploying, along with the scope of his engineering contribution.
 
 ## Content source of truth
 
 - `src/data/portfolio.ts` — identity, professional summary, career history, highlights, project cards, and technical competencies.
-- `src/data/case-studies.ts` — the 16 detailed project write-ups, implementation scope, available results, technology, and attribution boundaries.
+- `src/data/case-studies.ts` — all 52 detailed project write-ups, implementation scope, available results, engineering areas, and role descriptions.
+- `src/data/additional-projects.ts` — the 36 additional projects that extend the original 16 to the full 52-entry inventory.
+- `PROJECTS.md` and `public/project-inventory.json` — the full project catalog, official URLs, role descriptions, and screenshot paths.
 - `src/lib/ai-twin.ts` and `src/lib/ai-tools.ts` — the portfolio assistant's compact context, search index, metrics, and case-study retrieval tools.
-- `public/images/portfolio/projects/` — representative SVG interface illustrations. These are concept visuals, not screenshots of live products.
+- `public/images/portfolio/projects/live-sites/` — locally stored PNG screenshots captured from the actual public project websites. These are not generated mockups.
 - `public/resume.pdf` — the supplied resume available from the site.
 
-When revising project content, keep `portfolio.ts` and `case-studies.ts` aligned. Each new case study should include a matching illustrative asset named after its slug.
+When revising project content, keep `portfolio.ts`, `additional-projects.ts`, and `case-studies.ts` aligned. Public project screenshots use each project slug as the filename and PNG format. Internal projects with no public URL must keep `images: []`; do not add generated or unrelated substitutes. Rebuild the project catalog after content changes with `npm.cmd run catalog:projects`.
 
 ## Development
 
-```bash
-npm ci
-npm run dev
+```powershell
+npm.cmd ci
+npm.cmd run dev
 ```
 
 Then open `http://localhost:3000`.
 
-Run the test suite with:
+Run the test suite and create a production build with:
 
-```bash
-npm test
+```powershell
+npm.cmd test
+npm.cmd run build
 ```
 
-Create a production build with:
+## Real project website screenshots
 
-```bash
-npm run build
+Project visuals are intended to be screenshots captured from the actual public project websites, not generated mockups. The 45 screenshot paths are configured, but captures are not included until the local browser command below is run; the current manifest records the pending status. No npm dependencies are required for screenshot capture. There are 52 projects in the portfolio: 45 with public URLs and 7 private/internal projects without a public URL in the supplied information. With Node.js 22+ and Chrome or Edge installed, run from PowerShell:
+
+```powershell
+npm.cmd run capture:project-screenshots
 ```
+
+The script opens each public website or official app-store listing in Chrome or Edge at a 1440 × 900 desktop viewport, checks that a usable page loaded, and saves a PNG screenshot under `public/images/portfolio/projects/live-sites/`. The manifest records the page title, source URL, output path, and capture result. Set `CHROME_PATH` if the browser is installed in a non-standard location.
+
+The seven internal projects without a public URL are Freight SaaS / QuickBooks Integration, .NET 8 & Azure OpenAI Data Processing, Deed Driver Delivery, Music Space Booking App, Location-Based Mobile App, macOS Roulette Tactics, and Baccarat Stat Master. They are not assigned unrelated or fabricated screenshots; provide an authorized staging URL or supplied screenshot to add imagery for these entries.
 
 ## Static content preview
 

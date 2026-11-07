@@ -6,13 +6,12 @@ import { personalInfo } from "@/data/portfolio";
 import { getWorkIndexGraph, toJsonLd } from "@/lib/seo/jsonld";
 import { siteConfig } from "@/lib/seo/site";
 import CaseStudyCard from "@/components/CaseStudyCard";
-import { ReadingPathAsk } from "@/components/ai/ReadingPathAsk";
 import Reveal from "@/components/ui/reveal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const title = `Engineering Case Studies — ${personalInfo.name}`;
-const description = `${caseStudies.length} project write-ups explaining the product context, Tijani’s documented engineering role, implementation scope, available results, technology, and ownership boundaries.`;
+const description = '';
 const url = `${siteConfig.siteUrl}/work`;
 
 export const metadata: Metadata = {
@@ -26,12 +25,6 @@ export const metadata: Metadata = {
     description,
     siteName: siteConfig.siteName,
     images: [{ url: siteConfig.ogImage, alt: title }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [siteConfig.ogImage],
   },
 };
 
@@ -79,15 +72,9 @@ const WorkIndexPage = () => (
               Selected <span className="text-gradient">Project Work</span>
             </h1>
             <p className="mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground" style={{ textWrap: "pretty" }}>
-              Each write-up explains what the product does, the specific engineering work Tijani contributed,
-              the implementation scope, the technologies documented in the source material, and what can—and
-              cannot—be attributed to his role.
+          
             </p>
           </Reveal>
-
-          {/* <Reveal delay={0.08}>
-            <ReadingPathAsk />
-          </Reveal> */}
 
           {/* Grouped by capability rather than employer, so the shape of the work
               reads before the logo does. */}

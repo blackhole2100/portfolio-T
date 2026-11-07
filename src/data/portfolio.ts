@@ -1,4 +1,5 @@
 import type { CaseStudySlug } from "@/data/case-studies";
+import { additionalProjects } from "@/data/additional-projects";
 
 export const personalInfo = {
   name: "Tijani Shabazz",
@@ -176,6 +177,7 @@ export interface Project {
   images: string[];
   github?: string;
   live?: string;
+  links?: { label: string; url: string }[];
 }
 
 /** Projects with a documented role in the supplied resume and project notes. */
@@ -197,7 +199,7 @@ export const projects: Project[] = [
     complexity:
       "Cross-platform navigation and state, authenticated API workflows, searchable directories, location-aware filters, media handling, and deep-link behavior.",
     tech: ["React Native", "TypeScript", "React Navigation", "TanStack Query", "iOS", "Android", "REST APIs"],
-    images: ["/images/portfolio/projects/ourblackguide-react-native.svg"],
+    images: ["/images/portfolio/projects/live-sites/ourblackguide-react-native.png"],
     live: "https://apps.apple.com/us/app/ourblackguide/id6816153059",
   },
   {
@@ -217,8 +219,13 @@ export const projects: Project[] = [
     complexity:
       "Multi-profile state, expiring authentication, inconsistent API responses, validation of multi-step forms, and cross-platform release behavior.",
     tech: ["Flutter", "REST APIs", "Authentication", "iOS", "Android", "Mobile State Management"],
-    images: ["/images/portfolio/projects/parente-ai-mobile-health.svg"],
+    images: ["/images/portfolio/projects/live-sites/parente-ai-mobile-health.png"],
     live: "https://www.parentehealth.com/",
+    links: [
+      { label: "Website", url: "https://www.parentehealth.com/" },
+      { label: "App Store", url: "https://apps.apple.com/us/app/parente/id6749544630" },
+      { label: "Google Play", url: "https://play.google.com/store/apps/details?id=pat.parente.ai" },
+    ],
   },
   {
     slug: "anchord-ai-entity-resolution",
@@ -237,7 +244,7 @@ export const projects: Project[] = [
     complexity:
       "Coordinating multiple data signals, distinguishing confident matches from ambiguous records, and ensuring an entity is resolved before mutation.",
     tech: ["AI Agents", "MCP", "REST APIs", "Webhooks", "Entity Resolution", "Rules-Based Scoring"],
-    images: ["/images/portfolio/projects/anchord-ai-entity-resolution.svg"],
+    images: ["/images/portfolio/projects/live-sites/anchord-ai-entity-resolution.png"],
     live: "https://www.anchord.ai/product",
   },
   {
@@ -257,7 +264,7 @@ export const projects: Project[] = [
     complexity:
       "Combining property facts, comparable-property context, editable financial assumptions, and generated analysis in a coherent investor workflow.",
     tech: ["Property Data Ingestion", "Comparable Analysis", "Financial Modeling", "AI-Assisted Analysis", "Reporting"],
-    images: ["/images/portfolio/projects/arvrobot-real-estate-underwriting.svg"],
+    images: ["/images/portfolio/projects/live-sites/arvrobot-real-estate-underwriting.png"],
     live: "https://arvrobot.com/",
   },
   {
@@ -276,26 +283,26 @@ export const projects: Project[] = [
     complexity:
       "Connecting enterprise knowledge sources to grounded responses and routing AI output into workflows where operational context matters.",
     tech: ["IBM watsonx", "Enterprise AI", "Grounded Search", "Ticket Classification", "Workflow Automation"],
-    images: ["/images/portfolio/projects/crushbank-enterprise-ai.svg"],
+    images: ["/images/portfolio/projects/live-sites/crushbank-enterprise-ai.png"],
     live: "https://www.crushbank.com/orchestrate-it/",
   },
   {
-    slug: "correlate-health-clinical-trial-matching",
-    caseStudy: "correlate-health-clinical-trial-matching",
-    title: "Correlate Health / LooPT",
-    category: "Clinical Trial Matching",
+    slug: "correlate-health-platform-integration",
+    caseStudy: "correlate-health-platform-integration",
+    title: "Correlate Health",
+    category: "Healthcare Platform Integration",
     summary:
-      "A healthcare platform that evaluates structured EHR data and clinical notes against clinical-trial eligibility criteria and coordinates follow-up workflows.",
+      "A healthcare technology platform with clinical-data and application workflows that connect information, APIs, validation, and reviewable processes.",
     description:
-      "Worked on healthcare workflows that compare structured electronic health record data and free-text clinical notes with study eligibility criteria. The contribution covered data validation, complex eligibility rules, API integration, auditability, and human review.",
+      "Tijani participated in developing and deploying healthcare application workflows connected to the Correlate Health platform. His contribution included structured-data handling, validation, complex business logic, API integration, auditability, and reviewable clinical and operational processes. The LooPT CTM product is described separately.",
     impact:
-      "Supported a traceable matching process that combines structured and narrative clinical information while retaining validation and human review.",
+      "Helped deliver connected healthcare application workflows with structured data validation, API integration, and reviewable operations.",
     role:
-      "Healthcare application engineering contributor: eligibility logic, clinical-data validation, API integration, auditability, and review workflows.",
+      "Healthcare platform engineering: application workflows, structured-data handling, validation, APIs, auditability, and review processes.",
     complexity:
-      "Evaluating mixed structured and unstructured clinical information against multi-part eligibility criteria without losing reviewability.",
-    tech: ["Healthcare Workflows", "EHR Data", "Clinical Notes", "Eligibility Rules", "API Integration", "Auditability"],
-    images: ["/images/portfolio/projects/correlate-health-clinical-trial-matching.svg"],
+      "Connecting clinical data and application services while maintaining validation, traceability, and reliable downstream workflows.",
+    tech: ["Healthcare Workflows", "Clinical Data", "Data Validation", "API Integration", "Business Rules", "Auditability"],
+    images: ["/images/portfolio/projects/live-sites/correlate-health-platform-integration.png"],
     live: "https://correlatehealth.com/",
   },
   {
@@ -314,7 +321,7 @@ export const projects: Project[] = [
     complexity:
       "Maintaining reliable synchronization across external accounting APIs, expiring credentials, repeated events, and high-volume operational records.",
     tech: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
-    images: ["/images/portfolio/projects/freight-quickbooks-integration.svg"],
+    images: [],
   },
   {
     slug: "azure-openai-data-processing",
@@ -332,7 +339,7 @@ export const projects: Project[] = [
     complexity:
       "Combining recurring background processing, relational persistence, and AI service integration across a large historical dataset.",
     tech: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
-    images: ["/images/portfolio/projects/azure-openai-data-processing.svg"],
+    images: [],
   },
   {
     slug: "deed-driver-delivery",
@@ -350,7 +357,7 @@ export const projects: Project[] = [
     complexity:
       "Building a dependable mobile task flow around authentication, scanning/file interaction, and coordinated application state.",
     tech: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
-    images: ["/images/portfolio/projects/deed-driver-delivery.svg"],
+    images: [],
   },
   {
     slug: "gemsharbor-marketplace",
@@ -368,7 +375,7 @@ export const projects: Project[] = [
     complexity:
       "Coordinating listing state, time-sensitive bids, offers, payment events, notifications, and order progression across marketplace users.",
     tech: ["Marketplace Workflows", "E-commerce", "Auctions", "Bidding", "Payment Integrations", "Notifications"],
-    images: ["/images/portfolio/projects/gemsharbor-marketplace.svg"],
+    images: ["/images/portfolio/projects/live-sites/gemsharbor-marketplace.png"],
     live: "https://gemsharbor.com/",
   },
   {
@@ -387,7 +394,7 @@ export const projects: Project[] = [
     complexity:
       "Maintaining consistency across operational systems when events arrive asynchronously or downstream services fail temporarily.",
     tech: ["Logistics", "Fulfillment", "Event Processing", "System Synchronization", "Retry Strategies", "Automation"],
-    images: ["/images/portfolio/projects/shiphype-fulfillment.svg"],
+    images: ["/images/portfolio/projects/live-sites/shiphype-fulfillment.png"],
     live: "https://shiphype.com/",
   },
   {
@@ -406,7 +413,7 @@ export const projects: Project[] = [
     complexity:
       "Bringing marketing, inventory, customer, and call signals together so recommendations can be tied to operational outcomes.",
     tech: ["AI Workflows", "Google Ads", "Analytics", "CRM Integrations", "Inventory Data", "Call Data"],
-    images: ["/images/portfolio/projects/dealercortex-ai.svg"],
+    images: ["/images/portfolio/projects/live-sites/dealercortex-ai.png"],
     live: "https://dealercortexai.com/",
   },
   {
@@ -425,7 +432,7 @@ export const projects: Project[] = [
     complexity:
       "Keeping order and shipment state aligned across external carrier services while recovering safely from transient failures and repeated requests.",
     tech: ["Carrier APIs", "Order Synchronization", "Shipment Processing", "Label Generation", "Idempotency", "Reconciliation"],
-    images: ["/images/portfolio/projects/arub-shipping-integrations.svg"],
+    images: ["/images/portfolio/projects/live-sites/arub-shipping-integrations.png"],
     live: "https://arub.com/shipping",
   },
   {
@@ -444,7 +451,7 @@ export const projects: Project[] = [
     complexity:
       "Keeping invoice-derived transactions and accounting reference data consistent across Microsoft 365 intake, approval stages, and QuickBooks Desktop.",
     tech: ["Microsoft 365", "QuickBooks Desktop", "Web Connector", "Invoice Extraction", "Accounting Classification", "Approvals"],
-    images: ["/images/portfolio/projects/suppliersift-ap-automation.svg"],
+    images: ["/images/portfolio/projects/live-sites/suppliersift-ap-automation.png"],
     live: "https://suppliersift.com/",
   },
   {
@@ -463,7 +470,7 @@ export const projects: Project[] = [
     complexity:
       "Maintaining correct dependencies between engineering inputs and derived calculations while making results transparent and testable.",
     tech: ["Engineering Calculations", "Structural Steel", "Concrete", "Timber", "Foundations", "Automated Validation"],
-    images: ["/images/portfolio/projects/calcs-engineering-calculations.svg"],
+    images: ["/images/portfolio/projects/live-sites/calcs-engineering-calculations.png"],
     live: "https://calcs.com/",
   },
   {
@@ -482,9 +489,24 @@ export const projects: Project[] = [
     complexity:
       "Presenting detailed industrial and corporate information through a clear, consistent responsive interface.",
     tech: ["Web Development", "Responsive Design", "Corporate Website", "Content Organization"],
-    images: ["/images/portfolio/projects/charter-steel-web.svg"],
+    images: ["/images/portfolio/projects/live-sites/charter-steel-web.png"],
     live: "https://www.chartersteel.com/",
   },
+  ...additionalProjects.map((project) => ({
+    slug: project.slug,
+    caseStudy: project.slug as CaseStudySlug,
+    title: project.title,
+    category: project.category,
+    summary: project.summary,
+    description: `${project.description} Tijani participated in the development and deployment of this product, contributing to the areas described below.`,
+    impact: `Contributed to the development and deployment of ${project.title}, including ${project.areas.slice(0, 4).join(", ")}.`,
+    role: project.contribution,
+    complexity: project.problem,
+    tech: project.areas,
+    images: project.url ? [`/images/portfolio/projects/live-sites/${project.slug}.png`] : [],
+    live: project.url ?? undefined,
+    links: project.links ?? (project.url ? [{ label: "Official project site", url: project.url }] : []),
+  })),
 ];
 
 export const skillCategories = [

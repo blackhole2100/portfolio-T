@@ -5,8 +5,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, ExternalLink, Linkedin, Maximize2 } from "lucide-react";
-import { personalInfo, projects, type Project } from "@/data/portfolio";
-import { caseStudies, featuredCaseStudies, getCaseStudyPath } from "@/data/case-studies";
+import { personalInfo, type Project } from "@/data/portfolio";
+import { caseStudies, getCaseStudyPath } from "@/data/case-studies";
+import {
+  homepageFeaturedCaseStudies,
+  selectedProjectWork,
+  featuredSelectedProjectWork,
+  remainingSelectedProjectWork,
+} from "@/data/home-project-sections";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import AskAboutThis, { ReadCaseStudyLink } from "@/components/AskAboutThis";
 import { PROJECT_ANCHOR_PREFIX } from "@/lib/ai-twin";
@@ -21,8 +27,6 @@ import Reveal from "@/components/ui/reveal";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import ProjectImageViewer from "@/components/ProjectImageViewer";
 
-const featuredProjects = projects.filter((project) => project.featured);
-const otherProjects = projects.filter((project) => !project.featured);
 const PROJECT_IMAGE_SIZES = "(min-width: 1536px) 42rem, (min-width: 1024px) 40vw, 100vw";
 
 /**
@@ -50,6 +54,7 @@ function ProjectGallery({
    * makes neighbour warming actually work while still never re-fetching one.
    */
   const prefetchedRef = useRef<Set<number>>(new Set());
+  const [failedScreenshots, setFailedScreenshots] = useState<Set<string>>(new Set());
 
   const prefetchProjectImages = useCallback(
     (targetIndex?: number) => {
@@ -76,8 +81,8 @@ function ProjectGallery({
 
   if (project.images.length === 0) {
     return (
-      <div className="flex items-center justify-center border-t border-white/10 bg-black/30 p-6 font-mono text-sm text-muted-foreground lg:w-[58%] lg:border-l lg:border-t-0">
-        {">"} No preview available
+      <div className="flex items-center justify-center border-t border-white/10 bg-black/30 p-6 text-center font-mono text-xs leading-relaxed text-muted-foreground lg:w-[58%] lg:border-l lg:border-t-0">
+        Internal project — no public website URL was supplied. No unrelated image is used.
       </div>
     );
   }
@@ -94,43 +99,48 @@ function ProjectGallery({
           <CarouselContent>
             {project.images.map((img, idx) => (
               <CarouselItem key={`${project.title}-${img}`}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    prefetchProjectImages(idx);
-                    onOpenViewer(project, idx);
-                  }}
-                  onMouseEnter={() => prefetchProjectImages(idx)}
-                  onFocus={() => prefetchProjectImages(idx)}
-                  onTouchStart={() => prefetchProjectImages(idx)}
-                  className="group/viewer relative block w-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                  aria-label={`Open illustrative ${project.title} project visual ${idx + 1} of ${project.images.length} full screen`}
-                >
-                  <div className="aspect-[16/10] w-full overflow-hidden rounded-xl">
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={img}
-                        alt={`Illustrative interface visual for ${project.title}`}
-                        fill
-                        priority={priority && idx === 0}
-                        sizes={PROJECT_IMAGE_SIZES}
-                        className="pointer-events-none object-cover object-left-top transition-transform duration-700 ease-out group-hover/viewer:scale-[1.02] motion-reduce:transition-none"
-                        draggable={false}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover/viewer:opacity-100" />
-                  <span className="pointer-events-none absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/55 px-2.5 py-1.5 font-mono text-[11px] text-white/90 glass-tier-surface">
-                    <Maximize2 className="h-3 w-3" />
-                    Full screen
-                  </span>
-                  {project.images.length > 1 && (
-                    <span className="pointer-events-none absolute right-3 top-3 rounded-full border border-white/15 bg-black/55 px-2 py-1 font-mono text-[10px] text-white/80 glass-tier-surface">
-                      {idx + 1}/{project.images.length}
+                {failedScreenshots.has(img) ? (
+                  <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-2 rounded-xl px-6 text-center">
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-primary/80">Website screenshot pending</span>
+                    <span className="max-w-xs text-xs leading-relaxed text-muted-foreground">
+                      Run the project screenshot capture script to save the real website image in the public folder.
                     </span>
-                  )}
-                </button>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      prefetchProjectImages(idx);
+                      onOpenViewer(project, idx);
+                    }}
+                    onMouseEnter={() => prefetchProjectImages(idx)}
+                    onFocus={() => prefetchProjectImages(idx)}
+                    onTouchStart={() => prefetchProjectImages(idx)}
+                    className="group/viewer relative block w-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    aria-label={`Open screenshot captured from the public ${project.title} website full screen`}
+                  >
+                    <div className="aspect-[16/10] w-full overflow-hidden rounded-xl">
+                      <div className="relative h-full w-full">
+                        <Image
+                          src={img}
+                          alt={`Screenshot captured from the public ${project.title} website`}
+                          fill
+                          priority={priority && idx === 0}
+                          sizes={PROJECT_IMAGE_SIZES}
+                          className="pointer-events-none object-contain transition-transform duration-700 ease-out group-hover/viewer:scale-[1.02] motion-reduce:transition-none"
+                          draggable={false}
+                          onError={() => setFailedScreenshots((current) => new Set(current).add(img))}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover/viewer:opacity-100" />
+                    <span className="pointer-events-none absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/55 px-2.5 py-1.5 font-mono text-[11px] text-white/90 glass-tier-surface">
+                      <Maximize2 className="h-3 w-3" />
+                      Full screen
+                    </span>
+                  </button>
+                )}
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -297,69 +307,72 @@ const ProjectsSection = () => {
             Selected <span className="text-gradient">Work</span>
           </h2>
           <p className="mb-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-Selected work across AI-enabled systems, healthcare and financial integrations, cross-platform mobile apps, and business-facing SaaS products. Each case study separates the product context from Tijani's documented engineering role.
+{/* The homepage divides all 52 projects into two unique groups: three featured case studies and 49 additional project engagements. Each project appears once across these sections. */}
           </p>
         </Reveal>
 
-        {/* Tier 1 — the featured case studies, the only cards carrying metrics on
-            their face. Labelled by what they are rather than by employer, since the
-            row sits above a link to all documented project write-ups. */}
+        {/* First non-overlapping group: three featured case studies. */}
         <Reveal className="mb-6">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Featured case studies</h3>
+            <span className="font-mono text-[10.5px] text-muted-foreground/70 tabular-nums">{homepageFeaturedCaseStudies.length}</span>
             <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
         </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {featuredCaseStudies.map((study, index) => (
+          {homepageFeaturedCaseStudies.map((study, index) => (
             <Reveal key={study.slug} delay={index * 0.08} className="h-full">
+              {/* Keep the legacy project anchor available without rendering this project twice. */}
+              <span id={`${PROJECT_ANCHOR_PREFIX}${study.slug}`} data-project-slug={study.slug} aria-hidden="true" className="block scroll-mt-28" />
               {/* h4: the group label above this row is an h3. */}
               <CaseStudyCard study={study} headingLevel="h4" />
             </Reveal>
           ))}
         </div>
 
-        {/* The row is a fixed three-column grid, so the rest of the studies are
-            reached here rather than by growing it into a lopsided second row. */}
+        {/* The complete archive remains available as a separate destination. */}
         <Reveal className="mb-24 mt-6">
           <Link
             href="/work"
             className="group/all inline-flex items-center gap-2 text-sm font-semibold text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            View all {caseStudies.length} case studies
+            Browse the complete {caseStudies.length}-project archive
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/all:translate-x-1 motion-reduce:transition-none" />
           </Link>
         </Reveal>
 
-        {/* Selected projects with full visual previews */}
+        {/* Second non-overlapping group: the remaining 49 projects. */}
         <Reveal className="mb-8">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">
               Selected project work
             </h3>
+            <span className="font-mono text-[10.5px] text-muted-foreground/70 tabular-nums">{selectedProjectWork.length}</span>
             <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
         </Reveal>
 
         {/* Sticky stacked deck — cards overlap into a stack as you scroll. */}
         <div className="relative mb-20 flex flex-col gap-8 pb-20">
-          {featuredProjects.map((project, i) => (
+          {featuredSelectedProjectWork.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} onOpenViewer={handleOpenViewer} />
           ))}
         </div>
 
 
-        {/* Remaining project case studies stay discoverable without repeating full-size cards. */}
+        {/* Within the 49 selected-project entries, three have full visual cards and
+            the remaining 46 stay discoverable as compact project links. */}
         <Reveal>
           <div>
             <div className="mb-6 flex items-center gap-4">
               <h3 className="font-mono text-xs uppercase tracking-widest text-primary">More project work</h3>
+              <span className="font-mono text-[10.5px] text-muted-foreground/70 tabular-nums">{remainingSelectedProjectWork.length}</span>
               <span className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
             </div>
 
             <ul className="grid gap-3 sm:grid-cols-3">
-              {otherProjects.map((project) => (
+              {remainingSelectedProjectWork.map((project) => (
                 /* Anchor retained even though these no longer get a full card,
                    so the AI Twin's #project-<slug> links still resolve. */
                 <li
@@ -395,18 +408,7 @@ Selected work across AI-enabled systems, healthcare and financial integrations, 
           </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-12 flex justify-center">
-          <a
-            href={personalInfo.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-white/10 border-b-white/5 px-8 py-4 text-sm font-bold text-foreground shadow-accent-soft transition-all duration-300 glass hover:bg-white/10 hover:text-primary active:scale-95"
-          >
-            <Linkedin className="h-5 w-5" />
-            Connect on LinkedIn
-          </a>
-        </Reveal>
-
+      
         {activeViewerProject && (
           <ProjectImageViewer
             projectTitle={activeViewerProject.title}
