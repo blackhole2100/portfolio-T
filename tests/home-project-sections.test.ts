@@ -61,8 +61,33 @@ test("the homepage partition is derived from the canonical featured case-study s
 
 
 test("Freight SaaS — QuickBooks Online Integration is fully removed from the portfolio", () => {
-  assert.equal(caseStudies.some((study) => study.slug === "freight-quickbooks-integration"), false);
-  assert.equal(projects.some((project) => project.caseStudy === "freight-quickbooks-integration"), false);
-  assert.equal(homepageFeaturedCaseStudies.some((study) => study.slug === "freight-quickbooks-integration"), false);
-  assert.equal(selectedProjectWork.some((project) => project.caseStudy === "freight-quickbooks-integration"), false);
+  const removedSlug = "freight-quickbooks-integration";
+
+assert.equal(
+  caseStudies.some(
+    (study) => String(study.slug) === removedSlug
+  ),
+  false
+);
+
+assert.equal(
+  projects.some(
+    (project) => String(project.caseStudy) === removedSlug
+  ),
+  false
+);
+
+assert.equal(
+  homepageFeaturedCaseStudies.some(
+    (study) => String(study.slug) === removedSlug
+  ),
+  false
+);
+
+assert.equal(
+  selectedProjectWork.some(
+    (project) => String(project.caseStudy) === removedSlug
+  ),
+  false
+);
 });
