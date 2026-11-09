@@ -69,8 +69,8 @@ test("the standalone preview includes the current contact channels and all case 
   const preview = read("public/portfolio-preview.html");
   assert.match(preview, /munimaguro68@gmail\.com/);
   assert.match(preview, /github\.com\/lightsunshine001/);
-  assert.match(preview, /FEATURED CASE STUDIES · 2/i);
-  assert.match(preview, /SELECTED PROJECT WORK · 49/i);
+  assert.match(preview, /FEATURED CASE STUDIES · 3/i);
+  assert.match(preview, /SELECTED PROJECT WORK · 48/i);
   assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 51);
 });
 

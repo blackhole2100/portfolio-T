@@ -11,11 +11,11 @@ import {
 } from "../src/data/home-project-sections";
 
 test("homepage sections contain 51 unique projects in total", () => {
-  assert.equal(caseStudies.length, 51, "the complete portfolio archive contains 52 case studies");
+  assert.equal(caseStudies.length, 51, "the complete portfolio archive contains 51 case studies");
   assert.equal(projects.length, 51, "every case study has one portfolio project record");
 
-  assert.equal(homepageFeaturedCaseStudies.length, 2, "featured case studies must contain two projects");
-  assert.equal(selectedProjectWork.length, 49, "selected project work must contain the remaining 49 projects");
+  assert.equal(homepageFeaturedCaseStudies.length, 3, "featured case studies must contain three projects");
+  assert.equal(selectedProjectWork.length, 48, "selected project work must contain the remaining 48 projects");
   assert.equal(homepageFeaturedCaseStudies.length + selectedProjectWork.length, 51);
 
  const caseStudySlugs = new Set<string>(
@@ -39,14 +39,14 @@ const selectedSlugs = new Set<string>(
 });
 
 test("selected project work keeps its visual and compact presentation groups disjoint", () => {
-  assert.equal(featuredSelectedProjectWork.length, 3);
+  assert.equal(featuredSelectedProjectWork.length, 2);
   assert.equal(remainingSelectedProjectWork.length, 46);
-  assert.equal(featuredSelectedProjectWork.length + remainingSelectedProjectWork.length, 49);
+  assert.equal(featuredSelectedProjectWork.length + remainingSelectedProjectWork.length, 48);
 
   const visualSlugs = new Set(featuredSelectedProjectWork.map((project) => project.slug));
   const compactSlugs = new Set(remainingSelectedProjectWork.map((project) => project.slug));
 
-  assert.equal(visualSlugs.size + compactSlugs.size, 49);
+  assert.equal(visualSlugs.size + compactSlugs.size, 48);
   for (const slug of visualSlugs) {
     assert.equal(compactSlugs.has(slug), false, `${slug} must not appear in both selected-work presentations`);
   }
@@ -62,32 +62,20 @@ test("the homepage partition is derived from the canonical featured case-study s
 
 test("Freight SaaS - QuickBooks Online Integration is fully removed from the portfolio", () => {
   const removedSlug = "freight-quickbooks-integration";
+  assert.equal(caseStudies.some((study) => String(study.slug) === removedSlug), false);
+  assert.equal(projects.some((project) => String(project.caseStudy) === removedSlug), false);
+  assert.equal(homepageFeaturedCaseStudies.some((study) => String(study.slug) === removedSlug), false);
+  assert.equal(selectedProjectWork.some((project) => String(project.caseStudy) === removedSlug), false);
+});
 
-assert.equal(
-  caseStudies.some(
-    (study) => String(study.slug) === removedSlug
-  ),
-  false
-);
 
-assert.equal(
-  projects.some(
-    (project) => String(project.caseStudy) === removedSlug
-  ),
-  false
-);
-
-assert.equal(
-  homepageFeaturedCaseStudies.some(
-    (study) => String(study.slug) === removedSlug
-  ),
-  false
-);
-
-assert.equal(
-  selectedProjectWork.some(
-    (project) => String(project.caseStudy) === removedSlug
-  ),
-  false
-);
+test("ARVRobot fills the third featured case-study card and is removed from selected work", () => {
+  assert.equal(
+    homepageFeaturedCaseStudies.some((study) => study.slug === "arvrobot-real-estate-underwriting"),
+    true
+  );
+  assert.equal(
+    selectedProjectWork.some((project) => project.caseStudy === "arvrobot-real-estate-underwriting"),
+    false
+  );
 });

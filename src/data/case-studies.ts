@@ -556,6 +556,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "arvrobot-real-estate-underwriting",
     kind: "system",
     theme: "platform",
+    featured: true,
     title: "ARVRobot - Real Estate Underwriting",
     oneLiner:
       "Contributed property-data ingestion, comparable analysis, underwriting calculations, configurable assumptions, reporting, and AI-assisted property analysis.",
