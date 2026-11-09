@@ -11,7 +11,7 @@ Do not reintroduce older profile drafts, names, companies, locations, email addr
 - `src/data/portfolio.ts` is the source of truth for profile copy, professional experience, education, metrics, project cards, and technical skills.
 - `src/data/case-studies.ts` is the source of truth for the 16 detailed project write-ups.
 - Keep projects and case studies aligned by slug. Case study pages are available at `/work/[slug]`.
-- Every project illustration lives at `public/images/portfolio/projects/<slug>.svg`. These files are representative UI concepts, not real product screenshots.
+- Real public website screenshots are stored at `public/images/portfolio/projects/live-sites/<slug>.webp` after running `scripts/capture-project-screenshots.mjs`. Do not use generated concept illustrations or unrelated imagery as project evidence. Projects without a supplied public URL must have `images: []` and show an internal-project placeholder.
 - AI assistant context and search behavior are maintained in `src/lib/ai-twin.ts`, `src/lib/ai-tools.ts`, and `src/lib/ai-config.ts`. The floating chat remains available; the separate homepage showcase section is intentionally omitted.
 - SEO metadata and structured data are maintained in `src/lib/seo/`.
 

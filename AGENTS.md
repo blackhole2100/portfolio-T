@@ -111,7 +111,6 @@ Follow these patterns:
 Observed env vars:
 - `RESEND_API_KEY`
 - `CONTACT_EMAIL_FROM`
-- `CONTACT_EMAIL_TO`
 - `AI_MODEL`
 - `LLM_API_KEY`
 - `LLM_BASE_URL`
