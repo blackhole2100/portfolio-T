@@ -307,11 +307,11 @@ const ProjectsSection = () => {
             Selected <span className="text-gradient">Work</span>
           </h2>
           <p className="mb-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-{/* The homepage divides all 52 projects into two unique groups: three featured case studies and 49 additional project engagements. Each project appears once across these sections. */}
+{/* The homepage divides all 51 projects into two unique groups: two featured case studies and 49 additional project engagements. Each project appears once across these sections. */}
           </p>
         </Reveal>
 
-        {/* First non-overlapping group: three featured case studies. */}
+        {/* First non-overlapping group: two featured case studies. */}
         <Reveal className="mb-6">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">Featured case studies</h3>

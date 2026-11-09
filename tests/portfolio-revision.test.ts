@@ -41,7 +41,7 @@ test("the removed AI showcase has no homepage, navbar, footer, or hero anchor", 
   assert.doesNotMatch(navbar, /#ai-twin|label: "AI Assistant"/);
   assert.doesNotMatch(footer, /#ai-twin|AI Assistant/);
   assert.doesNotMatch(hero, /href="#ai-twin"/);
-  assert.match(hero, /open-ai-twin/);
+  assert.doesNotMatch(hero, /href="#ai-twin"|open-ai-twin/);
 });
 
 test("the command-palette UI and keyboard shortcut are removed while the theme toggle remains", () => {
@@ -69,9 +69,9 @@ test("the standalone preview includes the current contact channels and all case 
   const preview = read("public/portfolio-preview.html");
   assert.match(preview, /munimaguro68@gmail\.com/);
   assert.match(preview, /github\.com\/lightsunshine001/);
-  assert.match(preview, /FEATURED CASE STUDIES · 3/i);
+  assert.match(preview, /FEATURED CASE STUDIES · 2/i);
   assert.match(preview, /SELECTED PROJECT WORK · 49/i);
-  assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 52);
+  assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 51);
 });
 
 test("hero boundary has no oversized overlay or forced desktop viewport height", () => {

@@ -23,7 +23,6 @@
 - 11+ years of professional experience.
 - 93% reduction in application load time (career-level result; not attributed to a named project in the supplied resume).
 - Contributions to real-time platforms processing 1,000+ events per second (career-level result; not attributed to a named project in the supplied resume).
-- Freight SaaS / QuickBooks Online operation: approximately 65 brokerages, 52,000 loads per month, and 90,000 documents per month.
 - .NET 8 / Azure OpenAI data processing: approximately 2,400 records per day against a historical dataset of around 1.6 million records.
 - Anchord AI: 11 MCP tools integrated into agent workflows.
 
@@ -33,8 +32,8 @@
 - PeakActivity — Software Developer, Jan 2020–Sep 2022.
 - Chetu, Inc. — Full Stack Developer (Python, C#/.NET, TypeScript, AI, DevOps), Nov 2022–Jul 2026.
 
-## Project case studies (52)
-Tijani confirms participation in the development and deployment of all 52 products and platforms below. Descriptions preserve the supplied scope for each engagement and do not add unsupported technologies or performance claims.
+## Project case studies (51)
+Tijani confirms participation in the development and deployment of all 51 products and platforms below. Descriptions preserve the supplied scope for each engagement and do not add unsupported technologies or performance claims.
 
 ### 1. Anchord AI — Entity Resolution & Agent Integration
 Case study: https://tijani-porfolio.dev/work/anchord-ai-entity-resolution
@@ -44,7 +43,7 @@ Tijani's participation: Tijani participated in developing and deploying Anchord 
 Implementation areas: AI Agents, MCP, REST APIs, Webhooks, Entity Resolution, Rules-Based Scoring
 Tags: AI Agents, MCP, Entity Resolution, Integrations
 - Official project site: https://www.anchord.ai/product
-Screenshot: /images/portfolio/projects/live-sites/anchord-ai-entity-resolution.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/anchord-ai-entity-resolution.png (captured)
 
 #### Tijani's role
 Tijani integrated AI-agent workflows with 11 MCP tools, REST APIs, and webhooks. He implemented the multi-signal, rules-based scoring path, the evidence-backed review of ambiguous matches, canonical entity identifiers, and resolve-before-write flows.
@@ -73,7 +72,7 @@ Tijani's participation: Tijani participated in the development and deployment of
 Implementation areas: Healthcare Workflows, Clinical Data, Data Validation, API Integration, Business Rules, Auditability
 Tags: HealthTech, Healthcare Platform, Data Validation, APIs
 - Official project site: https://correlatehealth.com/
-Screenshot: /images/portfolio/projects/live-sites/correlate-health-platform-integration.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/correlate-health-platform-integration.png (captured)
 
 #### Tijani's role
 Tijani participated in developing and deploying healthcare platform workflows. His work included application integration, structured-data handling, validation, complex business logic, API connectivity, auditability, and reviewable processes that support clinical and operational users.
@@ -90,35 +89,7 @@ Tijani participated in the product's development and deployment. The supplied in
 
 ---
 
-### 3. Freight SaaS — QuickBooks Online Integration
-Case study: https://tijani-porfolio.dev/work/freight-quickbooks-integration
-Product context: This project connected freight operating workflows with QuickBooks Online. Tijani built the integration paths around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation, supporting an operation handling approximately 65 brokerages, 52,000 loads, and 90,000 documents each month.
-Problem: Freight operations create a large volume of business records that must stay aligned with accounting data. The integration has to work across authorization lifecycles and asynchronous events while avoiding duplicate updates and providing a way to reconcile records when systems drift or an event is retried.
-Tijani's participation: Tijani participated in developing and deploying the freight-to-QuickBooks integration, including OAuth, token refresh, webhook processing, idempotent synchronization, and reconciliation. The scale figures describe the operation supported, not a claim of sole ownership of the freight SaaS product.
-Implementation areas: QuickBooks Online, OAuth 2.0, Webhooks, Token Refresh, Idempotency, Reconciliation
-Tags: QuickBooks, Accounting Integration, Freight, Reliability
-- Public URL: Not available; private/internal project.
-Screenshot: No public screenshot path; private project. (private-no-public-url)
-
-#### Tijani's role
-Tijani built the integration workflows connecting the freight SaaS operation to QuickBooks Online. His documented responsibilities include OAuth handling, token refresh, webhook processing, idempotent synchronization, and reconciliation.
-- Implemented OAuth authorization and token refresh workflows.
-- Connected webhook events to the synchronization process.
-- Used idempotent handling to protect against repeated event delivery.
-- Built reconciliation workflows to help keep connected operational and accounting records aligned.
-
-#### Operational scale
-The connected operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month. Those figures describe the scale of the operation supported by the integration; they are not presented as a count of records personally processed by one developer.
-- Approximately 65 brokerages.
-- Approximately 52,000 loads per month.
-- Approximately 90,000 documents per month.
-
-#### Reliability across systems
-The engineering work focused on the points where external integrations commonly become fragile: credentials expire, event notifications repeat, and records need to be reconciled after partial failures. Idempotency and explicit reconciliation were part of the documented workflow rather than optional cleanup tasks.
-
----
-
-### 4. .NET 8 & Azure OpenAI Data Processing
+### 3. .NET 8 & Azure OpenAI Data Processing
 Case study: https://tijani-porfolio.dev/work/azure-openai-data-processing
 Product context: This enterprise data-processing project combines ASP.NET Core worker services, Entity Framework Core, SQL Server, and Azure OpenAI. Tijani developed the processing workflows, which handled approximately 2,400 records per day against a historical dataset of about 1.6 million records.
 Problem: The project needed a repeatable way to process records at a daily cadence while working against a large historical dataset and incorporating Azure OpenAI into the processing workflow. The supplied material identifies the worker-service, data-processing, persistence, and AI integration elements.
@@ -142,7 +113,7 @@ The documented stack places the processing logic in .NET worker services, uses E
 
 ---
 
-### 5. CrushBank Orchestrate IT — Enterprise AI
+### 4. CrushBank Orchestrate IT — Enterprise AI
 Case study: https://tijani-porfolio.dev/work/crushbank-enterprise-ai
 Product context: CrushBank Orchestrate IT is an enterprise AI platform built around IBM watsonx. Tijani contributed to integrations connecting enterprise information sources, grounded search and answers, service-ticket classification, and operational workflow automation.
 Problem: Enterprise IT workflows rely on information spread across business systems and service-management records. AI capabilities are more useful when they can retrieve relevant connected information, provide grounded answers, classify incoming tickets, and participate in operational processes.
@@ -150,7 +121,7 @@ Tijani's participation: Tijani participated in developing and deploying the ente
 Implementation areas: IBM watsonx, Enterprise AI, Grounded Search, Ticket Classification, Workflow Automation
 Tags: Enterprise AI, IBM watsonx, Knowledge Search, IT Automation
 - Official project site: https://www.crushbank.com/orchestrate-it/
-Screenshot: /images/portfolio/projects/live-sites/crushbank-enterprise-ai.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/crushbank-enterprise-ai.png (captured)
 
 #### Tijani's role
 Tijani contributed to enterprise AI integrations involving IBM watsonx, connected information sources, grounded search and answer experiences, ticket classification, and operational automation.
@@ -166,7 +137,7 @@ The supplied resume describes this as a contribution to enterprise AI integratio
 
 ---
 
-### 6. ARVRobot — Real Estate Underwriting
+### 5. ARVRobot — Real Estate Underwriting
 Case study: https://tijani-porfolio.dev/work/arvrobot-real-estate-underwriting
 Product context: ARVRobot helps real-estate investors evaluate properties and analyze potential returns. Tijani contributed to the data and analysis workflows that bring property facts, comparable properties, financial calculations, configurable assumptions, reporting, and AI-assisted analysis into an underwriting experience.
 Problem: Property investment decisions depend on more than a listing price. Investors need to gather property information, compare relevant properties, test financial assumptions, and review the resulting analysis in a consistent workflow.
@@ -174,7 +145,7 @@ Tijani's participation: Tijani participated in developing and deploying ARVRobot
 Implementation areas: Property Data, Comparable Analysis, Financial Calculations, Configurable Assumptions, Reporting, AI-Assisted Analysis
 Tags: Real Estate, Underwriting, Financial Analysis, AI
 - Official project site: https://arvrobot.com/
-Screenshot: /images/portfolio/projects/live-sites/arvrobot-real-estate-underwriting.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/arvrobot-real-estate-underwriting.png (captured)
 
 #### Tijani's role
 Tijani contributed property-data ingestion, comparable-property analysis, financial calculations, configurable assumptions, reporting, and AI-assisted property analysis.
@@ -191,7 +162,7 @@ The supplied materials describe Tijani as a contributor to the listed product wo
 
 ---
 
-### 7. ShipHype — Logistics & Fulfillment
+### 6. ShipHype — Logistics & Fulfillment
 Case study: https://tijani-porfolio.dev/work/shiphype-fulfillment
 Product context: ShipHype is an operational platform for fulfillment and logistics workflows. Tijani contributed to the integration and automation layers, focusing on event processing, data synchronization, retry strategies, error handling, and the operational processes that connect fulfillment systems.
 Problem: Fulfillment operations depend on multiple connected services and events. When updates arrive asynchronously or an external service is temporarily unavailable, the platform needs to preserve workflow state and provide safe retry and recovery behavior.
@@ -216,7 +187,7 @@ The resume states that Tijani contributed to these platform layers. It does not 
 
 ---
 
-### 8. DealerCortex AI — Automotive Intelligence
+### 7. DealerCortex AI — Automotive Intelligence
 Case study: https://tijani-porfolio.dev/work/dealercortex-ai
 Product context: DealerCortex AI connects dealership marketing activity, customer interactions, inventory, and business performance. Tijani's documented contribution includes AI-powered automotive workflows, Google Ads and analytics integrations, CRM and inventory connections, conversation and call-data integration, and AI recommendations tied to appointments, sales, and other business outcomes.
 Problem: Dealership performance data is spread across marketing platforms, inventory systems, CRM records, customer conversations, and call activity. A useful intelligence layer needs to connect those signals so marketing activity can be interpreted in the context of real dealership outcomes.
@@ -224,7 +195,7 @@ Tijani's participation: Tijani participated in developing and deploying DealerCo
 Implementation areas: AI Workflows, Google Ads, Analytics, CRM, Inventory Data, Call Data
 Tags: Automotive, AI, Marketing Analytics, CRM Integrations
 - Official project site: https://dealercortexai.com/
-Screenshot: /images/portfolio/projects/live-sites/dealercortex-ai.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/dealercortex-ai.png (captured)
 
 #### Tijani's role
 Tijani contributed to AI-powered automotive intelligence workflows and the integrations that feed them. The documented work includes Google Ads and analytics connections, inventory and CRM data, customer conversations and call data, and AI-driven dealership recommendations.
@@ -241,7 +212,7 @@ The supplied notes identify the platforms and data domains involved but do not s
 
 ---
 
-### 9. Arub Shipping — Carrier & Order Integrations
+### 8. Arub Shipping — Carrier & Order Integrations
 Case study: https://tijani-porfolio.dev/work/arub-shipping-integrations
 Product context: Arub Shipping connects order processing with carrier services. Tijani's documented integration experience includes carrier API connectivity, order synchronization, shipment processing, label generation, transaction reconciliation, idempotency, retries, and recovery handling.
 Problem: Shipping workflows need to carry order data into carrier services and bring shipment status and labels back into the originating operation. This becomes fragile when API requests are retried, events are duplicated, or the carrier and order systems temporarily disagree.
@@ -249,7 +220,7 @@ Tijani's participation: Tijani participated in developing and deploying Arub Shi
 Implementation areas: Carrier APIs, Order Sync, Shipment Processing, Label Generation, Reconciliation, Idempotency, Retries
 Tags: Shipping, Carrier APIs, Logistics, Integrations
 - Official project site: https://arub.com/shipping
-Screenshot: /images/portfolio/projects/live-sites/arub-shipping-integrations.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/arub-shipping-integrations.png (captured)
 
 #### Tijani's role
 Tijani worked on the shipping integration layer, covering carrier APIs, order synchronization, shipment processing, label generation, and transaction reconciliation. The documented reliability mechanisms include idempotency, retries, and recovery handling.
@@ -263,7 +234,7 @@ The engineering scope follows a shipping operation from order synchronization th
 
 ---
 
-### 10. SupplierSift — Accounts Payable Automation
+### 9. SupplierSift — Accounts Payable Automation
 Case study: https://tijani-porfolio.dev/work/suppliersift-ap-automation
 Product context: SupplierSift automates accounts-payable work from Microsoft 365 email intake through invoice extraction, accounting classification, approvals, and QuickBooks Desktop. Tijani's documented integration contribution includes QuickBooks Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention.
 Problem: Accounts-payable workflows begin with documents and email, but the final accounting record must be accurate and consistent with QuickBooks Desktop. The system needs to move invoice information through extraction, classification, approval, and posting without creating duplicate transactions or stale reference data.
@@ -271,7 +242,7 @@ Tijani's participation: Tijani participated in developing and deploying Supplier
 Implementation areas: Microsoft 365, QuickBooks Desktop, Web Connector, Invoice Extraction, Accounting Classification, Approvals
 Tags: FinTech, Accounts Payable, QuickBooks, Integrations
 - Official project site: https://suppliersift.com/
-Screenshot: /images/portfolio/projects/live-sites/suppliersift-ap-automation.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/suppliersift-ap-automation.png (captured)
 
 #### Tijani's role
 Tijani contributed integration and workflow work around QuickBooks Desktop, specifically Web Connector communication, transaction posting, accounting-list synchronization, and duplicate prevention.
@@ -288,7 +259,7 @@ The source describes Tijani's scope as relevant integration and workflow experie
 
 ---
 
-### 11. Calcs.com — Engineering Calculation Platform
+### 10. Calcs.com — Engineering Calculation Platform
 Case study: https://tijani-porfolio.dev/work/calcs-engineering-calculations
 Product context: Calcs.com converts spreadsheet-based design methods into web calculations for structural steel, concrete, timber, foundations, and connections. Tijani contributed to production web workflows with dependency-aware updates and automated validation.
 Problem: Engineering calculations often live in spreadsheets where dependencies and validation can be difficult to inspect or test consistently. A web workflow can make inputs, dependent calculations, and results more transparent while preserving the relationship between the values users change and the outputs they rely on.
@@ -296,7 +267,7 @@ Tijani's participation: Tijani participated in developing and deploying Calcs.co
 Implementation areas: Engineering Calculations, Structural Steel, Concrete, Timber, Foundations, Automated Validation
 Tags: Engineering Software, Web Applications, Validation, Calculations
 - Official project site: https://calcs.com/
-Screenshot: /images/portfolio/projects/live-sites/calcs-engineering-calculations.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/calcs-engineering-calculations.png (captured)
 
 #### Tijani's role
 Tijani contributed to the implementation of production web workflows, with a documented focus on dependency-aware updates and automated validation. The work supported the translation of spreadsheet-based engineering methods into a clearer, testable application experience.
@@ -312,7 +283,7 @@ Dependency-aware updates preserve the relationship between inputs and derived va
 
 ---
 
-### 12. LooPT CTM — Clinical Trial Matching
+### 11. LooPT CTM — Clinical Trial Matching
 Case study: https://tijani-porfolio.dev/work/loopt-clinical-trial-matching
 Product context: LooPT CTM supports the clinical-trial workflow within established care environments. It evaluates structured EHR fields and clinical notes against trial eligibility criteria, surfaces potential matches, and keeps criterion-level evidence available for review and follow-up. Tijani participated in developing and deploying the product, with engineering contributions in Clinical Trial Matching, EHR Data, Clinical Notes, Eligibility Rules, API Integration.
 Problem: Clinical-trial eligibility information is distributed across structured patient fields and narrative clinical notes. Reviewing every chart manually can make it difficult to identify candidates consistently and keep the rationale visible to clinical teams.
@@ -320,7 +291,7 @@ Tijani's participation: Tijani participated in developing and deploying the LooP
 Implementation areas: Clinical Trial Matching, EHR Data, Clinical Notes, Eligibility Rules, API Integration, Auditability, Human Review
 Tags: HealthTech, Clinical AI, EHR Integration, Eligibility Matching
 - Official project site: https://correlatehealth.com/solutions
-Screenshot: /images/portfolio/projects/live-sites/loopt-clinical-trial-matching.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/loopt-clinical-trial-matching.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the LooPT clinical-trial matching workflow. His supplied project material identifies clinical-data validation, eligibility rules, API integration, auditability, and human-review paths as the engineering areas involved.
@@ -344,7 +315,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 13. CompassHSS — Healthcare Staffing Platform
+### 12. CompassHSS — Healthcare Staffing Platform
 Case study: https://tijani-porfolio.dev/work/compasshss-healthcare-staffing
 Product context: CompassHSS supports staffing operations for healthcare facilities and professionals. Public product information describes shift posting and selection, professional profiles, credential and document compliance, calendars, reminders, clock-ins, time tracking, and unified billing workflows. Tijani participated in developing and deploying the product, with engineering contributions in Healthcare Staffing, Shift Requests, Scheduling, Credentials, Assignments.
 Problem: Healthcare facilities need to fill shifts while keeping staff credentials, assignments, schedules, hours, and billing aligned. Disconnected processes create delays and make workforce status harder to track.
@@ -352,7 +323,7 @@ Tijani's participation: Tijani participated in developing and deploying the heal
 Implementation areas: Healthcare Staffing, Shift Requests, Scheduling, Credentials, Assignments, Timesheets, Invoicing, Notifications
 Tags: HealthTech, Workforce Management, Scheduling, Compliance
 - Official project site: https://compasshss.com/
-Screenshot: /images/portfolio/projects/live-sites/compasshss-healthcare-staffing.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/compasshss-healthcare-staffing.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the healthcare staffing platform, contributing to the application workflows that connect staffing requests with professional availability, scheduling, compliance, and operational follow-through.
@@ -377,7 +348,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 14. Jobably — AI Job Discovery
+### 13. Jobably — AI Job Discovery
 Case study: https://tijani-porfolio.dev/work/jobably-ai-job-discovery
 Product context: Jobably streamlines job discovery by collecting listings from multiple sources, comparing them with user preferences, removing duplicate opportunities, and ranking relevant roles. Its product scope also includes tracking applications as candidates move through a search process. Tijani participated in developing and deploying the product, with engineering contributions in AI Job Discovery, Data Collection, Preference Matching, Duplicate Detection, Ranking.
 Problem: Job seekers often search across many sources and encounter repeated or poorly matched listings. A consolidated workflow helps reduce repetitive review and makes it easier to focus on relevant opportunities.
@@ -385,7 +356,7 @@ Tijani's participation: Tijani participated in developing and deploying the AI j
 Implementation areas: AI Job Discovery, Data Collection, Preference Matching, Duplicate Detection, Ranking, Application Tracking
 Tags: AI, Search, Matching, Automation
 - Official project site: https://jobably.com/
-Screenshot: /images/portfolio/projects/live-sites/jobably-ai-job-discovery.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/jobably-ai-job-discovery.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the AI job-discovery product, contributing to the application workflows around listing discovery, preference-based matching, duplicate handling, ranking, and application organization.
@@ -408,7 +379,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 15. Sunethix — IRB Submission Review
+### 14. Sunethix — IRB Submission Review
 Case study: https://tijani-porfolio.dev/work/sunethix-irb-review
 Product context: Sunethix analyzes research-submission documents such as protocols, consent forms, HIPAA materials, and recruitment content. Its public product description highlights a multi-stage parse, analyze, and compose pipeline, versioned regulatory rules, cross-document checks, and findings tied to document locations and citations. Tijani participated in developing and deploying the product, with engineering contributions in Document Parsing, Regulatory Rules, Cross-Document Analysis, Citation-Backed Findings, Audit Trail.
 Problem: IRB submissions contain related information across multiple documents. Inconsistencies in study details, sample handling, consent language, or regulatory elements can be difficult to detect through manual review alone.
@@ -416,7 +387,7 @@ Tijani's participation: Tijani participated in developing and deploying the AI d
 Implementation areas: Document Parsing, Regulatory Rules, Cross-Document Analysis, Citation-Backed Findings, Audit Trail, Human Review
 Tags: AI, HealthTech, Regulatory Review, Document Processing
 - Official project site: https://www.sunethix.com/
-Screenshot: /images/portfolio/projects/live-sites/sunethix-irb-review.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/sunethix-irb-review.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the AI document-review system, contributing to the product's document-analysis and review workflows that connect automated checks with evidence and human oversight.
@@ -439,7 +410,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 16. Lead Prosper — Lead Distribution Platform
+### 15. Lead Prosper — Lead Distribution Platform
 Case study: https://tijani-porfolio.dev/work/lead-prosper-routing
 Product context: Lead Prosper supports lead intake and distribution operations. The supplied project inventory identifies lead ingestion, validation, buyer routing, API delivery, and postback handling as the core product workflows. Tijani participated in developing and deploying the product, with engineering contributions in Lead Ingestion, Data Validation, Buyer Routing, API Delivery, Postbacks.
 Problem: Lead operations depend on accurate data arriving at the right buyer or destination. Without validation and reliable routing, malformed, duplicate, or misdirected lead records can disrupt downstream processing.
@@ -447,7 +418,7 @@ Tijani's participation: Tijani participated in developing and deploying the lead
 Implementation areas: Lead Ingestion, Data Validation, Buyer Routing, API Delivery, Postbacks, Lead Distribution
 Tags: Lead Management, APIs, Data Integration, Routing
 - Official project site: https://www.leadprosper.io/
-Screenshot: /images/portfolio/projects/live-sites/lead-prosper-routing.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/lead-prosper-routing.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the lead-distribution platform, contributing to the connected workflows that move incoming lead data through validation and routing toward buyer delivery and postback handling.
@@ -470,7 +441,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 17. Echoaeon — AI Lead Qualification
+### 16. Echoaeon — AI Lead Qualification
 Case study: https://tijani-porfolio.dev/work/echoaeon-ai-lead-automation
 Product context: Echoaeon connects lead collection and qualification with downstream sales systems. The supplied inventory describes AI lead qualification, lead scoring, HubSpot integration, and automation that retains human review for decisions that need approval. Tijani participated in developing and deploying the product, with engineering contributions in AI Lead Qualification, Lead Scoring, HubSpot Integration, Workflow Automation, Human Review.
 Problem: Sales teams spend time evaluating inbound opportunities and transferring context between lead sources and CRMs. Automation can make that process more consistent while keeping uncertain decisions reviewable.
@@ -478,7 +449,7 @@ Tijani's participation: Tijani participated in developing and deploying the AI a
 Implementation areas: AI Lead Qualification, Lead Scoring, HubSpot Integration, Workflow Automation, Human Review
 Tags: AI, Sales Automation, CRM, Lead Scoring
 - Official project site: https://echoaeon.com/
-Screenshot: /images/portfolio/projects/live-sites/echoaeon-ai-lead-automation.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/echoaeon-ai-lead-automation.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the AI automation product, contributing to its lead qualification and integration workflows that connect scoring, CRM context, and human-reviewed actions.
@@ -500,7 +471,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 18. SharkIndicators BlackBird — Trade Management
+### 17. SharkIndicators BlackBird — Trade Management
 Case study: https://tijani-porfolio.dev/work/sharkindicators-blackbird
 Product context: BlackBird is a trading tool for NinjaTrader that helps users automate trade management. Public product material describes configurable risk, money, and trade-management capabilities, including order movement, position scaling, stop-loss handling, and exposure controls. Tijani participated in developing and deploying the product, with engineering contributions in NinjaTrader, Trade Automation, Order Management, Position Scaling, Risk Management.
 Problem: Traders need to manage order movement, position sizing, stop-loss rules, and exposure while market conditions change. Configurable automation can apply a planned strategy consistently while keeping the trader in control.
@@ -508,7 +479,7 @@ Tijani's participation: Tijani participated in developing and deploying the trad
 Implementation areas: NinjaTrader, Trade Automation, Order Management, Position Scaling, Risk Management, Money Management
 Tags: Trading Software, Automation, Risk Controls, NinjaTrader
 - Official project site: https://www.sharkindicators.com/products/blackbird/
-Screenshot: /images/portfolio/projects/live-sites/sharkindicators-blackbird.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/sharkindicators-blackbird.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the trading software, contributing to the product's configurable trade-management and risk-control experience. The supplied notes do not specify individual implementation modules or a technology stack.
@@ -531,7 +502,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 19. Dynamite Docs — AI Document Extraction
+### 18. Dynamite Docs — AI Document Extraction
 Case study: https://tijani-porfolio.dev/work/dynamite-docs-document-ai
 Product context: Dynamite Docs processes PDFs, scans, images, and business files into structured data. Its public documentation describes an infer, correct, and remember workflow: AI proposes fields and rows, users review the result beside the source, and accepted data can be exported or sent into connected workflows. Tijani participated in developing and deploying the product, with engineering contributions in AI Extraction, PDF & Image Processing, Structured Data, Human Review, Batch Jobs.
 Problem: Invoices, receipts, forms, and other business documents contain information that must be transferred into structured systems. Manual entry is repetitive, while unreviewed extraction can introduce errors.
@@ -539,7 +510,7 @@ Tijani's participation: Tijani participated in developing and deploying the docu
 Implementation areas: AI Extraction, PDF & Image Processing, Structured Data, Human Review, Batch Jobs, Exports, API & Webhooks
 Tags: AI, Document Automation, Extraction, Human Review
 - Official project site: https://www.dynamitedocs.com/
-Screenshot: /images/portfolio/projects/live-sites/dynamite-docs-document-ai.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/dynamite-docs-document-ai.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the document-processing product, contributing to the application and workflow delivery around document extraction, review, structured data, and downstream use.
@@ -563,7 +534,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 20. HeadSpin — Digital Experience Testing
+### 19. HeadSpin — Digital Experience Testing
 Case study: https://tijani-porfolio.dev/work/headspin-digital-testing
 Product context: HeadSpin provides real-device and browser testing across mobile, web, and OTT experiences. Public product information describes functional, performance, network, regression, and compatibility testing, plus session data and performance KPIs for diagnosing user-experience issues. Tijani participated in developing and deploying the product, with engineering contributions in Real-Device Testing, Browser Testing, Network Conditions, Automation, Performance KPIs.
 Problem: Applications can behave differently across devices, carriers, and locations. Testing only in a local development environment may miss performance or functional issues that appear in real user conditions.
@@ -571,7 +542,7 @@ Tijani's participation: Tijani participated in developing and deploying the test
 Implementation areas: Real-Device Testing, Browser Testing, Network Conditions, Automation, Performance KPIs, Session Diagnostics
 Tags: Testing, Mobile, Performance, Quality Engineering
 - Official project site: https://www.headspin.io/
-Screenshot: /images/portfolio/projects/live-sites/headspin-digital-testing.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/headspin-digital-testing.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the testing platform, contributing to the product engineering and release work associated with real-device testing, automation, and performance-monitoring workflows.
@@ -594,7 +565,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 21. Libertum — Real-World Asset Tokenization
+### 20. Libertum — Real-World Asset Tokenization
 Case study: https://tijani-porfolio.dev/work/libertum-tokenization-platform
 Product context: Libertum supports the lifecycle of tokenized real-world assets. Its platform materials describe asset onboarding, digital securities issuance, investor participation, subscriptions, cap-table management, portfolio tracking, and blockchain transaction coordination. Tijani participated in developing and deploying the product, with engineering contributions in RWA Tokenization, Asset Listings, Investor Onboarding, Digital Securities, Subscriptions.
 Problem: Asset owners and investors need connected processes for presenting assets, onboarding participants, managing subscriptions, and tracking holdings. Tokenized asset products also need consistent records across platform and chain-related workflows.
@@ -602,7 +573,7 @@ Tijani's participation: Tijani participated in platform development and deployme
 Implementation areas: RWA Tokenization, Asset Listings, Investor Onboarding, Digital Securities, Subscriptions, Cap Tables, Portfolio Tracking, Blockchain Coordination
 Tags: FinTech, Tokenization, Marketplace, Asset Management
 - Official project site: https://libertum.io/en/
-Screenshot: /images/portfolio/projects/live-sites/libertum-tokenization-platform.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/libertum-tokenization-platform.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in platform development and deployment, contributing to product workflows related to asset listings, investor management, marketplace interactions, and blockchain transaction coordination.
@@ -627,7 +598,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 22. FileRun — Self-Hosted File Management
+### 21. FileRun — Self-Hosted File Management
 Case study: https://tijani-porfolio.dev/work/filerun-file-management
 Product context: FileRun provides web-based file management that can run on Linux or Windows servers and common self-hosted infrastructure. The supplied project inventory associates the product with document management, file access, and deployment workflows. Tijani participated in developing and deploying the product, with engineering contributions in PHP, MySQL, File Management, Document Access, Self-Hosted Deployment.
 Problem: Organizations need a manageable way to store, organize, access, and share files while retaining control over their hosting environment and data.
@@ -658,7 +629,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 23. TaxSlayer Pro — Tax Preparation Workflows
+### 22. TaxSlayer Pro — Tax Preparation Workflows
 Case study: https://tijani-porfolio.dev/work/taxslayer-pro-workflows
 Product context: TaxSlayer Pro serves professional tax preparers and tax offices. The supplied inventory identifies professional tax preparation workflows as the project area associated with this product. Tijani participated in developing and deploying the product, with engineering contributions in Tax Preparation, Professional Software, Client Workflows, Return Preparation, Review & Filing.
 Problem: Tax offices need dependable software workflows to prepare, review, and manage returns across clients and filing periods.
@@ -666,7 +637,7 @@ Tijani's participation: Tijani participated in developing and deploying software
 Implementation areas: Tax Preparation, Professional Software, Client Workflows, Return Preparation, Review & Filing
 Tags: Tax Software, Professional Services, Workflow Software, FinTech
 - Official project site: https://www.taxslayerpro.com/
-Screenshot: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying software workflows within the professional tax-preparation product area. The available notes do not identify a specific TaxSlayer Pro module or individual technology stack, so this entry does not assign narrower feature ownership.
@@ -688,7 +659,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 24. Northflank — Deployment & Infrastructure
+### 23. Northflank — Deployment & Infrastructure
 Case study: https://tijani-porfolio.dev/work/northflank-deployment-platform
 Product context: Northflank supports workflows that move software from source repositories to running services. Its public platform description includes service deployment, container builds, Git-based automation, databases, jobs, networking, and orchestration. Tijani participated in developing and deploying the product, with engineering contributions in Cloud Delivery, Container Builds, Services, Databases, Background Jobs.
 Problem: Modern applications combine services, databases, and background jobs. Teams need repeatable ways to build, deploy, and operate those workloads without manually coordinating every infrastructure step.
@@ -696,7 +667,7 @@ Tijani's participation: Tijani participated in developing and deploying platform
 Implementation areas: Cloud Delivery, Container Builds, Services, Databases, Background Jobs, GitOps, Orchestration
 Tags: Cloud, DevOps, Deployment, Infrastructure
 - Official project site: https://northflank.com/
-Screenshot: /images/portfolio/projects/live-sites/northflank-deployment-platform.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/northflank-deployment-platform.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying platform-related software using the deployment and infrastructure workflows identified in the project inventory. The supplied notes do not specify a particular Northflank product component or implementation module.
@@ -720,7 +691,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 25. MyOrbitHealth — Telehealth Platform
+### 24. MyOrbitHealth — Telehealth Platform
 Case study: https://tijani-porfolio.dev/work/myorbithealth-telehealth
 Product context: MyOrbitHealth supports healthcare businesses launching branded virtual-care services. Public product information describes patient storefronts and intake, provider workflows, pharmacy and laboratory fulfillment, messaging, scheduling, and connections to external business systems through APIs and webhooks. Tijani participated in developing and deploying the product, with engineering contributions in Telehealth, Patient Intake, Provider Workflows, Pharmacy & Labs, APIs.
 Problem: A telehealth service must connect the patient-facing brand experience with the clinical and operational systems behind care delivery. Fragmented intake, provider, pharmacy, lab, and communication systems can create disconnected journeys.
@@ -728,7 +699,7 @@ Tijani's participation: Tijani participated in developing and deploying the heal
 Implementation areas: Telehealth, Patient Intake, Provider Workflows, Pharmacy & Labs, APIs, Webhooks, Healthcare Integrations
 Tags: HealthTech, Telehealth, Integrations, Patient Experience
 - Official project site: https://myorbithealth.com/
-Screenshot: /images/portfolio/projects/live-sites/myorbithealth-telehealth.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/myorbithealth-telehealth.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the healthcare technology product, contributing to the connected application and integration workflows that support patient-facing and operational experiences.
@@ -752,7 +723,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 26. Andy Labs — AI Executive Assistant
+### 25. Andy Labs — AI Executive Assistant
 Case study: https://tijani-porfolio.dev/work/andy-labs-ai-assistant
 Product context: Andy Labs presents an AI chief-of-staff product that works across connected business systems. Its public description emphasizes operational tasks, dedicated execution environments, configurable rules, and human approval before sensitive actions such as sending, paying, or deleting. Tijani participated in developing and deploying the product, with engineering contributions in AI Assistant, Business Operations, System Integrations, Task Automation, Approval Controls.
 Problem: Business operators spend time moving between email, finance, analytics, and communication tools to complete repetitive operational tasks. An assistant needs connected context and explicit approval boundaries before carrying out sensitive actions.
@@ -760,7 +731,7 @@ Tijani's participation: Tijani participated in developing and deploying the AI a
 Implementation areas: AI Assistant, Business Operations, System Integrations, Task Automation, Approval Controls, Dedicated Execution
 Tags: AI Agents, Automation, Integrations, Operations
 - Official project site: https://andylabs.io/
-Screenshot: /images/portfolio/projects/live-sites/andy-labs-ai-assistant.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/andy-labs-ai-assistant.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the AI assistant product, contributing to the software and integration workflows that connect an assistant experience with real business systems.
@@ -783,7 +754,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 27. Synthreo — Enterprise AI Infrastructure
+### 26. Synthreo — Enterprise AI Infrastructure
 Case study: https://tijani-porfolio.dev/work/synthreo-enterprise-ai
 Product context: Synthreo positions itself as infrastructure for technology services building AI offerings. Its public site describes subscription management, usage limits, building and sharing services, hosting, security, and certification. Tijani participated in developing and deploying the product, with engineering contributions in AI Infrastructure, Subscriptions, Usage Limits, Hosting, Security.
 Problem: Organizations delivering AI services need more than model access. They need infrastructure for hosting, usage governance, customer-facing packaging, security, and recurring service operations.
@@ -791,7 +762,7 @@ Tijani's participation: Tijani participated in developing and deploying the ente
 Implementation areas: AI Infrastructure, Subscriptions, Usage Limits, Hosting, Security, Certification, Service Delivery
 Tags: Enterprise AI, Infrastructure, SaaS, Service Platform
 - Official project site: https://synthreo.ai/
-Screenshot: /images/portfolio/projects/live-sites/synthreo-enterprise-ai.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/synthreo-enterprise-ai.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the enterprise AI platform, contributing to product engineering and the connected application workflows that support AI service delivery.
@@ -815,7 +786,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 28. Interra Health — Healthcare Technology
+### 27. Interra Health — Healthcare Technology
 Case study: https://tijani-porfolio.dev/work/interra-health-platform
 Product context: Interra Health is listed in the supplied project inventory as a healthcare technology engagement. The notes identify the product area but do not enumerate individual modules, clinical workflows, or a technology stack. Tijani participated in developing and deploying the product, with engineering contributions in Healthcare Technology, Application Development, Integration, Testing, Deployment.
 Problem: Healthcare software must present information and support workflows in a way that fits the needs of patients, providers, or healthcare operators. The supplied material does not specify a narrower problem statement for this engagement.
@@ -823,7 +794,7 @@ Tijani's participation: Tijani participated in developing and deploying the heal
 Implementation areas: Healthcare Technology, Application Development, Integration, Testing, Deployment
 Tags: HealthTech, Software Engineering, Product Development
 - Official project site: https://interrahealth.com/
-Screenshot: /images/portfolio/projects/live-sites/interra-health-platform.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/interra-health-platform.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the healthcare technology product. This entry records collaborative software engineering participation without assigning a specific clinical module or implementation detail that was not included in the source notes.
@@ -844,7 +815,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 29. Definity — Healthcare Workforce Platform
+### 28. Definity — Healthcare Workforce Platform
 Case study: https://tijani-porfolio.dev/work/definity-workforce-platform
 Product context: Definity focuses on healthcare labor management. Its public product description highlights workforce visibility, predictive planning, mobile-first booking, and deployment of different staffing models across facilities and locations. Tijani participated in developing and deploying the product, with engineering contributions in Workforce Visibility, Predictive Planning, Mobile Booking, Staff Deployment, Healthcare Labor.
 Problem: Health systems need to align clinician availability with demand while managing different workforce models and multiple locations. Fragmented workforce information makes it harder to plan and deploy staff efficiently.
@@ -852,7 +823,7 @@ Tijani's participation: Tijani participated in developing and deploying the work
 Implementation areas: Workforce Visibility, Predictive Planning, Mobile Booking, Staff Deployment, Healthcare Labor
 Tags: HealthTech, Workforce, Scheduling, Operations
 - Official project site: https://definitywfs.com/
-Screenshot: /images/portfolio/projects/live-sites/definity-workforce-platform.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/definity-workforce-platform.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the workforce platform, contributing to the application delivery and operational workflows associated with healthcare workforce planning and management.
@@ -874,7 +845,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 30. Service Fusion — Field Service Management
+### 29. Service Fusion — Field Service Management
 Case study: https://tijani-porfolio.dev/work/service-fusion-field-service
 Product context: Service Fusion supports field-service businesses such as HVAC, plumbing, electrical, and appliance service providers. Its public site describes scheduling and dispatch, estimates, job management, customer records, GPS tracking, invoices, payments, and technician mobile workflows. Tijani participated in developing and deploying the product, with engineering contributions in Customer Management, Estimates, Scheduling, Dispatch, Job Management.
 Problem: Field-service businesses coordinate office staff, dispatchers, technicians, customers, schedules, estimates, and payments. A connected platform helps keep job status and customer communication aligned from booking through invoicing.
@@ -907,7 +878,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 31. OurBlackGuide — React Native Marketplace
+### 30. OurBlackGuide — React Native Marketplace
 Case study: https://tijani-porfolio.dev/work/ourblackguide-react-native
 Product context: OurBlackGuide is a community discovery application connecting users with local businesses, professional services, entrepreneurs, events, career resources, and marketplace listings. Tijani contributed to the React Native architecture and reusable iOS/Android components, then integrated the account, discovery, profile, and listing workflows.
 Problem: A community directory needs more than a list of business names. Users need ways to find relevant services and events, narrow results by category and location, review business profiles, and interact with listings from a mobile device.
@@ -915,7 +886,7 @@ Tijani's participation: Tijani participated in developing and deploying OurBlack
 Implementation areas: React Native, TypeScript, React Navigation, TanStack Query, Authentication, REST APIs
 Tags: React Native, Mobile, Marketplace, Directory Search
 - Official project site: https://apps.apple.com/us/app/ourblackguide/id6816153059
-Screenshot: /images/portfolio/projects/live-sites/ourblackguide-react-native.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/ourblackguide-react-native.png (captured)
 
 #### Tijani's role
 Tijani contributed to the React Native application architecture and reusable cross-platform components using TypeScript, React Navigation, and TanStack Query. He integrated authentication and APIs, built directory-search and filter experiences, and worked on business profiles, image uploads, deep links, and production releases.
@@ -933,7 +904,7 @@ The documented stack—React Native, TypeScript, React Navigation, and TanStack 
 
 ---
 
-### 32. Parente AI — Cross-Platform Health Application
+### 31. Parente AI — Cross-Platform Health Application
 Case study: https://tijani-porfolio.dev/work/parente-ai-mobile-health
 Product context: Parente AI is a pediatric behavioral-health application combining parent-led therapy, child psychology, clinician communication, and AI-assisted coaching. Tijani built Flutter mobile workflows for family onboarding, assessments, and patient messaging, integrated APIs, and addressed reliability issues that affected real user flows.
 Problem: A family-facing health application must preserve the correct profile and assessment state while moving between onboarding, assessments, and patient messaging. API inconsistencies and expired sessions can interrupt that journey and leave forms incomplete or state stale.
@@ -943,7 +914,7 @@ Tags: Flutter, HealthTech, Mobile, API Integration
 - Website: https://www.parentehealth.com/
 - App Store: https://apps.apple.com/us/app/parente/id6749544630
 - Google Play: https://play.google.com/store/apps/details?id=pat.parente.ai
-Screenshot: /images/portfolio/projects/live-sites/parente-ai-mobile-health.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/parente-ai-mobile-health.png (captured)
 
 #### Tijani's role
 Tijani built Flutter workflows for family onboarding, assessments, and patient messaging. He integrated the application APIs and addressed token expiration, inconsistent responses, stale state after profile switching, incomplete forms, and iOS/Android release needs.
@@ -961,7 +932,7 @@ The application was developed for iOS and Android using Flutter. The supplied ma
 
 ---
 
-### 33. Deed — Driver Delivery Application
+### 32. Deed — Driver Delivery Application
 Case study: https://tijani-porfolio.dev/work/deed-driver-delivery
 Product context: Deed is a driver delivery application built for a UPS partner in Iceland. Tijani developed the Flutter application supporting package scanning and delivery tasks, using Firebase Authentication and a documented set of state-management, dependency-injection, reactive, and file-selection tools.
 Problem: Delivery drivers need mobile workflows that let them carry out package-related tasks while working in the field. The application brings package scanning and delivery actions into a driver-facing mobile experience.
@@ -984,7 +955,7 @@ The project is documented as a Flutter/Dart application with Firebase Authentica
 
 ---
 
-### 34. GemsHarbor — Marketplace & Auctions
+### 33. GemsHarbor — Marketplace & Auctions
 Case study: https://tijani-porfolio.dev/work/gemsharbor-marketplace
 Product context: GemsHarbor is a B2B/B2C gemstone and jewelry marketplace. Tijani worked on the commerce workflows spanning product listings, user dashboards, auctions, bidding, offers, payment integrations, notifications, and order progression.
 Problem: A specialist marketplace needs to support both product discovery and transaction workflows. Listings, auction activity, offers, payment status, notifications, and orders need to connect so buyers and sellers can follow a transaction through its stages.
@@ -1009,7 +980,7 @@ The supplied resume identifies the major marketplace workflows but does not prov
 
 ---
 
-### 35. Charter Steel — Corporate Web Experience
+### 34. Charter Steel — Corporate Web Experience
 Case study: https://tijani-porfolio.dev/work/charter-steel-web
 Product context: Charter Steel is an industrial steel manufacturer. Tijani's documented contribution includes website development, responsive page layouts, corporate presentation, and organization of business-facing information for professional audiences.
 Problem: An industrial corporate website needs to communicate a company's capabilities and business information clearly to customers and professional audiences. The experience should remain usable across screen sizes while keeping important content organized and easy to navigate.
@@ -1017,7 +988,7 @@ Tijani's participation: Tijani participated in developing and deploying the Char
 Implementation areas: Web Development, Responsive Design, Corporate Website, Content Organization
 Tags: Corporate Website, Responsive Design, Industrial, B2B
 - Official project site: https://www.chartersteel.com/
-Screenshot: /images/portfolio/projects/live-sites/charter-steel-web.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/charter-steel-web.png (captured)
 
 #### Tijani's role
 Tijani contributed to website development, responsive layouts, corporate presentation, and business-facing content organization.
@@ -1031,7 +1002,7 @@ The project required a consistent presentation of company and business informati
 
 ---
 
-### 36. Nomo — Family Organizer
+### 35. Nomo — Family Organizer
 Case study: https://tijani-porfolio.dev/work/nomo-family-organizer
 Product context: Nomo organizes household responsibilities into assigned tasks and reminders. Family members can delegate chores and errands, set deadlines, receive notifications, repeat ongoing tasks, and see whether work has been completed without relying on long message threads or one person remembering everything. Tijani participated in developing and deploying the product, with engineering contributions in Mobile Application, Task Assignment, Deadlines, Recurring Activities, Push Notifications.
 Problem: Household work is often coordinated informally, leaving one person to remember deadlines, appointments, errands, and follow-ups. The product gives each task an owner and a reminder so responsibility is shared and visible.
@@ -1039,7 +1010,7 @@ Tijani's participation: Tijani participated in the application's development and
 Implementation areas: Mobile Application, Task Assignment, Deadlines, Recurring Activities, Push Notifications, Completion Tracking
 Tags: Mobile, Productivity, Family Apps, Notifications
 - Official project site: https://apps.apple.com/us/app/family-organizer-nomo/id6758967723
-Screenshot: /images/portfolio/projects/live-sites/nomo-family-organizer.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/nomo-family-organizer.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in the application's development and production deployment, contributing to the mobile product experience for task assignment, reminders, recurring activities, and completion tracking.
@@ -1062,7 +1033,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 37. AD Spin Studio — Guided Vehicle Walkarounds
+### 36. AD Spin Studio — Guided Vehicle Walkarounds
 Case study: https://tijani-porfolio.dev/work/ad-spin-studio
 Product context: AD Spin Studio provides a guided vehicle walkaround experience through a mobile interface. The application organizes an inspection or presentation into clear steps so users can move through the vehicle experience in a consistent sequence. Tijani participated in developing and deploying the product, with engineering contributions in Mobile Application, Guided Workflows, Vehicle Walkarounds, Cross-Platform UX, Media Interaction.
 Problem: Vehicle walkarounds need a repeatable presentation flow that users can follow on a phone. A guided experience helps organize each stage rather than relying on an unstructured sequence of photos or verbal notes.
@@ -1070,7 +1041,7 @@ Tijani's participation: Tijani participated in developing and deploying the mobi
 Implementation areas: Mobile Application, Guided Workflows, Vehicle Walkarounds, Cross-Platform UX, Media Interaction
 Tags: Automotive, Mobile, Guided Workflows, iOS
 - Official project site: https://apps.apple.com/ca/app/ad-spin-studio/id6754834221
-Screenshot: /images/portfolio/projects/live-sites/ad-spin-studio.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/ad-spin-studio.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the mobile application, contributing to the cross-platform user experience and guided step-by-step workflow implementation described in the project inventory.
@@ -1092,7 +1063,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 38. Peptide Paradigm — Peptide Reference App
+### 37. Peptide Paradigm — Peptide Reference App
 Case study: https://tijani-porfolio.dev/work/peptide-paradigm
 Product context: Peptide Paradigm is an information-focused mobile product that helps users explore peptide profiles and reference material. Its public product description highlights searchable peptide information, mechanisms, common dosing references, half-lives, stacks, and protocol-oriented learning content. Tijani participated in developing and deploying the product, with engineering contributions in Mobile Application, Reference Content, Search & Discovery, Structured Profiles, Information Architecture.
 Problem: Peptide information is often scattered across forums and disconnected references. The app brings related information into a searchable structure so users can find and review material in one place.
@@ -1100,7 +1071,7 @@ Tijani's participation: Tijani participated in developing and deploying the mobi
 Implementation areas: Mobile Application, Reference Content, Search & Discovery, Structured Profiles, Information Architecture
 Tags: Mobile, Research Reference, Search, Education
 - Official project site: https://www.peptideparadigm.app/
-Screenshot: /images/portfolio/projects/live-sites/peptide-paradigm.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/peptide-paradigm.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the mobile product, contributing to its information-centered application experience and peptide discovery workflows.
@@ -1122,7 +1093,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 39. Music Space Booking App
+### 38. Music Space Booking App
 Case study: https://tijani-porfolio.dev/work/music-space-booking-app
 Product context: The application connects people looking for music spaces with venue hosts. The supplied project notes describe discovery and favorites, host messaging, booking schedules, Stripe payments, user profiles, and venue-room management as the core product workflows. Tijani participated in developing and deploying the product, with engineering contributions in Flutter Mobile App, Venue Discovery, Favorites, Host Messaging, Scheduling.
 Problem: Finding and booking a suitable music space involves discovering venues, checking availability, coordinating with hosts, and completing payment. The product brings those steps into a connected mobile booking journey.
@@ -1155,7 +1126,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 40. Location-Based Mobile App
+### 39. Location-Based Mobile App
 Case study: https://tijani-porfolio.dev/work/location-based-mobile-app
 Product context: This mobile project combines Flutter screens with location permissions, navigation flows, and separate business and data layers. The supplied notes also identify German localization using flutter_i18n as part of the implementation. Tijani participated in developing and deploying the product, with engineering contributions in Flutter, Location Permissions, Navigation, Business Layer, Data Layer.
 Problem: Location-aware applications need to request and manage device permissions while presenting navigation and business information in a predictable user experience. Localization adds another requirement: the same screens and flows must remain understandable in the selected language.
@@ -1187,7 +1158,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 41. macOS Roulette Tactics
+### 40. macOS Roulette Tactics
 Case study: https://tijani-porfolio.dev/work/macos-roulette-tactics
 Product context: MacOS Roulette Tactics is a desktop product focused on roulette strategy and related session information. The project inventory identifies Swift, SwiftUI, and SQLite as the implementation technologies. Tijani participated in developing and deploying the product, with engineering contributions in macOS Desktop, Swift, SwiftUI, SQLite, Desktop UX.
 Problem: A desktop strategy tool needs a focused interface for users to work with roulette-related information and keep relevant data available between sessions.
@@ -1217,7 +1188,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 42. Baccarat Stat Master
+### 41. Baccarat Stat Master
 Case study: https://tijani-porfolio.dev/work/baccarat-stat-master
 Product context: Baccarat Stat Master is a desktop application centered on baccarat statistics and related session data. The supplied inventory identifies Swift, SwiftUI, and SQLite as the technology foundation. Tijani participated in developing and deploying the product, with engineering contributions in macOS Desktop, Swift, SwiftUI, SQLite, Statistics Interface.
 Problem: A statistics-focused desktop tool needs to present baccarat-related information in a usable interface and retain the data required for analysis across sessions.
@@ -1247,7 +1218,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 43. Sisu — Real Estate Transaction Intelligence
+### 42. Sisu — Real Estate Transaction Intelligence
 Case study: https://tijani-porfolio.dev/work/sisu-real-estate-operations
 Product context: Sisu organizes real-estate team operations around deals and agent activity. The supplied inventory describes transaction management, commission tracking, performance visibility, and recruiting workflows as product areas. Tijani participated in developing and deploying the product, with engineering contributions in Transaction Management, Commission Workflows, Agent Performance, Recruiting, Business Reporting.
 Problem: Brokerages and teams need a consistent view of transactions, commissions, agent activity, and recruiting. When those workflows are spread across separate tools, managers have less visibility into progress and performance.
@@ -1255,7 +1226,7 @@ Tijani's participation: Tijani participated in developing and deploying the real
 Implementation areas: Transaction Management, Commission Workflows, Agent Performance, Recruiting, Business Reporting
 Tags: Real Estate, SaaS, Operations, Analytics
 - Official project site: https://sisu.co/
-Screenshot: /images/portfolio/projects/live-sites/sisu-real-estate-operations.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/sisu-real-estate-operations.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the real-estate operations product, contributing to software workflows that support transaction visibility, commission-related processes, performance reporting, and recruiting operations.
@@ -1277,7 +1248,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 44. PressBeyond — Hotel Discovery & Booking
+### 43. PressBeyond — Hotel Discovery & Booking
 Case study: https://tijani-porfolio.dev/work/pressbeyond-hotel-discovery
 Product context: PressBeyond helps travelers discover and compare design-driven hotels using concise visual summaries of property style, service, and location. The public site also describes a direct booking engine and a cash-back offering for eligible stays. Tijani participated in developing and deploying the product, with engineering contributions in Hotel Discovery, Visual Comparison, Property Information, Search, Booking Flow.
 Problem: Comparing boutique and luxury hotels can require opening many separate listings and reconciling inconsistent information. A consistent visual comparison experience helps travelers narrow options more efficiently.
@@ -1285,7 +1256,7 @@ Tijani's participation: Tijani participated in developing and deploying the trav
 Implementation areas: Hotel Discovery, Visual Comparison, Property Information, Search, Booking Flow
 Tags: Travel, Discovery, Booking, Marketplace
 - Official project site: https://www.pressbeyond.com/
-Screenshot: /images/portfolio/projects/live-sites/pressbeyond-hotel-discovery.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/pressbeyond-hotel-discovery.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the travel product, contributing to the user-facing hotel discovery and booking experience described in the project inventory.
@@ -1307,7 +1278,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 45. Pet-Free Hotels — No-Pet Policy Discovery
+### 44. Pet-Free Hotels — No-Pet Policy Discovery
 Case study: https://tijani-porfolio.dev/work/pet-free-hotels
 Product context: Pet-Free Hotels organizes hotels with published no-pet policies into a searchable directory. The public site highlights location-based search, state and map navigation, and policy context so travelers can identify properties that match their accommodation preferences. Tijani participated in developing and deploying the product, with engineering contributions in Hotel Directory, Location Search, Policy Information, Map Navigation, Property Discovery.
 Problem: Travelers with specific accommodation preferences need reliable information about hotel policies. Searching one property at a time makes it difficult to compare options across a destination.
@@ -1315,7 +1286,7 @@ Tijani's participation: Tijani participated in developing and deploying the hote
 Implementation areas: Hotel Directory, Location Search, Policy Information, Map Navigation, Property Discovery
 Tags: Travel, Search, Directory, Policy Discovery
 - Official project site: https://petfreehotels.com/
-Screenshot: /images/portfolio/projects/live-sites/pet-free-hotels.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/pet-free-hotels.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the hotel-discovery experience, contributing to the search and information workflows that organize properties around documented pet-policy information.
@@ -1337,7 +1308,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 46. Omni — Ride-Hailing & Trip Management
+### 45. Omni — Ride-Hailing & Trip Management
 Case study: https://tijani-porfolio.dev/work/omni-ride-hailing
 Product context: Omni supports on-demand and scheduled ride workflows. The supplied inventory describes ride requests, driver matching, scheduled journeys, and live trip tracking as the core product experience. Tijani participated in developing and deploying the product, with engineering contributions in Ride Requests, Scheduled Rides, Driver Matching, Trip Tracking, Mobility Workflows.
 Problem: A ride service must coordinate rider requests, driver availability, scheduled pickup times, and changing trip status. Users need consistent visibility from booking through pickup and completion.
@@ -1345,7 +1316,7 @@ Tijani's participation: Tijani participated in developing and deploying the mobi
 Implementation areas: Ride Requests, Scheduled Rides, Driver Matching, Trip Tracking, Mobility Workflows
 Tags: Mobility, Mobile, Scheduling, Real-Time Tracking
 - Official project site: https://www.rideomni.com/
-Screenshot: /images/portfolio/projects/live-sites/omni-ride-hailing.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/omni-ride-hailing.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the mobility product, contributing to the application workflows that connect ride requests, scheduling, driver assignment, and trip-status visibility.
@@ -1367,7 +1338,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 47. Swiftpoint Z2 — Programmable Gaming Mouse
+### 46. Swiftpoint Z2 — Programmable Gaming Mouse
 Case study: https://tijani-porfolio.dev/work/swiftpoint-z2
 Product context: Swiftpoint Z2 combines programmable mouse hardware with configurable software features. The supplied inventory identifies macros, analog inputs, custom controls, and device profiles as the main product capabilities. Tijani participated in developing and deploying the product, with engineering contributions in Programmable Controls, Macros, Analog Inputs, Device Profiles, Configuration Experience.
 Problem: Advanced users need input devices that can adapt to different games and workflows. Configurable controls and profiles make complex actions and personal settings reusable across activities.
@@ -1375,7 +1346,7 @@ Tijani's participation: Tijani participated in the product's development and dep
 Implementation areas: Programmable Controls, Macros, Analog Inputs, Device Profiles, Configuration Experience
 Tags: Hardware, Input Devices, Configuration, Gaming
 - Official project site: https://www.swiftpoint.com/products/gaming-mice-swiftpoint-z2
-Screenshot: /images/portfolio/projects/live-sites/swiftpoint-z2.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/swiftpoint-z2.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in the product's development and deployment work. The available project notes identify the programmable control and profile experience but do not specify a particular hardware, firmware, or software subsystem as his individual ownership area.
@@ -1397,7 +1368,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 48. Wispr Flow — AI Voice Dictation
+### 47. Wispr Flow — AI Voice Dictation
 Case study: https://tijani-porfolio.dev/work/wispr-flow-dictation
 Product context: Wispr Flow lets users dictate in desktop and mobile applications. Its public product information describes speech transcription, cleanup of filler words and punctuation, and insertion of the refined text into the active field for messages, documents, notes, and code. Tijani participated in developing and deploying the product, with engineering contributions in Voice Dictation, Speech Transcription, Text Formatting, Cross-Application Input, Desktop & Mobile.
 Problem: Typing can interrupt a user's flow when drafting messages, documents, or notes. Voice dictation is more useful when the transcript is cleaned up and delivered directly into the application already in use.
@@ -1405,7 +1376,7 @@ Tijani's participation: Tijani participated in developing and deploying the prod
 Implementation areas: Voice Dictation, Speech Transcription, Text Formatting, Cross-Application Input, Desktop & Mobile
 Tags: AI, Voice, Productivity, Cross-Platform
 - Official project site: https://wisprflow.ai/
-Screenshot: /images/portfolio/projects/live-sites/wispr-flow-dictation.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/wispr-flow-dictation.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the productivity product, contributing to its AI-enabled voice-to-text application experience and cross-platform workflow delivery.
@@ -1427,7 +1398,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 49. PrivateFly — Private Aviation Booking
+### 48. PrivateFly — Private Aviation Booking
 Case study: https://tijani-porfolio.dev/work/privatefly-aviation-booking
 Product context: PrivateFly provides private-jet charter and related aviation services. The supplied project inventory identifies private aviation booking and partner-distribution workflows as the product area associated with this engagement. Tijani participated in developing and deploying the product, with engineering contributions in Flight Search, Charter Options, Booking Workflow, Partner Distribution, Aviation Operations.
 Problem: Private aviation bookings involve route, timing, aircraft, availability, and partner coordination. A digital workflow needs to present flight options and support the path from search to quote and booking.
@@ -1435,7 +1406,7 @@ Tijani's participation: Tijani participated in developing and deploying the avia
 Implementation areas: Flight Search, Charter Options, Booking Workflow, Partner Distribution, Aviation Operations
 Tags: Aviation, Booking, Travel, Integrations
 - Official project site: https://www.privatefly.com/
-Screenshot: /images/portfolio/projects/live-sites/privatefly-aviation-booking.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/privatefly-aviation-booking.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the aviation product experience, contributing to the booking and partner-distribution workflows described in the project inventory.
@@ -1457,7 +1428,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 50. HandHistory.com — Poker Analytics
+### 49. HandHistory.com — Poker Analytics
 Case study: https://tijani-porfolio.dev/work/handhistory-poker-analytics
 Product context: HandHistory.com imports poker hand histories and turns them into interactive replays and analytics. Its public product material describes profit-and-loss charts, hand playback, card and pot progression, bankroll tracking, and tools for identifying patterns and leaks in play. Tijani participated in developing and deploying the product, with engineering contributions in Data Ingestion, Hand Replay, Event Reconstruction, Poker Analytics, Profit & Loss.
 Problem: Raw hand-history files are difficult to inspect and compare manually. Players need a way to reconstruct hands, review decisions, and connect individual actions with longer-term performance trends.
@@ -1465,7 +1436,7 @@ Tijani's participation: Tijani participated in developing and deploying the poke
 Implementation areas: Data Ingestion, Hand Replay, Event Reconstruction, Poker Analytics, Profit & Loss, Interactive Review
 Tags: Analytics, Data Processing, Interactive UI, Poker
 - Official project site: https://handhistory.com/
-Screenshot: /images/portfolio/projects/live-sites/handhistory-poker-analytics.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/handhistory-poker-analytics.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the poker analytics product, contributing to the data-ingestion, event-reconstruction, analytics, and interactive-interface work areas identified in the supplied inventory.
@@ -1488,7 +1459,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 51. OnTrajectory — Financial Planning
+### 50. OnTrajectory — Financial Planning
 Case study: https://tijani-porfolio.dev/work/ontrajectory-financial-planning
 Product context: OnTrajectory focuses on lifetime financial projections and scenario planning. The supplied inventory identifies cash-flow forecasting, retirement planning, and the ability to explore different financial assumptions as the product's primary scope. Tijani participated in developing and deploying the product, with engineering contributions in Financial Planning, Cash-Flow Projections, Retirement Modeling, Scenario Analysis, Interactive Inputs.
 Problem: Long-term financial decisions depend on changing assumptions about income, spending, savings, and retirement timing. A planning application needs to make the effects of those assumptions understandable across a long horizon.
@@ -1496,7 +1467,7 @@ Tijani's participation: Tijani participated in developing and deploying the fina
 Implementation areas: Financial Planning, Cash-Flow Projections, Retirement Modeling, Scenario Analysis, Interactive Inputs
 Tags: FinTech, Financial Modeling, SaaS, Scenario Planning
 - Official project site: https://www.ontrajectory.com/
-Screenshot: /images/portfolio/projects/live-sites/ontrajectory-financial-planning.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/ontrajectory-financial-planning.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the financial-planning product, contributing to application workflows that present financial inputs, projections, and scenario comparisons.
@@ -1518,7 +1489,7 @@ Tijani's participation connected the product requirements to working application
 
 ---
 
-### 52. Appleseed Planner — Retirement Simulation
+### 51. Appleseed Planner — Retirement Simulation
 Case study: https://tijani-porfolio.dev/work/appleseed-planner
 Product context: Appleseed Planner guides users through a short financial intake and creates a plan with scenario modeling. Its public product material describes a Monte Carlo retirement-planning engine and tools intended to help users evaluate future financial paths. Tijani participated in developing and deploying the product, with engineering contributions in Financial Planning, Retirement Simulation, Monte Carlo Modeling, User Inputs, Scenario Comparison.
 Problem: Retirement decisions involve uncertainty around spending, savings, timing, and future returns. Users need to see how their assumptions influence possible outcomes rather than rely on a single static estimate.
@@ -1526,7 +1497,7 @@ Tijani's participation: Tijani participated in developing and deploying the plan
 Implementation areas: Financial Planning, Retirement Simulation, Monte Carlo Modeling, User Inputs, Scenario Comparison
 Tags: FinTech, Retirement, Financial Modeling, Simulation
 - Official project site: https://appleseedplanner.com/
-Screenshot: /images/portfolio/projects/live-sites/appleseed-planner.png (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/appleseed-planner.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the planning product, contributing to the application experience and financial-simulation workflows described in the project inventory.
@@ -1547,4 +1518,4 @@ Appleseed Planner guides users through a short financial intake and creates a pl
 Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies Financial Planning, Retirement Simulation, Monte Carlo Modeling, User Inputs, Scenario Comparison as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.
 
 ## Screenshot capture
-45 public project destinations are configured for real browser screenshot capture. The script saves actual Chrome/Edge screenshots into public/images/portfolio/projects/live-sites/. 7 internal projects have no public URL; a genuine screenshot requires an authorized staging URL or supplied image.
+45 public project destinations are configured for real browser screenshot capture. The script saves actual Chrome/Edge screenshots into public/images/portfolio/projects/live-sites/. 6 internal projects have no public URL; a genuine screenshot requires an authorized staging URL or supplied image.

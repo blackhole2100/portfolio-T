@@ -10,13 +10,13 @@ import {
   remainingSelectedProjectWork,
 } from "../src/data/home-project-sections";
 
-test("homepage sections contain 52 unique projects in total", () => {
-  assert.equal(caseStudies.length, 52, "the complete portfolio archive contains 52 case studies");
-  assert.equal(projects.length, 52, "every case study has one portfolio project record");
+test("homepage sections contain 51 unique projects in total", () => {
+  assert.equal(caseStudies.length, 51, "the complete portfolio archive contains 52 case studies");
+  assert.equal(projects.length, 51, "every case study has one portfolio project record");
 
-  assert.equal(homepageFeaturedCaseStudies.length, 3, "featured case studies must contain three projects");
+  assert.equal(homepageFeaturedCaseStudies.length, 2, "featured case studies must contain two projects");
   assert.equal(selectedProjectWork.length, 49, "selected project work must contain the remaining 49 projects");
-  assert.equal(homepageFeaturedCaseStudies.length + selectedProjectWork.length, 52);
+  assert.equal(homepageFeaturedCaseStudies.length + selectedProjectWork.length, 51);
 
  const caseStudySlugs = new Set<string>(
   homepageFeaturedCaseStudies.map((study) => study.slug)
@@ -57,4 +57,12 @@ test("the homepage partition is derived from the canonical featured case-study s
     homepageFeaturedCaseStudies.map((study) => study.slug),
     featuredCaseStudies.map((study) => study.slug)
   );
+});
+
+
+test("Freight SaaS — QuickBooks Online Integration is fully removed from the portfolio", () => {
+  assert.equal(caseStudies.some((study) => study.slug === "freight-quickbooks-integration"), false);
+  assert.equal(projects.some((project) => project.caseStudy === "freight-quickbooks-integration"), false);
+  assert.equal(homepageFeaturedCaseStudies.some((study) => study.slug === "freight-quickbooks-integration"), false);
+  assert.equal(selectedProjectWork.some((project) => project.caseStudy === "freight-quickbooks-integration"), false);
 });

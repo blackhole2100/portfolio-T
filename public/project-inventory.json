@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-07T19:55:52.818Z",
-  "totalProjects": 52,
+  "generatedAt": "2026-11-09T10:22:09.661Z",
+  "totalProjects": 51,
   "publicProjects": 45,
-  "privateProjects": 7,
+  "privateProjects": 6,
   "items": [
     {
       "number": 1,
@@ -63,7 +63,7 @@
       ],
       "publicUrl": "https://www.anchord.ai/product",
       "screenshot": "/images/portfolio/projects/live-sites/anchord-ai-entity-resolution.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
       "number": 2,
@@ -119,65 +119,10 @@
       ],
       "publicUrl": "https://correlatehealth.com/",
       "screenshot": "/images/portfolio/projects/live-sites/correlate-health-platform-integration.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
       "number": 3,
-      "slug": "freight-quickbooks-integration",
-      "title": "Freight SaaS — QuickBooks Online Integration",
-      "category": "Financial & Logistics Integration",
-      "kind": "system",
-      "theme": "retrieval",
-      "summary": "This project connected freight operating workflows with QuickBooks Online. Tijani built the integration paths around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation, supporting an operation handling approximately 65 brokerages, 52,000 loads, and 90,000 documents each month.",
-      "contribution": "Tijani participated in developing and deploying the freight-to-QuickBooks integration, including OAuth, token refresh, webhook processing, idempotent synchronization, and reconciliation. The scale figures describe the operation supported, not a claim of sole ownership of the freight SaaS product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's role",
-          "body": "Tijani built the integration workflows connecting the freight SaaS operation to QuickBooks Online. His documented responsibilities include OAuth handling, token refresh, webhook processing, idempotent synchronization, and reconciliation.",
-          "points": [
-            "Implemented OAuth authorization and token refresh workflows.",
-            "Connected webhook events to the synchronization process.",
-            "Used idempotent handling to protect against repeated event delivery.",
-            "Built reconciliation workflows to help keep connected operational and accounting records aligned."
-          ]
-        },
-        {
-          "heading": "Operational scale",
-          "body": "The connected operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month. Those figures describe the scale of the operation supported by the integration; they are not presented as a count of records personally processed by one developer.",
-          "points": [
-            "Approximately 65 brokerages.",
-            "Approximately 52,000 loads per month.",
-            "Approximately 90,000 documents per month."
-          ]
-        },
-        {
-          "heading": "Reliability across systems",
-          "body": "The engineering work focused on the points where external integrations commonly become fragile: credentials expire, event notifications repeat, and records need to be reconciled after partial failures. Idempotency and explicit reconciliation were part of the documented workflow rather than optional cleanup tasks.",
-          "points": []
-        }
-      ],
-      "problem": "Freight operations create a large volume of business records that must stay aligned with accounting data. The integration has to work across authorization lifecycles and asynchronous events while avoiding duplicate updates and providing a way to reconcile records when systems drift or an event is retried.",
-      "implementationAreas": [
-        "QuickBooks Online",
-        "OAuth 2.0",
-        "Webhooks",
-        "Token Refresh",
-        "Idempotency",
-        "Reconciliation"
-      ],
-      "tags": [
-        "QuickBooks",
-        "Accounting Integration",
-        "Freight",
-        "Reliability"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 4,
       "slug": "azure-openai-data-processing",
       "title": ".NET 8 & Azure OpenAI Data Processing",
       "category": "Enterprise Data Processing",
@@ -227,7 +172,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 5,
+      "number": 4,
       "slug": "crushbank-enterprise-ai",
       "title": "CrushBank Orchestrate IT — Enterprise AI",
       "category": "Enterprise AI & IT Workflows",
@@ -278,10 +223,10 @@
       ],
       "publicUrl": "https://www.crushbank.com/orchestrate-it/",
       "screenshot": "/images/portfolio/projects/live-sites/crushbank-enterprise-ai.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 6,
+      "number": 5,
       "slug": "arvrobot-real-estate-underwriting",
       "title": "ARVRobot — Real Estate Underwriting",
       "category": "Real Estate Underwriting",
@@ -334,10 +279,10 @@
       ],
       "publicUrl": "https://arvrobot.com/",
       "screenshot": "/images/portfolio/projects/live-sites/arvrobot-real-estate-underwriting.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 7,
+      "number": 6,
       "slug": "shiphype-fulfillment",
       "title": "ShipHype — Logistics & Fulfillment",
       "category": "Logistics & Fulfillment SaaS",
@@ -394,7 +339,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 8,
+      "number": 7,
       "slug": "dealercortex-ai",
       "title": "DealerCortex AI — Automotive Intelligence",
       "category": "Automotive Intelligence",
@@ -447,10 +392,10 @@
       ],
       "publicUrl": "https://dealercortexai.com/",
       "screenshot": "/images/portfolio/projects/live-sites/dealercortex-ai.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 9,
+      "number": 8,
       "slug": "arub-shipping-integrations",
       "title": "Arub Shipping — Carrier & Order Integrations",
       "category": "Shipping & Carrier Integrations",
@@ -499,10 +444,10 @@
       ],
       "publicUrl": "https://arub.com/shipping",
       "screenshot": "/images/portfolio/projects/live-sites/arub-shipping-integrations.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 10,
+      "number": 9,
       "slug": "suppliersift-ap-automation",
       "title": "SupplierSift — Accounts Payable Automation",
       "category": "Accounts Payable Automation",
@@ -555,10 +500,10 @@
       ],
       "publicUrl": "https://suppliersift.com/",
       "screenshot": "/images/portfolio/projects/live-sites/suppliersift-ap-automation.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 11,
+      "number": 10,
       "slug": "calcs-engineering-calculations",
       "title": "Calcs.com — Engineering Calculation Platform",
       "category": "Engineering Calculation Software",
@@ -610,10 +555,10 @@
       ],
       "publicUrl": "https://calcs.com/",
       "screenshot": "/images/portfolio/projects/live-sites/calcs-engineering-calculations.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 12,
+      "number": 11,
       "slug": "loopt-clinical-trial-matching",
       "title": "LooPT CTM — Clinical Trial Matching",
       "category": "Clinical Trial Matching",
@@ -675,10 +620,10 @@
       ],
       "publicUrl": "https://correlatehealth.com/solutions",
       "screenshot": "/images/portfolio/projects/live-sites/loopt-clinical-trial-matching.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 13,
+      "number": 12,
       "slug": "compasshss-healthcare-staffing",
       "title": "CompassHSS — Healthcare Staffing Platform",
       "category": "Healthcare Workforce Management",
@@ -742,10 +687,10 @@
       ],
       "publicUrl": "https://compasshss.com/",
       "screenshot": "/images/portfolio/projects/live-sites/compasshss-healthcare-staffing.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 14,
+      "number": 13,
       "slug": "jobably-ai-job-discovery",
       "title": "Jobably — AI Job Discovery",
       "category": "AI Search & Matching",
@@ -805,10 +750,10 @@
       ],
       "publicUrl": "https://jobably.com/",
       "screenshot": "/images/portfolio/projects/live-sites/jobably-ai-job-discovery.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 15,
+      "number": 14,
       "slug": "sunethix-irb-review",
       "title": "Sunethix — IRB Submission Review",
       "category": "AI Regulatory Document Analysis",
@@ -868,10 +813,10 @@
       ],
       "publicUrl": "https://www.sunethix.com/",
       "screenshot": "/images/portfolio/projects/live-sites/sunethix-irb-review.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 16,
+      "number": 15,
       "slug": "lead-prosper-routing",
       "title": "Lead Prosper — Lead Distribution Platform",
       "category": "Lead Ingestion & Routing",
@@ -931,10 +876,10 @@
       ],
       "publicUrl": "https://www.leadprosper.io/",
       "screenshot": "/images/portfolio/projects/live-sites/lead-prosper-routing.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 17,
+      "number": 16,
       "slug": "echoaeon-ai-lead-automation",
       "title": "Echoaeon — AI Lead Qualification",
       "category": "AI Lead Automation",
@@ -992,10 +937,10 @@
       ],
       "publicUrl": "https://echoaeon.com/",
       "screenshot": "/images/portfolio/projects/live-sites/echoaeon-ai-lead-automation.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 18,
+      "number": 17,
       "slug": "sharkindicators-blackbird",
       "title": "SharkIndicators BlackBird — Trade Management",
       "category": "Trading Automation Software",
@@ -1055,10 +1000,10 @@
       ],
       "publicUrl": "https://www.sharkindicators.com/products/blackbird/",
       "screenshot": "/images/portfolio/projects/live-sites/sharkindicators-blackbird.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 19,
+      "number": 18,
       "slug": "dynamite-docs-document-ai",
       "title": "Dynamite Docs — AI Document Extraction",
       "category": "AI Document Processing",
@@ -1120,10 +1065,10 @@
       ],
       "publicUrl": "https://www.dynamitedocs.com/",
       "screenshot": "/images/portfolio/projects/live-sites/dynamite-docs-document-ai.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 20,
+      "number": 19,
       "slug": "headspin-digital-testing",
       "title": "HeadSpin — Digital Experience Testing",
       "category": "Mobile & Web Testing Platform",
@@ -1183,10 +1128,10 @@
       ],
       "publicUrl": "https://www.headspin.io/",
       "screenshot": "/images/portfolio/projects/live-sites/headspin-digital-testing.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 21,
+      "number": 20,
       "slug": "libertum-tokenization-platform",
       "title": "Libertum — Real-World Asset Tokenization",
       "category": "FinTech & Asset Management",
@@ -1250,10 +1195,10 @@
       ],
       "publicUrl": "https://libertum.io/en/",
       "screenshot": "/images/portfolio/projects/live-sites/libertum-tokenization-platform.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 22,
+      "number": 21,
       "slug": "filerun-file-management",
       "title": "FileRun — Self-Hosted File Management",
       "category": "Document & File Management",
@@ -1316,7 +1261,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 23,
+      "number": 22,
       "slug": "taxslayer-pro-workflows",
       "title": "TaxSlayer Pro — Tax Preparation Workflows",
       "category": "Professional Tax Software",
@@ -1374,10 +1319,10 @@
       ],
       "publicUrl": "https://www.taxslayerpro.com/",
       "screenshot": "/images/portfolio/projects/live-sites/taxslayer-pro-workflows.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 24,
+      "number": 23,
       "slug": "northflank-deployment-platform",
       "title": "Northflank — Deployment & Infrastructure",
       "category": "Developer Platform & Cloud Delivery",
@@ -1439,10 +1384,10 @@
       ],
       "publicUrl": "https://northflank.com/",
       "screenshot": "/images/portfolio/projects/live-sites/northflank-deployment-platform.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 25,
+      "number": 24,
       "slug": "myorbithealth-telehealth",
       "title": "MyOrbitHealth — Telehealth Platform",
       "category": "Healthcare & Telehealth",
@@ -1504,10 +1449,10 @@
       ],
       "publicUrl": "https://myorbithealth.com/",
       "screenshot": "/images/portfolio/projects/live-sites/myorbithealth-telehealth.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 26,
+      "number": 25,
       "slug": "andy-labs-ai-assistant",
       "title": "Andy Labs — AI Executive Assistant",
       "category": "AI Operations & Productivity",
@@ -1567,10 +1512,10 @@
       ],
       "publicUrl": "https://andylabs.io/",
       "screenshot": "/images/portfolio/projects/live-sites/andy-labs-ai-assistant.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 27,
+      "number": 26,
       "slug": "synthreo-enterprise-ai",
       "title": "Synthreo — Enterprise AI Infrastructure",
       "category": "Enterprise AI Platform",
@@ -1632,10 +1577,10 @@
       ],
       "publicUrl": "https://synthreo.ai/",
       "screenshot": "/images/portfolio/projects/live-sites/synthreo-enterprise-ai.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 28,
+      "number": 27,
       "slug": "interra-health-platform",
       "title": "Interra Health — Healthcare Technology",
       "category": "Healthcare Software",
@@ -1691,10 +1636,10 @@
       ],
       "publicUrl": "https://interrahealth.com/",
       "screenshot": "/images/portfolio/projects/live-sites/interra-health-platform.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 29,
+      "number": 28,
       "slug": "definity-workforce-platform",
       "title": "Definity — Healthcare Workforce Platform",
       "category": "Healthcare Workforce Management",
@@ -1752,10 +1697,10 @@
       ],
       "publicUrl": "https://definitywfs.com/",
       "screenshot": "/images/portfolio/projects/live-sites/definity-workforce-platform.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 30,
+      "number": 29,
       "slug": "service-fusion-field-service",
       "title": "Service Fusion — Field Service Management",
       "category": "Field Service SaaS",
@@ -1822,7 +1767,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 31,
+      "number": 30,
       "slug": "ourblackguide-react-native",
       "title": "OurBlackGuide — React Native Marketplace",
       "category": "React Native Marketplace",
@@ -1876,10 +1821,10 @@
       ],
       "publicUrl": "https://apps.apple.com/us/app/ourblackguide/id6816153059",
       "screenshot": "/images/portfolio/projects/live-sites/ourblackguide-react-native.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 32,
+      "number": 31,
       "slug": "parente-ai-mobile-health",
       "title": "Parente AI — Cross-Platform Health Application",
       "category": "Cross-Platform Health App",
@@ -1941,10 +1886,10 @@
       ],
       "publicUrl": "https://www.parentehealth.com/",
       "screenshot": "/images/portfolio/projects/live-sites/parente-ai-mobile-health.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 33,
+      "number": 32,
       "slug": "deed-driver-delivery",
       "title": "Deed — Driver Delivery Application",
       "category": "Flutter Logistics App",
@@ -1993,7 +1938,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 34,
+      "number": 33,
       "slug": "gemsharbor-marketplace",
       "title": "GemsHarbor — Marketplace & Auctions",
       "category": "Jewelry Marketplace & Auctions",
@@ -2050,7 +1995,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 35,
+      "number": 34,
       "slug": "charter-steel-web",
       "title": "Charter Steel — Corporate Web Experience",
       "category": "Industrial Corporate Website",
@@ -2096,10 +2041,10 @@
       ],
       "publicUrl": "https://www.chartersteel.com/",
       "screenshot": "/images/portfolio/projects/live-sites/charter-steel-web.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 36,
+      "number": 35,
       "slug": "nomo-family-organizer",
       "title": "Nomo — Family Organizer",
       "category": "Mobile Family Productivity",
@@ -2159,10 +2104,10 @@
       ],
       "publicUrl": "https://apps.apple.com/us/app/family-organizer-nomo/id6758967723",
       "screenshot": "/images/portfolio/projects/live-sites/nomo-family-organizer.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 37,
+      "number": 36,
       "slug": "ad-spin-studio",
       "title": "AD Spin Studio — Guided Vehicle Walkarounds",
       "category": "Automotive Mobile Application",
@@ -2220,10 +2165,10 @@
       ],
       "publicUrl": "https://apps.apple.com/ca/app/ad-spin-studio/id6754834221",
       "screenshot": "/images/portfolio/projects/live-sites/ad-spin-studio.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 38,
+      "number": 37,
       "slug": "peptide-paradigm",
       "title": "Peptide Paradigm — Peptide Reference App",
       "category": "Mobile Research & Reference",
@@ -2281,10 +2226,10 @@
       ],
       "publicUrl": "https://www.peptideparadigm.app/",
       "screenshot": "/images/portfolio/projects/live-sites/peptide-paradigm.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 39,
+      "number": 38,
       "slug": "music-space-booking-app",
       "title": "Music Space Booking App",
       "category": "Flutter Marketplace & Booking",
@@ -2346,7 +2291,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 40,
+      "number": 39,
       "slug": "location-based-mobile-app",
       "title": "Location-Based Mobile App",
       "category": "Flutter Location-Aware Application",
@@ -2406,7 +2351,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 41,
+      "number": 40,
       "slug": "macos-roulette-tactics",
       "title": "macOS Roulette Tactics",
       "category": "SwiftUI Desktop Application",
@@ -2463,7 +2408,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 42,
+      "number": 41,
       "slug": "baccarat-stat-master",
       "title": "Baccarat Stat Master",
       "category": "SwiftUI Desktop Application",
@@ -2520,7 +2465,7 @@
       "screenshotStatus": "private-no-public-url"
     },
     {
-      "number": 43,
+      "number": 42,
       "slug": "sisu-real-estate-operations",
       "title": "Sisu — Real Estate Transaction Intelligence",
       "category": "Real Estate Operations SaaS",
@@ -2578,10 +2523,10 @@
       ],
       "publicUrl": "https://sisu.co/",
       "screenshot": "/images/portfolio/projects/live-sites/sisu-real-estate-operations.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 44,
+      "number": 43,
       "slug": "pressbeyond-hotel-discovery",
       "title": "PressBeyond — Hotel Discovery & Booking",
       "category": "Travel Discovery Platform",
@@ -2639,10 +2584,10 @@
       ],
       "publicUrl": "https://www.pressbeyond.com/",
       "screenshot": "/images/portfolio/projects/live-sites/pressbeyond-hotel-discovery.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 45,
+      "number": 44,
       "slug": "pet-free-hotels",
       "title": "Pet-Free Hotels — No-Pet Policy Discovery",
       "category": "Travel Search Platform",
@@ -2700,10 +2645,10 @@
       ],
       "publicUrl": "https://petfreehotels.com/",
       "screenshot": "/images/portfolio/projects/live-sites/pet-free-hotels.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 46,
+      "number": 45,
       "slug": "omni-ride-hailing",
       "title": "Omni — Ride-Hailing & Trip Management",
       "category": "Mobility Platform",
@@ -2761,10 +2706,10 @@
       ],
       "publicUrl": "https://www.rideomni.com/",
       "screenshot": "/images/portfolio/projects/live-sites/omni-ride-hailing.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 47,
+      "number": 46,
       "slug": "swiftpoint-z2",
       "title": "Swiftpoint Z2 — Programmable Gaming Mouse",
       "category": "Hardware & Configuration Software",
@@ -2822,10 +2767,10 @@
       ],
       "publicUrl": "https://www.swiftpoint.com/products/gaming-mice-swiftpoint-z2",
       "screenshot": "/images/portfolio/projects/live-sites/swiftpoint-z2.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 48,
+      "number": 47,
       "slug": "wispr-flow-dictation",
       "title": "Wispr Flow — AI Voice Dictation",
       "category": "AI Productivity Application",
@@ -2883,10 +2828,10 @@
       ],
       "publicUrl": "https://wisprflow.ai/",
       "screenshot": "/images/portfolio/projects/live-sites/wispr-flow-dictation.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 49,
+      "number": 48,
       "slug": "privatefly-aviation-booking",
       "title": "PrivateFly — Private Aviation Booking",
       "category": "Aviation Booking Platform",
@@ -2944,10 +2889,10 @@
       ],
       "publicUrl": "https://www.privatefly.com/",
       "screenshot": "/images/portfolio/projects/live-sites/privatefly-aviation-booking.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 50,
+      "number": 49,
       "slug": "handhistory-poker-analytics",
       "title": "HandHistory.com — Poker Analytics",
       "category": "Analytics & Interactive Product",
@@ -3007,10 +2952,10 @@
       ],
       "publicUrl": "https://handhistory.com/",
       "screenshot": "/images/portfolio/projects/live-sites/handhistory-poker-analytics.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 51,
+      "number": 50,
       "slug": "ontrajectory-financial-planning",
       "title": "OnTrajectory — Financial Planning",
       "category": "Financial Planning SaaS",
@@ -3068,10 +3013,10 @@
       ],
       "publicUrl": "https://www.ontrajectory.com/",
       "screenshot": "/images/portfolio/projects/live-sites/ontrajectory-financial-planning.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     },
     {
-      "number": 52,
+      "number": 51,
       "slug": "appleseed-planner",
       "title": "Appleseed Planner — Retirement Simulation",
       "category": "Financial Planning Application",
@@ -3129,7 +3074,7 @@
       ],
       "publicUrl": "https://appleseedplanner.com/",
       "screenshot": "/images/portfolio/projects/live-sites/appleseed-planner.png",
-      "screenshotStatus": "capture-required"
+      "screenshotStatus": "captured"
     }
   ]
 }

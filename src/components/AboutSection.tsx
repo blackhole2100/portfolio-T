@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Download, MapPin } from "lucide-react";
 import { about, experiences, personalInfo } from "@/data/portfolio";
-import logo from "@/assets/tijani-mark.svg";
 
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import AskAboutThis from "@/components/AskAboutThis";
@@ -104,9 +103,11 @@ const AboutSection = () => {
                 <div className="relative hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 sm:flex">
                   <div aria-hidden="true" className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl" />
                   <Image
-                    src={logo}
+                    src="/images/tijani-mark.svg"
                     alt=""
                     aria-hidden="true"
+                    width={40}
+                    height={40}
                     className="pointer-events-none relative z-10 h-10 w-10 opacity-90"
                     draggable={false}
                   />

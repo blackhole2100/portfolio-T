@@ -17,7 +17,6 @@ Senior Full-Stack & AI Software Engineer with 11+ years of experience building a
 ## Career results
 - 93% reduction in application load time. This is a career-level resume result and is not attributed to a named project in the supplied resume.
 - Contributions to real-time platforms processing 1,000+ events per second. The resume does not tie this to a named project.
-- Freight SaaS / QuickBooks Online operation: approximately 65 brokerages, 52,000 loads, and 90,000 documents per month.
 - .NET 8 / Azure OpenAI processing workflow: approximately 2,400 records per day against a historical dataset of around 1.6 million records.
 - Anchord AI: 11 MCP tools integrated into agent workflows.
 

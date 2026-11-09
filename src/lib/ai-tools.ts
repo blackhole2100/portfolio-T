@@ -318,24 +318,6 @@ const METRICS: MetricEntry[] = [
     source: "Anchord AI — Entity Resolution & Agent Integration",
   },
   {
-    keys: ["brokerages", "65 brokerages", "freight brokerages"],
-    value: "Approximately 65",
-    context: "Brokerages supported by the freight SaaS operation connected to QuickBooks Online. This is the operational scale of the integration, not a personal customer count.",
-    source: "Freight SaaS — QuickBooks Online Integration",
-  },
-  {
-    keys: ["loads per month", "52000 loads", "52,000 loads"],
-    value: "Approximately 52,000 per month",
-    context: "Loads handled per month by the freight operation supported by the QuickBooks Online integration.",
-    source: "Freight SaaS — QuickBooks Online Integration",
-  },
-  {
-    keys: ["documents per month", "90000 documents", "90,000 documents"],
-    value: "Approximately 90,000 per month",
-    context: "Documents handled per month by the freight operation supported by the QuickBooks Online integration.",
-    source: "Freight SaaS — QuickBooks Online Integration",
-  },
-  {
     keys: ["records per day", "2400 records", "2,400 records", "daily processing"],
     value: "Approximately 2,400 per day",
     context: "Records processed per day by the .NET 8 and Azure OpenAI worker-service/data-processing workflow.",

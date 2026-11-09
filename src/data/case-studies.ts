@@ -68,7 +68,6 @@ export interface CaseStudy {
 export type CaseStudySlug =
   | "anchord-ai-entity-resolution"
   | "correlate-health-platform-integration"
-  | "freight-quickbooks-integration"
   | "azure-openai-data-processing"
   | "crushbank-enterprise-ai"
   | "ourblackguide-react-native"
@@ -122,7 +121,6 @@ export type CaseStudySlug =
 export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "anchord-ai-entity-resolution",
   "correlate-health-platform-integration",
-  "freight-quickbooks-integration",
   "azure-openai-data-processing",
   "crushbank-enterprise-ai",
   "ourblackguide-react-native",
@@ -292,65 +290,6 @@ const baseCaseStudies: CaseStudy[] = [
       "Tijani participated in the development and deployment of Correlate Health application workflows. This describes his engineering contribution within the product effort and does not claim sole authorship of the wider healthcare platform.",
     tags: ["HealthTech", "Healthcare Platform", "Data Validation", "APIs"],
     aliases: ["correlate health", "healthcare platform", "healthcare integration", "clinical data workflows", "health data validation", "ehr integration", "clinical operations"],
-  },
-  {
-    slug: "freight-quickbooks-integration",
-    kind: "system",
-    theme: "retrieval",
-    featured: true,
-    title: "Freight SaaS — QuickBooks Online Integration",
-    oneLiner:
-      "Built OAuth, webhook, idempotent synchronization, and reconciliation workflows for freight operations supporting 65 brokerages and 90,000 documents per month.",
-    summary:
-      "This project connected freight operating workflows with QuickBooks Online. Tijani built the integration paths around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation, supporting an operation handling approximately 65 brokerages, 52,000 loads, and 90,000 documents each month.",
-    problem:
-      "Freight operations create a large volume of business records that must stay aligned with accounting data. The integration has to work across authorization lifecycles and asynchronous events while avoiding duplicate updates and providing a way to reconcile records when systems drift or an event is retried.",
-    constraints: [
-      "OAuth credentials and access tokens need to be refreshed and managed over time.",
-      "Webhook delivery can be repeated, so synchronization must be idempotent.",
-      "High operational volume makes reconciliation and recovery important parts of the integration.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [],
-    sections: [
-      {
-        heading: "Tijani's role",
-        body:
-          "Tijani built the integration workflows connecting the freight SaaS operation to QuickBooks Online. His documented responsibilities include OAuth handling, token refresh, webhook processing, idempotent synchronization, and reconciliation.",
-        points: [
-          "Implemented OAuth authorization and token refresh workflows.",
-          "Connected webhook events to the synchronization process.",
-          "Used idempotent handling to protect against repeated event delivery.",
-          "Built reconciliation workflows to help keep connected operational and accounting records aligned.",
-        ],
-      },
-      {
-        heading: "Operational scale",
-        body:
-          "The connected operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month. Those figures describe the scale of the operation supported by the integration; they are not presented as a count of records personally processed by one developer.",
-        points: [
-          "Approximately 65 brokerages.",
-          "Approximately 52,000 loads per month.",
-          "Approximately 90,000 documents per month.",
-        ],
-      },
-      {
-        heading: "Reliability across systems",
-        body:
-          "The engineering work focused on the points where external integrations commonly become fragile: credentials expire, event notifications repeat, and records need to be reconciled after partial failures. Idempotency and explicit reconciliation were part of the documented workflow rather than optional cleanup tasks.",
-      },
-    ],
-    results: [
-      { metric: "65", label: "Brokerages supported" },
-      { metric: "52,000", label: "Loads per month" },
-      { metric: "90,000", label: "Documents per month" },
-    ],
-    stack: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
-    ownership:
-      "Tijani participated in developing and deploying the freight-to-QuickBooks integration, including OAuth, token refresh, webhook processing, idempotent synchronization, and reconciliation. The scale figures describe the operation supported, not a claim of sole ownership of the freight SaaS product.",
-    tags: ["QuickBooks", "Accounting Integration", "Freight", "Reliability"],
-    aliases: ["freight saas", "quickbooks", "qbo", "oauth", "token refresh", "webhooks", "65 brokerages", "52000 loads", "90000 documents", "reconciliation"],
   },
   {
     slug: "azure-openai-data-processing",

@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 const css = readFileSync("src/app/globals.css", "utf8");
 const previewBuilder = readFileSync("scripts/build-static-preview.mjs", "utf8");
 const preview = readFileSync("public/portfolio-preview.html", "utf8");
+const legacyPreview = readFileSync("public/preview.html", "utf8");
 
 function extractBlock(source: string, selector: string): string {
   const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -17,9 +18,11 @@ test("light theme uses the requested silver-white page background and sky-blue d
   const root = extractBlock(css, ":root");
   assert.match(root, /--background:\s*0 0% 96\.08%/); // #F5F5F5
   assert.match(root, /--accent:\s*202\.96 92% 75\.49%/); // #87CEFA
-  assert.match(root, /--accent-light:\s*203\.48 87\.34% 84\.51%/);
-  assert.match(root, /--primary:\s*206\.02 100% 38\.43%/); // vivid, accessible bright blue
+  assert.match(root, /--accent-light:\s*202\.5 100% 85\.88%/);
+  assert.match(root, /--primary:\s*206\.04 100% 41\.57%/); // brighter, saturated blue with accessible white button text
   assert.match(root, /--primary-foreground:\s*0 0% 100%/);
+  assert.match(root, /--card:\s*0 0% 100%/); // crisp white cards on silver-white page
+  assert.match(root, /--border:\s*201\.64 75\.31% 84\.12%/); // brighter blue borders
 });
 
 test("dark theme color tokens are retained", () => {
@@ -35,9 +38,12 @@ test("dark theme color tokens are retained", () => {
 test("standalone preview uses the same light palette while retaining its dark palette", () => {
   assert.match(previewBuilder, /--bg:#F5F5F5/);
   assert.match(previewBuilder, /--accent:#87CEFA/);
-  assert.match(previewBuilder, /--accent2:#006FC4/);
+  assert.match(previewBuilder, /--accent2:#0078D4/);
   assert.match(previewBuilder, /--accent:#62dfd0/);
   assert.match(previewBuilder, /--bg:#07131f/);
   assert.match(preview, /--bg:#F5F5F5/);
   assert.match(preview, /--accent:#87CEFA/);
+  assert.match(legacyPreview, /--bg:#F5F5F5/);
+  assert.match(legacyPreview, /--accent:#87CEFA/);
+  assert.match(legacyPreview, /--accent2:#0078D4/);
 });

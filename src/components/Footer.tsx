@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { personalInfo } from "@/data/portfolio";
-import logo from "@/assets/tijani-mark.svg";
 import { Linkedin, Github, Mail } from "lucide-react";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { scrollToHash, scrollToTop } from "@/lib/scroll";
@@ -54,7 +53,7 @@ const Footer = () => {
             <Link href="/" onClick={handleHomeClick} className="flex items-center gap-3 group shrink-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                <Image src={logo} alt="" aria-hidden="true" className="w-8 h-8 opacity-80 group-hover:opacity-100 relative z-10 transition-opacity pointer-events-none" draggable={false} />
+                <Image src="/images/tijani-mark.svg" alt="" aria-hidden="true" width={32} height={32} className="w-8 h-8 opacity-80 group-hover:opacity-100 relative z-10 transition-opacity pointer-events-none" draggable={false} />
               </div>
               <span className="text-base font-bold text-muted-foreground group-hover:text-foreground transition-colors tracking-tight">
                 Tijani Shabazz

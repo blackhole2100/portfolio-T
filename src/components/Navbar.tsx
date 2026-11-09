@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Menu, X, Download, Github, Mail } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import logo from "@/assets/tijani-mark.svg";
 import { personalInfo } from "@/data/portfolio";
 import { ThemeToggle } from "./ThemeToggle";
 import { useLenisLock } from "@/hooks/useLenisLock";
@@ -212,7 +211,7 @@ const Navbar = () => {
           }`}
         >
           <Link href="/" onClick={handleHomeClick} aria-label="Go to the top of the homepage" className="flex items-center gap-2 group">
-            <Image src={logo} alt="" aria-hidden="true" className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110 pointer-events-none" draggable={false} />
+            <Image src="/images/tijani-mark.svg" alt="" aria-hidden="true" width={48} height={48} className="w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-110 pointer-events-none" draggable={false} />
             <span className="font-bold text-lg tracking-wide hidden sm:block">Tijani Shabazz</span>
           </Link>
 

@@ -13,25 +13,25 @@
        and a vivid blue primary for readable links, labels, and controls. */
     --background: 0 0% 96.08%; /* #F5F5F5 */
     --foreground: 220 25% 10%;
-    --card: 0 0% 98.5%;
+    --card: 0 0% 100%;
     --card-foreground: 220 25% 10%;
-    --popover: 0 0% 98.5%;
+    --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
-    --primary: 206.02 100% 38.43%; /* vivid bright blue: #006FC4 */
+    --primary: 206.04 100% 41.57%; /* vivid azure blue: #0078D4 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 203.33 75% 95.29%; /* #EAF5FC */
-    --secondary-foreground: 206.02 100% 38.43%;
-    --muted: 201.43 43.75% 93.73%; /* #E8F1F6 */
+    --secondary: 205 100% 95.29%; /* #E7F5FF */
+    --secondary-foreground: 206.04 100% 41.57%;
+    --muted: 206.09 100% 95.49%; /* #E8F5FF */
     --muted-foreground: 220 10% 45%;
     --accent: 202.96 92% 75.49%; /* #87CEFA */
-    --accent-light: 203.48 87.34% 84.51%; /* #B5DFFA */
-    --accent-dark: 206.02 100% 38.43%; /* #006FC4 */
+    --accent-light: 202.5 100% 85.88%; /* #B7E4FF */
+    --accent-dark: 206.04 100% 41.57%; /* #0078D4 */
     --accent-foreground: 220 25% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 202.5 42.11% 85.1%; /* #C9DDE9 */
-    --input: 202.5 42.11% 85.1%;
-    --ring: 206.02 100% 38.43%;
+    --border: 201.64 75.31% 84.12%; /* #B8DFF5 */
+    --input: 201.64 75.31% 84.12%;
+    --ring: 206.04 100% 41.57%;
     --radius: 0.75rem;
 
     /* Glass blur scale. Three tiers for three kinds of surface, so the amount

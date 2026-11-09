@@ -133,7 +133,7 @@ const experienceContext = experiences
   })
   .join("\n");
 
-/** Compact 52-project index. Full implementation and contribution detail is fetched on demand. */
+/** Compact 51-project index. Full implementation and contribution detail is fetched on demand. */
 const caseStudyContext = caseStudies
   .map((study) => `- ${study.title} | ${study.kind} | slug: ${study.slug} | focus: ${study.tags.slice(0, 3).join(", ")}`)
   .join("\n");
@@ -199,7 +199,7 @@ When links would help the visitor, use these markdown links directly:
 - [View LinkedIn](${personalInfo.linkedin})
 - [View GitHub](${personalInfo.github})
 - [Email Tijani](mailto:${personalInfo.email})
-- [Browse all 52 projects](/work)
+- [Browse all 51 projects](/work)
 - [Review Experience](#experience)
 - [View Skills](#skills)
 - [Download Resume](${personalInfo.resumeUrl})

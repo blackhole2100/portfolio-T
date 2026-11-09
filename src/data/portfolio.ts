@@ -20,7 +20,6 @@ export const stats = [
   { value: 11, suffix: "+", label: "Years of Experience", href: "#experience" },
   { value: 93, suffix: "%", label: "Application Load-Time Reduction", href: "#about" },
   { value: 1000, suffix: "+", label: "Events Processed per Second", href: "#about" },
-  { value: 90, suffix: "K", label: "Documents per Month", href: "/work/freight-quickbooks-integration" },
 ];
 
 export interface Highlight {
@@ -44,12 +43,6 @@ export const about = {
       label: "Events processed per second",
       detail:
         "Contributions to real-time platforms processing more than 1,000 events per second, as stated in the supplied resume.",
-    },
-    {
-      metric: "65",
-      label: "Brokerages supported",
-      detail:
-        "A freight SaaS integration supported an operation spanning approximately 65 brokerages, with QuickBooks Online synchronization and reconciliation workflows.",
     },
     {
       metric: "1.6M",
@@ -153,7 +146,7 @@ export const experiences: Experience[] = [
       "Full-stack delivery for client and enterprise software, spanning web applications, backend services, integrations, AI-enabled capabilities, and deployment.",
     bullets: [
       { text: "Designed and implemented end-to-end application features across browser-based interfaces, server-side services, APIs, and relational or document data stores.", study: "charter-steel-web" },
-      { text: "Developed backend functionality and integration layers with Python and C#/.NET, connecting business workflows to internal services and external platforms through REST APIs and webhooks.", study: "freight-quickbooks-integration" },
+      "Developed backend functionality and integration layers with Python and C#/.NET, connecting business workflows to internal services and external platforms through REST APIs and webhooks.",
       { text: "Built and extended TypeScript-based application experiences, aligning frontend behavior with API contracts, authentication flows, data requirements, and operational workflows.", study: "ourblackguide-react-native" },
       { text: "Applied AI capabilities to product workflows, including LLM-powered features, agent/tool integrations, retrieval-oriented experiences, and business-process automation.", study: "anchord-ai-entity-resolution" },
       { text: "Addressed production concerns across performance, reliability, security, and maintainability; supported cloud delivery and CI/CD practices across the software lifecycle.", study: "azure-openai-data-processing" },
@@ -304,24 +297,6 @@ export const projects: Project[] = [
     tech: ["Healthcare Workflows", "Clinical Data", "Data Validation", "API Integration", "Business Rules", "Auditability"],
     images: ["/images/portfolio/projects/live-sites/correlate-health-platform-integration.png"],
     live: "https://correlatehealth.com/",
-  },
-  {
-    slug: "freight-quickbooks-integration",
-    caseStudy: "freight-quickbooks-integration",
-    title: "Freight SaaS — QuickBooks Online Integration",
-    category: "Financial & Logistics Integration",
-    summary:
-      "An accounting integration that connects freight operations with QuickBooks Online through secure authorization, event-driven synchronization, and reconciliation.",
-    description:
-      "Built integration workflows around OAuth authorization, token refresh, webhooks, idempotent synchronization, and reconciliation. The connected freight operation supported approximately 65 brokerages, 52,000 loads, and 90,000 documents per month.",
-    impact:
-      "Supported high-volume brokerage operations with repeatable accounting synchronization and recovery-aware reconciliation workflows.",
-    role:
-      "Integration engineering: OAuth lifecycle, webhook processing, idempotent sync, token refresh, and financial reconciliation.",
-    complexity:
-      "Maintaining reliable synchronization across external accounting APIs, expiring credentials, repeated events, and high-volume operational records.",
-    tech: ["QuickBooks Online", "OAuth 2.0", "Webhooks", "Token Refresh", "Idempotency", "Reconciliation"],
-    images: [],
   },
   {
     slug: "azure-openai-data-processing",
