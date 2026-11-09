@@ -880,7 +880,7 @@ const useFluidCursor = (
    *
    * Nothing in this file used to call gl.delete* at all, so every simulation
    * buffer recreated on a resize was leaked. initFramebuffers() runs on each
-   * reported size change — i.e. continuously while a window is drag-resized —
+   * reported size change - i.e. continuously while a window is drag-resized -
    * so the leak was unbounded and independent of unmount.
    */
   function deleteFBO(target) {
@@ -1288,7 +1288,7 @@ const useFluidCursor = (
      * cycle leaked a full set of textures, framebuffers, programs, and buffers.
      * The caller remounts the canvas whenever pointer type, reduced-motion, or
      * the breakpoint changes, and browsers cap concurrent WebGL contexts at
-     * roughly 16 — so repeated toggling could exhaust them and the effect would
+     * roughly 16 - so repeated toggling could exhaust them and the effect would
      * silently stop working.
      */
     try {
@@ -1301,7 +1301,7 @@ const useFluidCursor = (
       // Deliberately NOT calling WEBGL_lose_context here.
       //
       // Forcing context loss leaves the canvas element transparent while React
-      // may still have it mounted — and because the page background sits behind
+      // may still have it mounted - and because the page background sits behind
       // it, that showed as the white flash on refresh that commit 9e96e68
       // ("initializeFirstFrame") originally fixed. The explicit deletes above
       // reclaim the buffers that actually grow; the rest is released when the

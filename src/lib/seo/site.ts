@@ -10,7 +10,7 @@ export const siteConfig = {
   resumeUrl: `${siteUrl}${personalInfo.resumeUrl}`,
   updatedAt: "2026-11-04T00:00:00.000Z",
   siteName: "Tijani Shabazz Portfolio",
-  title: `${personalInfo.name} — ${personalInfo.role}`,
+  title: `${personalInfo.name} - ${personalInfo.role}`,
   description: personalInfo.tagline,
   author: personalInfo.name,
   creator: personalInfo.name,

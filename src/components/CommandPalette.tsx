@@ -77,7 +77,7 @@ const CommandPalette = () => {
   }, []);
 
   /**
-   * Clearing on every close — not just on select — so ESC or an overlay click
+   * Clearing on every close - not just on select - so ESC or an overlay click
    * does not leave a stale search waiting on the next open.
    */
   const onOpenChange = useCallback((next: boolean) => {

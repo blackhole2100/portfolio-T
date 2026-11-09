@@ -24,7 +24,7 @@ import { createChatEventParser, type ChatStreamEvent } from "../src/lib/chat-con
  * Minimal OpenAI-compatible SSE upstream so no network or API key is involved.
  *
  * The route always requests `stream: true`, so the fixture speaks SSE rather
- * than returning a single JSON body — otherwise it exercises a shape the real
+ * than returning a single JSON body - otherwise it exercises a shape the real
  * upstream never sends.
  */
 function startFakeUpstream(handler: (body: Record<string, unknown>) => unknown) {
@@ -102,7 +102,7 @@ async function drain(response: Response, timeoutMs = 8_000): Promise<ChatStreamE
 
   const deadline = new Promise<never>((_, reject) => {
     const timer = setTimeout(
-      () => reject(new Error(`stream did not close within ${timeoutMs}ms — controller.close() never ran`)),
+      () => reject(new Error(`stream did not close within ${timeoutMs}ms - controller.close() never ran`)),
       timeoutMs
     );
     // Node keeps the process alive for a pending timer; this one must not.
@@ -222,7 +222,7 @@ test("finish() closes the controller rather than calling itself", () => {
 test("a tool call reassembled from streamed deltas still executes", async (t) => {
   // The provider streams `tool_calls` fragmented across multiple deltas and
   // keyed by `index`. Round 0 depends on that reassembly working, since every
-  // round now streams — including the round offered `tools`.
+  // round now streams - including the round offered `tools`.
   //
   // Deliberately captures request bodies rather than asserting INSIDE the
   // HTTP handler: an assertion thrown from within the server callback does
@@ -233,7 +233,7 @@ test("a tool call reassembled from streamed deltas still executes", async (t) =>
   const { server, url } = await startFakeUpstream((body) => {
     receivedBodies.push(body);
     // Keyed on whether the request already carries a tool result, not on call
-    // count — a stalled attempt legitimately retries the SAME round, which
+    // count - a stalled attempt legitimately retries the SAME round, which
     // must not be mistaken for the next round.
     const hasToolResult = JSON.stringify(body.messages).includes('"role":"tool"');
     if (!hasToolResult) {

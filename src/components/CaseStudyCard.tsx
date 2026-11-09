@@ -95,7 +95,7 @@ const CaseStudyCard = ({
             </div>
           )}
         </div>
-        {/* Glyph inline with the title rather than on its own row —
+        {/* Glyph inline with the title rather than on its own row -
             it was costing ~70px of height for one small icon. */}
         <div className="flex items-start gap-3">
           <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-primary/25 bg-primary/10 text-primary transition-colors duration-300 group-hover/system:border-primary/50">

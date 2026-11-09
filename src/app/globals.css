@@ -3,7 +3,7 @@
 
 
 @layer base {
-  /* Applied before JS to prevent white flash — matches .dark --background value */
+  /* Applied before JS to prevent white flash - matches .dark --background value */
   html {
     background-color: hsl(224, 47%, 7%);
   }
@@ -42,7 +42,7 @@
     --blur-overlay: 24px;   /* modals over dimmed content: chat, palette */
     --blur-scrim: 4px;      /* the dimming layer behind a modal */
 
-    /* Glass FILL opacity — the half of glass morphism that actually makes the
+    /* Glass FILL opacity - the half of glass morphism that actually makes the
        blur visible. A fill of the page colour at N% lets (100-N)% of the
        blurred backdrop through; a fill of *white* at 2% lets 98% through and
        reads flat no matter how much blur is applied. Both models were in use
@@ -102,7 +102,7 @@
     scroll-padding-top: calc(5rem + env(safe-area-inset-top));
     /* Reserve the scrollbar track permanently. Radix dialogs lock scroll via
        react-remove-scroll, which removes the scrollbar and widens the viewport
-       — that shifted the centre-aligned fixed navbar left on open and back on
+       - that shifted the centre-aligned fixed navbar left on open and back on
        close. Reserving the gutter means the width never changes. */
     scrollbar-gutter: stable;
   }
@@ -187,7 +187,7 @@ textarea,
   /* Glass surfaces: translucent fill + blur only.
      They deliberately do NOT set a border. Call sites compose their own
      (`glass-strong border-white/10`, `glass-subtle border-white/5`), and these
-     utilities are emitted late in the stylesheet — so baking a border in here
+     utilities are emitted late in the stylesheet - so baking a border in here
      overrode those per-element classes and changed borders across the site.
 
      Blur comes from the --blur-* tokens, one per kind of surface, so depth is
@@ -210,7 +210,7 @@ textarea,
 
   /* Heavier surfaces that must occlude content behind them: the command
      palette, the chat panel, the dialog primitive, the stacked project deck.
-     The navbar deliberately does NOT use these — see .glass-nav below. */
+     The navbar deliberately does NOT use these - see .glass-nav below. */
   .glass,
   .glass-strong {
     -webkit-backdrop-filter: blur(var(--blur-chrome));
@@ -218,7 +218,7 @@ textarea,
   }
 
   /* Fills use the page background colour, matching SpotlightCard. Mixing in
-     `transparent` is what lets the blurred backdrop show through — the higher
+     `transparent` is what lets the blurred backdrop show through - the higher
      the percentage, the more opaque and the less frost. */
   .glass {
     background-color: color-mix(in oklab, hsl(var(--background)) 68%, transparent);
@@ -255,7 +255,7 @@ textarea,
     background-color: color-mix(in oklab, hsl(var(--background)) 55%, transparent);
   }
 
-  /* The dimming layer behind a modal. Not a surface — it sits over content
+  /* The dimming layer behind a modal. Not a surface - it sits over content
      rather than holding any, so it takes the lightest blur of the four. */
   .glass-scrim {
     -webkit-backdrop-filter: blur(var(--blur-scrim));
@@ -274,10 +274,10 @@ textarea,
 
   /* Call-to-action buttons.
      These were retyped at each call site, which is how the secondary button
-     ended up in three variants — one of them missing `backdrop-blur` entirely,
+     ended up in three variants - one of them missing `backdrop-blur` entirely,
      so it rendered flat transparent next to the same button in the hero.
 
-     Two @apply pitfalls hit while writing these, both of which fail SILENTLY —
+     Two @apply pitfalls hit while writing these, both of which fail SILENTLY -
      the rule still compiles, it just loses declarations:
        1. An opacity-modified border colour (`border-primary/50`) emits
           `border-color` without the opacity AND drops every utility after it
@@ -362,7 +362,7 @@ textarea,
 
   /* The sticky sidebar panel, previously copy-pasted byte-for-byte across
      AboutSection, SkillsSection, and ExperienceSection. Its fill matches
-     SpotlightCard's 68% so a sidebar and the cards beside it read identically —
+     SpotlightCard's 68% so a sidebar and the cards beside it read identically -
      they used to differ 34x, which is what made panels look flat. Unlike the
      glass-* utilities this one owns its border, because no call site adds one. */
   .panel-sticky {
@@ -380,7 +380,7 @@ textarea,
   }
 
   /* One content width for the whole site. Sections must not add their own
-     max-w-* on top of this — three of them used to, sitting 64px narrower than
+     max-w-* on top of this - three of them used to, sitting 64px narrower than
      their neighbours and visibly breaking the left/right edges. */
   .container-narrow {
     @apply max-w-6xl mx-auto px-5 sm:px-6 lg:px-8;

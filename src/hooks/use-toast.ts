@@ -165,7 +165,7 @@ function useToast() {
         listeners.splice(index, 1);
       }
     };
-  // setState identity is stable, so subscribe once — [state] re-subscribed on
+  // setState identity is stable, so subscribe once - [state] re-subscribed on
   // every dispatch.
   }, []);
 

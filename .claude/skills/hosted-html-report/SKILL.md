@@ -23,7 +23,7 @@ hosted-html-report/
 ```bash
 S=<wherever this skill is installed>   # e.g. ~/.claude/skills/hosted-html-report
 
-# 1. start from the template (never from a blank file — it encodes the theme
+# 1. start from the template (never from a blank file - it encodes the theme
 #    tokens, glassmorphism, and diagram pattern below)
 cp $S/assets/report-template.html ./my-report.html
 
@@ -41,7 +41,7 @@ Make both scripts executable once: `chmod +x $S/scripts/*.sh`
 ## Auth & config
 
 `host-file.sh` POSTs the file, base64-encoded, to the portfolio's own
-`/api/artifacts` route — a plain JSON endpoint backed by Vercel Blob, no MCP
+`/api/artifacts` route - a plain JSON endpoint backed by Vercel Blob, no MCP
 handshake involved. It needs an upload token, resolved in this order:
 
 1. `ARTIFACT_UPLOAD_URL` / `ARTIFACT_UPLOAD_TOKEN` environment variables
@@ -55,12 +55,12 @@ The token is a shared secret configured server-side as `ARTIFACT_UPLOAD_TOKEN`
 token the route returns `401`.
 
 **No size ceiling.** Unlike the old MCP-based transport, a plain HTTP POST has
-no argv-length bug to work around — the only limit is the platform's own
+no argv-length bug to work around - the only limit is the platform's own
 request body size. Write reports as long as they need to be.
 
 ## Same slug/name.html replaces the report in place
 
-Uploading to a `slug/name.html` that already exists **overwrites it** — same
+Uploading to a `slug/name.html` that already exists **overwrites it** - same
 URL, updated content, no separate "delete first" step. This is intentional:
 cross-link related reports from the header badges (see the template) and
 re-host the same path whenever a report changes, so shared links never break.
@@ -72,7 +72,7 @@ reset at UTC midnight.
 
 ## The diagram pattern: hand-authored inline SVG, not Mermaid
 
-Diagrams are plain `<svg viewBox="...">` markup — boxes, arrows, text — styled
+Diagrams are plain `<svg viewBox="...">` markup - boxes, arrows, text - styled
 to match the portfolio's own diagram components
 (`src/components/diagrams/DiagramFrame.tsx`). There is no diagramming DSL to
 learn and no rendering-engine defects to work around; you're writing the exact
@@ -88,7 +88,7 @@ SVG that ends up on the page.
 - Arrows are `<path d="M x1 y1 L x2 y2">` with `marker-end="url(#arrow)"`, using
   the shared arrowhead `<marker>` defined once in the template's `<defs>`
   (teal fill, `#29D6B9`).
-- Give every `<svg>` a `viewBox` sized to fit its content with ~20px margin —
+- Give every `<svg>` a `viewBox` sized to fit its content with ~20px margin -
   `verify-report.sh` fails any `<svg>` missing one.
 - Keep diagrams wide rather than tall: a diagram narrower than ~380px and
   taller than ~1200px is hard to read on a normal screen.
@@ -98,7 +98,7 @@ SVG that ends up on the page.
 
 Because this is hand-written SVG rather than a rendering engine's output,
 there's no equivalent of Mermaid's opaque edge-label-opacity or curve-routing
-bugs — what you write is what renders. The only thing worth double-checking is
+bugs - what you write is what renders. The only thing worth double-checking is
 label collisions on a dense diagram; keep box spacing generous (≥70px gaps)
 and this doesn't come up.
 
@@ -122,12 +122,12 @@ Setting `color` on a container does **not** reach descendants that have their
 own rule. `header{color:#fff}` plus a generic `p{color:var(--fg))}` renders
 dark text on the dark gradient header, because a direct rule always beats an
 inherited value regardless of specificity. Set the colour explicitly on the
-header's `h1`, `p`, `.eyebrow`, `.brand a` and badges — the template does this
+header's `h1`, `p`, `.eyebrow`, `.brand a` and badges - the template does this
 and comments why; `verify-report.sh` flags regressions.
 
 ## Writing quality
 
-The report should stand alone — assume the reader has no prior context.
+The report should stand alone - assume the reader has no prior context.
 
 - Lead with the answer, then support it. Put the conclusion in the first paragraph.
 - **Never refer back by label.** "As in approach B", "see option 2", "the row-four case"
@@ -146,7 +146,7 @@ Same `slug/name.html` overwrites in place and the URL is unchanged (see "Same
 slug/name.html replaces the report in place" above). `host-file.sh` waits a
 few seconds then byte-compares the live URL against the local file to confirm
 the write actually landed; tune the wait with `VERIFY_DELAY`. A stale live
-copy and a silently-rejected upload can look similar — check the script's
+copy and a silently-rejected upload can look similar - check the script's
 error output rather than assuming propagation lag if it keeps failing.
 
 Cross-link related reports from the header badges so a reader can move between them.
@@ -159,7 +159,7 @@ Cross-link related reports from the header badges so a reader can move between t
 | `503` on upload                                  | server env not configured                           | `ARTIFACT_UPLOAD_TOKEN` or `BLOB_READ_WRITE_TOKEN` unset on the server         |
 | `429` "Daily limit reached"                      | 10 new-reports/day or 30 updates/day cap hit        | wait until UTC midnight                                                        |
 | `404` on the live URL                            | slug/filename typo, or never uploaded               | check `host-file.sh`'s output for the exact path used                          |
-| Diagram source shows as plain text on the page   | wrote it inside a `<pre>` instead of a real `<svg>` | this skill uses inline SVG, not a text-block DSL — write actual `<svg>` markup |
+| Diagram source shows as plain text on the page   | wrote it inside a `<pre>` instead of a real `<svg>` | this skill uses inline SVG, not a text-block DSL - write actual `<svg>` markup |
 | `verify-report.sh` FAILs "svg without a viewBox" | missing `viewBox` attribute                         | add one sized to the diagram's content                                         |
 | Header text dark on the gradient                 | generic rule beats inheritance                      | set colour on the element itself                                               |
 | Live copy differs after upload                   | brief propagation lag, or rejected write            | wait a few seconds and retry; check the response body for an `error` field     |

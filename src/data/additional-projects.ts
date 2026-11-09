@@ -26,7 +26,7 @@ export interface AdditionalProjectData {
 export const additionalProjects: AdditionalProjectData[] = [
   {
     slug: "loopt-clinical-trial-matching",
-    title: "LooPT CTM — Clinical Trial Matching",
+    title: "LooPT CTM - Clinical Trial Matching",
     category: "Clinical Trial Matching",
     theme: "retrieval",
     kind: "system",
@@ -42,7 +42,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "nomo-family-organizer",
-    title: "Nomo — Family Organizer",
+    title: "Nomo - Family Organizer",
     category: "Mobile Family Productivity",
     theme: "products",
     kind: "product",
@@ -58,7 +58,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "ad-spin-studio",
-    title: "AD Spin Studio — Guided Vehicle Walkarounds",
+    title: "AD Spin Studio - Guided Vehicle Walkarounds",
     category: "Automotive Mobile Application",
     theme: "products",
     kind: "product",
@@ -74,7 +74,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "peptide-paradigm",
-    title: "Peptide Paradigm — Peptide Reference App",
+    title: "Peptide Paradigm - Peptide Reference App",
     category: "Mobile Research & Reference",
     theme: "products",
     kind: "product",
@@ -154,7 +154,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "compasshss-healthcare-staffing",
-    title: "CompassHSS — Healthcare Staffing Platform",
+    title: "CompassHSS - Healthcare Staffing Platform",
     category: "Healthcare Workforce Management",
     theme: "retrieval",
     kind: "system",
@@ -170,7 +170,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "jobably-ai-job-discovery",
-    title: "Jobably — AI Job Discovery",
+    title: "Jobably - AI Job Discovery",
     category: "AI Search & Matching",
     theme: "agents",
     kind: "system",
@@ -186,7 +186,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "sunethix-irb-review",
-    title: "Sunethix — IRB Submission Review",
+    title: "Sunethix - IRB Submission Review",
     category: "AI Regulatory Document Analysis",
     theme: "agents",
     kind: "system",
@@ -202,7 +202,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "lead-prosper-routing",
-    title: "Lead Prosper — Lead Distribution Platform",
+    title: "Lead Prosper - Lead Distribution Platform",
     category: "Lead Ingestion & Routing",
     theme: "platform",
     kind: "system",
@@ -218,7 +218,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "echoaeon-ai-lead-automation",
-    title: "Echoaeon — AI Lead Qualification",
+    title: "Echoaeon - AI Lead Qualification",
     category: "AI Lead Automation",
     theme: "agents",
     kind: "system",
@@ -234,7 +234,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "sisu-real-estate-operations",
-    title: "Sisu — Real Estate Transaction Intelligence",
+    title: "Sisu - Real Estate Transaction Intelligence",
     category: "Real Estate Operations SaaS",
     theme: "platform",
     kind: "product",
@@ -250,7 +250,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "sharkindicators-blackbird",
-    title: "SharkIndicators BlackBird — Trade Management",
+    title: "SharkIndicators BlackBird - Trade Management",
     category: "Trading Automation Software",
     theme: "platform",
     kind: "system",
@@ -266,7 +266,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "pressbeyond-hotel-discovery",
-    title: "PressBeyond — Hotel Discovery & Booking",
+    title: "PressBeyond - Hotel Discovery & Booking",
     category: "Travel Discovery Platform",
     theme: "platform",
     kind: "product",
@@ -282,7 +282,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "pet-free-hotels",
-    title: "Pet-Free Hotels — No-Pet Policy Discovery",
+    title: "Pet-Free Hotels - No-Pet Policy Discovery",
     category: "Travel Search Platform",
     theme: "platform",
     kind: "product",
@@ -298,7 +298,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "omni-ride-hailing",
-    title: "Omni — Ride-Hailing & Trip Management",
+    title: "Omni - Ride-Hailing & Trip Management",
     category: "Mobility Platform",
     theme: "products",
     kind: "product",
@@ -314,7 +314,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "swiftpoint-z2",
-    title: "Swiftpoint Z2 — Programmable Gaming Mouse",
+    title: "Swiftpoint Z2 - Programmable Gaming Mouse",
     category: "Hardware & Configuration Software",
     theme: "platform",
     kind: "product",
@@ -330,7 +330,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "dynamite-docs-document-ai",
-    title: "Dynamite Docs — AI Document Extraction",
+    title: "Dynamite Docs - AI Document Extraction",
     category: "AI Document Processing",
     theme: "agents",
     kind: "system",
@@ -346,7 +346,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "wispr-flow-dictation",
-    title: "Wispr Flow — AI Voice Dictation",
+    title: "Wispr Flow - AI Voice Dictation",
     category: "AI Productivity Application",
     theme: "agents",
     kind: "product",
@@ -362,7 +362,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "headspin-digital-testing",
-    title: "HeadSpin — Digital Experience Testing",
+    title: "HeadSpin - Digital Experience Testing",
     category: "Mobile & Web Testing Platform",
     theme: "platform",
     kind: "system",
@@ -378,7 +378,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "privatefly-aviation-booking",
-    title: "PrivateFly — Private Aviation Booking",
+    title: "PrivateFly - Private Aviation Booking",
     category: "Aviation Booking Platform",
     theme: "platform",
     kind: "product",
@@ -394,7 +394,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "libertum-tokenization-platform",
-    title: "Libertum — Real-World Asset Tokenization",
+    title: "Libertum - Real-World Asset Tokenization",
     category: "FinTech & Asset Management",
     theme: "platform",
     kind: "system",
@@ -410,7 +410,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "handhistory-poker-analytics",
-    title: "HandHistory.com — Poker Analytics",
+    title: "HandHistory.com - Poker Analytics",
     category: "Analytics & Interactive Product",
     theme: "platform",
     kind: "product",
@@ -426,7 +426,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "filerun-file-management",
-    title: "FileRun — Self-Hosted File Management",
+    title: "FileRun - Self-Hosted File Management",
     category: "Document & File Management",
     theme: "platform",
     kind: "system",
@@ -442,7 +442,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "ontrajectory-financial-planning",
-    title: "OnTrajectory — Financial Planning",
+    title: "OnTrajectory - Financial Planning",
     category: "Financial Planning SaaS",
     theme: "platform",
     kind: "product",
@@ -458,7 +458,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "appleseed-planner",
-    title: "Appleseed Planner — Retirement Simulation",
+    title: "Appleseed Planner - Retirement Simulation",
     category: "Financial Planning Application",
     theme: "platform",
     kind: "product",
@@ -474,7 +474,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "taxslayer-pro-workflows",
-    title: "TaxSlayer Pro — Tax Preparation Workflows",
+    title: "TaxSlayer Pro - Tax Preparation Workflows",
     category: "Professional Tax Software",
     theme: "platform",
     kind: "system",
@@ -490,7 +490,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "northflank-deployment-platform",
-    title: "Northflank — Deployment & Infrastructure",
+    title: "Northflank - Deployment & Infrastructure",
     category: "Developer Platform & Cloud Delivery",
     theme: "platform",
     kind: "system",
@@ -506,7 +506,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "myorbithealth-telehealth",
-    title: "MyOrbitHealth — Telehealth Platform",
+    title: "MyOrbitHealth - Telehealth Platform",
     category: "Healthcare & Telehealth",
     theme: "retrieval",
     kind: "system",
@@ -522,7 +522,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "andy-labs-ai-assistant",
-    title: "Andy Labs — AI Executive Assistant",
+    title: "Andy Labs - AI Executive Assistant",
     category: "AI Operations & Productivity",
     theme: "agents",
     kind: "system",
@@ -538,7 +538,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "synthreo-enterprise-ai",
-    title: "Synthreo — Enterprise AI Infrastructure",
+    title: "Synthreo - Enterprise AI Infrastructure",
     category: "Enterprise AI Platform",
     theme: "agents",
     kind: "system",
@@ -554,7 +554,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "interra-health-platform",
-    title: "Interra Health — Healthcare Technology",
+    title: "Interra Health - Healthcare Technology",
     category: "Healthcare Software",
     theme: "retrieval",
     kind: "system",
@@ -570,7 +570,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "definity-workforce-platform",
-    title: "Definity — Healthcare Workforce Platform",
+    title: "Definity - Healthcare Workforce Platform",
     category: "Healthcare Workforce Management",
     theme: "retrieval",
     kind: "system",
@@ -586,7 +586,7 @@ export const additionalProjects: AdditionalProjectData[] = [
   },
   {
     slug: "service-fusion-field-service",
-    title: "Service Fusion — Field Service Management",
+    title: "Service Fusion - Field Service Management",
     category: "Field Service SaaS",
     theme: "platform",
     kind: "system",

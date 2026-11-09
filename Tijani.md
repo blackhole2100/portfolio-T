@@ -1,4 +1,4 @@
-# Tijani Shabazz — Verified Portfolio Content
+# Tijani Shabazz - Verified Portfolio Content
 
 This file summarizes the current source-of-truth profile for the portfolio. Use the uploaded senior engineer resume and project inventory as the underlying source. Do not reintroduce older contact details from previous drafts.
 
@@ -21,14 +21,14 @@ Senior Full-Stack & AI Software Engineer with 11+ years of experience building a
 - Anchord AI: 11 MCP tools integrated into agent workflows.
 
 ## Professional experience
-- ModMed Innovation Lab — Research Assistant, Jun 2015–May 2017.
-- Kairos Technologies — C/C++/C#/.NET Developer, Jun 2017–Dec 2019.
-- PeakActivity — Software Developer, Jan 2020–Sep 2022.
-- Chetu, Inc. — Full Stack Developer | Python, C#/.NET, TypeScript | AI, DevOps, Nov 2022–Jul 2026.
+- ModMed Innovation Lab - Research Assistant, Jun 2015–May 2017.
+- Kairos Technologies - C/C++/C#/.NET Developer, Jun 2017–Dec 2019.
+- PeakActivity - Software Developer, Jan 2020–Sep 2022.
+- Chetu, Inc. - Full Stack Developer | Python, C#/.NET, TypeScript | AI, DevOps, Nov 2022–Jul 2026.
 
 ## Education
-- Master of Science, Computer Science — Florida Atlantic University, 2013–2015.
-- Bachelor of Science, Computer Science — Florida International University, 2009–2013.
+- Master of Science, Computer Science - Florida Atlantic University, 2013–2015.
+- Bachelor of Science, Computer Science - Florida International University, 2009–2013.
 
 ## Project attribution rules
 - Use the 16 project case studies in `src/data/case-studies.ts` and corresponding card data in `src/data/portfolio.ts`.

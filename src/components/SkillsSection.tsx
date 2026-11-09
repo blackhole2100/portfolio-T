@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/reveal";
 import { skillCategories } from "@/data/portfolio";
 import AskAboutThis from "@/components/AskAboutThis";
 
-/** Keyed by exact category title — a miss falls back to Wrench silently, so
+/** Keyed by exact category title - a miss falls back to Wrench silently, so
  *  these must be updated in the same edit as any title change in portfolio.ts. */
 const CATEGORY_ICONS: Record<string, React.ElementType> = {
   "AI & Intelligent Applications": Brain,
@@ -62,7 +62,7 @@ const SkillsSection = () => {
                         The pill sits OUTSIDE this row, not in the text column.
                         Inside it, the extra line made the text column taller
                         than the 48px icon, so `items-center` re-centred the icon
-                        against a different height per card — which is why the
+                        against a different height per card - which is why the
                         gap under the icon varied between categories.
                       */}
                       <div className="flex items-center gap-4">

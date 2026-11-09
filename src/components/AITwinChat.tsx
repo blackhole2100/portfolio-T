@@ -357,7 +357,7 @@ const AITwinChat = () => {
    *
    * Mobile renders `fixed inset-0` with a full backdrop, so it is a modal and
    * the page behind it must not move. Desktop is a 20-24rem corner panel with
-   * no scrim — a non-modal surface the visitor is expected to read *alongside*
+   * no scrim - a non-modal surface the visitor is expected to read *alongside*
    * the page, so freezing the page behind it was wrong.
    */
   useLenisLock(isOpen && isMobile);
@@ -590,7 +590,7 @@ const AITwinChat = () => {
      *
      * `timeoutId` is an absolute backstop. `idleTimeoutId` is the one that
      * actually governs: it restarts on every received chunk, so a long answer
-     * that keeps streaming is never mistaken for a stalled request — which is
+     * that keeps streaming is never mistaken for a stalled request - which is
      * precisely what the old single fixed timer got wrong.
      */
     const timeoutId = window.setTimeout(() => controller.abort(), CHAT_CLIENT_TIMEOUT_MS);
@@ -702,7 +702,7 @@ const AITwinChat = () => {
       // Both paths must clear `streaming`, and both must patch the message that
       // was already streaming rather than appending beside it. Previously the
       // retry path omitted `streaming: false` and the non-retry path appended a
-      // brand-new message — so a failure after the first text_delta left the
+      // brand-new message - so a failure after the first text_delta left the
       // partial reply blinking its cursor forever, with an unrelated error
       // bubble underneath it.
       const targetId = assistantId;
@@ -763,7 +763,7 @@ const AITwinChat = () => {
 
       /*
        * A "Continue in AI Twin" handoff from an inline answer already has the
-       * answer — resending the question would burn a request and a wait the
+       * answer - resending the question would burn a request and a wait the
        * visitor already sat through. Appending both turns directly reaches the
        * same place `handleSend` would have (this component hydrates from
        * localStorage on mount and re-persists on every `messages` change, so
@@ -918,7 +918,7 @@ const AITwinChat = () => {
               >
                 {msg.role === "assistant" ? (
                   <>
-                    {/* Tool calls appear as they execute — this is the part
+                    {/* Tool calls appear as they execute - this is the part
                         that reads as an agent rather than a text box. */}
                     {msg.toolCalls && msg.toolCalls.length > 0 && (
                       <ul className="mb-3 flex flex-col gap-1.5 border-l-2 border-primary/25 pl-3">

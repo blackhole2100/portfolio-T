@@ -5,8 +5,8 @@ import { getProjectAnchor, normalizeText } from "@/lib/ai-twin";
 /**
  * Tools the portfolio assistant can call.
  *
- * Every tool is a pure function over data already in the repo — no network, no
- * database — so a call costs microseconds and the only failure mode is
+ * Every tool is a pure function over data already in the repo - no network, no
+ * database - so a call costs microseconds and the only failure mode is
  * "not found", which each tool reports honestly rather than guessing.
  */
 
@@ -94,7 +94,7 @@ export const TOOL_DEFINITIONS = [
     function: {
       name: "get_metric",
       description:
-        "Look up a specific measured number with its measurement context. ALWAYS use this before stating any figure. If the metric is not in the portfolio it returns measured:false — say so plainly rather than estimating.",
+        "Look up a specific measured number with its measurement context. ALWAYS use this before stating any figure. If the metric is not in the portfolio it returns measured:false - say so plainly rather than estimating.",
       parameters: {
         type: "object",
         properties: {
@@ -172,7 +172,7 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
   // Multi-term so "tenant isolation" matches text containing either word.
   //
   // A >2 filter used to drop every short term, which meant the tool's own
-  // documented example query ("Go") returned nothing — and so did "AI", "n8n",
+  // documented example query ("Go") returned nothing - and so did "AI", "n8n",
   // and "RAG". Single characters are still dropped as noise, but real
   // two-character technology names have to survive.
   const allTerms = normalizeText(query).split(" ").filter(Boolean);
@@ -242,7 +242,7 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
         if (score > 0) {
           hits.push({
             kind: "experience",
-            id: `${experience.company} — ${experience.role}`,
+            id: `${experience.company} - ${experience.role}`,
             title: `${experience.role} at ${experience.company}`,
             snippet: text,
             score,
@@ -282,7 +282,7 @@ function searchWork(query: string, kind: string = "all"): { hits: Omit<SearchHit
 }
 
 /* ------------------------------------------------------------------ *
- * get_metric — the tool that must be able to say "not measured"
+ * get_metric - the tool that must be able to say "not measured"
  * ------------------------------------------------------------------ */
 
 interface MetricEntry {
@@ -315,7 +315,7 @@ const METRICS: MetricEntry[] = [
     keys: ["mcp tools", "11 mcp tools", "anchord tools", "anchord mcp"],
     value: "11 MCP tools",
     context: "AI-agent workflows integrated with 11 MCP tools for Anchord AI. The documented contribution also includes REST APIs, webhooks, multi-signal scoring, evidence-backed ambiguous-match review, canonical IDs, and resolve-before-write flows.",
-    source: "Anchord AI — Entity Resolution & Agent Integration",
+    source: "Anchord AI - Entity Resolution & Agent Integration",
   },
   {
     keys: ["records per day", "2400 records", "2,400 records", "daily processing"],
@@ -348,7 +348,7 @@ function getMetric(name: string) {
    *
    * `find` with bidirectional substring matching let a short key swallow a longer
    * query: the key "8" sits earlier in METRICS than "8 repositories", so asking
-   * for repositories returned the business-functions figure — and "3 tiers"
+   * for repositories returned the business-functions figure - and "3 tiers"
    * returned "20 of 20". A tool whose contract is "never state an unverified
    * number" returning a confidently wrong one is the worst possible failure, so
    * matches are ranked by how much of the key the query actually accounts for
@@ -381,7 +381,7 @@ function getMetric(name: string) {
 }
 
 /* ------------------------------------------------------------------ *
- * navigate_to — allow-listed, so the model cannot invent a destination
+ * navigate_to - allow-listed, so the model cannot invent a destination
  * ------------------------------------------------------------------ */
 
 const SECTION_TARGETS: Record<string, string> = {
@@ -555,7 +555,7 @@ export function executeTool(request: ToolCallRequest): ToolCallResult {
        * Accepts an array OR a delimited string.
        *
        * The schema asks for an array, but models routinely send
-       * `"a,b"` instead — observed live: valid slugs arrived as one joined
+       * `"a,b"` instead - observed live: valid slugs arrived as one joined
        * string, `Array.isArray` rejected them, and the tool refused a request
        * it could plainly have served. Refusing on a formatting quirk reads to
        * the visitor as "the data isn't there", which is a worse failure than
@@ -567,7 +567,7 @@ export function executeTool(request: ToolCallRequest): ToolCallResult {
       if (found.length < 2) {
         // Tells the model how to recover instead of only that it failed.
         // A bare "need two slugs" left it with nothing to do, and it emitted an
-        // empty answer — the visitor then saw the generic fallback for a
+        // empty answer - the visitor then saw the generic fallback for a
         // question that was perfectly answerable.
         return finish(
           {

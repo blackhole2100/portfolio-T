@@ -6,7 +6,7 @@ const GatewayIoDiagram = ({ description }: { description: string }) => (
     description={description}
     viewBox="0 0 720 424"
   >
-    {/* Before — both paths converge on the same throttled volume */}
+    {/* Before - both paths converge on the same throttled volume */}
     <LayerLabel x={16} y={20} text="Before" />
     <Box x={16} y={30} w={214} h={52} label="Every query" sub="reads the index" order={0} />
     <Box x={474} y={30} w={230} h={52} label="Scheduled re-index" sub="8 repos, every 30 min" order={0} />
@@ -29,7 +29,7 @@ const GatewayIoDiagram = ({ description }: { description: string }) => (
     <Box x={196} y={218} w={328} h={46} label="Health check never answers in time" order={3} />
     <Caption x={534} y={246} text="read as an app crash loop" anchor="start" />
 
-    {/* After — the hot path no longer touches shared storage */}
+    {/* After - the hot path no longer touches shared storage */}
     <LayerLabel x={16} y={300} text="After" />
     <Box x={16} y={310} w={214} h={52} label="Every query" sub="reads local index" order={4} />
     <Box x={244} y={310} w={232} h={52} label="Gateway owns its sync" sub="shallow pull on its own interval" accent order={4} />

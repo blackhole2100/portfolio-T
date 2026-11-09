@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!study) return {};
 
-  const title = `${study.title} — ${personalInfo.name}`;
+  const title = `${study.title} - ${personalInfo.name}`;
   const url = `${siteConfig.siteUrl}${getCaseStudyPath(study.slug)}`;
 
   return {
@@ -282,7 +282,7 @@ const CaseStudyPage = async ({ params }: PageProps) => {
                 {study.sections.map((section) => (
                   <Reveal key={section.heading}>
                     {/* Section headings come from data and vary in length, so
-                        the pill anchors below rather than trailing the text —
+                        the pill anchors below rather than trailing the text -
                         inline, a permanently visible pill would leave every
                         heading's ragged edge permanently uneven. */}
                     <div className="mt-14">

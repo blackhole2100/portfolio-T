@@ -14,9 +14,9 @@ const tenureLabel = currentRole.period;
 /**
  * About section.
  *
- * Built on the same skeleton as Experience and Skills — sticky `panel-sticky`
+ * Built on the same skeleton as Experience and Skills - sticky `panel-sticky`
  * sidebar (badge, two-line gradient heading, intro) beside a long scrolling
- * content column — so the three read as one system.
+ * content column - so the three read as one system.
  *
  * Earlier attempts put the identity facts in the sidebar and only two
  * paragraphs beside them, which left the sidebar taller than its own column and
@@ -119,7 +119,7 @@ const AboutSection = () => {
             </Reveal>
 
             {/* Metric-led proof. Two across inside a 2/3 column keeps each card
-                at a readable measure — three across gave ~23 chars per line. */}
+                at a readable measure - three across gave ~23 chars per line. */}
             <div className="grid gap-4 sm:grid-cols-2">
               {about.highlights.map((highlight, i) => (
                 <SpotlightCard key={highlight.label} delay={i * 0.05} className="h-full">

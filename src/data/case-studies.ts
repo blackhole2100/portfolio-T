@@ -182,7 +182,7 @@ const baseCaseStudies: CaseStudy[] = [
     kind: "system",
     theme: "agents",
     featured: true,
-    title: "Anchord AI — Entity Resolution & Agent Integration",
+    title: "Anchord AI - Entity Resolution & Agent Integration",
     oneLiner:
       "Integrated AI-agent workflows with 11 MCP tools and implemented a reviewable entity-resolution path from candidate matching to safe downstream writes.",
     summary:
@@ -242,7 +242,7 @@ const baseCaseStudies: CaseStudy[] = [
     kind: "system",
     theme: "retrieval",
     featured: true,
-    title: "Correlate Health — Healthcare Platform Integration",
+    title: "Correlate Health - Healthcare Platform Integration",
     oneLiner:
       "Contributed to the development and deployment of healthcare application workflows connecting clinical data, APIs, validation, and reviewable operational processes.",
     summary:
@@ -347,7 +347,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "crushbank-enterprise-ai",
     kind: "system",
     theme: "agents",
-    title: "CrushBank Orchestrate IT — Enterprise AI",
+    title: "CrushBank Orchestrate IT - Enterprise AI",
     oneLiner:
       "Contributed to IBM watsonx integrations for connected enterprise knowledge, grounded answers, service-ticket classification, and operational automation.",
     summary:
@@ -398,7 +398,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "ourblackguide-react-native",
     kind: "product",
     theme: "products",
-    title: "OurBlackGuide — React Native Marketplace",
+    title: "OurBlackGuide - React Native Marketplace",
     oneLiner:
       "Contributed to cross-platform React Native architecture, directory discovery, secure sessions, business profiles, media uploads, and production releases.",
     summary:
@@ -434,7 +434,7 @@ const baseCaseStudies: CaseStudy[] = [
       {
         heading: "Mobile application foundations",
         body:
-          "The documented stack—React Native, TypeScript, React Navigation, and TanStack Query—supports reusable screen components, navigation, and API-backed state. Authentication, media uploads, and deep links extend the experience beyond a simple directory browser.",
+          "The documented stack-React Native, TypeScript, React Navigation, and TanStack Query-supports reusable screen components, navigation, and API-backed state. Authentication, media uploads, and deep links extend the experience beyond a simple directory browser.",
       },
     ],
     results: [
@@ -452,7 +452,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "parente-ai-mobile-health",
     kind: "product",
     theme: "products",
-    title: "Parente AI — Cross-Platform Health Application",
+    title: "Parente AI - Cross-Platform Health Application",
     oneLiner:
       "Built Flutter onboarding, assessment, and patient-messaging workflows, integrated APIs, and resolved mobile state and authentication issues across iOS and Android.",
     summary:
@@ -507,7 +507,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "deed-driver-delivery",
     kind: "product",
     theme: "products",
-    title: "Deed — Driver Delivery Application",
+    title: "Deed - Driver Delivery Application",
     oneLiner:
       "Developed a Flutter driver application for a UPS partner in Iceland, supporting package-scanning and delivery workflows.",
     summary:
@@ -556,7 +556,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "arvrobot-real-estate-underwriting",
     kind: "system",
     theme: "platform",
-    title: "ARVRobot — Real Estate Underwriting",
+    title: "ARVRobot - Real Estate Underwriting",
     oneLiner:
       "Contributed property-data ingestion, comparable analysis, underwriting calculations, configurable assumptions, reporting, and AI-assisted property analysis.",
     summary:
@@ -609,7 +609,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "gemsharbor-marketplace",
     kind: "product",
     theme: "products",
-    title: "GemsHarbor — Marketplace & Auctions",
+    title: "GemsHarbor - Marketplace & Auctions",
     oneLiner:
       "Worked on product listings, dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order workflows.",
     summary:
@@ -662,7 +662,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "shiphype-fulfillment",
     kind: "system",
     theme: "platform",
-    title: "ShipHype — Logistics & Fulfillment",
+    title: "ShipHype - Logistics & Fulfillment",
     oneLiner:
       "Contributed to fulfillment integrations and automation covering event processing, synchronization, retries, error handling, and operational workflows.",
     summary:
@@ -715,7 +715,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "dealercortex-ai",
     kind: "system",
     theme: "agents",
-    title: "DealerCortex AI — Automotive Intelligence",
+    title: "DealerCortex AI - Automotive Intelligence",
     oneLiner:
       "Connected marketing, inventory, CRM, customer-conversation, and call data to AI-driven dealership recommendations and business outcomes.",
     summary:
@@ -768,7 +768,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "arub-shipping-integrations",
     kind: "system",
     theme: "platform",
-    title: "Arub Shipping — Carrier & Order Integrations",
+    title: "Arub Shipping - Carrier & Order Integrations",
     oneLiner:
       "Worked on carrier APIs, order synchronization, shipment processing, label generation, reconciliation, idempotency, retries, and recovery handling.",
     summary:
@@ -816,7 +816,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "suppliersift-ap-automation",
     kind: "system",
     theme: "retrieval",
-    title: "SupplierSift — Accounts Payable Automation",
+    title: "SupplierSift - Accounts Payable Automation",
     oneLiner:
       "Contributed QuickBooks Desktop integration workflows for invoice posting, accounting-list synchronization, and duplicate prevention.",
     summary:
@@ -869,7 +869,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "calcs-engineering-calculations",
     kind: "system",
     theme: "platform",
-    title: "Calcs.com — Engineering Calculation Platform",
+    title: "Calcs.com - Engineering Calculation Platform",
     oneLiner:
       "Contributed to production web workflows that turn spreadsheet-based engineering methods into transparent, testable calculations.",
     summary:
@@ -921,7 +921,7 @@ const baseCaseStudies: CaseStudy[] = [
     slug: "charter-steel-web",
     kind: "product",
     theme: "platform",
-    title: "Charter Steel — Corporate Web Experience",
+    title: "Charter Steel - Corporate Web Experience",
     oneLiner:
       "Contributed to industrial website development, responsive layouts, corporate presentation, and business-facing content organization.",
     summary:

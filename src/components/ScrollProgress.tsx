@@ -17,7 +17,7 @@ type LenisWindow = Window & typeof globalThis & { __lenis?: LenisLike };
  * route. Previously this lived inside `CaseStudyToc`, which meant it only existed
  * on case-study pages and was tied to `#case-study-article`.
  *
- * Driven by a motion value and `scaleX` on a transform — never an animated
+ * Driven by a motion value and `scaleX` on a transform - never an animated
  * `width`, which would lay out on every frame.
  */
 const ScrollProgress = () => {
@@ -51,7 +51,7 @@ const ScrollProgress = () => {
      * event is what makes it continuous.
      *
      * Lenis is created by an ancestor (`SmoothScroll`), and React runs child
-     * effects before parent effects — so on a fresh page load `window.__lenis`
+     * effects before parent effects - so on a fresh page load `window.__lenis`
      * may not exist yet. Rather than silently falling back to the coarse native
      * path forever, poll briefly for it and upgrade when it appears. Under
      * `prefers-reduced-motion` Lenis is never created and the native listener is

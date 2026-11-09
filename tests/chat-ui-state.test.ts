@@ -16,8 +16,8 @@ const ROUTE = readFileSync("src/app/api/chat/route.ts", "utf8");
 test("the typing indicator does not duplicate a streaming bubble", () => {
   /*
    * The standalone indicator predates streaming. Once the assistant bubble
-   * started being placed on the first event — carrying its own status label and
-   * tool trace — an unconditional `isLoading` indicator rendered a SECOND empty
+   * started being placed on the first event - carrying its own status label and
+   * tool trace - an unconditional `isLoading` indicator rendered a SECOND empty
    * bubble underneath the real one.
    */
   const guard = /\{isLoading && !messages\.some\(\(message\) => message\.streaming\)/;

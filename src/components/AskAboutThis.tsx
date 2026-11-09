@@ -15,7 +15,7 @@ export { openAiTwin as askAboutThis } from "@/lib/ask-twin";
  * drift apart.
  *
  * Deliberately quiet at rest. These are always visible now rather than
- * hover-revealed, and there are 40-plus of them on the homepage alone — at full
+ * hover-revealed, and there are 40-plus of them on the homepage alone - at full
  * accent strength they would compete with the content they annotate. Hover and
  * focus raise the contrast, so hover signals "this is interactive" rather than
  * "this exists".
@@ -36,13 +36,13 @@ const AFFORDANCE_BASE =
  *
  * `inline` opts a surface into answering in place instead, and is deliberately
  * rare. An inline answer only works where the container is full-width prose
- * that can grow downward — inside a narrow grid cell it blew the card's height
+ * that can grow downward - inside a narrow grid cell it blew the card's height
  * and broke row alignment with its neighbours, and it duplicated text that was
  * already on screen a few pixels above.
  *
  * Always visible: no opacity toggling and no `group-hover` scope. An earlier
  * version revealed itself on hover of a named group ancestor, which meant every
- * call site had to declare a matching `group/<scope>` wrapper — a coupling that
+ * call site had to declare a matching `group/<scope>` wrapper - a coupling that
  * silently broke whenever the pill moved out of that ancestor.
  */
 export default function AskAboutThis({

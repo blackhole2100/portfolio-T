@@ -10,7 +10,7 @@ import Reveal from "@/components/ui/reveal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const title = `Engineering Case Studies — ${personalInfo.name}`;
+const title = `Engineering Case Studies - ${personalInfo.name}`;
 const description = '';
 const url = `${siteConfig.siteUrl}/work`;
 

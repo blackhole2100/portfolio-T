@@ -116,7 +116,7 @@ const SelectItem = React.forwardRef<
     {/*
       Rendered as a sibling of the text, not inside it. `ItemText` is an inline
       wrapper, so an icon passed through `children` ends up inside it and the
-      Item's flex row never applies — which stacked the icon above the label.
+      Item's flex row never applies - which stacked the icon above the label.
     */}
     {Icon && <Icon className="h-4 w-4 shrink-0 text-primary" />}
 

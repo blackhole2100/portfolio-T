@@ -9,7 +9,7 @@ import { join } from "node:path";
  *
  * Both earlier sweeps asked the wrong question. One searched only for WHITE
  * fills (`bg-white/5`), so a primary-tinted fill was invisible to it. The other
- * asked "does this element have a fill?" and treated yes as proof it was fine —
+ * asked "does this element have a fill?" and treated yes as proof it was fine -
  * when the actual defect is having a fill WITHOUT a blur. This test asks the
  * correct question: any large prose/panel surface with a resting fill must also
  * declare a blur source.
@@ -75,12 +75,12 @@ test("large panel surfaces with a fill also declare a blur", () => {
       if (!/\bp-[5-9]\b|\bp-1[0-9]\b/.test(cls)) continue;
       if (GLASS_TOKENS.some((token) => cls.includes(token))) continue;
 
-      // A resting fill of ANY colour — the earlier audits only looked for white.
+      // A resting fill of ANY colour - the earlier audits only looked for white.
       const fill = /(?<!hover:)(?<!group-hover:)(?<!focus:)\bbg-(?!transparent|gradient|clip|none)[a-z]+/.exec(cls);
       if (!fill) continue;
 
       const line = source.slice(0, match.index).split("\n").length;
-      offenders.push(`${file}:${line} — fill ${fill[0]} with no blur\n    ${cls.slice(0, 110)}`);
+      offenders.push(`${file}:${line} - fill ${fill[0]} with no blur\n    ${cls.slice(0, 110)}`);
     }
   }
 

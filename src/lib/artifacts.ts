@@ -37,7 +37,7 @@ export type ArtifactUploadRequest = z.infer<typeof artifactUploadSchema>;
 export const ARTIFACT_PREFIX = "artifacts";
 export const ARTIFACT_COUNTER_PREFIX = "artifacts/_meta/counters";
 
-// Daily caps are enforced globally (not per-IP) — see hosted-html-report plan
+// Daily caps are enforced globally (not per-IP) - see hosted-html-report plan
 // notes: Vercel Blob has no concept of "who uploaded this", and adding a
 // separate durable per-IP store (e.g. Upstash Redis) was explicitly declined.
 export const MAX_NEW_HOSTS_PER_DAY = 10;

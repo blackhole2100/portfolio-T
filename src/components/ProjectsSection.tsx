@@ -49,7 +49,7 @@ function ProjectGallery({
    * Which image indexes have already been warmed.
    *
    * This was a single boolean, latched true by the index-less call the mount
-   * effect makes — so only images 0 and 1 were ever prefetched and every later
+   * effect makes - so only images 0 and 1 were ever prefetched and every later
    * targeted call (hover, focus, paging) returned early. Tracking per index
    * makes neighbour warming actually work while still never re-fetching one.
    */
@@ -82,7 +82,7 @@ function ProjectGallery({
   if (project.images.length === 0) {
     return (
       <div className="flex items-center justify-center border-t border-white/10 bg-black/30 p-6 text-center font-mono text-xs leading-relaxed text-muted-foreground lg:w-[58%] lg:border-l lg:border-t-0">
-        Internal project — no public website URL was supplied. No unrelated image is used.
+        Internal project - no public website URL was supplied. No unrelated image is used.
       </div>
     );
   }
@@ -187,15 +187,15 @@ function ProjectCard({
         Opaque on purpose, with blur explicitly disabled.
 
         These cards stack into a sticky deck, so each one must fully hide the
-        cards behind it. Any translucency at all — even the 80% `glass-strong`
-        tier — lets the previous card's screenshot show through, which is what
+        cards behind it. Any translucency at all - even the 80% `glass-strong`
+        tier - lets the previous card's screenshot show through, which is what
         the original `backdrop-blur-none backdrop-saturate-100` was guarding
         against. This is the one surface on the site that is deliberately not
         glass; do not "fix" it to use a glass tier.
       */}
       {/*
         animateOnEnter={false}: the reveal animation fades element opacity from 0
-        to 1, and a half-faded opaque card is translucent — so on refresh the card
+        to 1, and a half-faded opaque card is translucent - so on refresh the card
         below showed through for the length of the animation. Fading in a member
         of a deliberately opaque stack cannot work; the deck reveals itself
         through the sticky scroll offsets instead.
@@ -353,7 +353,7 @@ const ProjectsSection = () => {
           </div>
         </Reveal>
 
-        {/* Sticky stacked deck — cards overlap into a stack as you scroll. */}
+        {/* Sticky stacked deck - cards overlap into a stack as you scroll. */}
         <div className="relative mb-20 flex flex-col gap-8 pb-20">
           {featuredSelectedProjectWork.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} onOpenViewer={handleOpenViewer} />

@@ -34,7 +34,7 @@ export function InlineAnswer({
    *
    * Keying on `status` as well made this re-run on every state transition, and
    * under React StrictMode's development double-invoke that meant a second
-   * request immediately superseded the first — whose abort then surfaced as a
+   * request immediately superseded the first - whose abort then surfaced as a
    * spurious "took too long" error before the real answer arrived.
    */
   useEffect(() => {
@@ -59,7 +59,7 @@ export function InlineAnswer({
       A `span` with `block` display, not a `div`.
 
       The pill that opens this sits inside headings and inside paragraph/list
-      text, and a `div` is invalid HTML there — browsers close the enclosing
+      text, and a `div` is invalid HTML there - browsers close the enclosing
       `<p>` early and the answer escapes its container. A span styled as a block
       is valid in every one of those positions and still lays out as a panel.
     */
@@ -109,7 +109,7 @@ export function InlineAnswer({
 
           A tool call flips the status to "streaming" before any text exists, so
           gating on "loading" alone left the panel showing a bare
-          `get_case_study(...)` trace line and nothing else — it read as broken
+          `get_case_study(...)` trace line and nothing else - it read as broken
           rather than as working.
         */}
         {(status === "loading" || ((status === "streaming" || status === "done") && !content)) && (

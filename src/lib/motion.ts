@@ -30,7 +30,7 @@ export function revealTransition(shouldReduceMotion: boolean | null, delay = 0):
 type Axis = "y" | "x";
 
 /**
- * Slide only — deliberately no opacity fade.
+ * Slide only - deliberately no opacity fade.
  *
  * Backdrop blur only reads as glass once the element is opaque enough to have a
  * visible fill, so fading a glass surface in from `opacity: 0` made it look

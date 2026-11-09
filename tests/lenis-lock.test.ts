@@ -8,7 +8,7 @@ const SOURCE = readFileSync("src/hooks/useLenisLock.ts", "utf8");
  * Guards how overlays stop the page from scrolling behind them.
  *
  * The previous version of this file only re-implemented the reference counter
- * inline and asserted against its own copy — so it stayed green while the hook
+ * inline and asserted against its own copy - so it stayed green while the hook
  * switched mechanism entirely, and could never have caught the bug it was
  * nominally protecting: `data-lenis-prevent` on `body` matched every wheel
  * event and silently disabled smooth scrolling site-wide.
@@ -18,7 +18,7 @@ const SOURCE = readFileSync("src/hooks/useLenisLock.ts", "utf8");
 
 test("the lock never uses data-lenis-prevent on body", () => {
   // Lenis slices composedPath() up to `rootElement` (document.documentElement),
-  // and `body` sits below html in that path — so it survives the slice and
+  // and `body` sits below html in that path - so it survives the slice and
   // matches on EVERY wheel event, making Lenis bail out page-wide. The symptom
   // is the page reverting to native scroll speed whenever an overlay is open.
   assert.doesNotMatch(
@@ -78,10 +78,10 @@ test("nested overlays lock once and release once", () => {
   acquire(); // second modal over it
   assert.deepEqual({ locked, released }, { locked: 1, released: 0 });
 
-  release(); // first modal closes — page must stay locked
+  release(); // first modal closes - page must stay locked
   assert.deepEqual({ locked, released }, { locked: 1, released: 0 });
 
-  release(); // twin closes — now released
+  release(); // twin closes - now released
   assert.deepEqual({ locked, released }, { locked: 1, released: 1 });
 
   release(); // stray release
@@ -115,7 +115,7 @@ test("the AI Twin only locks scroll on mobile", () => {
    * silently wrong.
    *
    * Anchored on the code comment marking the branch, not the bare word
-   * "Desktop" — that also appears in prose above and swallowed the mobile
+   * "Desktop" - that also appears in prose above and swallowed the mobile
    * branch, which does legitimately have a backdrop.
    */
   const desktopBranch = source.slice(source.indexOf("// Desktop:"));
@@ -123,7 +123,7 @@ test("the AI Twin only locks scroll on mobile", () => {
   assert.doesNotMatch(
     desktopBranch,
     /fixed inset-0 z-50 bg-black/,
-    "the desktop panel gained a scrim, so it is now modal — revisit the mobile-only lock"
+    "the desktop panel gained a scrim, so it is now modal - revisit the mobile-only lock"
   );
 });
 

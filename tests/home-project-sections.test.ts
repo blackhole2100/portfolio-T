@@ -60,7 +60,7 @@ test("the homepage partition is derived from the canonical featured case-study s
 });
 
 
-test("Freight SaaS — QuickBooks Online Integration is fully removed from the portfolio", () => {
+test("Freight SaaS - QuickBooks Online Integration is fully removed from the portfolio", () => {
   const removedSlug = "freight-quickbooks-integration";
 
 assert.equal(

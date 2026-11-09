@@ -76,7 +76,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07131f"><meta name="description" content="${esc(personalInfo.tagline)}">
-<title>${esc(personalInfo.name)} — Portfolio Preview</title>
+<title>${esc(personalInfo.name)} - Portfolio Preview</title>
 <style>
 :root{color-scheme:dark;--bg:#07131f;--panel:#0d1d2b;--panel2:#102536;--line:#244154;--text:#e8f2f8;--muted:#9bb0c0;--accent:#62dfd0;--accent2:#2999aa;--ambient:#1b66621c;--shadow:0 22px 70px #0006}
 :root[data-theme="light"]{color-scheme:light;--bg:#F5F5F5;--panel:#FFFFFF;--panel2:#E7F5FF;--line:#B8DFF5;--text:#132b3b;--muted:#536c7c;--accent:#87CEFA;--accent2:#0078D4;--ambient:#87CEFA55;--shadow:0 18px 55px #193b4c18}

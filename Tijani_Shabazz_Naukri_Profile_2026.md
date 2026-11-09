@@ -1,4 +1,4 @@
-# Tijani Shabazz — Naukri profile
+# Tijani Shabazz - Naukri profile
 
 Prepared on 11 September 2026 from `src/`, `work/`, `Nikunj.md`, and `Nikunj_Khitha_ATS_Resume_2026.tex`, with internet research into Naukri's candidate guidance and recruiter search tools.
 
@@ -26,7 +26,7 @@ This priority order is my assessment of your current gaps. Naukri recommends a r
 
 ## 2. Resume headline
 
-### Recommended — use this first
+### Recommended - use this first
 
 ```text
 Applied AI Engineer at ArmorCode | Generative AI, AI Agents & RAG | Python, Go, TypeScript & Java | MCP, LLM Evaluation & Backend Engineering
@@ -34,7 +34,7 @@ Applied AI Engineer at ArmorCode | Generative AI, AI Agents & RAG | Python, Go, 
 
 This highlights your current role, programming stack, and strengths in AI platforms, evaluation and backend engineering. The recommended headline is **141 characters**, including spaces. Naukri's published headline guidance specifies a 250-character limit. [Naukri: Resume Headline Examples](https://www.naukri.com/blog/resume-headline-examples-for-naukri/amp/)
 
-### Alternative — for a deliberate shift toward AI platform/backend openings
+### Alternative - for a deliberate shift toward AI platform/backend openings
 
 ```text
 Applied AI Engineer | AI Platform & Backend Engineering | Python, Go, TypeScript, Java, Spring Boot, Spring AI | MCP, RAG, LLM Gateways, Langfuse, AWS, Kubernetes
@@ -117,20 +117,20 @@ Add roles in reverse chronological order. Use the official employer spelling and
 
 Your Naukri editor does not allow descriptions for previous employment. Paste the combined ArmorCode description below into the current full-time entry. It includes the relevant earlier ArmorCode work under an explicitly dated internship paragraph. Keep the internship's title and dates as a separate employment record wherever the editor allows those fields.
 
-### ArmorCode — current role
+### ArmorCode - current role
 
 | Field | Value |
 |---|---|
 | Company | ArmorCode |
 | Designation | Applied AI Engineer (SDE 1), subject to official-title check |
 | Current employment | Yes |
-| Employment type | Full-time — confirm against your contract |
+| Employment type | Full-time - confirm against your contract |
 | Dates | December 2025 – Present |
 | Location | Gurugram, Haryana, India |
 | Current annual salary | **CONFIRM** actual annual CTC and requested fixed/variable breakdown |
 | Notice period | **CONFIRM** official notice period |
 
-**Job profile — copy and paste:**
+**Job profile - copy and paste:**
 
 ```text
 Build production AI systems and developer tools with Python, TypeScript and Go for ArmorCode's enterprise AppSec environment.
@@ -143,7 +143,7 @@ Build production AI systems and developer tools with Python, TypeScript and Go f
 - Built a Go codebase-search MCP service across eight product repositories and resolved output-schema and client-timeout failures through source-level debugging and regression verification.
 - Built AI documentation automation triggered by completed Jira tickets: an agent creates or updates GitHub documentation and opens a PR, the team reviews and edits it through Quill (Electron/React/TypeScript), and merged changes sync to Zendesk. Built Quill as the workflow's review app with an embedded AI agent terminal, per-branch Git worktrees and permission-aware GitHub actions.
 
-Earlier at ArmorCode — Software Development Intern (Applied AI), Jan-Nov 2025:
+Earlier at ArmorCode - Software Development Intern (Applied AI), Jan-Nov 2025:
 - Created Anya's initial Java agent framework and owned its short- and long-term memory layers. Set up Langfuse evaluation for agent accuracy and memory behavior.
 - Migrated 2 of 6 sub-agents from LangChain4j to Spring AI, reimplementing memory and evaluation integrations.
 - Owned integrations for 5+ security tools, including Black Duck, Snyk and Checkmarx, on a platform with 130+ connectors. Built AI-assisted scaffolding with template engines and AST parsing, reducing boilerplate setup time by 30%.
@@ -151,7 +151,7 @@ Earlier at ArmorCode — Software Development Intern (Applied AI), Jan-Nov 2025:
 Technologies: Python, TypeScript, Go, Java, Spring Boot, Spring AI, LangChain4j, React, Electron, MCP, Langfuse, Ragas, OpenTelemetry, Neo4j, pgvector, PostgreSQL, LiteLLM, AWS, Jenkins, Jira, GitHub and Zendesk.
 ```
 
-### ArmorCode — internship
+### ArmorCode - internship
 
 | Field | Value |
 |---|---|
@@ -163,7 +163,7 @@ Technologies: Python, TypeScript, Go, Java, Spring Boot, Spring AI, LangChain4j,
 
 The relevant internship achievements are included in the current ArmorCode description above. This previous-employment entry needs only the available company, designation, employment type and date fields.
 
-### Xansr Media (AIKO) — internship
+### Xansr Media (AIKO) - internship
 
 | Field | Value |
 |---|---|
@@ -173,7 +173,7 @@ The relevant internship achievements are included in the current ArmorCode descr
 | Dates | June 2024 – December 2024 |
 | Location | Remote |
 
-**Job profile — copy and paste:**
+**Job profile - copy and paste:**
 
 ```text
 - Built Fantasy GPT with Python, LangGraph, SQL-RAG, backend APIs and DeepEval quality checks for multi-step sports queries.
@@ -184,7 +184,7 @@ The relevant internship achievements are included in the current ArmorCode descr
 Technologies: Python, LangGraph, RAG, DeepEval, FastAPI, Node.js, Microsoft SQL Server, Azure Speech SDK, Docker and GitHub Actions.
 ```
 
-### Central Electricity Authority, Government of India — internship
+### Central Electricity Authority, Government of India - internship
 
 | Field | Value |
 |---|---|
@@ -194,7 +194,7 @@ Technologies: Python, LangGraph, RAG, DeepEval, FastAPI, Node.js, Microsoft SQL 
 | Dates | May 2023 – July 2023 |
 | Location | New Delhi, India |
 
-**Job profile — copy and paste:**
+**Job profile - copy and paste:**
 
 ```text
 - Integrated National Power Portal data into a renewable-energy dashboard covering 150+ power stations.
@@ -212,32 +212,32 @@ For a field explicitly asking for full-time professional experience excluding in
 
 ## 6. IT skills
 
-The screenshot shows **one skill per saved entry**, with separate fields for **Skill / software name**, **Software version**, **Last used**, and **Experience — Years / Months**. Only the skill name has a required-field asterisk in this screenshot; try leaving unknown optional fields empty instead of inventing values.
+The screenshot shows **one skill per saved entry**, with separate fields for **Skill / software name**, **Software version**, **Last used**, and **Experience - Years / Months**. Only the skill name has a required-field asterisk in this screenshot; try leaving unknown optional fields empty instead of inventing values.
 
 ### Entries matching the form
 
 Add the first 15 initially. React, Next.js and Electron are additional options for AI product and TypeScript roles. A dash below means **leave blank until known**, not a literal dash to type into the form.
 
-| Skill / software name | Software version | Last used | Experience — Years | Experience — Months |
+| Skill / software name | Software version | Last used | Experience - Years | Experience - Months |
 |---|---|---|---|---|
-| Python | — | 2026 | 2 | 3 |
+| Python | - | 2026 | 2 | 3 |
 | TypeScript | 5.9.3* | 2026 | 1 | 9 |
-| Go | — | 2026 | 1 | 9 |
-| Java | — | 2026 | 2 | 0 |
-| Spring Boot | — | 2026 | 1 | 9 |
-| Spring AI | — | 2026 | 1 | 9 |
-| LangGraph | — | 2024 | 0 | 7 |
-| FastAPI | — | 2024 | 0 | 7 |
-| Langfuse | — | 2026 | 1 | 9 |
-| PostgreSQL | — | 2026 | 2 | 0 |
-| Neo4j | — | 2026 | 1 | 9 |
-| pgvector | — | 2026 | 1 | 9 |
-| Docker | — | 2026 | 1 | 9 |
-| AWS Bedrock | — | 2026 | 0 | 9 |
-| Kubernetes | — | 2026 | 1 | 9 |
+| Go | - | 2026 | 1 | 9 |
+| Java | - | 2026 | 2 | 0 |
+| Spring Boot | - | 2026 | 1 | 9 |
+| Spring AI | - | 2026 | 1 | 9 |
+| LangGraph | - | 2024 | 0 | 7 |
+| FastAPI | - | 2024 | 0 | 7 |
+| Langfuse | - | 2026 | 1 | 9 |
+| PostgreSQL | - | 2026 | 2 | 0 |
+| Neo4j | - | 2026 | 1 | 9 |
+| pgvector | - | 2026 | 1 | 9 |
+| Docker | - | 2026 | 1 | 9 |
+| AWS Bedrock | - | 2026 | 0 | 9 |
+| Kubernetes | - | 2026 | 1 | 9 |
 | React.js | 19.2.4* | 2026 | 2 | 0 |
 | Next.js | 16.2.6* | 2026 | 1 | 9 |
-| Electron | — | 2026 | 0 | 9 |
+| Electron | - | 2026 | 0 | 9 |
 
 *Versions marked with an asterisk are resolved versions in this portfolio's [package-lock.json](package-lock.json). Enter them only if they reflect versions you personally worked with. They are not inferred versions for Quill, CodeNex, or your employer's systems. Other versions have not been established by the reviewed files. AWS Bedrock is a service; do not put a model name in the software-version field.
 
@@ -274,18 +274,18 @@ Each project below now has the fields shown in your Naukri form. Paste its first
 
 The screenshot's preselected Finished, Offsite and Full time options do not establish those facts for all employer projects.
 
-### Project 1 — LLM Evaluation Platform
+### Project 1 - LLM Evaluation Platform
 
 | Field | Value |
 |---|---|
 | Project title | LLM Evaluation Platform |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or extend evaluation coverage; Finished only for a completed scope |
-| Worked from — year/month | 2026 / July † |
-| Worked till — year/month | Actual completion month if Finished; ongoing if In progress |
+| Worked from - year/month | 2026 / July † |
+| Worked till - year/month | Actual completion month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time |
 | Team size | Leave blank until confirmed; include the actual evaluation project team |
 | Role | Developer or closest equivalent available |
@@ -293,7 +293,7 @@ The screenshot's preselected Finished, Offsite and Full time options do not esta
 
 † July 2026 is anchored to [BTA-217](work/BTA/BTA-217.md), created 16 July 2026 for the original model-comparison framework. Confirm the start of the expanded platform scope you are describing; the records do not establish a finished date.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built an LLM evaluation framework on ArmorCode's Langfuse platform to measure prompt, model, agent, tool and retrieval quality. Created golden datasets, deterministic checks, classification metrics, Ragas retrieval scoring and LLM-as-a-judge evaluation validated against human labels. Integrated evaluation into Jenkins CI gates to assess accuracy, latency and cost before changes ship. Owned the evaluation framework; platform DevOps owned the underlying Langfuse deployment.
@@ -301,24 +301,24 @@ Built an LLM evaluation framework on ArmorCode's Langfuse platform to measure pr
 Case study: https://tijani-porfolio.dev/work/llm-evaluation-platform
 ```
 
-**Role description — copy and paste (204/250 characters):**
+**Role description - copy and paste (204/250 characters):**
 
 ```text
 Designed the evaluation framework, curated golden datasets, implemented deterministic and LLM-based scoring, and integrated Jenkins quality gates. Platform DevOps owned the underlying Langfuse deployment.
 ```
 
-### Project 2 — Governed MCP Tool Registry
+### Project 2 - Governed MCP Tool Registry
 
 | Field | Value |
 |---|---|
 | Project title | Governed MCP Tool Registry |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode; this company project includes earlier internship contributions |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode; this company project includes earlier internship contributions |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you continue integrating and maintaining servers |
-| Worked from — year/month | 2025 / November † |
-| Worked till — year/month | Ongoing if In progress; actual end month if Finished |
+| Worked from - year/month | 2025 / November † |
+| Worked till - year/month | Ongoing if In progress; actual end month if Finished |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current project assignment; retain the earlier internship distinction in employment |
 | Team size | Leave blank until actual registry/integration team size is confirmed |
 | Role | Developer or closest equivalent available |
@@ -326,7 +326,7 @@ Designed the evaluation framework, curated golden datasets, implemented determin
 
 † November 2025 is a provisional delivered-server workstream anchor: [BTA-65](work/BTA/BTA-65.md) was created 4 November and [BTA-78](work/BTA/BTA-78.md) on 28 November. Earlier MCP client experiments do not by themselves establish the start of this server-registry project.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Delivered 10+ production Model Context Protocol servers into a shared enterprise registry for agent tool access. Implemented OAuth2/RBAC, tool-level permission tiers, explicit denials and audit attribution. Validated 20/20 authorization checks across three access tiers in a 23-tool integration. Enabled internal tool distribution to business users and resolved a codebase-search failure caused by an output-schema defect and a client-timeout mismatch.
@@ -334,24 +334,24 @@ Delivered 10+ production Model Context Protocol servers into a shared enterprise
 Case study: https://tijani-porfolio.dev/work/governed-mcp-registry
 ```
 
-**Role description — copy and paste (181/250 characters):**
+**Role description - copy and paste (181/250 characters):**
 
 ```text
 Built and integrated MCP servers, implemented OAuth2/RBAC and tool-level permissions, validated authorization behavior, and maintained access governance and integration reliability.
 ```
 
-### Project 3 — Knowledge Graph RAG
+### Project 3 - Knowledge Graph RAG
 
 | Field | Value |
 |---|---|
 | Project title | Knowledge Graph RAG |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode; the initial POC was during the internship |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode; the initial POC was during the internship |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you continue ingestion, retrieval improvements or evaluation |
-| Worked from — year/month | 2025 / September † |
-| Worked till — year/month | Ongoing if In progress; actual end month if Finished |
+| Worked from - year/month | 2025 / September † |
+| Worked till - year/month | Ongoing if In progress; actual end month if Finished |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; initial work was during the internship |
 | Team size | Leave blank until confirmed |
 | Role | Developer or closest equivalent available |
@@ -359,7 +359,7 @@ Built and integrated MCP servers, implemented OAuth2/RBAC and tool-level permiss
 
 † [BTA-35](work/BTA/BTA-35.md), the KG-RAG POC for RCA action items, was created 23 September 2025. This supports a September POC anchor, subject to confirmation of your actual start.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built tenant-scoped knowledge-graph RAG over 1M+ entities using Neo4j and pgvector. Connected product documentation, root-cause analyses and test knowledge to business agents through graph and vector retrieval. Implemented ingestion paths and evaluated retrieval accuracy, ranking quality and context precision across five query modes to ground answers in relevant, tenant-scoped information.
@@ -367,13 +367,13 @@ Built tenant-scoped knowledge-graph RAG over 1M+ entities using Neo4j and pgvect
 Case study: https://tijani-porfolio.dev/work/knowledge-graph-rag
 ```
 
-**Role description — copy and paste (170/250 characters):**
+**Role description - copy and paste (170/250 characters):**
 
 ```text
 Built tenant-scoped graph and vector retrieval, developed ingestion pipelines, and evaluated retrieval accuracy, ranking quality and context precision across query modes.
 ```
 
-### Project 4 — Fantasy GPT: Sports Intelligence with SQL-RAG
+### Project 4 - Fantasy GPT: Sports Intelligence with SQL-RAG
 
 | Field | Value |
 |---|---|
@@ -381,10 +381,10 @@ Built tenant-scoped graph and vector retrieval, developed ingestion pipelines, a
 | Tag with employment/education | Your internship entry at Xansr Media (AIKO) |
 | Client | Xansr Media (Internal product) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2024 / actual project start month within June–December |
-| Worked till — year/month | 2024 / actual project end month, no later than December for this internship contribution |
+| Worked from - year/month | 2024 / actual project start month within June–December |
+| Worked till - year/month | 2024 / actual project end month, no later than December for this internship contribution |
 | Project location | Your actual city during the remote internship; leave blank if uncertain |
-| Project site | Offsite — the internship is documented as remote |
+| Project site | Offsite - the internship is documented as remote |
 | Nature of employment | Full time if the internship was full-time; otherwise select the actual arrangement |
 | Team size | Leave blank until the product team size is confirmed |
 | Role | Developer or closest equivalent available; the employment tag retains Internship |
@@ -392,7 +392,7 @@ Built tenant-scoped graph and vector retrieval, developed ingestion pipelines, a
 
 Use June–December 2024 only if you worked on Fantasy GPT throughout the internship. The employment dates establish the outer bounds, not the exact project months.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built Fantasy GPT, a sports intelligence system answering cricket questions through multi-step reasoning over live match data. Developed Python and FastAPI backend APIs and LangGraph workflows to plan and chain SQL-RAG queries against Microsoft SQL Server. Built Python ETL pipelines to collect sports data from multiple sources and keep the analytical store updated. Integrated an in-house fine-tuned model for domain-specific reasoning and added DeepEval quality checks to assess generated answers. Owned the retrieval and reasoning system, backend APIs, data pipelines and answer evaluation as a GenAI intern on the product team.
@@ -400,7 +400,7 @@ Built Fantasy GPT, a sports intelligence system answering cricket questions thro
 Case study: https://tijani-porfolio.dev/work/fantasy-gpt
 ```
 
-**Role description — copy and paste (169/250 characters):**
+**Role description - copy and paste (169/250 characters):**
 
 ```text
 Built Python/FastAPI APIs, LangGraph reasoning workflows, SQL-RAG retrieval, sports-data ETL pipelines and DeepEval quality checks as a GenAI intern on the product team.
@@ -408,18 +408,18 @@ Built Python/FastAPI APIs, LangGraph reasoning workflows, SQL-RAG retrieval, spo
 
 Use this entry to make your Xansr work visible even though Naukri does not provide a description field for that previous employment entry. The fine-tuned model was an in-house component; the description does not claim you personally trained it. The public case study reports 98% query resolution and answers under 30 seconds; the copy above omits those metrics until their evaluation conditions can be explained, consistent with the evidence notes below.
 
-### Project 5 — AI Documentation Automation with Quill Review
+### Project 5 - AI Documentation Automation with Quill Review
 
 | Field | Value |
 |---|---|
 | Project title | AI Documentation Automation with Quill Review |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode; the initial automation work was during the internship |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode; the initial automation work was during the internship |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you continue developing or maintaining the workflow |
-| Worked from — year/month | 2025 / July † for the overall documentation automation |
-| Worked till — year/month | Ongoing if In progress; actual end month if Finished |
+| Worked from - year/month | 2025 / July † for the overall documentation automation |
+| Worked till - year/month | Ongoing if In progress; actual end month if Finished |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; initial work was during the internship |
 | Team size | Actual team for the complete documentation workflow; leave blank until confirmed |
 | Role | Developer or closest equivalent available |
@@ -427,7 +427,7 @@ Use this entry to make your Xansr work visible even though Naukri does not provi
 
 † The work map dates the documentation workstream to July 2025; [BTA-6](work/BTA/BTA-6.md) was created 29 July 2025. Quill was added in 2026. The July anchor describes the broader automation, not the date all current stages or the Quill app existed.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built AI documentation automation that starts when a Jira ticket is completed. An agent gathers ticket and codebase context, creates or updates documentation in GitHub, and opens a pull request. Built Quill, the workflow's TypeScript/React/Electron review app, so the documentation team can inspect rendered changes, edit drafts and approve PRs using a WYSIWYG editor, an embedded agent terminal and isolated Git worktrees. Once the PR merges, the workflow syncs the documentation to Zendesk. Quill provides the human review step within the complete automation.
@@ -436,32 +436,32 @@ Case study: https://tijani-porfolio.dev/work/documentation-automation
 Quill review app: https://tijani-porfolio.dev/work/quill
 ```
 
-**Role description — copy and paste (162/250 characters):**
+**Role description - copy and paste (162/250 characters):**
 
 ```text
 Built the Jira-triggered documentation agent workflow, GitHub PR delivery, Quill review app in TypeScript/React/Electron, and Zendesk synchronization after merge.
 ```
 
-### Project 6 — Agentic Office OS
+### Project 6 - Agentic Office OS
 
 | Field | Value |
 |---|---|
 | Project title | Agentic Office OS |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | 2025–2026; confirm the actual start year and month |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | 2025–2026; confirm the actual start year and month |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | AI Agents, MCP, Slack, Human-in-the-Loop Workflows, Go, Gin, Task Queues, Observability |
 
 Office OS is the umbrella platform. The evaluation, registry, retrieval, documentation and business-data entries describe specific components; do not add their durations together.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Co-built ArmorCode's internal agent platform with teammates, translating stakeholder requirements into autonomous, human-triggered and human-in-the-loop workflows accessible through Slack. Connected agents to shared MCP tools, product knowledge and business data. Owned stakeholder discovery, rollout, debugging and enablement. Operationalized internal agent execution through a Go/Gin gateway with routing, load balancing, task queues and observability for scheduled and pull-request-triggered workflows.
@@ -469,30 +469,30 @@ Co-built ArmorCode's internal agent platform with teammates, translating stakeho
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (164/250 characters):**
+**Role description - copy and paste (164/250 characters):**
 
 ```text
 Co-built the internal agent platform, translated stakeholder needs into workflows, integrated shared tools and context, and owned rollout, debugging and enablement.
 ```
 
-### Project 7 — Code Intelligence Gateway
+### Project 7 - Code Intelligence Gateway
 
 | Field | Value |
 |---|---|
 | Project title | Code Intelligence Gateway |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | 2026 / actual start month — confirm |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | 2026 / actual start month - confirm |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Go, MCP, Docker, AWS ECS, AWS Fargate, Application Load Balancer, Vector Search, Git, Debugging |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built a Go code-search gateway over eight product repositories with authentication, request queueing, per-query session isolation and a read-only agent backed by a local vector index. Designed the production deployment and diagnosed shared-filesystem throughput throttling behind recurring restarts. Moved query data off the shared-volume hot path, made startup non-blocking and coordinated Git synchronization. Also resolved MCP output-schema and client-timeout failures. Platform DevOps implemented infrastructure provisioning against my deployment specification.
@@ -500,32 +500,32 @@ Built a Go code-search gateway over eight product repositories with authenticati
 Case study: https://tijani-porfolio.dev/work/code-intelligence-gateway
 ```
 
-**Role description — copy and paste (198/250 characters):**
+**Role description - copy and paste (198/250 characters):**
 
 ```text
 Designed the Go search service and deployment specification, implemented query isolation and indexing changes, and diagnosed storage and MCP failures. Platform DevOps provisioned the infrastructure.
 ```
 
-### Project 8 — Enterprise LLM Gateway and Cost Optimization
+### Project 8 - Enterprise LLM Gateway and Cost Optimization
 
 | Field | Value |
 |---|---|
 | Project title | Enterprise LLM Gateway and Cost Optimization |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | Actual start year/month during ArmorCode tenure — confirm |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | Actual start year/month during ArmorCode tenure - confirm |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | LiteLLM, LLM Gateways, AWS Bedrock, Prompt Caching, API Key Management, RBAC, Cost Analysis, MCP |
 
 This is ArmorCode's enterprise LiteLLM work. The personal Go-based CodeNex AI API Proxy remains a separate Work sample. No dedicated public case study is established for this enterprise gateway.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Maintain company-wide model and MCP access through LiteLLM, including the approved model catalog, scoped API keys, per-model access and spend budgets. Distribute permission-controlled internal MCP access to employee clients. Investigated a budget alert across more than 50,000 requests, traced the largest cost concentration to recurring automations and a historical backfill, and implemented model migration and AWS Bedrock prompt caching by separating system and user prompts.
@@ -533,32 +533,32 @@ Maintain company-wide model and MCP access through LiteLLM, including the approv
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (156/250 characters):**
+**Role description - copy and paste (156/250 characters):**
 
 ```text
 Maintain LiteLLM access governance, model configuration and spend budgets; investigate usage costs and implement model migration and Bedrock prompt caching.
 ```
 
-### Project 9 — Sentinel Test Generation Agent
+### Project 9 - Sentinel Test Generation Agent
 
 | Field | Value |
 |---|---|
 | Project title | Sentinel Test Generation Agent |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | 2025–2026; confirm the actual start year and month |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | 2025–2026; confirm the actual start year and month |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Python, AI Agents, MCP, Neo4j, n8n, Jira, AWS Bedrock, Test Generation, Tool Calling |
 
 The public case study explicitly distinguishes delivered generation and upload from planned traceability enforcement and remediation. Do not describe those planned features as shipped.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built an agent that generates test cases from Jira tickets using code-graph context, historical root-cause analyses and the existing test corpus. Implemented parallel tool calls and uploads to the test-management system with folder handling and labels. Fixed parsing and priority-field integration defects and validated an end-to-end run jointly with a QA engineer. Designed a ticket-to-case traceability contract for downstream automation; enforcement of that contract remains planned.
@@ -566,30 +566,30 @@ Built an agent that generates test cases from Jira tickets using code-graph cont
 Case study: https://tijani-porfolio.dev/work/sentinel-test-agent
 ```
 
-**Role description — copy and paste (156/250 characters):**
+**Role description - copy and paste (156/250 characters):**
 
 ```text
 Built the test-generation agent, grounding tools and test-management integration; fixed data-contract defects and validated generated cases jointly with QA.
 ```
 
-### Project 10 — Business Data Layer for Agents
+### Project 10 - Business Data Layer for Agents
 
 | Field | Value |
 |---|---|
 | Project title | Business Data Layer for Agents |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | 2026 / actual start month — confirm |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | 2026 / actual start month - confirm |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Python, PostgreSQL, Apache Superset, AWS S3, FastAPI, ETL, MCP, Docker, Jenkins, Row-Level Security |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built a governed business-data platform consolidating four production environments and more than ten external sources into a central S3 lake, PostgreSQL analytics database and Apache Superset. Designed a 12-table serving schema, region-qualified tenant identities, scheduled ETL and row-level access control. Migrated 19 dashboards to parity with the previous reporting tool and exposed the modeled data through MCP so business agents and dashboards query the same governed sources.
@@ -597,32 +597,32 @@ Built a governed business-data platform consolidating four production environmen
 Case study: https://tijani-porfolio.dev/work/bi-platform
 ```
 
-**Role description — copy and paste (172/250 characters):**
+**Role description - copy and paste (172/250 characters):**
 
 ```text
 Owned architecture, schema design, ETL, tenant identity, access controls and the MCP interface; delivered the reporting migration and shared data layer for business agents.
 ```
 
-### Project 11 — Anya Agent Framework and Memory
+### Project 11 - Anya Agent Framework and Memory
 
 | Field | Value |
 |---|---|
 | Project title | Anya Agent Framework and Memory |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode; includes earlier internship work |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode; includes earlier internship work |
 | Client | ArmorCode (Internal) |
 | Project status | In progress if you still develop or maintain this scope; otherwise Finished |
-| Worked from — year/month | 2025 / actual start month within January–November for the initial framework |
-| Worked till — year/month | Actual end month if Finished; ongoing if In progress |
+| Worked from - year/month | 2025 / actual start month within January–November for the initial framework |
+| Worked till - year/month | Actual end month if Finished; ongoing if In progress |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time for the current assignment; retain any earlier internship distinction |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Java, LangChain4j, Spring AI, Langfuse, Agent Memory, Graphiti, Knowledge Graphs, LLM Evaluation |
 
 This entry spans the internship framework and later memory work. Confirm the later memory work belongs to the same project before combining its dates. The description preserves the phases.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Created the initial Java framework for Anya, ArmorCode's platform agent, during my internship. Designed and owned short- and long-term memory and established Langfuse evaluation for agent accuracy and memory behavior. Migrated two of six sub-agents from LangChain4j to Spring AI, reimplementing memory and evaluation integrations. Later platform memory work used Graphiti temporal knowledge graphs to combine session context with tenant- and person-level recall.
@@ -630,32 +630,32 @@ Created the initial Java framework for Anya, ArmorCode's platform agent, during 
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (163/250 characters):**
+**Role description - copy and paste (163/250 characters):**
 
 ```text
 Built Anya's initial Java agent framework and memory, established evaluation, migrated two sub-agents to Spring AI, and delivered later temporal-graph memory work.
 ```
 
-### Project 12 — AppSec Integrations and Backend Developer Tooling
+### Project 12 - AppSec Integrations and Backend Developer Tooling
 
 | Field | Value |
 |---|---|
 | Project title | AppSec Integrations and Backend Developer Tooling |
-| Tag with employment/education | Applied AI Engineer (SDE 1) — ArmorCode; contribution was during the January–November 2025 internship |
+| Tag with employment/education | Applied AI Engineer (SDE 1) - ArmorCode; contribution was during the January–November 2025 internship |
 | Client | ArmorCode (Internal) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2025 / actual start month within January–November |
-| Worked till — year/month | 2025 / actual project end month, no later than November |
+| Worked from - year/month | 2025 / actual start month within January–November |
+| Worked till - year/month | 2025 / actual project end month, no later than November |
 | Project location | Gurugram, India |
-| Project site | Onsite if performed at ArmorCode's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at ArmorCode's office; Offsite if remote - confirm |
 | Nature of employment | Full time if the internship was full-time; otherwise your actual arrangement |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Java, API Integration, AST Parsing, Template Engines, Resilience4j, PostgreSQL, MySQL, Redis, Kafka, Elasticsearch, MongoDB, LocalStack |
 
 Grouped backend workstream from the internship. The platform's 130+ connectors are company scope; your documented ownership is 5+ tool integrations.
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Owned backend integrations for more than five security tools, including Black Duck, Snyk and Checkmarx, on ArmorCode's AppSec platform. Built AI-assisted integration scaffolding using template engines and AST parsing. Developed supporting backend service orchestration for MySQL, Elasticsearch, Redis, Kafka, MongoDB and LocalStack, and a reusable Resilience4j HTTP client with failure isolation, configurable backoff, timeouts and SSRF protection.
@@ -663,13 +663,13 @@ Owned backend integrations for more than five security tools, including Black Du
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (157/250 characters):**
+**Role description - copy and paste (157/250 characters):**
 
 ```text
 Implemented security-tool integrations, automated integration scaffolding, built shared service orchestration and delivered a reusable resilient HTTP client.
 ```
 
-### Project 13 — AIKO: Voice Sports Companion
+### Project 13 - AIKO: Voice Sports Companion
 
 | Field | Value |
 |---|---|
@@ -677,16 +677,16 @@ Implemented security-tool integrations, automated integration scaffolding, built
 | Tag with employment/education | Your internship entry at Xansr Media (AIKO) |
 | Client | Xansr Media (Internal product) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2024 / actual project start month within June–December |
-| Worked till — year/month | 2024 / actual project end month, no later than December |
-| Project location | Your actual city during the remote internship — confirm |
-| Project site | Offsite — remote internship |
+| Worked from - year/month | 2024 / actual project start month within June–December |
+| Worked till - year/month | 2024 / actual project end month, no later than December |
+| Project location | Your actual city during the remote internship - confirm |
+| Project site | Offsite - remote internship |
 | Nature of employment | Full time if the internship was full-time; otherwise your actual arrangement |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Python, Node.js, FastAPI, Azure Speech SDK, Voice AI, Personalization, AI Agents, Docker, GitHub Actions |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Contributed to AIKO, Xansr Media's personalized voice sports companion, as a GenAI intern. Worked on Azure Speech SDK speech-to-text and text-to-speech workflows, user personalization, live AI-generated commentary in more than 20 languages and profile-driven highlight generation. Helped connect live match context to conversational and catch-up experiences. Built backend microservices and containerized delivery workflows during the internship. The team product was presented at IBC 2024 in Amsterdam.
@@ -694,13 +694,13 @@ Contributed to AIKO, Xansr Media's personalized voice sports companion, as a Gen
 Case study: https://tijani-porfolio.dev/work/aiko
 ```
 
-**Role description — copy and paste (144/250 characters):**
+**Role description - copy and paste (144/250 characters):**
 
 ```text
 Contributed to voice workflows, user personalization, profile-driven highlights and backend services as a GenAI intern on the AIKO product team.
 ```
 
-### Project 14 — National Renewable Energy Dashboard
+### Project 14 - National Renewable Energy Dashboard
 
 | Field | Value |
 |---|---|
@@ -708,16 +708,16 @@ Contributed to voice workflows, user personalization, profile-driven highlights 
 | Tag with employment/education | Your internship entry at Central Electricity Authority |
 | Client | Central Electricity Authority (Internal) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2023 / actual project start month within May–July |
-| Worked till — year/month | 2023 / actual project end month, no later than July |
+| Worked from - year/month | 2023 / actual project start month within May–July |
+| Worked till - year/month | 2023 / actual project end month, no later than July |
 | Project location | New Delhi, India |
-| Project site | Onsite if performed at CEA's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at CEA's office; Offsite if remote - confirm |
 | Nature of employment | Full time if the internship was full-time; otherwise your actual arrangement |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Data Integration, Data Validation, Reporting, Dashboard Development |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Integrated National Power Portal data into a national renewable-energy dashboard covering more than 150 power stations during my internship at the Central Electricity Authority. Worked on data integration and reporting reliability for the public-sector dashboard.
@@ -725,13 +725,13 @@ Integrated National Power Portal data into a national renewable-energy dashboard
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (140/250 characters):**
+**Role description - copy and paste (140/250 characters):**
 
 ```text
 Integrated National Power Portal data into the renewable-energy dashboard and improved data reliability for reporting across power stations.
 ```
 
-### Project 15 — Secure File Management System
+### Project 15 - Secure File Management System
 
 | Field | Value |
 |---|---|
@@ -739,16 +739,16 @@ Integrated National Power Portal data into the renewable-energy dashboard and im
 | Tag with employment/education | Your internship entry at Central Electricity Authority |
 | Client | Central Electricity Authority (Internal) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2023 / actual project start month within May–July |
-| Worked till — year/month | 2023 / actual project end month, no later than July |
+| Worked from - year/month | 2023 / actual project start month within May–July |
+| Worked till - year/month | 2023 / actual project end month, no later than July |
 | Project location | New Delhi, India |
-| Project site | Onsite if performed at CEA's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at CEA's office; Offsite if remote - confirm |
 | Nature of employment | Full time if the internship was full-time; otherwise your actual arrangement |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | Java, PostgreSQL, RBAC, File Management, Backend Development |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Built a secure Java and PostgreSQL file-management system during my Central Electricity Authority internship. Implemented role-based access control and file organization and retrieval workflows for more than 5,000 files used in internal operations.
@@ -756,13 +756,13 @@ Built a secure Java and PostgreSQL file-management system during my Central Elec
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (153/250 characters):**
+**Role description - copy and paste (153/250 characters):**
 
 ```text
 Built the Java/PostgreSQL file-management system, implemented role-based access control and developed internal file organization and retrieval workflows.
 ```
 
-### Project 16 — Conference Room Booking System
+### Project 16 - Conference Room Booking System
 
 | Field | Value |
 |---|---|
@@ -770,16 +770,16 @@ Built the Java/PostgreSQL file-management system, implemented role-based access 
 | Tag with employment/education | Your internship entry at Central Electricity Authority |
 | Client | Central Electricity Authority (Internal) |
 | Project status | Finished for your completed internship contribution |
-| Worked from — year/month | 2023 / actual project start month within May–July |
-| Worked till — year/month | 2023 / actual project end month, no later than July |
+| Worked from - year/month | 2023 / actual project start month within May–July |
+| Worked till - year/month | 2023 / actual project end month, no later than July |
 | Project location | New Delhi, India |
-| Project site | Onsite if performed at CEA's office; Offsite if remote — confirm |
+| Project site | Onsite if performed at CEA's office; Offsite if remote - confirm |
 | Nature of employment | Full time if the internship was full-time; otherwise your actual arrangement |
-| Team size | Actual project team size — leave blank until confirmed |
+| Team size | Actual project team size - leave blank until confirmed |
 | Role | Developer or closest equivalent available |
 | Skills used | MongoDB, Express.js, React, Node.js, MERN Stack, Full-Stack Development |
 
-**Details of project — copy and paste:**
+**Details of project - copy and paste:**
 
 ```text
 Developed a MERN conference-room booking system during my Central Electricity Authority internship. Built the application to streamline internal room reservations and scheduling, reducing manual coordination and scheduling errors.
@@ -787,7 +787,7 @@ Developed a MERN conference-room booking system during my Central Electricity Au
 Portfolio experience: https://tijani-porfolio.dev/#experience
 ```
 
-**Role description — copy and paste (124/250 characters):**
+**Role description - copy and paste (124/250 characters):**
 
 ```text
 Developed the MERN booking application and its reservation and scheduling workflows for internal conference-room management.
@@ -801,7 +801,7 @@ If the editor requires a choice that cannot be left blank, replace the condition
 |---|---|
 | Qualification | B.Tech / B.E. |
 | Specialisation | Computer Science and Engineering (CSE) |
-| Institution | The NorthCap University, Gurugram — select the matching listed institution |
+| Institution | The NorthCap University, Gurugram - select the matching listed institution |
 | Course type | Full Time |
 | Start year | 2021 |
 | Passing year | 2025 |
@@ -820,18 +820,18 @@ Your existing degree entry is substantially correct. Add Class XII and Class X o
 | GitHub | https://github.com/Nikunj2003 | AI products and backend projects using TypeScript, Python, Go and Java, including CodeNex and an AI API gateway. |
 | Portfolio | https://tijani-porfolio.dev/ | Applied AI case studies covering agents, MCP, RAG, evaluation and TypeScript product development with React and Electron. |
 
-### Work samples — personal projects
+### Work samples - personal projects
 
 Use this section for all six personal projects listed in the portfolio. Employer projects and their supporting links are in Section 7. The portfolio website itself remains under Online profiles.
 
-#### Work sample 1 — CodeNex: AI Builder
+#### Work sample 1 - CodeNex: AI Builder
 
 | Field | Value |
 |---|---|
 | Title | CodeNex: AI Builder |
 | URL | https://www.codenex.dev/ |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an AI application builder with React and TypeScript that turns natural-language prompts into React applications. Designed a Spring Boot/Spring AI backend with streamed generation, persistent workspaces and isolated Kubernetes preview environments. Implemented platform capabilities including RBAC, token quotas, autoscaling and subscription billing. Owned the backend, streaming architecture and preview infrastructure.
@@ -839,27 +839,27 @@ Built an AI application builder with React and TypeScript that turns natural-lan
 GitHub: https://github.com/Nikunj2003/Codenex-backend-v1
 ```
 
-#### Work sample 2 — CodeNex AI API Proxy
+#### Work sample 2 - CodeNex AI API Proxy
 
 | Field | Value |
 |---|---|
 | Title | CodeNex AI API Proxy |
 | URL | https://github.com/Nikunj2003/codenex-ai-api-proxy |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an OpenAI-compatible AI gateway in Go and Gin to route model traffic through one API. Implemented provider abstraction, multi-account load balancing, health-aware fallbacks, streaming responses, Redis-backed caching and operational controls. Designed the gateway for reliable access to multiple model providers.
 ```
 
-#### Work sample 3 — Serenify
+#### Work sample 3 - Serenify
 
 | Field | Value |
 |---|---|
 | Title | Serenify |
 | URL | https://serenify.codenex.dev/ |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an open-source AI wellness product with React, TypeScript, Supabase and Gemini. Combined empathetic chat, mood tracking, journaling, guided sessions, crisis-help flows and pgvector-backed personalization. Owned product design, frontend experience and AI workflows, with attention to privacy-aware analytics.
@@ -867,40 +867,40 @@ Built an open-source AI wellness product with React, TypeScript, Supabase and Ge
 GitHub: https://github.com/Nikunj2003/Serenify
 ```
 
-#### Work sample 4 — Resume Fit — CodeNex
+#### Work sample 4 - Resume Fit - CodeNex
 
 | Field | Value |
 |---|---|
-| Title | Resume Fit — CodeNex |
+| Title | Resume Fit - CodeNex |
 | URL | https://github.com/Nikunj2003/Resume-Fit-Codenex |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an AI resume analysis and improvement tool using React, TypeScript, Gemini AI, Vercel AI SDK and Recharts. Implemented ATS-style scoring, keyword extraction, guided refinements and visual feedback for iterative resume improvement. Owned product UX, AI workflow design and frontend implementation.
 ```
 
-#### Work sample 5 — CodeNex Images
+#### Work sample 5 - CodeNex Images
 
 | Field | Value |
 |---|---|
 | Title | CodeNex Images |
 | URL | https://github.com/Nikunj2003/codenex-images |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an AI image generation and editing workspace using React, TypeScript, Vite, Gemini, Auth0, Node.js and MongoDB. Designed the creation and editing flows, integrated authentication and model interactions, and implemented the full-stack product.
 ```
 
-#### Work sample 6 — LLaMa MCP Streamlit
+#### Work sample 6 - LLaMa MCP Streamlit
 
 | Field | Value |
 |---|---|
 | Title | LLaMa MCP Streamlit |
 | URL | https://github.com/Nikunj2003/LLaMa-MCP-Streamlit |
 
-**Description — copy and paste:**
+**Description - copy and paste:**
 
 ```text
 Built an interactive Python and Streamlit assistant connecting NVIDIA NIM-hosted LLaMA 3.3 70B to Model Context Protocol tools. Implemented the interface and tool integration to demonstrate real-time external tool execution through an LLM assistant.
@@ -946,7 +946,7 @@ Your public GitHub profile also links to `nikunj.tech` and expands MCP as “Mod
 If the editor provides an awards/achievements field, use:
 
 ```text
-AI Ninja Award — ArmorCode
+AI Ninja Award - ArmorCode
 First-ever recipient of ArmorCode's AI Ninja Award, presented at a company-wide global forum.
 ```
 
@@ -966,9 +966,9 @@ These are recommended choices, not verified current Naukri dropdown labels. Sele
 |---|---|
 | Current location | Gurugram / Gurgaon, Haryana, India |
 | Primary desired role | Applied AI Engineer / Generative AI Engineer |
-| Additional desired roles | Agentic AI Engineer, LLM Engineer, AI Product Engineer, AI Platform Engineer, Backend Engineer — AI Systems |
+| Additional desired roles | Agentic AI Engineer, LLM Engineer, AI Product Engineer, AI Platform Engineer, Backend Engineer - AI Systems |
 | Additional role to search | Forward Deployed AI Engineer; your internal stakeholder delivery supports the direction, while external customer deployment experience should be described accurately |
-| Department / function | Engineering — Software & QA, or the available AI engineering equivalent |
+| Department / function | Engineering - Software & QA, or the available AI engineering equivalent |
 | Role category | AI/ML or software development, according to the live taxonomy and selected role |
 | Current employer industry | Software Product / enterprise cybersecurity software, using the closest available category |
 | Desired employment | Permanent, full-time, unless your preferences differ |
@@ -977,8 +977,8 @@ These are recommended choices, not verified current Naukri dropdown labels. Sele
 | Current annual CTC | **CONFIRM** actual value |
 | Expected annual CTC | **CONFIRM** your target; no salary estimate has been inferred |
 | Notice period | **CONFIRM** contractual duration and whether you are currently serving it |
-| Email | munimaguro68@gmail.com — verify in Naukri |
-| Phone | +91 9540234616 — from the LaTeX resume; verify that it remains your recruiter contact number |
+| Email | munimaguro68@gmail.com - verify in Naukri |
+| Phone | +91 9540234616 - from the LaTeX resume; verify that it remains your recruiter contact number |
 | Recruiter visibility and communication | Check that your profile is searchable and desired recruiter communications are enabled in your account settings |
 
 Availability is material: Naukri documents recruiter searches for notice period, including candidates already serving notice. Its recruiter screening tools also expose experience, salary, location, skills and current company. Accurate structured fields therefore matter alongside good prose. [Naukri: Notice Period Search](https://recruiterzone.naukri.com/hire-faster-with-notice-period-search/), [Naukri: Applicant Insights](https://recruiterzone.naukri.com/introducing-applicant-insights-now-you-can-screen-better-candidates-faster/)

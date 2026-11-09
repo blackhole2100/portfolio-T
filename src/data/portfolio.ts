@@ -6,7 +6,7 @@ export const personalInfo = {
   role: "Senior Full-Stack & AI Software Engineer",
   location: "Fort Lauderdale, Florida",
   tagline:
-    "I build production software across web, mobile, enterprise, and AI—combining end-to-end product engineering with backend architecture, integrations, data workflows, and reliable cloud delivery.",
+    "I build production software across web, mobile, enterprise, and AI-combining end-to-end product engineering with backend architecture, integrations, data workflows, and reliable cloud delivery.",
   focus:
     "Full-stack web and SaaS engineering · React Native and Flutter apps · AI-enabled products · APIs and distributed integrations · cloud delivery and production reliability",
   linkedin: "https://www.linkedin.com/in/tijani-shabazz-7493a6439",
@@ -30,7 +30,7 @@ export interface Highlight {
 
 export const about = {
   summary:
-    "I’m a senior full-stack and AI software engineer with 11+ years of experience building and evolving production applications. I work across the full lifecycle—from understanding business requirements and shaping application architecture to implementing web and mobile experiences, integrating external systems, handling data-intensive workflows, and supporting cloud delivery. My project experience spans healthcare, logistics, financial integrations, marketplaces, real estate, and enterprise IT.",
+    "I’m a senior full-stack and AI software engineer with 11+ years of experience building and evolving production applications. I work across the full lifecycle-from understanding business requirements and shaping application architecture to implementing web and mobile experiences, integrating external systems, handling data-intensive workflows, and supporting cloud delivery. My project experience spans healthcare, logistics, financial integrations, marketplaces, real estate, and enterprise IT.",
   highlights: [
     {
       metric: "93%",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     description:
       "Contributed to the React Native application architecture and reusable iOS and Android components. The mobile experience brings directory discovery, business profiles, category and location filtering, and listing workflows into one community-focused product.",
     impact:
-      "Delivered reusable cross-platform foundations and connected the main discovery journey—from authenticated access and search through profiles, media uploads, and deep links.",
+      "Delivered reusable cross-platform foundations and connected the main discovery journey-from authenticated access and search through profiles, media uploads, and deep links.",
     role:
       "React Native engineering: reusable mobile components, authentication, API integration, discovery, profiles, and production releases.",
     complexity:
@@ -319,7 +319,7 @@ export const projects: Project[] = [
   {
     slug: "deed-driver-delivery",
     caseStudy: "deed-driver-delivery",
-    title: "Deed — Driver Delivery Application",
+    title: "Deed - Driver Delivery Application",
     category: "Flutter Logistics App",
     summary:
       "A driver-focused mobile application for a UPS partner in Iceland, supporting package scanning and delivery workflows.",

@@ -98,7 +98,7 @@ test("the read-case-study link is never hand-styled at a call site", () => {
    * `CaseStudyCard` is exempt and deliberately so: its "Read case study" line
    * is the card's full-width CTA *and* its stretched navigation target
    * (after:inset-0 covering the whole card). That is a different component from
-   * the small inline pill this rule governs — forcing the shared pill there
+   * the small inline pill this rule governs - forcing the shared pill there
    * would remove the card's click target.
    */
   const EXEMPT = new Set([join("src", "components", "CaseStudyCard.tsx")]);
@@ -145,7 +145,7 @@ test("experience covers the summary bullet as well as the detail bullets", () =>
 });
 
 test("the pill is never inline inside a heading that renders variable-length data", () => {
-  // Inline, the pill lands wherever the heading text ends — so it sat in a
+  // Inline, the pill lands wherever the heading text ends - so it sat in a
   // different place on each project card, case-study card, and skills category.
   // This matters more now that it is always visible: it would leave every
   // heading's ragged edge permanently uneven.
@@ -225,7 +225,7 @@ test("the inline answer never shows a bare tool trace with no message", () => {
  * `ask()` aborts whatever is in flight, and React StrictMode double-invokes
  * effects in development, so the first request is routinely cancelled by the
  * second. Without an ownership check both runs reached the error handler and
- * wrote "That took too long to answer" over the run that was still working —
+ * wrote "That took too long to answer" over the run that was still working -
  * the error flashed on screen, then the real answer replaced it.
  */
 test("only the request that still owns the controller may write state", () => {

@@ -128,7 +128,7 @@ function ExperienceItem({
 
           <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground md:text-base">
             {/* The summary is a point like any other, so it gets the same
-                affordance — it was the one bullet in every card without one. */}
+                affordance - it was the one bullet in every card without one. */}
             <li className="flex gap-3 text-foreground/90">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
               <div className="flex-1">
@@ -157,7 +157,7 @@ function ExperienceItem({
                   <div className="flex-1">
                     <p>{text}</p>
                     {/* Every point is askable, not just the ones with a case
-                        study — a reader's question does not depend on whether a
+                        study - a reader's question does not depend on whether a
                         write-up happens to exist. Both affordances share one row
                         so they align down the list regardless of text length. */}
                     <div className="mt-2 flex flex-wrap items-center gap-2">

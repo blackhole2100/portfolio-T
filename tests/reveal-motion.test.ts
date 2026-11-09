@@ -11,7 +11,7 @@ import { revealAnimate, revealInitial } from "../src/lib/motion";
  * visible fill, so animating a glass panel up from `opacity: 0` left it looking
  * flat for the whole reveal and then snapping to glass. At 0.6s duration plus
  * up to 0.4s of stagger, that was a full second of every glass surface on the
- * page rendering wrong after load — measured as 18 glass-wrapping elements
+ * page rendering wrong after load - measured as 18 glass-wrapping elements
  * shipped at `opacity: 0` in the production HTML.
  *
  * The slide is what carries the entrance; the fade was the part that broke.
@@ -37,7 +37,7 @@ test("revealAnimate settles position without touching opacity", () => {
 test("reduced motion renders final state rather than fading", () => {
   const initial = revealInitial(true) as Record<string, unknown>;
 
-  // With nothing to animate, the element paints correct on the first frame —
+  // With nothing to animate, the element paints correct on the first frame -
   // which is the desired outcome under prefers-reduced-motion anyway.
   assert.deepEqual(initial, {}, "reduced motion must have no initial offset or fade");
 });

@@ -226,7 +226,7 @@ const ContactSection = () => {
             </div>
           </SpotlightCard>
 
-          {/* Right panel — Form */}
+          {/* Right panel - Form */}
           <SpotlightCard delay={0.2} className="h-full">
             <form onSubmit={handleSubmit} className="relative p-6 sm:p-8 md:p-10 flex flex-col gap-6 h-full" aria-busy={isSubmitting} noValidate>
               <div className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">

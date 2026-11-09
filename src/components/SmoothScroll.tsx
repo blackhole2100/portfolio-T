@@ -18,7 +18,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
    * Lenis caches its own scroll position and, because the effect below runs once
    * with an empty dep array, it never learns about route changes. Next resets
    * `window.scrollY` on navigation but Lenis then writes its stale value back on
-   * the next frame — so opening a case study from the homepage (where the
+   * the next frame - so opening a case study from the homepage (where the
    * featured row sits far down a very tall page) landed you near the footer.
    *
    * It looked correct from `/work` only because that page is short: the stale
@@ -29,7 +29,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Skip the very first run. On a hard load or a refresh the browser owns the
-    // scroll position — forcing 0 here would defeat scroll restoration, which is
+    // scroll position - forcing 0 here would defeat scroll restoration, which is
     // a separate fix. Only client-side navigations need the reset.
     if (isFirstRenderRef.current) {
       isFirstRenderRef.current = false;
@@ -87,7 +87,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
      *
      * Lenis caches its own scroll position when it initialises. On a refresh the
      * browser restores the previous offset asynchronously, so Lenis could start
-     * from a stale value and then correct itself on the first frame — which read
+     * from a stale value and then correct itself on the first frame - which read
      * as the page auto-scrolling a little on every reload. Resyncing after the
      * restore settles removes the drift without fighting the browser (leaving
      * scrollRestoration on "auto", so refreshing keeps your reading position).

@@ -4,7 +4,7 @@ import { about, bulletText, experiences, personalInfo, projects, skillCategories
 export const CHAT_MEMORY_WINDOW = 10;
 export const CHAT_STORAGE_KEY = "tijani-ai-twin-chat";
 export const PROJECT_ANCHOR_PREFIX = "project-";
-export const WELCOME_MESSAGE = "Hi — I’m Tijani’s AI portfolio assistant. I can summarize his full-stack, mobile, and AI experience, walk through a project, or explain his role in a specific delivery. You can [browse the projects](#work), [review his experience](#experience), or [download the resume](/resume.pdf).";
+export const WELCOME_MESSAGE = "Hi - I’m Tijani’s AI portfolio assistant. I can summarize his full-stack, mobile, and AI experience, walk through a project, or explain his role in a specific delivery. You can [browse the projects](#work), [review his experience](#experience), or [download the resume](/resume.pdf).";
 
 type ConversationWindowMessage = {
   content: string;
@@ -179,7 +179,7 @@ Navigation:
 
 /** Topic-level context for the suggestion generator; it intentionally excludes project detail. */
 export const PORTFOLIO_CONTEXT_BRIEF = `
-${personalInfo.name} — ${personalInfo.role}
+${personalInfo.name} - ${personalInfo.role}
 Location: ${personalInfo.location}
 ${about.summary}
 

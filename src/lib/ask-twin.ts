@@ -3,7 +3,7 @@
  *
  * Lives in its own module to break a cycle: `AskAboutThis` renders
  * `InlineAnswer`, and `InlineAnswer` needs to hand its exchange off to the
- * panel — importing the dispatcher back from `AskAboutThis` would make the two
+ * panel - importing the dispatcher back from `AskAboutThis` would make the two
  * modules depend on each other.
  *
  * @param answer When supplied, the panel appends the exchange as an already

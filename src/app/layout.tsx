@@ -10,8 +10,8 @@ import { siteConfig, ogLocale } from '@/lib/seo/site'
 // Mounted at the layout so every route gets the background layer, including
 // /work/*. Self-gates on pointer:fine, >=1280px, and reduced motion.
 const FluidCursor = dynamic(() => import('@/components/FluidCursor'))
-// Mounted here so the twin — and the "ask about this" affordances that dispatch
-// into it — work on case study routes, not just the homepage.
+// Mounted here so the twin - and the "ask about this" affordances that dispatch
+// into it - work on case study routes, not just the homepage.
 // const AITwinChat = dynamic(() => import('@/components/AITwinChat'))
 
 export const metadata: Metadata = {

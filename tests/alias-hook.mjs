@@ -9,7 +9,7 @@ const srcDir = resolvePath(dirname(fileURLToPath(import.meta.url)), "..", "src")
  *
  * tsconfig paths are a TypeScript-only concept, so bare Node cannot follow
  * them. Without this, any module under test that uses `@/` fails with
- * ERR_MODULE_NOT_FOUND — which previously forced tested modules to avoid the
+ * ERR_MODULE_NOT_FOUND - which previously forced tested modules to avoid the
  * alias the rest of the codebase uses.
  */
 import { existsSync } from "node:fs";

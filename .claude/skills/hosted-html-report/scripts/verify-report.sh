@@ -99,7 +99,7 @@ if [ -s "$W/res.json" ]; then
   python3 - "$W/res.json" <<'PY' || FAIL=3
 import json,sys
 r=json.load(open(sys.argv[1])); bad=[]
-if r["emptySvgs"]: bad.append(f'{r["emptySvgs"]} diagram(s) with no text labels — likely empty/broken')
+if r["emptySvgs"]: bad.append(f'{r["emptySvgs"]} diagram(s) with no text labels - likely empty/broken')
 if r["darkTextOnDarkBg"]: bad.append('dark text on dark background: '+", ".join(r["darkTextOnDarkBg"]))
 if r["pageErrors"]: bad.append('page errors: '+"; ".join(r["pageErrors"]))
 if r["widest"] and r["widest"]<380 and r["tallest"]>1200:
@@ -115,5 +115,5 @@ fi
 rm -rf "$W"
 
 echo
-[ $FAIL -eq 0 ] && echo "ALL CHECKS PASSED — safe to host" || echo "CHECKS FAILED (exit $FAIL) — fix before hosting"
+[ $FAIL -eq 0 ] && echo "ALL CHECKS PASSED - safe to host" || echo "CHECKS FAILED (exit $FAIL) - fix before hosting"
 exit $FAIL

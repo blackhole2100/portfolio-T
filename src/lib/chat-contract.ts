@@ -7,7 +7,7 @@ export const CHAT_SUGGESTION_TIMEOUT_MS = 4_000;
  * The answer itself no longer counts against this, because it streams and is
  * policed by an idle timer instead. Raised from 18.5s because that figure was
  * derived when the answer was blocking too, and it left the tool round only
- * ~12s — enough to abort a healthy round-0 call that simply had a large prompt
+ * ~12s - enough to abort a healthy round-0 call that simply had a large prompt
  * to read. It must also leave room for all CHAT_TOOL_ROUND_ATTEMPTS of the
  * blocking round (3 x 9s) plus the reserve, or the budget would cancel a retry
  * that was about to succeed.
@@ -19,7 +19,7 @@ export const CHAT_TOTAL_RESPONSE_BUDGET_MS = 40_000;
  * Raised to clear the route's own worst case: up to ~27s for the blocking
  * tool round's 3 retry attempts, plus up to CHAT_STREAM_FIRST_CHUNK_TIMEOUT_MS
  * for the answer's first token, plus the generation and suggestion tail. This
- * is a backstop for a runtime that never sends another byte at all — the idle
+ * is a backstop for a runtime that never sends another byte at all - the idle
  * timer is what catches an ordinary stall, and it fires far sooner.
  */
 export const CHAT_CLIENT_TIMEOUT_MS = 75_000;
@@ -58,7 +58,7 @@ export const CHAT_MAX_TOOL_ROUNDS = 3;
  * Attempts (not retries) for a stream that stalls before its first byte.
  *
  * Sized from 12 measured calls against the provider's free tier:
- * p50 3.5s time-to-first-byte, p90 34s, one outright stall past 60s — only
+ * p50 3.5s time-to-first-byte, p90 34s, one outright stall past 60s - only
  * 58% connected within 12s. That distribution has no single timeout that is
  * both responsive and tail-safe, so the strategy is to cut early and retry:
  * three attempts at the idle threshold beat one long wait, because each retry

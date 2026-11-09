@@ -10,9 +10,9 @@ interface FlipWordsProps {
   interval?: number;
   className?: string;
   /**
-   * "slot" reserves a fixed width and centres the word — for a word swapping
+   * "slot" reserves a fixed width and centres the word - for a word swapping
    * inside a sentence, where surrounding text must not shift.
-   * "line" flows at its natural width, left-aligned — for a standalone line.
+   * "line" flows at its natural width, left-aligned - for a standalone line.
    */
   variant?: "slot" | "line";
   /** Width of the reserved slot in ch. Defaults to the longest word. */

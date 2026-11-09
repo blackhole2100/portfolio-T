@@ -24,7 +24,7 @@ const IDLE_STATE: AnswerState = { status: "idle", content: "", toolCalls: [] };
  * Drives one inline question against the same `/live-assistant` endpoint the
  * panel uses, with its own local state rather than the panel's `Message[]`.
  *
- * Deliberately NOT a thin wrapper around `consumeChatStream` — that function
+ * Deliberately NOT a thin wrapper around `consumeChatStream` - that function
  * is written against the panel's `setMessages` and a stable `assistantId`,
  * which an inline surface (a single question under a heading, no history) has
  * no use for. Reusing the markdown renderer (`AnswerBody`) is what keeps the
@@ -126,7 +126,7 @@ export function useAssistantAnswer() {
        * `ask()` aborts whatever was in flight, and React StrictMode
        * double-invokes effects in development, so the first call is routinely
        * cancelled by the second. Both landed here and wrote "That took too long
-       * to answer" over the run that was actually still working — the error
+       * to answer" over the run that was actually still working - the error
        * flashed on screen and then the real answer replaced it.
        *
        * Only the request that still owns `abortRef` may touch state, and a

@@ -42,7 +42,7 @@ interface ChatCompletionMessageParam {
 
 /**
  * Explicit segment config. Without it the platform default function timeout
- * applies, which can truncate a legitimate streamed answer mid-flight — the
+ * applies, which can truncate a legitimate streamed answer mid-flight - the
  * contact route already pins its runtime; this one had simply never been given
  * the same treatment. `maxDuration` sits above the server-side budget so the
  * budget, not the platform, is what ends a slow request.
@@ -304,13 +304,13 @@ type StreamedToolCall = { id?: string; name: string; args: string };
 /**
  * Streams ONE completion call and reports connection + text as they arrive.
  *
- * Every round streams now, including round 0 with `tools` attached — measured
+ * Every round streams now, including round 0 with `tools` attached - measured
  * directly: time-to-first-byte for a tool-offering call is consistently much
  * faster and far less variable than total generation time (p50 ~3.5s vs a
  * blocking call that can legitimately run 10-20s when the model answers
  * directly instead of calling a tool). Reassembling `tool_calls` from stream
  * deltas by `index` worked correctly in direct testing against this provider
- * — ids and arguments both arrived intact — so there is no longer a reason to
+ * - ids and arguments both arrived intact - so there is no longer a reason to
  * keep a separate non-streaming path for tool rounds.
  *
  * Returns the finished tool calls (if any) once the stream ends; text is
@@ -337,7 +337,7 @@ async function streamCompletion(
   /*
    * The deadline applies to SILENCE, not to total duration.
    *
-   * A fixed total cap aborts a long answer that is streaming perfectly well —
+   * A fixed total cap aborts a long answer that is streaming perfectly well -
    * observed live: 471 deltas delivered, then killed mid-sentence at the cap and
    * reported to the visitor as a timeout. While tokens keep arriving the request
    * is healthy; only a stall is a fault, so the timer restarts on every chunk.
@@ -440,7 +440,7 @@ class UpstreamStatusError extends Error {
  * a heavy tail (p50 ~3.5s, occasional 30-40s stalls even just to connect).
  * Waiting out a stall of that length would make the assistant feel broken;
  * re-rolling is cheaper, since the odds of two consecutive tail hits are far
- * lower than one. Only a stall before any byte arrives is retried — once
+ * lower than one. Only a stall before any byte arrives is retried - once
  * streaming has started, the request is healthy and is not restarted.
  */
 async function streamCompletionWithRetry(
@@ -454,7 +454,7 @@ async function streamCompletionWithRetry(
    * Called before each attempt so the caller can send a keep-alive byte.
    *
    * A silent multi-attempt retry loop can run for several attempts with
-   * nothing sent to the client — comfortably longer than its idle timeout,
+   * nothing sent to the client - comfortably longer than its idle timeout,
    * which would then abort a retry that was still in progress.
    */
   onAttempt?: (attempt: number) => void,
@@ -605,7 +605,7 @@ export async function POST(request: Request) {
        *
        * `enqueue` throws on a detached stream. Without this guard a client
        * disconnect threw inside `send`, and the catch handler's own `send`
-       * calls threw again with nothing above them to catch it — an unhandled
+       * calls threw again with nothing above them to catch it - an unhandled
        * rejection on every abandoned request. Writes are now no-ops after the
        * stream is gone, and closing is idempotent.
        */
@@ -681,12 +681,12 @@ export async function POST(request: Request) {
            * Measured directly against the provider: time-to-first-byte for a
            * tool-offering call (p50 ~3.5s) is far faster and far less variable
            * than total generation time, which for an open-ended question the
-           * model often answers directly — 10-20s of blocking generation with
+           * model often answers directly - 10-20s of blocking generation with
            * no tool call at all. That was round 0's actual failure mode: not
            * tool-selection latency, but the model choosing to write a full
            * prose answer on the very first call. Streaming turns that into a
            * fast first byte regardless of which the model does, and streamed
-           * `tool_calls` reassemble correctly from `index` on this provider —
+           * `tool_calls` reassemble correctly from `index` on this provider -
            * confirmed live before removing the separate blocking path.
            */
           let chunks = "";
@@ -713,7 +713,7 @@ export async function POST(request: Request) {
               },
               /*
                * The retry attempt number is internal detail and must not reach
-               * the UI — it shipped as "attempt 1 Thinking …", which reads as a
+               * the UI - it shipped as "attempt 1 Thinking …", which reads as a
                * debug string. The heartbeat's real job is to keep the client's
                * idle timer alive, so any label works; the visitor only needs to
                * know it is still working.
@@ -759,7 +759,7 @@ export async function POST(request: Request) {
            * Text alongside tool_calls has already reached the client as
            * `text_delta`, but it is the model's own narration of what it is
            * about to do ("Let me check...") rather than the answer, and it
-           * must not be echoed back into `messages` as if it were final —
+           * must not be echoed back into `messages` as if it were final -
            * `streamedText` exists only to detect an empty round; it is
            * intentionally NOT concatenated into the assistant history entry
            * below beyond what the provider itself reports as `content`.

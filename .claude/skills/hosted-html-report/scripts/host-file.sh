@@ -9,7 +9,7 @@
 #   remote-filename   defaults to the local file's basename (must end .html)
 #
 # This POSTs straight to the portfolio's own /api/artifacts route (a plain
-# bearer-token-authenticated JSON endpoint backed by Vercel Blob) — there is
+# bearer-token-authenticated JSON endpoint backed by Vercel Blob) - there is
 # no MCP handshake, no argv-length ceiling, and no size cap beyond the
 # platform's own request-body limit.
 #
@@ -74,7 +74,7 @@ RAW_LEN=$(wc -c < "$FILE" | tr -d ' ')
 
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 
-# Payload goes via a file, not a shell argument — this file can be large and
+# Payload goes via a file, not a shell argument - this file can be large and
 # some shells choke on very long argv entries even without the old MCP bug.
 python3 - "$TMP/payload.json" "$SLUG" "$REMOTE_NAME" <<'PY' "$B64"
 import json, sys
@@ -120,7 +120,7 @@ if [ -n "$LIVE_URL" ] && [ "${SKIP_VERIFY:-0}" != "1" ]; then
     echo "verified: live copy is byte-identical"
   else
     echo "warning: live copy differs from local ($(wc -c < "$TMP/live" | tr -d ' ') vs $RAW_LEN bytes)." >&2
-    echo "         Usually brief propagation lag — re-check in a few seconds." >&2
+    echo "         Usually brief propagation lag - re-check in a few seconds." >&2
     exit 5
   fi
 fi

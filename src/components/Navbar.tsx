@@ -42,7 +42,7 @@ const Navbar = () => {
     const updateScrolled = () => {
       frameId = null;
 
-      // The scrolled background applies on EVERY route — the bar floats over
+      // The scrolled background applies on EVERY route - the bar floats over
       // content everywhere. This used to sit behind an `isHome` early return,
       // which is why /work and /work/* had a transparent bar with page text
       // showing straight through it.

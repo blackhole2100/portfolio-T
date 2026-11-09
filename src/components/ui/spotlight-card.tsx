@@ -19,7 +19,7 @@ interface SpotlightCardProps {
    * For the stacked project deck, where each card must completely hide the ones
    * behind it. This is a prop rather than a `className` override because the
    * glass tier sets `backdrop-filter` directly while `backdrop-blur-none` only
-   * clears a custom property — and the tier is emitted later in the stylesheet,
+   * clears a custom property - and the tier is emitted later in the stylesheet,
    * so a class-based override loses. Omitting the tier is the reliable fix.
    */
   opaque?: boolean;
@@ -138,7 +138,7 @@ export function SpotlightCard({
     <motion.div
       ref={setRefs}
       /*
-        Slide only, no opacity fade — matching `revealInitial` in lib/motion.
+        Slide only, no opacity fade - matching `revealInitial` in lib/motion.
         A glass card faded in from `opacity: 0` reads as flat until the fade
         finishes, so every card on the page looked non-glass for up to a second
         after load. See the note in lib/motion.ts.
