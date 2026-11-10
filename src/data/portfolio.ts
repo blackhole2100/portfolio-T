@@ -308,7 +308,7 @@ export const projects: Project[] = [
     complexity:
       "Coordinating listing state, time-sensitive bids, offers, payment events, notifications, and order progression across marketplace users.",
     tech: ["Marketplace Workflows", "E-commerce", "Auctions", "Bidding", "Payment Integrations", "Notifications"],
-    images: ["/images/portfolio/projects/live-sites/gemsharbor-marketplace.jpg"],
+    images: ["/images/portfolio/projects/live-sites/gemsharbor-marketplace.png"],
     live: "https://gemsharbor.com/",
   },
   {
@@ -327,7 +327,7 @@ export const projects: Project[] = [
     complexity:
       "Maintaining consistency across operational systems when events arrive asynchronously or downstream services fail temporarily.",
     tech: ["Logistics", "Fulfillment", "Event Processing", "System Synchronization", "Retry Strategies", "Automation"],
-    images: ["/images/portfolio/projects/live-sites/shiphype-fulfillment.jpg"],
+    images: ["/images/portfolio/projects/live-sites/shiphype-fulfillment.png"],
     live: "https://shiphype.com/",
   },
   {

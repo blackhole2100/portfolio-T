@@ -145,7 +145,7 @@ Tijani's participation: Tijani participated in developing and deploying ShipHype
 Implementation areas: Fulfillment, Logistics, Event Processing, Synchronization, Retries, Error Handling, Automation
 Tags: Logistics, Fulfillment, Integrations, Automation
 - Official project site: https://shiphype.com/
-Screenshot: /images/portfolio/projects/live-sites/shiphype-fulfillment.jpg (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/shiphype-fulfillment.png (capture-required)
 
 #### Tijani's role
 Tijani contributed to the platform's integration and automation layers, including event processing, synchronization, retry strategies, error handling, and operational workflows. The supporting project notes also identify work around integration and AI layers.
@@ -517,7 +517,7 @@ Tijani's participation: Tijani participated in developing and deploying the test
 Implementation areas: Real-Device Testing, Browser Testing, Network Conditions, Automation, Performance KPIs, Session Diagnostics
 Tags: Testing, Mobile, Performance, Quality Engineering
 - Official project site: https://www.headspin.io/
-Screenshot: /images/portfolio/projects/live-sites/headspin-digital-testing.jpg (captured)
+Screenshot: /images/portfolio/projects/live-sites/headspin-digital-testing.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the testing platform, contributing to the product engineering and release work associated with real-device testing, automation, and performance-monitoring workflows.
@@ -581,7 +581,7 @@ Tijani's participation: Tijani participated in developing and deploying software
 Implementation areas: Tax Preparation, Professional Software, Client Workflows, Return Preparation, Review & Filing
 Tags: Tax Software, Professional Services, Workflow Software, FinTech
 - Official project site: https://www.taxslayerpro.com/
-Screenshot: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.jpg (captured)
+Screenshot: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying software workflows within the professional tax-preparation product area. The available notes do not identify a specific TaxSlayer Pro module or individual technology stack, so this entry does not assign narrower feature ownership.
@@ -797,7 +797,7 @@ Tijani's participation: Tijani participated in developing and deploying the fiel
 Implementation areas: Customer Management, Estimates, Scheduling, Dispatch, Job Management, GPS Tracking, Invoicing, Technician Mobile App
 Tags: Field Service, SaaS, Scheduling, Operations
 - Official project site: https://www.servicefusion.com/
-Screenshot: /images/portfolio/projects/live-sites/service-fusion-field-service.jpg (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/service-fusion-field-service.png (capture-required)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the field-service software product, contributing to application workflows that support customer and job operations across office and technician experiences.
@@ -884,7 +884,7 @@ Tijani's participation: Tijani participated in developing and deploying GemsHarb
 Implementation areas: Marketplace, E-commerce, Auctions, Bidding, Offers, Payment Integrations, Notifications
 Tags: Marketplace, E-commerce, Auctions, Payments
 - Official project site: https://gemsharbor.com/
-Screenshot: /images/portfolio/projects/live-sites/gemsharbor-marketplace.jpg (capture-required)
+Screenshot: /images/portfolio/projects/live-sites/gemsharbor-marketplace.png (capture-required)
 
 #### Tijani's role
 Tijani worked on the marketplace and e-commerce workflows: listings, dashboards, auctions and bidding, offers, payment integrations, notifications, and connected order flows.
@@ -1202,7 +1202,7 @@ Tijani's participation: Tijani participated in developing and deploying the avia
 Implementation areas: Flight Search, Charter Options, Booking Workflow, Partner Distribution, Aviation Operations
 Tags: Aviation, Booking, Travel, Integrations
 - Official project site: https://www.privatefly.com/
-Screenshot: /images/portfolio/projects/live-sites/privatefly-aviation-booking.jpg (captured)
+Screenshot: /images/portfolio/projects/live-sites/privatefly-aviation-booking.png (captured)
 
 #### Tijani's development and deployment role
 Tijani participated in developing and deploying the aviation product experience, contributing to the booking and partner-distribution workflows described in the project inventory.
