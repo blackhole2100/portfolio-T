@@ -40,7 +40,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: ShipHype is an operational platform for fulfillment and logistics workflows. Tijani contributed to the integration and automation layers, focusing on event processing, data synchronization, retry strategies, error handling, and the operational processes that connect fulfillment systems.
 - Tijani's contribution: Tijani participated in developing and deploying ShipHype's integration and automation layers, including event processing, synchronization, retry strategies, error handling, and operational workflows. The platform was developed as a collaborative product.
 - Implementation areas: Fulfillment, Logistics, Event Processing, Synchronization, Retries, Error Handling, Automation
-- Screenshot path: /images/portfolio/projects/live-sites/shiphype-fulfillment.png (capture-required)
+- Screenshot path: /images/portfolio/projects/live-sites/shiphype-fulfillment.jpg (capture-required)
 
 ## 6. DealerCortex AI - Automotive Intelligence
 - Case study: https://tijani-porfolio.dev/work/dealercortex-ai
@@ -144,7 +144,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: HeadSpin provides real-device and browser testing across mobile, web, and OTT experiences. Public product information describes functional, performance, network, regression, and compatibility testing, plus session data and performance KPIs for diagnosing user-experience issues. Tijani participated in developing and deploying the product, with engineering contributions in Real-Device Testing, Browser Testing, Network Conditions, Automation, Performance KPIs.
 - Tijani's contribution: Tijani participated in developing and deploying the testing platform, contributing to the product engineering and release work associated with real-device testing, automation, and performance-monitoring workflows. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.
 - Implementation areas: Real-Device Testing, Browser Testing, Network Conditions, Automation, Performance KPIs, Session Diagnostics
-- Screenshot path: /images/portfolio/projects/live-sites/headspin-digital-testing.png (captured)
+- Screenshot path: /images/portfolio/projects/live-sites/headspin-digital-testing.jpg (captured)
 
 ## 19. Libertum - Real-World Asset Tokenization
 - Case study: https://tijani-porfolio.dev/work/libertum-tokenization-platform
@@ -160,7 +160,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: TaxSlayer Pro serves professional tax preparers and tax offices. The supplied inventory identifies professional tax preparation workflows as the project area associated with this product. Tijani participated in developing and deploying the product, with engineering contributions in Tax Preparation, Professional Software, Client Workflows, Return Preparation, Review & Filing.
 - Tijani's contribution: Tijani participated in developing and deploying software workflows within the professional tax-preparation product area. The available notes do not identify a specific TaxSlayer Pro module or individual technology stack, so this entry does not assign narrower feature ownership. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.
 - Implementation areas: Tax Preparation, Professional Software, Client Workflows, Return Preparation, Review & Filing
-- Screenshot path: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.png (captured)
+- Screenshot path: /images/portfolio/projects/live-sites/taxslayer-pro-workflows.jpg (captured)
 
 ## 21. Northflank - Deployment & Infrastructure
 - Case study: https://tijani-porfolio.dev/work/northflank-deployment-platform
@@ -216,7 +216,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: Service Fusion supports field-service businesses such as HVAC, plumbing, electrical, and appliance service providers. Its public site describes scheduling and dispatch, estimates, job management, customer records, GPS tracking, invoices, payments, and technician mobile workflows. Tijani participated in developing and deploying the product, with engineering contributions in Customer Management, Estimates, Scheduling, Dispatch, Job Management.
 - Tijani's contribution: Tijani participated in developing and deploying the field-service software product, contributing to application workflows that support customer and job operations across office and technician experiences. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.
 - Implementation areas: Customer Management, Estimates, Scheduling, Dispatch, Job Management, GPS Tracking, Invoicing, Technician Mobile App
-- Screenshot path: /images/portfolio/projects/live-sites/service-fusion-field-service.png (capture-required)
+- Screenshot path: /images/portfolio/projects/live-sites/service-fusion-field-service.jpg (capture-required)
 
 ## 28. OurBlackGuide - React Native Marketplace
 - Case study: https://tijani-porfolio.dev/work/ourblackguide-react-native
@@ -240,7 +240,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: GemsHarbor is a B2B/B2C gemstone and jewelry marketplace. Tijani worked on the commerce workflows spanning product listings, user dashboards, auctions, bidding, offers, payment integrations, notifications, and order progression.
 - Tijani's contribution: Tijani participated in developing and deploying GemsHarbor's marketplace and transaction workflows, including listings, dashboards, auctions, bidding, offers, payment integrations, notifications, and order flows. This reflects his contribution within the broader product effort.
 - Implementation areas: Marketplace, E-commerce, Auctions, Bidding, Offers, Payment Integrations, Notifications
-- Screenshot path: /images/portfolio/projects/live-sites/gemsharbor-marketplace.png (capture-required)
+- Screenshot path: /images/portfolio/projects/live-sites/gemsharbor-marketplace.jpg (capture-required)
 
 ## 31. Charter Steel - Corporate Web Experience
 - Case study: https://tijani-porfolio.dev/work/charter-steel-web
@@ -328,7 +328,7 @@ This catalog contains 44 projects in which Tijani confirms participation in deve
 - Summary: PrivateFly provides private-jet charter and related aviation services. The supplied project inventory identifies private aviation booking and partner-distribution workflows as the product area associated with this engagement. Tijani participated in developing and deploying the product, with engineering contributions in Flight Search, Charter Options, Booking Workflow, Partner Distribution, Aviation Operations.
 - Tijani's contribution: Tijani participated in developing and deploying the aviation product experience, contributing to the booking and partner-distribution workflows described in the project inventory. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.
 - Implementation areas: Flight Search, Charter Options, Booking Workflow, Partner Distribution, Aviation Operations
-- Screenshot path: /images/portfolio/projects/live-sites/privatefly-aviation-booking.png (captured)
+- Screenshot path: /images/portfolio/projects/live-sites/privatefly-aviation-booking.jpg (captured)
 
 ## 42. HandHistory.com - Poker Analytics
 - Case study: https://tijani-porfolio.dev/work/handhistory-poker-analytics
