@@ -70,8 +70,8 @@ test("the standalone preview includes the current contact channels and all case 
   assert.match(preview, /munimaguro68@gmail\.com/);
   assert.match(preview, /github\.com\/lightsunshine001/);
   assert.match(preview, /FEATURED CASE STUDIES · 3/i);
-  assert.match(preview, /SELECTED PROJECT WORK · 48/i);
-  assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 51);
+  assert.match(preview, /SELECTED PROJECT WORK · 41/i);
+  assert.equal((preview.match(/<article class="project-card/g) ?? []).length, 44);
 });
 
 test("hero boundary has no oversized overlay or forced desktop viewport height", () => {

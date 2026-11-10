@@ -44,12 +44,6 @@ export const about = {
       detail:
         "Contributions to real-time platforms processing more than 1,000 events per second, as stated in the supplied resume.",
     },
-    {
-      metric: "1.6M",
-      label: "Historical records in data workflows",
-      detail:
-        "A .NET 8 and Azure OpenAI data-processing workflow handled about 2,400 records per day against a historical dataset of approximately 1.6 million records.",
-    },
   ] satisfies Highlight[],
 };
 
@@ -149,7 +143,7 @@ export const experiences: Experience[] = [
       "Developed backend functionality and integration layers with Python and C#/.NET, connecting business workflows to internal services and external platforms through REST APIs and webhooks.",
       { text: "Built and extended TypeScript-based application experiences, aligning frontend behavior with API contracts, authentication flows, data requirements, and operational workflows.", study: "ourblackguide-react-native" },
       { text: "Applied AI capabilities to product workflows, including LLM-powered features, agent/tool integrations, retrieval-oriented experiences, and business-process automation.", study: "anchord-ai-entity-resolution" },
-      { text: "Addressed production concerns across performance, reliability, security, and maintainability; supported cloud delivery and CI/CD practices across the software lifecycle.", study: "azure-openai-data-processing" },
+      "Addressed production concerns across performance, reliability, security, and maintainability; supported cloud delivery and CI/CD practices across the software lifecycle.",
     ],
   },
 ];
@@ -297,42 +291,6 @@ export const projects: Project[] = [
     tech: ["Healthcare Workflows", "Clinical Data", "Data Validation", "API Integration", "Business Rules", "Auditability"],
     images: ["/images/portfolio/projects/live-sites/correlate-health-platform-integration.png"],
     live: "https://correlatehealth.com/",
-  },
-  {
-    slug: "azure-openai-data-processing",
-    caseStudy: "azure-openai-data-processing",
-    title: ".NET 8 & Azure OpenAI Data Processing",
-    category: "Enterprise Data Processing",
-    summary:
-      "A worker-service and data-processing workflow combining ASP.NET Core, Entity Framework Core, SQL Server, and Azure OpenAI.",
-    description:
-      "Developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI. The pipeline processed approximately 2,400 records per day against a historical dataset of around 1.6 million records.",
-    impact:
-      "Applied AI-assisted processing to a substantial historical dataset while maintaining a recurring daily processing workflow.",
-    role:
-      ".NET backend and data-processing development: worker services, persistence with EF Core and SQL Server, and Azure OpenAI integration.",
-    complexity:
-      "Combining recurring background processing, relational persistence, and AI service integration across a large historical dataset.",
-    tech: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
-    images: [],
-  },
-  {
-    slug: "deed-driver-delivery",
-    caseStudy: "deed-driver-delivery",
-    title: "Deed - Driver Delivery Application",
-    category: "Flutter Logistics App",
-    summary:
-      "A driver-focused mobile application for a UPS partner in Iceland, supporting package scanning and delivery workflows.",
-    description:
-      "Developed a Flutter application that supports driver package scanning and delivery tasks. The implementation used Firebase Authentication and a set of Flutter state-management and dependency-management tools to organize the application workflow.",
-    impact:
-      "Brought package-scanning and delivery tasks into a mobile workflow for drivers in the partner operation.",
-    role:
-      "Flutter application development: driver-facing screens and package-scanning/delivery workflow implementation.",
-    complexity:
-      "Building a dependable mobile task flow around authentication, scanning/file interaction, and coordinated application state.",
-    tech: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
-    images: [],
   },
   {
     slug: "gemsharbor-marketplace",
@@ -483,6 +441,7 @@ export const projects: Project[] = [
     links: project.links ?? (project.url ? [{ label: "Official project site", url: project.url }] : []),
   })),
 ];
+
 
 export const skillCategories = [
   {

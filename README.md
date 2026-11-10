@@ -5,8 +5,8 @@ A production portfolio site built with Next.js App Router, React, TypeScript, an
 ## Content source of truth
 
 - `src/data/portfolio.ts` - identity, professional summary, career history, highlights, project cards, and technical competencies.
-- `src/data/case-studies.ts` - all 51 detailed project write-ups, implementation scope, available results, engineering areas, and role descriptions.
-- `src/data/additional-projects.ts` - the 36 additional projects that extend the original 15 to the full 51-entry inventory.
+- `src/data/case-studies.ts` - all 44 detailed project write-ups, implementation scope, available results, engineering areas, and role descriptions.
+- `src/data/additional-projects.ts` - the 31 additional projects that extend the base inventory to 44 published entries.
 - `PROJECTS.md` and `public/project-inventory.json` - the full project catalog, official URLs, role descriptions, and screenshot paths.
 - `src/lib/ai-twin.ts` and `src/lib/ai-tools.ts` - the portfolio assistant's compact context, search index, metrics, and case-study retrieval tools.
 - `public/images/portfolio/projects/live-sites/` - locally stored PNG screenshots captured from the actual public project websites. These are not generated mockups.
@@ -32,7 +32,7 @@ npm.cmd run build
 
 ## Real project website screenshots
 
-Project visuals are intended to be screenshots captured from the actual public project websites, not generated mockups. The 45 screenshot paths are configured, but captures are not included until the local browser command below is run; the current manifest records the pending status. No npm dependencies are required for screenshot capture. There are 51 projects in the portfolio: 45 with public URLs and 6 private/internal projects without a public URL in the supplied information. With Node.js 22+ and Chrome or Edge installed, run from PowerShell:
+Project visuals are intended to be screenshots captured from the actual public project websites, not generated mockups. The 44 screenshot paths are configured, but captures are not included until the local browser command below is run; the current manifest records the pending status. No npm dependencies are required for screenshot capture. There are 44 published case studies in the portfolio, all with public URLs. The seven projects removed at the user’s request are excluded from both the homepage and the case-study archive. With Node.js 22+ and Chrome or Edge installed, run from PowerShell:
 
 ```powershell
 npm.cmd run capture:project-screenshots
@@ -40,7 +40,7 @@ npm.cmd run capture:project-screenshots
 
 The script opens each public website or official app-store listing in Chrome or Edge at a 1440 × 900 desktop viewport, checks that a usable page loaded, and saves a PNG screenshot under `public/images/portfolio/projects/live-sites/`. The manifest records the page title, source URL, output path, and capture result. Set `CHROME_PATH` if the browser is installed in a non-standard location.
 
-The six internal projects without a public URL are .NET 8 & Azure OpenAI Data Processing, Deed Driver Delivery, Music Space Booking App, Location-Based Mobile App, macOS Roulette Tactics, and Baccarat Stat Master. They are not assigned unrelated or fabricated screenshots; provide an authorized staging URL or supplied screenshot to add imagery for these entries.
+The seven projects removed at the user’s request are excluded from both the homepage and the `/work` case-study archive. The remaining 44 published projects all have public destinations.
 
 ## Static content preview
 

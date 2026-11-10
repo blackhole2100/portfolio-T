@@ -1,11 +1,11 @@
 {
   "status": "pending-local-browser-capture",
-  "generatedAt": "2026-11-09T21:33:16.027Z",
+  "generatedAt": "2026-11-10T02:35:21.114Z",
   "viewport": {
     "width": 1440,
     "height": 900
   },
-  "publicProjectCount": 45,
+  "publicProjectCount": 44,
   "capturedCount": 41,
   "captures": [
     {
@@ -140,13 +140,6 @@
       "url": "https://libertum.io/en/",
       "file": "/images/portfolio/projects/live-sites/libertum-tokenization-platform.png",
       "status": "captured"
-    },
-    {
-      "slug": "filerun-file-management",
-      "title": "FileRun - Self-Hosted File Management",
-      "url": "https://filerun.com/",
-      "file": "/images/portfolio/projects/live-sites/filerun-file-management.png",
-      "status": "capture-required"
     },
     {
       "slug": "taxslayer-pro-workflows",
@@ -324,36 +317,5 @@
       "status": "captured"
     }
   ],
-  "internalProjects": [
-    {
-      "slug": "azure-openai-data-processing",
-      "title": ".NET 8 & Azure OpenAI Data Processing",
-      "status": "private-no-public-url"
-    },
-    {
-      "slug": "deed-driver-delivery",
-      "title": "Deed - Driver Delivery Application",
-      "status": "private-no-public-url"
-    },
-    {
-      "slug": "music-space-booking-app",
-      "title": "Music Space Booking App",
-      "status": "private-no-public-url"
-    },
-    {
-      "slug": "location-based-mobile-app",
-      "title": "Location-Based Mobile App",
-      "status": "private-no-public-url"
-    },
-    {
-      "slug": "macos-roulette-tactics",
-      "title": "macOS Roulette Tactics",
-      "status": "private-no-public-url"
-    },
-    {
-      "slug": "baccarat-stat-master",
-      "title": "Baccarat Stat Master",
-      "status": "private-no-public-url"
-    }
-  ]
+  "internalProjects": []
 }

@@ -16,8 +16,8 @@ import {
 } from "../src/data/case-studies";
 import { experiences, bulletStudySlug, bulletText, projects } from "../src/data/portfolio";
 
-test("the published portfolio has fifty-one project case studies", () => {
-  assert.equal(caseStudies.length, 51);
+test("the published portfolio has forty-four project case studies", () => {
+  assert.equal(caseStudies.length, 44);
   assert.equal(CASE_STUDY_SLUGS.length, caseStudies.length);
   assert.deepEqual([...CASE_STUDY_SLUGS].sort(), caseStudies.map((study) => study.slug).sort());
 });
@@ -92,8 +92,8 @@ test("public projects map to real website screenshot files and internal projects
     }
   }
 
-  assert.equal(publicProjectCount, 45, "expected forty-five projects with public website URLs");
-  assert.equal(internalProjectCount, 6, "expected six internal projects without public URLs");
+  assert.equal(publicProjectCount, 44, "expected forty-four projects with public website URLs");
+  assert.equal(internalProjectCount, 0, "expected zero internal projects in the published case-study archive");
 });
 
 test("client case-study cards do not import Node filesystem screenshot helpers", () => {
@@ -135,8 +135,8 @@ test("every study has a reachable theme group", () => {
   }
 });
 
-test("exactly two system case studies are featured", () => {
-  assert.equal(featuredCaseStudies.length, 2);
+test("exactly three system case studies are featured", () => {
+  assert.equal(featuredCaseStudies.length, 3);
   assert.ok(featuredCaseStudies.every((study) => study.kind === "system"));
 });
 

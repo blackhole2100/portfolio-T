@@ -61,7 +61,6 @@ test("get_metric returns source-backed figures with context", () => {
     ["load-time reduction", "93%"],
     ["events per second", "1,000+ events per second"],
     ["Anchord MCP tools", "11 MCP tools"],
-    ["records per day", "Approximately 2,400 per day"],
   ] as const;
   for (const [name, expected] of cases) {
     const result = call("get_metric", { name });
@@ -77,6 +76,8 @@ test("get_metric returns source-backed figures with context", () => {
 test("get_metric refuses figures that are not published", () => {
   const documents = call("get_metric", { name: "documents per month" });
   assert.equal((documents.output as { measured: boolean }).measured, false);
+  const removedProjectMetric = call("get_metric", { name: "records per day" });
+  assert.equal((removedProjectMetric.output as { measured: boolean }).measured, false);
   const result = call("get_metric", { name: "monthly active users" });
   const output = result.output as { measured: boolean; reason: string };
   assert.equal(output.measured, false);
@@ -123,7 +124,7 @@ test("navigate_to rejects targets outside the allow-list", () => {
 });
 
 test("compare_systems needs at least two valid case-study slugs", () => {
-  const ok = call("compare_systems", { slugs: ["anchord-ai-entity-resolution", "azure-openai-data-processing"] });
+  const ok = call("compare_systems", { slugs: ["anchord-ai-entity-resolution", "arvrobot-real-estate-underwriting"] });
   assert.equal(ok.refused, false);
   assert.equal((ok.output as { systems: unknown[] }).systems.length, 2);
   const tooFew = call("compare_systems", { slugs: ["anchord-ai-entity-resolution"] });
@@ -131,7 +132,7 @@ test("compare_systems needs at least two valid case-study slugs", () => {
 });
 
 test("compare_systems accepts a delimited string", () => {
-  const result = call("compare_systems", { slugs: "anchord-ai-entity-resolution,azure-openai-data-processing" });
+  const result = call("compare_systems", { slugs: "anchord-ai-entity-resolution,arvrobot-real-estate-underwriting" });
   assert.equal(result.refused, false);
   assert.equal((result.output as { systems: unknown[] }).systems.length, 2);
 });

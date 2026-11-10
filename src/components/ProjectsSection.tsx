@@ -307,7 +307,7 @@ const ProjectsSection = () => {
             Selected <span className="text-gradient">Work</span>
           </h2>
           <p className="mb-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-{/* The homepage divides all 51 projects into two unique groups: three featured case studies and 48 additional project engagements. Each project appears once across these sections. */}
+{/* The homepage divides all 44 projects into two unique groups: three featured case studies and 41 additional project engagements. Each project appears once across these sections. */}
           </p>
         </Reveal>
 
@@ -342,7 +342,7 @@ const ProjectsSection = () => {
           </Link>
         </Reveal>
 
-        {/* Second non-overlapping group: the remaining 48 projects. */}
+        {/* Second non-overlapping group: the remaining 41 projects. */}
         <Reveal className="mb-8">
           <div className="flex items-center gap-4">
             <h3 className="font-mono text-xs uppercase tracking-widest text-primary">
@@ -361,8 +361,8 @@ const ProjectsSection = () => {
         </div>
 
 
-        {/* Within the 48 selected-project entries, two have full visual cards and
-            the remaining 46 stay discoverable as compact project links. */}
+        {/* Within the 41 selected-project entries, two have full visual cards and
+            the remaining 39 stay discoverable as compact project links. */}
         <Reveal>
           <div>
             <div className="mb-6 flex items-center gap-4">

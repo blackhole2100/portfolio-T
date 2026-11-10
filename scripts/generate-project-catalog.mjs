@@ -46,8 +46,8 @@ const items = caseStudies.map((study, index) => {
 
 const publicItems = items.filter((item) => item.publicUrl);
 const privateItems = items.filter((item) => !item.publicUrl);
-if (items.length !== 51 || publicItems.length !== 45 || privateItems.length !== 6) {
-  throw new Error(`Unexpected portfolio inventory: ${items.length} total, ${publicItems.length} public, ${privateItems.length} private (expected 51 total, 45 public, 6 private).`);
+if (items.length !== 44 || publicItems.length !== 44 || privateItems.length !== 0) {
+  throw new Error(`Unexpected portfolio inventory: ${items.length} total, ${publicItems.length} public, ${privateItems.length} private (expected 44 total, 44 public, 0 private).`);
 }
 
 const inventory = {
@@ -76,7 +76,7 @@ const full = `${profile}## Project case studies (${items.length})\nTijani confir
   const externalLinks = item.links.map((link) => `- ${link.label}: ${link.url}`).join("\n") || "- Public URL: Not available; private/internal project.";
   const role = item.roleDetails.map((section) => `#### ${section.heading}\n${section.body}${section.points.length ? `\n${section.points.map((point) => `- ${point}`).join("\n")}` : ""}`).join("\n\n");
   return `### ${item.number}. ${item.title}\nCase study: ${caseStudyUrl}\nProduct context: ${item.summary}\nProblem: ${item.problem}\nTijani's participation: ${item.contribution}\nImplementation areas: ${item.implementationAreas.join(", ")}\nTags: ${item.tags.join(", ")}\n${externalLinks}\nScreenshot: ${item.screenshot ?? "No public screenshot path; private project."} (${item.screenshotStatus})\n\n${role}`;
-}).join("\n\n---\n\n") + `\n\n## Screenshot capture\n${publicItems.length} public project destinations are configured for real browser screenshot capture. The script saves actual Chrome/Edge screenshots into public/images/portfolio/projects/live-sites/. ${privateItems.length} internal projects have no public URL; a genuine screenshot requires an authorized staging URL or supplied image.\n`;
+}).join("\n\n---\n\n") + `\n\n## Screenshot capture\n${publicItems.length} public project destinations are configured for real browser screenshot capture. The script saves actual Chrome/Edge screenshots into public/images/portfolio/projects/live-sites/. ${privateItems.length > 0 ? `${privateItems.length} internal projects have no public URL; a genuine screenshot requires an authorized staging URL or supplied image.` : "No internal-only projects are currently included in the published archive."}\n`;
 writeFileSync(join(publicRoot, "llms-full.txt"), full, "utf8");
 
 const catalog = `# Tijani Shabazz - ${items.length} Project Portfolio\n\nThis catalog contains ${items.length} projects in which Tijani confirms participation in development and deployment. ${publicItems.length} have public links and ${privateItems.length} are private/internal.\n\n` + items.map((item) => `## ${item.number}. ${item.title}\n- Case study: ${siteUrl}/work/${item.slug}\n- Public URL: ${item.publicUrl ?? "Private/internal; no public URL supplied"}\n- Summary: ${item.summary}\n- Tijani's contribution: ${item.contribution}\n- Implementation areas: ${item.implementationAreas.join(", ")}\n- Screenshot path: ${item.screenshot ?? "No public screenshot path; private project"} (${item.screenshotStatus})`).join("\n\n") + "\n";

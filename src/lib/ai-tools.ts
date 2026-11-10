@@ -318,21 +318,9 @@ const METRICS: MetricEntry[] = [
     source: "Anchord AI - Entity Resolution & Agent Integration",
   },
   {
-    keys: ["records per day", "2400 records", "2,400 records", "daily processing"],
-    value: "Approximately 2,400 per day",
-    context: "Records processed per day by the .NET 8 and Azure OpenAI worker-service/data-processing workflow.",
-    source: ".NET 8 & Azure OpenAI Data Processing",
-  },
-  {
-    keys: ["historical records", "1.6 million", "1.6m", "1.6m records", "dataset size"],
-    value: "Approximately 1.6 million",
-    context: "Historical records in the dataset used by the .NET 8 and Azure OpenAI data-processing workflow.",
-    source: ".NET 8 & Azure OpenAI Data Processing",
-  },
-  {
     keys: ["case studies", "case study count", "how many case studies", "write ups"],
-    value: "16",
-    context: "Sixteen project case studies are published in the Work section. Each describes product context, Tijani's documented role, implementation scope, available results, and ownership boundaries.",
+    value: "44",
+    context: "Forty-four project case studies are published in the Work section. Each describes product context, Tijani's documented role, implementation scope, available results, and ownership boundaries.",
     source: "Portfolio Work Index",
   },
 ];

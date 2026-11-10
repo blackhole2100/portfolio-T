@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-09T21:33:16.019Z",
-  "totalProjects": 51,
-  "publicProjects": 45,
-  "privateProjects": 6,
+  "generatedAt": "2026-11-10T02:35:21.107Z",
+  "totalProjects": 44,
+  "publicProjects": 44,
+  "privateProjects": 0,
   "items": [
     {
       "number": 1,
@@ -123,56 +123,6 @@
     },
     {
       "number": 3,
-      "slug": "azure-openai-data-processing",
-      "title": ".NET 8 & Azure OpenAI Data Processing",
-      "category": "Enterprise Data Processing",
-      "kind": "system",
-      "theme": "agents",
-      "summary": "This enterprise data-processing project combines ASP.NET Core worker services, Entity Framework Core, SQL Server, and Azure OpenAI. Tijani developed the processing workflows, which handled approximately 2,400 records per day against a historical dataset of about 1.6 million records.",
-      "contribution": "Tijani participated in developing and deploying the .NET 8 and Azure OpenAI worker-service and data-processing workflows, including ASP.NET Core, EF Core, SQL Server, and Azure OpenAI integration. The wider data platform is a collaborative product effort.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's role",
-          "body": "Tijani developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI. His work covered the application processing path and its connection to persistence and AI service capabilities.",
-          "points": [
-            "Developed .NET 8 / ASP.NET Core worker-service workflows.",
-            "Used Entity Framework Core and SQL Server for data access and persistence.",
-            "Integrated Azure OpenAI into the record-processing flow."
-          ]
-        },
-        {
-          "heading": "Processing volume",
-          "body": "The workflow processed about 2,400 records per day against a historical dataset of roughly 1.6 million records. These are the approximate volumes stated in the resume, not a claim about throughput beyond the documented project scope.",
-          "points": []
-        },
-        {
-          "heading": "Backend and data workflow",
-          "body": "The documented stack places the processing logic in .NET worker services, uses EF Core and SQL Server for the data layer, and integrates Azure OpenAI for AI-assisted processing. The supplied resume does not specify additional infrastructure or a measured accuracy result, so those details are intentionally not inferred.",
-          "points": []
-        }
-      ],
-      "problem": "The project needed a repeatable way to process records at a daily cadence while working against a large historical dataset and incorporating Azure OpenAI into the processing workflow. The supplied material identifies the worker-service, data-processing, persistence, and AI integration elements.",
-      "implementationAreas": [
-        ".NET 8",
-        "ASP.NET Core",
-        "Entity Framework Core",
-        "SQL Server",
-        "Azure OpenAI",
-        "Worker Services"
-      ],
-      "tags": [
-        ".NET",
-        "Azure OpenAI",
-        "Data Processing",
-        "Enterprise"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 4,
       "slug": "crushbank-enterprise-ai",
       "title": "CrushBank Orchestrate IT - Enterprise AI",
       "category": "Enterprise AI & IT Workflows",
@@ -226,7 +176,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 5,
+      "number": 4,
       "slug": "arvrobot-real-estate-underwriting",
       "title": "ARVRobot - Real Estate Underwriting",
       "category": "Real Estate Underwriting",
@@ -282,7 +232,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 6,
+      "number": 5,
       "slug": "shiphype-fulfillment",
       "title": "ShipHype - Logistics & Fulfillment",
       "category": "Logistics & Fulfillment SaaS",
@@ -339,7 +289,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 7,
+      "number": 6,
       "slug": "dealercortex-ai",
       "title": "DealerCortex AI - Automotive Intelligence",
       "category": "Automotive Intelligence",
@@ -395,7 +345,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 8,
+      "number": 7,
       "slug": "arub-shipping-integrations",
       "title": "Arub Shipping - Carrier & Order Integrations",
       "category": "Shipping & Carrier Integrations",
@@ -447,7 +397,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 9,
+      "number": 8,
       "slug": "suppliersift-ap-automation",
       "title": "SupplierSift - Accounts Payable Automation",
       "category": "Accounts Payable Automation",
@@ -503,7 +453,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 10,
+      "number": 9,
       "slug": "calcs-engineering-calculations",
       "title": "Calcs.com - Engineering Calculation Platform",
       "category": "Engineering Calculation Software",
@@ -558,7 +508,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 11,
+      "number": 10,
       "slug": "loopt-clinical-trial-matching",
       "title": "LooPT CTM - Clinical Trial Matching",
       "category": "Clinical Trial Matching",
@@ -623,7 +573,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 12,
+      "number": 11,
       "slug": "compasshss-healthcare-staffing",
       "title": "CompassHSS - Healthcare Staffing Platform",
       "category": "Healthcare Workforce Management",
@@ -690,7 +640,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 13,
+      "number": 12,
       "slug": "jobably-ai-job-discovery",
       "title": "Jobably - AI Job Discovery",
       "category": "AI Search & Matching",
@@ -753,7 +703,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 14,
+      "number": 13,
       "slug": "sunethix-irb-review",
       "title": "Sunethix - IRB Submission Review",
       "category": "AI Regulatory Document Analysis",
@@ -816,7 +766,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 15,
+      "number": 14,
       "slug": "lead-prosper-routing",
       "title": "Lead Prosper - Lead Distribution Platform",
       "category": "Lead Ingestion & Routing",
@@ -879,7 +829,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 16,
+      "number": 15,
       "slug": "echoaeon-ai-lead-automation",
       "title": "Echoaeon - AI Lead Qualification",
       "category": "AI Lead Automation",
@@ -940,7 +890,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 17,
+      "number": 16,
       "slug": "sharkindicators-blackbird",
       "title": "SharkIndicators BlackBird - Trade Management",
       "category": "Trading Automation Software",
@@ -1003,7 +953,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 18,
+      "number": 17,
       "slug": "dynamite-docs-document-ai",
       "title": "Dynamite Docs - AI Document Extraction",
       "category": "AI Document Processing",
@@ -1068,7 +1018,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 19,
+      "number": 18,
       "slug": "headspin-digital-testing",
       "title": "HeadSpin - Digital Experience Testing",
       "category": "Mobile & Web Testing Platform",
@@ -1131,7 +1081,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 20,
+      "number": 19,
       "slug": "libertum-tokenization-platform",
       "title": "Libertum - Real-World Asset Tokenization",
       "category": "FinTech & Asset Management",
@@ -1198,70 +1148,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 21,
-      "slug": "filerun-file-management",
-      "title": "FileRun - Self-Hosted File Management",
-      "category": "Document & File Management",
-      "kind": "system",
-      "theme": "platform",
-      "summary": "FileRun provides web-based file management that can run on Linux or Windows servers and common self-hosted infrastructure. The supplied project inventory associates the product with document management, file access, and deployment workflows. Tijani participated in developing and deploying the product, with engineering contributions in PHP, MySQL, File Management, Document Access, Self-Hosted Deployment.",
-      "contribution": "Tijani participated in developing and deploying FileRun-related functionality and delivery workflows, contributing within the PHP/MySQL file-management environment described in the project inventory. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's development and deployment role",
-          "body": "Tijani participated in developing and deploying FileRun-related functionality and delivery workflows, contributing within the PHP/MySQL file-management environment described in the project inventory.",
-          "points": [
-            "Access a self-hosted file workspace.",
-            "Organize and browse files and folders.",
-            "Manage file access and sharing workflows.",
-            "Deploy and maintain the application on supported server infrastructure."
-          ]
-        },
-        {
-          "heading": "Product workflow and implementation",
-          "body": "FileRun provides web-based file management that can run on Linux or Windows servers and common self-hosted infrastructure. The supplied project inventory associates the product with document management, file access, and deployment workflows. The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.",
-          "points": [
-            "PHP",
-            "MySQL",
-            "File Management",
-            "Document Access",
-            "Self-Hosted Deployment",
-            "File Sharing"
-          ]
-        },
-        {
-          "heading": "Engineering scope",
-          "body": "Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies PHP, MySQL, File Management, Document Access, Self-Hosted Deployment, File Sharing as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.",
-          "points": []
-        }
-      ],
-      "problem": "Organizations need a manageable way to store, organize, access, and share files while retaining control over their hosting environment and data.",
-      "implementationAreas": [
-        "PHP",
-        "MySQL",
-        "File Management",
-        "Document Access",
-        "Self-Hosted Deployment",
-        "File Sharing"
-      ],
-      "tags": [
-        "PHP",
-        "MySQL",
-        "Document Management",
-        "Self-Hosted"
-      ],
-      "links": [
-        {
-          "label": "Official project site",
-          "url": "https://filerun.com/"
-        }
-      ],
-      "publicUrl": "https://filerun.com/",
-      "screenshot": "/images/portfolio/projects/live-sites/filerun-file-management.png",
-      "screenshotStatus": "capture-required"
-    },
-    {
-      "number": 22,
+      "number": 20,
       "slug": "taxslayer-pro-workflows",
       "title": "TaxSlayer Pro - Tax Preparation Workflows",
       "category": "Professional Tax Software",
@@ -1322,7 +1209,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 23,
+      "number": 21,
       "slug": "northflank-deployment-platform",
       "title": "Northflank - Deployment & Infrastructure",
       "category": "Developer Platform & Cloud Delivery",
@@ -1387,7 +1274,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 24,
+      "number": 22,
       "slug": "myorbithealth-telehealth",
       "title": "MyOrbitHealth - Telehealth Platform",
       "category": "Healthcare & Telehealth",
@@ -1452,7 +1339,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 25,
+      "number": 23,
       "slug": "andy-labs-ai-assistant",
       "title": "Andy Labs - AI Executive Assistant",
       "category": "AI Operations & Productivity",
@@ -1515,7 +1402,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 26,
+      "number": 24,
       "slug": "synthreo-enterprise-ai",
       "title": "Synthreo - Enterprise AI Infrastructure",
       "category": "Enterprise AI Platform",
@@ -1580,7 +1467,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 27,
+      "number": 25,
       "slug": "interra-health-platform",
       "title": "Interra Health - Healthcare Technology",
       "category": "Healthcare Software",
@@ -1639,7 +1526,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 28,
+      "number": 26,
       "slug": "definity-workforce-platform",
       "title": "Definity - Healthcare Workforce Platform",
       "category": "Healthcare Workforce Management",
@@ -1700,7 +1587,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 29,
+      "number": 27,
       "slug": "service-fusion-field-service",
       "title": "Service Fusion - Field Service Management",
       "category": "Field Service SaaS",
@@ -1767,7 +1654,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 30,
+      "number": 28,
       "slug": "ourblackguide-react-native",
       "title": "OurBlackGuide - React Native Marketplace",
       "category": "React Native Marketplace",
@@ -1824,7 +1711,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 31,
+      "number": 29,
       "slug": "parente-ai-mobile-health",
       "title": "Parente AI - Cross-Platform Health Application",
       "category": "Cross-Platform Health App",
@@ -1889,56 +1776,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 32,
-      "slug": "deed-driver-delivery",
-      "title": "Deed - Driver Delivery Application",
-      "category": "Flutter Logistics App",
-      "kind": "product",
-      "theme": "products",
-      "summary": "Deed is a driver delivery application built for a UPS partner in Iceland. Tijani developed the Flutter application supporting package scanning and delivery tasks, using Firebase Authentication and a documented set of state-management, dependency-injection, reactive, and file-selection tools.",
-      "contribution": "Tijani participated in developing and deploying the Deed Flutter application for driver package-scanning and delivery workflows. The listed scope describes the mobile product work, not ownership of the wider carrier organization or logistics operation.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's role",
-          "body": "Tijani developed the Flutter application for the partner's driver package-scanning and delivery workflows. The documented stack includes Dart, Firebase Authentication, Provider, GetIt, RxDart, BLoC, and file_picker.",
-          "points": [
-            "Developed the Flutter mobile application.",
-            "Supported driver package-scanning and delivery task flows.",
-            "Worked with Firebase Authentication for application access.",
-            "Used Provider, GetIt, RxDart, and BLoC within the application architecture.",
-            "Used file_picker as part of the app's file interaction capabilities."
-          ]
-        },
-        {
-          "heading": "Mobile implementation",
-          "body": "The project is documented as a Flutter/Dart application with Firebase Authentication and a combination of state-management and dependency-management tools. The supplied notes do not provide a public product URL or quantitative delivery metric.",
-          "points": []
-        }
-      ],
-      "problem": "Delivery drivers need mobile workflows that let them carry out package-related tasks while working in the field. The application brings package scanning and delivery actions into a driver-facing mobile experience.",
-      "implementationAreas": [
-        "Flutter",
-        "Dart",
-        "Firebase Authentication",
-        "Provider",
-        "GetIt",
-        "RxDart",
-        "BLoC",
-        "file_picker"
-      ],
-      "tags": [
-        "Flutter",
-        "Logistics",
-        "Mobile",
-        "Driver App"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 33,
+      "number": 30,
       "slug": "gemsharbor-marketplace",
       "title": "GemsHarbor - Marketplace & Auctions",
       "category": "Jewelry Marketplace & Auctions",
@@ -1995,7 +1833,7 @@
       "screenshotStatus": "capture-required"
     },
     {
-      "number": 34,
+      "number": 31,
       "slug": "charter-steel-web",
       "title": "Charter Steel - Corporate Web Experience",
       "category": "Industrial Corporate Website",
@@ -2044,7 +1882,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 35,
+      "number": 32,
       "slug": "nomo-family-organizer",
       "title": "Nomo - Family Organizer",
       "category": "Mobile Family Productivity",
@@ -2107,7 +1945,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 36,
+      "number": 33,
       "slug": "ad-spin-studio",
       "title": "AD Spin Studio - Guided Vehicle Walkarounds",
       "category": "Automotive Mobile Application",
@@ -2168,7 +2006,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 37,
+      "number": 34,
       "slug": "peptide-paradigm",
       "title": "Peptide Paradigm - Peptide Reference App",
       "category": "Mobile Research & Reference",
@@ -2229,243 +2067,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 38,
-      "slug": "music-space-booking-app",
-      "title": "Music Space Booking App",
-      "category": "Flutter Marketplace & Booking",
-      "kind": "product",
-      "theme": "products",
-      "summary": "The application connects people looking for music spaces with venue hosts. The supplied project notes describe discovery and favorites, host messaging, booking schedules, Stripe payments, user profiles, and venue-room management as the core product workflows. Tijani participated in developing and deploying the product, with engineering contributions in Flutter Mobile App, Venue Discovery, Favorites, Host Messaging, Scheduling.",
-      "contribution": "Tijani participated in building and deploying the Flutter application, contributing across the venue-discovery, booking, messaging, payment, profile, and room-management workflows described in the project notes. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's development and deployment role",
-          "body": "Tijani participated in building and deploying the Flutter application, contributing across the venue-discovery, booking, messaging, payment, profile, and room-management workflows described in the project notes.",
-          "points": [
-            "Discover music spaces and save preferred venues.",
-            "Open venue and room details and coordinate with hosts through messaging.",
-            "Schedule a booking against the available space.",
-            "Complete payment through Stripe and manage the booking from a profile."
-          ]
-        },
-        {
-          "heading": "Product workflow and implementation",
-          "body": "The application connects people looking for music spaces with venue hosts. The supplied project notes describe discovery and favorites, host messaging, booking schedules, Stripe payments, user profiles, and venue-room management as the core product workflows. The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.",
-          "points": [
-            "Flutter Mobile App",
-            "Venue Discovery",
-            "Favorites",
-            "Host Messaging",
-            "Scheduling",
-            "Stripe Payments",
-            "Profiles",
-            "Room Management"
-          ]
-        },
-        {
-          "heading": "Engineering scope",
-          "body": "Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies Flutter Mobile App, Venue Discovery, Favorites, Host Messaging, Scheduling, Stripe Payments, Profiles, Room Management as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.",
-          "points": []
-        }
-      ],
-      "problem": "Finding and booking a suitable music space involves discovering venues, checking availability, coordinating with hosts, and completing payment. The product brings those steps into a connected mobile booking journey.",
-      "implementationAreas": [
-        "Flutter Mobile App",
-        "Venue Discovery",
-        "Favorites",
-        "Host Messaging",
-        "Scheduling",
-        "Stripe Payments",
-        "Profiles",
-        "Room Management"
-      ],
-      "tags": [
-        "Flutter",
-        "Marketplace",
-        "Bookings",
-        "Payments"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 39,
-      "slug": "location-based-mobile-app",
-      "title": "Location-Based Mobile App",
-      "category": "Flutter Location-Aware Application",
-      "kind": "product",
-      "theme": "products",
-      "summary": "This mobile project combines Flutter screens with location permissions, navigation flows, and separate business and data layers. The supplied notes also identify German localization using flutter_i18n as part of the implementation. Tijani participated in developing and deploying the product, with engineering contributions in Flutter, Location Permissions, Navigation, Business Layer, Data Layer.",
-      "contribution": "Tijani participated in developing and deploying the Flutter application, contributing to its location-aware screens, navigation, application layers, permission handling, and localization workflows. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's development and deployment role",
-          "body": "Tijani participated in developing and deploying the Flutter application, contributing to its location-aware screens, navigation, application layers, permission handling, and localization workflows.",
-          "points": [
-            "Request and handle location permissions.",
-            "Present location-aware navigation and related screens.",
-            "Connect screen behavior to business and data layers.",
-            "Render localized interface content, including German translations."
-          ]
-        },
-        {
-          "heading": "Product workflow and implementation",
-          "body": "This mobile project combines Flutter screens with location permissions, navigation flows, and separate business and data layers. The supplied notes also identify German localization using flutter_i18n as part of the implementation. The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.",
-          "points": [
-            "Flutter",
-            "Location Permissions",
-            "Navigation",
-            "Business Layer",
-            "Data Layer",
-            "Localization",
-            "flutter_i18n"
-          ]
-        },
-        {
-          "heading": "Engineering scope",
-          "body": "Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies Flutter, Location Permissions, Navigation, Business Layer, Data Layer, Localization, flutter_i18n as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.",
-          "points": []
-        }
-      ],
-      "problem": "Location-aware applications need to request and manage device permissions while presenting navigation and business information in a predictable user experience. Localization adds another requirement: the same screens and flows must remain understandable in the selected language.",
-      "implementationAreas": [
-        "Flutter",
-        "Location Permissions",
-        "Navigation",
-        "Business Layer",
-        "Data Layer",
-        "Localization",
-        "flutter_i18n"
-      ],
-      "tags": [
-        "Flutter",
-        "Location Services",
-        "Localization",
-        "Mobile"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 40,
-      "slug": "macos-roulette-tactics",
-      "title": "macOS Roulette Tactics",
-      "category": "SwiftUI Desktop Application",
-      "kind": "product",
-      "theme": "products",
-      "summary": "MacOS Roulette Tactics is a desktop product focused on roulette strategy and related session information. The project inventory identifies Swift, SwiftUI, and SQLite as the implementation technologies. Tijani participated in developing and deploying the product, with engineering contributions in macOS Desktop, Swift, SwiftUI, SQLite, Desktop UX.",
-      "contribution": "Tijani participated in developing and deploying the macOS application, contributing to its SwiftUI desktop experience and SQLite-backed application functionality. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's development and deployment role",
-          "body": "Tijani participated in developing and deploying the macOS application, contributing to its SwiftUI desktop experience and SQLite-backed application functionality.",
-          "points": [
-            "Use the macOS interface to access roulette tactic features.",
-            "Work with application data persisted through SQLite.",
-            "Navigate the desktop experience through SwiftUI views."
-          ]
-        },
-        {
-          "heading": "Product workflow and implementation",
-          "body": "MacOS Roulette Tactics is a desktop product focused on roulette strategy and related session information. The project inventory identifies Swift, SwiftUI, and SQLite as the implementation technologies. The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.",
-          "points": [
-            "macOS Desktop",
-            "Swift",
-            "SwiftUI",
-            "SQLite",
-            "Desktop UX",
-            "Local Data Persistence"
-          ]
-        },
-        {
-          "heading": "Engineering scope",
-          "body": "Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies macOS Desktop, Swift, SwiftUI, SQLite, Desktop UX, Local Data Persistence as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.",
-          "points": []
-        }
-      ],
-      "problem": "A desktop strategy tool needs a focused interface for users to work with roulette-related information and keep relevant data available between sessions.",
-      "implementationAreas": [
-        "macOS Desktop",
-        "Swift",
-        "SwiftUI",
-        "SQLite",
-        "Desktop UX",
-        "Local Data Persistence"
-      ],
-      "tags": [
-        "macOS",
-        "Swift",
-        "SwiftUI",
-        "SQLite"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 41,
-      "slug": "baccarat-stat-master",
-      "title": "Baccarat Stat Master",
-      "category": "SwiftUI Desktop Application",
-      "kind": "product",
-      "theme": "products",
-      "summary": "Baccarat Stat Master is a desktop application centered on baccarat statistics and related session data. The supplied inventory identifies Swift, SwiftUI, and SQLite as the technology foundation. Tijani participated in developing and deploying the product, with engineering contributions in macOS Desktop, Swift, SwiftUI, SQLite, Statistics Interface.",
-      "contribution": "Tijani participated in developing and deploying the desktop application, contributing to its SwiftUI interface and SQLite-backed data functionality. This description reflects Tijani's participation in the product's development and deployment; it does not imply that he was the sole developer, designer, or owner of the wider product.",
-      "roleDetails": [
-        {
-          "heading": "Tijani's development and deployment role",
-          "body": "Tijani participated in developing and deploying the desktop application, contributing to its SwiftUI interface and SQLite-backed data functionality.",
-          "points": [
-            "Open the macOS application and navigate its baccarat statistics views.",
-            "Work with the information presented by the desktop interface.",
-            "Persist application data using SQLite."
-          ]
-        },
-        {
-          "heading": "Product workflow and implementation",
-          "body": "Baccarat Stat Master is a desktop application centered on baccarat statistics and related session data. The supplied inventory identifies Swift, SwiftUI, and SQLite as the technology foundation. The implementation and deployment scope described for this engagement covers the product workflows and engineering areas listed below.",
-          "points": [
-            "macOS Desktop",
-            "Swift",
-            "SwiftUI",
-            "SQLite",
-            "Statistics Interface",
-            "Local Data Persistence"
-          ]
-        },
-        {
-          "heading": "Engineering scope",
-          "body": "Tijani's participation connected the product requirements to working application functionality and deployment. The supplied project inventory identifies macOS Desktop, Swift, SwiftUI, SQLite, Statistics Interface, Local Data Persistence as the relevant implementation areas. Where a specific framework, database, or performance metric was not supplied, this case study does not invent one.",
-          "points": []
-        }
-      ],
-      "problem": "A statistics-focused desktop tool needs to present baccarat-related information in a usable interface and retain the data required for analysis across sessions.",
-      "implementationAreas": [
-        "macOS Desktop",
-        "Swift",
-        "SwiftUI",
-        "SQLite",
-        "Statistics Interface",
-        "Local Data Persistence"
-      ],
-      "tags": [
-        "macOS",
-        "Swift",
-        "SwiftUI",
-        "Statistics"
-      ],
-      "links": [],
-      "publicUrl": null,
-      "screenshot": null,
-      "screenshotStatus": "private-no-public-url"
-    },
-    {
-      "number": 42,
+      "number": 35,
       "slug": "sisu-real-estate-operations",
       "title": "Sisu - Real Estate Transaction Intelligence",
       "category": "Real Estate Operations SaaS",
@@ -2526,7 +2128,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 43,
+      "number": 36,
       "slug": "pressbeyond-hotel-discovery",
       "title": "PressBeyond - Hotel Discovery & Booking",
       "category": "Travel Discovery Platform",
@@ -2587,7 +2189,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 44,
+      "number": 37,
       "slug": "pet-free-hotels",
       "title": "Pet-Free Hotels - No-Pet Policy Discovery",
       "category": "Travel Search Platform",
@@ -2648,7 +2250,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 45,
+      "number": 38,
       "slug": "omni-ride-hailing",
       "title": "Omni - Ride-Hailing & Trip Management",
       "category": "Mobility Platform",
@@ -2709,7 +2311,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 46,
+      "number": 39,
       "slug": "swiftpoint-z2",
       "title": "Swiftpoint Z2 - Programmable Gaming Mouse",
       "category": "Hardware & Configuration Software",
@@ -2770,7 +2372,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 47,
+      "number": 40,
       "slug": "wispr-flow-dictation",
       "title": "Wispr Flow - AI Voice Dictation",
       "category": "AI Productivity Application",
@@ -2831,7 +2433,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 48,
+      "number": 41,
       "slug": "privatefly-aviation-booking",
       "title": "PrivateFly - Private Aviation Booking",
       "category": "Aviation Booking Platform",
@@ -2892,7 +2494,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 49,
+      "number": 42,
       "slug": "handhistory-poker-analytics",
       "title": "HandHistory.com - Poker Analytics",
       "category": "Analytics & Interactive Product",
@@ -2955,7 +2557,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 50,
+      "number": 43,
       "slug": "ontrajectory-financial-planning",
       "title": "OnTrajectory - Financial Planning",
       "category": "Financial Planning SaaS",
@@ -3016,7 +2618,7 @@
       "screenshotStatus": "captured"
     },
     {
-      "number": 51,
+      "number": 44,
       "slug": "appleseed-planner",
       "title": "Appleseed Planner - Retirement Simulation",
       "category": "Financial Planning Application",

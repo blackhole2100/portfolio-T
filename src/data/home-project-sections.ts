@@ -2,11 +2,9 @@ import { featuredCaseStudies } from "@/data/case-studies";
 import { projects } from "@/data/portfolio";
 
 /**
- * The homepage presents the 51-project portfolio in two non-overlapping groups:
- * - the three featured case studies, which receive full case-study cards;
- * - every other project, which appears once in Selected Project Work.
- *
- * The /work route remains the complete archive of all 51 detailed case studies.
+ * The portfolio contains 44 published projects. The homepage presents each exactly once
+ * across two non-overlapping groups: three featured case studies and the remaining projects.
+ * The /work route is the complete 44-project case-study archive.
  */
 export const homepageFeaturedCaseStudies = featuredCaseStudies;
 

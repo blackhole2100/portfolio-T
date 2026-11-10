@@ -16,11 +16,9 @@ import { projects } from "@/data/portfolio";
 export const SYSTEM_GLYPHS: Record<string, LucideIcon> = {
   "anchord-ai-entity-resolution": Network,
   "correlate-health-platform-integration": HeartPulse,
-  "azure-openai-data-processing": Database,
   "crushbank-enterprise-ai": Brain,
   "ourblackguide-react-native": Layers,
   "parente-ai-mobile-health": HeartPulse,
-  "deed-driver-delivery": Activity,
   "arvrobot-real-estate-underwriting": Building2,
   "gemsharbor-marketplace": Boxes,
   "shiphype-fulfillment": Boxes,

@@ -68,11 +68,9 @@ export interface CaseStudy {
 export type CaseStudySlug =
   | "anchord-ai-entity-resolution"
   | "correlate-health-platform-integration"
-  | "azure-openai-data-processing"
   | "crushbank-enterprise-ai"
   | "ourblackguide-react-native"
   | "parente-ai-mobile-health"
-  | "deed-driver-delivery"
   | "arvrobot-real-estate-underwriting"
   | "gemsharbor-marketplace"
   | "shiphype-fulfillment"
@@ -85,10 +83,6 @@ export type CaseStudySlug =
   | "nomo-family-organizer"
   | "ad-spin-studio"
   | "peptide-paradigm"
-  | "music-space-booking-app"
-  | "location-based-mobile-app"
-  | "macos-roulette-tactics"
-  | "baccarat-stat-master"
   | "compasshss-healthcare-staffing"
   | "jobably-ai-job-discovery"
   | "sunethix-irb-review"
@@ -106,7 +100,6 @@ export type CaseStudySlug =
   | "privatefly-aviation-booking"
   | "libertum-tokenization-platform"
   | "handhistory-poker-analytics"
-  | "filerun-file-management"
   | "ontrajectory-financial-planning"
   | "appleseed-planner"
   | "taxslayer-pro-workflows"
@@ -121,11 +114,9 @@ export type CaseStudySlug =
 export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "anchord-ai-entity-resolution",
   "correlate-health-platform-integration",
-  "azure-openai-data-processing",
   "crushbank-enterprise-ai",
   "ourblackguide-react-native",
   "parente-ai-mobile-health",
-  "deed-driver-delivery",
   "arvrobot-real-estate-underwriting",
   "gemsharbor-marketplace",
   "shiphype-fulfillment",
@@ -138,10 +129,6 @@ export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "nomo-family-organizer",
   "ad-spin-studio",
   "peptide-paradigm",
-  "music-space-booking-app",
-  "location-based-mobile-app",
-  "macos-roulette-tactics",
-  "baccarat-stat-master",
   "compasshss-healthcare-staffing",
   "jobably-ai-job-discovery",
   "sunethix-irb-review",
@@ -159,7 +146,6 @@ export const CASE_STUDY_SLUGS: CaseStudySlug[] = [
   "privatefly-aviation-booking",
   "libertum-tokenization-platform",
   "handhistory-poker-analytics",
-  "filerun-file-management",
   "ontrajectory-financial-planning",
   "appleseed-planner",
   "taxslayer-pro-workflows",
@@ -290,58 +276,6 @@ const baseCaseStudies: CaseStudy[] = [
       "Tijani participated in the development and deployment of Correlate Health application workflows. This describes his engineering contribution within the product effort and does not claim sole authorship of the wider healthcare platform.",
     tags: ["HealthTech", "Healthcare Platform", "Data Validation", "APIs"],
     aliases: ["correlate health", "healthcare platform", "healthcare integration", "clinical data workflows", "health data validation", "ehr integration", "clinical operations"],
-  },
-  {
-    slug: "azure-openai-data-processing",
-    kind: "system",
-    theme: "agents",
-    title: ".NET 8 & Azure OpenAI Data Processing",
-    oneLiner:
-      "Developed ASP.NET Core worker and data-processing workflows using EF Core, SQL Server, and Azure OpenAI across a 1.6-million-record historical dataset.",
-    summary:
-      "This enterprise data-processing project combines ASP.NET Core worker services, Entity Framework Core, SQL Server, and Azure OpenAI. Tijani developed the processing workflows, which handled approximately 2,400 records per day against a historical dataset of about 1.6 million records.",
-    problem:
-      "The project needed a repeatable way to process records at a daily cadence while working against a large historical dataset and incorporating Azure OpenAI into the processing workflow. The supplied material identifies the worker-service, data-processing, persistence, and AI integration elements.",
-    constraints: [
-      "The workflow operates against a historical dataset of approximately 1.6 million records.",
-      "The documented processing volume is approximately 2,400 records per day.",
-      "Background processing, relational persistence, and the Azure OpenAI service must work together as one application workflow.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [],
-    sections: [
-      {
-        heading: "Tijani's role",
-        body:
-          "Tijani developed worker-service and data-processing workflows using ASP.NET Core, EF Core, SQL Server, and Azure OpenAI. His work covered the application processing path and its connection to persistence and AI service capabilities.",
-        points: [
-          "Developed .NET 8 / ASP.NET Core worker-service workflows.",
-          "Used Entity Framework Core and SQL Server for data access and persistence.",
-          "Integrated Azure OpenAI into the record-processing flow.",
-        ],
-      },
-      {
-        heading: "Processing volume",
-        body:
-          "The workflow processed about 2,400 records per day against a historical dataset of roughly 1.6 million records. These are the approximate volumes stated in the resume, not a claim about throughput beyond the documented project scope.",
-      },
-      {
-        heading: "Backend and data workflow",
-        body:
-          "The documented stack places the processing logic in .NET worker services, uses EF Core and SQL Server for the data layer, and integrates Azure OpenAI for AI-assisted processing. The supplied resume does not specify additional infrastructure or a measured accuracy result, so those details are intentionally not inferred.",
-      },
-    ],
-    results: [
-      { metric: "2,400", label: "Records processed per day" },
-      { metric: "1.6M", label: "Historical records in the dataset" },
-      { metric: ".NET 8", label: "Worker-service and processing stack" },
-    ],
-    stack: [".NET 8", "ASP.NET Core", "Entity Framework Core", "SQL Server", "Azure OpenAI", "Worker Services"],
-    ownership:
-      "Tijani participated in developing and deploying the .NET 8 and Azure OpenAI worker-service and data-processing workflows, including ASP.NET Core, EF Core, SQL Server, and Azure OpenAI integration. The wider data platform is a collaborative product effort.",
-    tags: [".NET", "Azure OpenAI", "Data Processing", "Enterprise"],
-    aliases: ["dotnet 8", ".net 8", "azure openai", "ef core", "entity framework", "sql server", "worker service", "2400 records", "1.6 million records"],
   },
   {
     slug: "crushbank-enterprise-ai",
@@ -502,55 +436,6 @@ const baseCaseStudies: CaseStudy[] = [
       "Tijani participated in developing and deploying Parente AI's Flutter mobile workflows, including onboarding, assessments, messaging, API integration, token handling, profile-state corrections, form completion, and release support. The complete product was a collaborative effort.",
     tags: ["Flutter", "HealthTech", "Mobile", "API Integration"],
     aliases: ["parente", "parente ai", "pediatric behavioral health", "family onboarding", "assessments", "patient messaging", "flutter"],
-  },
-  {
-    slug: "deed-driver-delivery",
-    kind: "product",
-    theme: "products",
-    title: "Deed - Driver Delivery Application",
-    oneLiner:
-      "Developed a Flutter driver application for a UPS partner in Iceland, supporting package-scanning and delivery workflows.",
-    summary:
-      "Deed is a driver delivery application built for a UPS partner in Iceland. Tijani developed the Flutter application supporting package scanning and delivery tasks, using Firebase Authentication and a documented set of state-management, dependency-injection, reactive, and file-selection tools.",
-    problem:
-      "Delivery drivers need mobile workflows that let them carry out package-related tasks while working in the field. The application brings package scanning and delivery actions into a driver-facing mobile experience.",
-    constraints: [
-      "The application is a Flutter mobile product using Firebase Authentication.",
-      "The documented implementation uses several state and dependency-management libraries together.",
-      "The workflow includes package scanning and delivery operations.",
-    ],
-    diagram: null,
-    diagramCaption: "",
-    decisions: [],
-    sections: [
-      {
-        heading: "Tijani's role",
-        body:
-          "Tijani developed the Flutter application for the partner's driver package-scanning and delivery workflows. The documented stack includes Dart, Firebase Authentication, Provider, GetIt, RxDart, BLoC, and file_picker.",
-        points: [
-          "Developed the Flutter mobile application.",
-          "Supported driver package-scanning and delivery task flows.",
-          "Worked with Firebase Authentication for application access.",
-          "Used Provider, GetIt, RxDart, and BLoC within the application architecture.",
-          "Used file_picker as part of the app's file interaction capabilities.",
-        ],
-      },
-      {
-        heading: "Mobile implementation",
-        body:
-          "The project is documented as a Flutter/Dart application with Firebase Authentication and a combination of state-management and dependency-management tools. The supplied notes do not provide a public product URL or quantitative delivery metric.",
-      },
-    ],
-    results: [
-      { metric: "Flutter", label: "Driver-facing mobile application" },
-      { metric: "Package scan", label: "Core delivery workflow" },
-      { metric: "Firebase Auth", label: "Application authentication" },
-    ],
-    stack: ["Flutter", "Dart", "Firebase Authentication", "Provider", "GetIt", "RxDart", "BLoC", "file_picker"],
-    ownership:
-      "Tijani participated in developing and deploying the Deed Flutter application for driver package-scanning and delivery workflows. The listed scope describes the mobile product work, not ownership of the wider carrier organization or logistics operation.",
-    tags: ["Flutter", "Logistics", "Mobile", "Driver App"],
-    aliases: ["deed", "driver delivery", "ups partner", "iceland", "package scanning", "firebase authentication", "flutter", "dart"],
   },
   {
     slug: "arvrobot-real-estate-underwriting",
