@@ -92,15 +92,14 @@ export default function RootLayout({
                 try {
                   var storedTheme = localStorage.getItem('theme');
                   var root = document.documentElement;
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  var shouldUseDark = storedTheme ? storedTheme === 'dark' : prefersDark;
+
+                  // Dark theme is the default.
+                  // Respect an explicitly saved light-theme preference.
+                  var shouldUseDark = storedTheme !== 'light';
 
                   root.classList.toggle('dark', shouldUseDark);
                 } catch(e) {
-                  document.documentElement.classList.toggle(
-                    'dark',
-                    window.matchMedia('(prefers-color-scheme: dark)').matches
-                  );
+                  document.documentElement.classList.add('dark');
                 }
               })();
             `,

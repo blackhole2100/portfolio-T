@@ -6,7 +6,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange storageKey="theme">
+    <ThemeProvider 
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem={false}
+      disableTransitionOnChange 
+      storageKey="theme">
       {/*
         reducedMotion="user" makes framer-motion honour prefers-reduced-motion for
         every animation in the tree, so a component that forgets to check the
